@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-31",
+  "lastUpdated": "2026-04-01",
   "csReps": [
     "Cayden Fox"
   ],
@@ -18,33 +18,78 @@
       "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
       "renewalDate": "2026-12-12",
       "npsTicketUrls": [
-        {"label": "Latoya Henry — Birches of Lehigh Valley (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41905403719"},
-        {"label": "Leslie Juan — Manor at Market Square (Feb 2026)", "score": 4, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41758140264"},
-        {"label": "Aiesha Roach — Birches at Newtown (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41903235750"},
-        {"label": "Scott Garverich — Chestnut Knoll (Feb 2026)", "score": 2, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41744439411"},
-        {"label": "Jemetrice Blakely — Heritage Green Hanover (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"}
+        {
+          "label": "Latoya Henry \u2014 Birches of Lehigh Valley (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41905403719"
+        },
+        {
+          "label": "Leslie Juan \u2014 Manor at Market Square (Feb 2026)",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41758140264"
+        },
+        {
+          "label": "Aiesha Roach \u2014 Birches at Newtown (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41903235750"
+        },
+        {
+          "label": "Scott Garverich \u2014 Chestnut Knoll (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41744439411"
+        },
+        {
+          "label": "Jemetrice Blakely \u2014 Heritage Green Hanover (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"
+        }
       ],
       "bugTicketUrls": [
-        {"label": "Not able to approve shifts", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38330230296"},
-        {"label": "Staffing Ladder budgets not budgeting by shift", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41812347246"},
-        {"label": "Shared Calendar View setting not working properly", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39109781867"},
-        {"label": "\"Enjoy Day Off\" displays when shifts are scheduled", "priority": "MEDIUM", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39636914522"},
-        {"label": "Approve open shift, reject the rest", "priority": "LOW", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31460037465"}
+        {
+          "label": "Not able to approve shifts",
+          "priority": "HIGH",
+          "status": "closed",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38330230296"
+        },
+        {
+          "label": "Staffing Ladder budgets not budgeting by shift",
+          "priority": "HIGH",
+          "status": "closed",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41812347246"
+        },
+        {
+          "label": "Shared Calendar View setting not working properly",
+          "priority": "HIGH",
+          "status": "closed",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39109781867"
+        },
+        {
+          "label": "\"Enjoy Day Off\" displays when shifts are scheduled",
+          "priority": "MEDIUM",
+          "status": "closed",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39636914522"
+        },
+        {
+          "label": "Approve open shift, reject the rest",
+          "priority": "LOW",
+          "status": "closed",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31460037465"
+        }
       ],
       "actions": [
-        "Monitor backlog (4 items) — all open bugs now resolved, watch for regressions",
+        "Monitor backlog (4 items) \u2014 all open bugs now resolved, watch for regressions",
         "Address Paylocity integration delays before April 1 position transition",
         "Launch targeted staff training push based on NPS usability feedback"
       ],
-      "notes": "18 facilities — 11 live, 4 mid-stage, 3 early. Loyal account, technical friction.",
+      "notes": "18 facilities \u2014 11 live, 4 mid-stage, 3 early. Loyal account, technical friction.",
       "metricDetails": {
         "platformUsage": {
-          "summary": "11 of 18 buildings actively publishing daily. Message volume up 7× over last quarter. Call-off rate declining.",
+          "summary": "11 of 18 buildings actively publishing daily. Message volume up 7\u00d7 over last quarter. Call-off rate declining.",
           "highlights": [
             "11/18 buildings publishing daily",
-            "Monthly message volume: ~7,200 (up from ~1,050 — 7× growth)",
+            "Monthly message volume: ~7,200 (up from ~1,050 \u2014 7\u00d7 growth)",
             "Call-off rate declining quarter-over-quarter",
-            "7 buildings still in onboarding — not yet contributing usage data"
+            "7 buildings still in onboarding \u2014 not yet contributing usage data"
           ]
         },
         "npsSurvey": {
@@ -53,11 +98,36 @@
           "responseCount": 5,
           "trend": "Stable vs. January average (2.9)",
           "responses": [
-            {"building": "The Birches of Lehigh Valley", "respondent": "Latoya Henry", "score": 3, "note": "Still getting used to it"},
-            {"building": "The Manor at Market Square", "respondent": "Leslie Juan", "score": 4, "note": null},
-            {"building": "The Birches at Newtown", "respondent": "Aiesha Roach", "score": 3, "note": null},
-            {"building": "Chestnut Knoll", "respondent": "Scott Garverich", "score": 2, "note": null},
-            {"building": "Heritage Green Hanover", "respondent": "Jemetrice Blakely", "score": 3, "note": "it not easy to learn all the gadgets"}
+            {
+              "building": "The Birches of Lehigh Valley",
+              "respondent": "Latoya Henry",
+              "score": 3,
+              "note": "Still getting used to it"
+            },
+            {
+              "building": "The Manor at Market Square",
+              "respondent": "Leslie Juan",
+              "score": 4,
+              "note": null
+            },
+            {
+              "building": "The Birches at Newtown",
+              "respondent": "Aiesha Roach",
+              "score": 3,
+              "note": null
+            },
+            {
+              "building": "Chestnut Knoll",
+              "respondent": "Scott Garverich",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Heritage Green Hanover",
+              "respondent": "Jemetrice Blakely",
+              "score": 3,
+              "note": "it not easy to learn all the gadgets"
+            }
           ]
         },
         "supportLoad": {
@@ -77,10 +147,10 @@
         "customerSentiment": {
           "summary": "Loyal, long-term account with active CS engagement. Technical friction creating some frustration but no escalation risk.",
           "signals": [
-            "Active CS engagement — responsive to outreach from Cayden",
+            "Active CS engagement \u2014 responsive to outreach from Cayden",
             "Paylocity integration delays affecting multiple buildings ahead of April 1 position transition",
             "Staff feedback: usability concerns noted in NPS (gadgets comment, learning curve)",
-            "Chestnut Knoll NPS average 1.5/5 — outlier, warrants a check-in",
+            "Chestnut Knoll NPS average 1.5/5 \u2014 outlier, warrants a check-in",
             "No escalation signals in Slack at-risk channel"
           ]
         },
@@ -91,22 +161,405 @@
         }
       },
       "communities": [
-        {"name": "The Birches of Lehigh Valley", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "The Manor at Market Square", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 75, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "The Birches at Newtown", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Chestnut Knoll", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 20, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Heritage Green Hanover", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Keystone Villa at Douglassville, PC", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Senior Commons at Powder Mill", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Keystone Villa at Fleetwood", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Heritage Green Assisted Living", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Mid-Stage Community A", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Mid-Stage Community B", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Mid-Stage Community C", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Mid-Stage Community D", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Early-Stage Community A", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Early-Stage Community B", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-        {"name": "Early-Stage Community C", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null}
+        {
+          "name": "The Birches of Lehigh Valley",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Manor at Market Square",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 75,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Birches at Newtown",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Chestnut Knoll",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Heritage Green Hanover",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Keystone Villa at Douglassville, PC",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Senior Commons at Powder Mill",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Keystone Villa at Fleetwood",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Heritage Green Assisted Living",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community B",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community C",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community D",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Early-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Early-Stage Community B",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Early-Stage Community C",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
+    },
+    {
+      "company": "Cottonwood",
+      "date": "2026-04-01",
+      "csRep": "Cayden Fox",
+      "overallScore": 62,
+      "platformUsage": 65,
+      "customerSentiment": 55,
+      "npsSurvey": 40,
+      "onboardingHealth": 72,
+      "supportLoad": 72,
+      "engagementCadence": 70,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555",
+      "renewalDate": "2026-11-14",
+      "npsTicketUrls": [
+        {
+          "label": "Angie Wheeler \u2014 Crestwood (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41797011310"
+        },
+        {
+          "label": "Kathleen Wilke \u2014 Columbine Commons (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41761858935"
+        },
+        {
+          "label": "Erika Upchurch \u2014 Columbine West (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41940439312"
+        },
+        {
+          "label": "Staci Day \u2014 Alpine Meadow (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41759845381"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Manually added PTO immediately disappears from schedule",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36689149470"
+        }
+      ],
+      "actions": [
+        "Resolve PTO bug \u2014 open MEDIUM ticket active; flag to engineering and follow up with affected buildings",
+        "NPS follow-up for Crestwood and Alpine Meadow (scored 2/5) \u2014 check in on pain points and schedule targeted training",
+        "Validate April 1 go-lives (North Shore, Nevada sites) \u2014 confirm Paylogics/iSolved sync is working day-of"
+      ],
+      "notes": "19 communities \u2014 12 live, 4 mid-stage, 1 early, 2 new go-lives April 1. Multi-state enterprise. iSolved/Paylogics HRIS integration.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "11 of 18 facilities publishing schedules. Monthly message volume ~7K (healthy). Fill rate low at 1.9% \u2014 likely a data artifact from invite strategy, not adoption issue.",
+          "highlights": [
+            "11/18 facilities publishing schedules in last 30 days",
+            "Monthly message volume: ~7,000",
+            "Shift fill rate: ~1.9% (low \u2014 investigate invite strategy)",
+            "7 facilities not yet publishing (onboarding or recently added)"
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 2.5,
+          "responseCount": 4,
+          "trend": "Below average \u2014 2 scores of 2, 2 scores of 3",
+          "responses": [
+            {
+              "building": "Crestwood",
+              "respondent": "Angie Wheeler",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Columbine Commons",
+              "respondent": "Kathleen Wilke",
+              "score": 3,
+              "note": null
+            },
+            {
+              "building": "Columbine West",
+              "respondent": "Erika Upchurch",
+              "score": 3,
+              "note": "The view change (needing to use the multi-view) has been an adjustment"
+            },
+            {
+              "building": "Alpine Meadow",
+              "respondent": "Staci Day",
+              "score": 2,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 1,
+          "openLow": 0,
+          "backlogItems": 1,
+          "summary": "1 open MEDIUM bug in backlog: PTO disappearing from schedule after manual entry. No HIGH priority open tickets."
+        },
+        "onboardingHealth": {
+          "total": 19,
+          "live": 12,
+          "midStage": 4,
+          "earlyStage": 1,
+          "summary": "12 of 19 communities fully live. 4 mid-stage and 1 early-stage remain. 2 new go-lives planned April 1 (North Shore, Nevada). iSolved/Paylogics integration active."
+        },
+        "customerSentiment": {
+          "summary": "Engaged account with active CS relationship. NPS feedback points to usability friction (multi-view adjustment, UI changes). No escalations. Integration complexity is the main risk area.",
+          "signals": [
+            "Responsive to CS outreach \u2014 regular meeting cadence maintained",
+            "iSolved/Paylogics HRIS integration adds complexity; no reported failures but requires monitoring",
+            "Multi-view UI change causing adjustment friction (noted in NPS)",
+            "2 April 1 go-lives adding workload pressure",
+            "No entries in Slack #at-risk channel"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Regular cadence with active onboarding ongoing. Multiple meetings logged across the team in last 90 days.",
+          "avgDaysBetween": null,
+          "recentMeetings": []
+        }
+      },
+      "communities": [
+        {
+          "name": "Crestwood",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine Commons",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine West",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Alpine Meadow",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "North Shore",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Nevada Site 1",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community B",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Early-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
       ]
     }
   ]
