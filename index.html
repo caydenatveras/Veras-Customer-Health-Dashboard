@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veras — Customer Health Dashboard</title>
+  <style>
+    :root {
+      --green:#22c55e;--green-light:#dcfce7;--green-dark:#15803d;
+      --yellow:#eab308;--yellow-light:#fef9c3;--yellow-dark:#854d0e;
+      --red:#ef4444;--red-light:#fee2e2;--red-dark:#991b1b;
+      --gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-300:#d1d5db;
+      --gray-400:#9ca3af;--gray-500:#6b7280;--gray-600:#4b5563;--gray-700:#374151;
+      --gray-800:#1f2937;--gray-900:#111827;
+      --brand:#6366f1;--brand-light:#eef2ff;--brand-dark:#4f46e5;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.05);
+      --shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:0 4px 6px rgba(0,0,0,.07),0 2px 4px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px rgba(0,0,0,.1),0 4px 6px rgba(0,0,0,.05);
+      --radius:10px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--gray-100);color:var(--gray-800);min-height:100vh}
+
+    /* ── HEADER ── */
+    header{background:white;border-bottom:1px solid var(--gray-200);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;box-shadow:var(--shadow-sm)}
+    .header-left{display:flex;align-items:center;gap:12px}
+    .logo{font-size:17px;font-weight:700;color:var(--brand);letter-spacing:-.3px}
+    .header-divider{width:1px;height:20px;background:var(--gray-200)}
+    .header-title{font-size:14px;color:var(--gray-600);font-weight:500}
+    .header-tabs{display:flex;gap:2px;background:var(--gray-100);border-radius:8px;padding:3px}
+    .tab-btn{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--gray-600);transition:all .15s}
+    .tab-btn.active{background:white;color:var(--gray-900);box-shadow:var(--shadow-sm)}
+    .header-actions{display:flex;gap:8px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .15s}
+    .btn-ghost{background:transparent;color:var(--gray-600)}.btn-ghost:hover{background:var(--gray-100)}
+    .btn-primary{background:var(--brand);color:white}.btn-primary:hover{background:var(--brand-dark)}
+    .btn-outline{background:white;color:var(--gray-700);border:1px solid var(--gray-300)}.btn-outline:hover{background:var(--gray-50)}
+    .btn-sm{padding:5px 11px;font-size:12px}
+
+    /* ── VIEWS ── */
+    .view{display:none}.view.active{display:block}
+    main{max-width:1140px;margin:0 auto;padding:28px 24px}
+
+    /* ── STATS ROW ── */
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+    .stat-card{background:white;border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow)}
+    .stat-label{font-size:12px;color:var(--gray-500);font-weight:500;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+    .stat-value{font-size:26px;font-weight:700;color:var(--gray-900);line-height:1}
+    .stat-card.green .stat-value{color:var(--green-dark)}
+    .stat-card.yellow .stat-value{color:var(--yellow-dark)}
+    .stat-card.red .stat-value{color:var(--red-dark)}
+
+    /* ── FILTER BAR ── */
+    .summary-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap}
+    .filter-pills{display:flex;gap:6px;flex-wrap:wrap}
+    .pill{padding:5px 14px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--gray-200);background:white;color:var(--gray-600);transition:all .15s}
+    .pill:hover{border-color:var(--gray-400)}
+    .pill.active{border-color:var(--brand);color:var(--brand);background:var(--brand-light)}
+    .pill.green.active{border-color:var(--green-dark);color:var(--green-dark);background:var(--green-light)}
+    .pill.yellow.active{border-color:#a16207;color:#a16207;background:var(--yellow-light)}
+    .pill.red.active{border-color:var(--red-dark);color:var(--red-dark);background:var(--red-light)}
+    .controls-right{display:flex;align-items:center;gap:10px}
+    .sort-select,.rep-select{font-size:13px;color:var(--gray-700);border:1px solid var(--gray-200);border-radius:7px;padding:6px 10px;background:white;cursor:pointer;outline:none}
+    .count-label{font-size:13px;color:var(--gray-500)}
+
+    /* ── COMPANY CARDS ── */
+    .cards-grid{display:grid;gap:14px}
+    .company-card{background:white;border-radius:var(--radius);box-shadow:var(--shadow);border-left:5px solid var(--gray-300);overflow:hidden;transition:box-shadow .15s}
+    .company-card:hover{box-shadow:var(--shadow-md)}
+    .company-card.green{border-left-color:var(--green)}
+    .company-card.yellow{border-left-color:var(--yellow)}
+    .company-card.red{border-left-color:var(--red)}
+    .card-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 14px;cursor:pointer;user-select:none}
+    .card-header-left{display:flex;align-items:center;gap:14px}
+    .score-badge{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+    .score-badge.green{background:var(--green-light);color:var(--green-dark)}
+    .score-badge.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+    .score-badge.red{background:var(--red-light);color:var(--red-dark)}
+    .company-name{font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:3px}
+    .company-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gray-500);flex-wrap:wrap}
+    .status-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+    .status-badge.green{background:var(--green-light);color:var(--green-dark)}
+    .status-badge.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+    .status-badge.red{background:var(--red-light);color:var(--red-dark)}
+    .rep-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:500;background:var(--brand-light);color:var(--brand-dark)}
+    .card-header-right{display:flex;align-items:center;gap:16px}
+    .sparkline-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+    .sparkline-label{font-size:10px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.04em}
+    .chevron{color:var(--gray-400);font-size:18px;transition:transform .2s}
+    .chevron.open{transform:rotate(180deg)}
+    .card-body{border-top:1px solid var(--gray-100);padding:16px 20px;display:none}
+    .card-body.open{display:block}
+    .dimensions-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin-bottom:16px}
+    .dimension{display:flex;flex-direction:column;gap:4px;cursor:pointer}
+    .dimension:hover .dim-name{color:var(--brand)}
+    .dim-row{display:flex;justify-content:space-between;align-items:center}
+    .dim-name{font-size:12px;color:var(--gray-600);font-weight:500;transition:color .15s}
+    .dim-score{font-size:12px;font-weight:600;color:var(--gray-700)}
+    .dim-score.unknown{color:var(--gray-400);font-weight:400}
+    .progress-track{height:6px;background:var(--gray-100);border-radius:3px;overflow:hidden}
+    .progress-fill{height:100%;border-radius:3px;transition:width .4s ease}
+    .progress-fill.green{background:var(--green)}
+    .progress-fill.yellow{background:var(--yellow)}
+    .progress-fill.red{background:var(--red)}
+    .progress-fill.unknown{background:var(--gray-200);width:100%!important}
+    .actions-section{margin-top:4px}
+    .actions-toggle{font-size:12px;color:var(--brand);cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-weight:500}
+    .actions-toggle:hover{text-decoration:underline}
+    .actions-list{display:none;margin-top:8px;padding:10px 12px;background:var(--gray-50);border-radius:7px;list-style:none}
+    .actions-list.open{display:block}
+    .actions-list li{font-size:12px;color:var(--gray-700);padding:4px 0 4px 14px;position:relative}
+    .actions-list li::before{content:"→";position:absolute;left:0;color:var(--brand)}
+    .card-footer{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .card-footer-meta{display:flex;align-items:center;gap:10px}
+    .notes-text{font-size:11px;color:var(--gray-400);font-style:italic}
+    .last-updated{font-size:11px;color:var(--gray-400)}
+    .communities-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:500;background:var(--brand-light);color:var(--brand-dark);border:none;cursor:pointer;transition:all .15s}
+    .communities-btn:hover{background:#e0e7ff}
+
+    /* ── TICKET + HS LINKS ── */
+    .hs-link{font-size:11px;color:#e8622a;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:3px}
+    .hs-link:hover{text-decoration:underline;color:#c54e1e}
+    .tickets-section{margin-top:10px;padding-top:10px;border-top:1px solid var(--gray-100);display:flex;gap:24px;flex-wrap:wrap}
+    .ticket-group{display:flex;flex-direction:column;gap:5px}
+    .ticket-group-label{font-size:10px;color:var(--gray-400);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+    .ticket-link{font-size:11px;color:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+    .ticket-link:hover{text-decoration:underline}
+    .ticket-tag{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;text-transform:uppercase;letter-spacing:.03em}
+    .ticket-tag.high{background:var(--red-light);color:var(--red-dark)}
+    .ticket-tag.medium{background:var(--yellow-light);color:var(--yellow-dark)}
+    .ticket-tag.low{background:var(--gray-100);color:var(--gray-500)}
+    .ticket-tag.nps{background:var(--brand-light);color:var(--brand)}
+
+    /* ── COMMUNITIES VIEW ── */
+    .breadcrumb{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray-500);margin-bottom:20px}
+    .breadcrumb a{color:var(--brand);text-decoration:none;cursor:pointer}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb .sep{color:var(--gray-300)}
+    .company-hero{background:white;border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .company-hero-left{display:flex;align-items:center;gap:14px}
+    .hero-score{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;flex-shrink:0}
+    .hero-score.green{background:var(--green-light);color:var(--green-dark)}
+    .hero-score.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+    .hero-score.red{background:var(--red-light);color:var(--red-dark)}
+    .hero-name{font-size:18px;font-weight:700;color:var(--gray-900);margin-bottom:4px}
+    .hero-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gray-500)}
+    .hero-stats{display:flex;gap:16px}
+    .hero-stat{text-align:center}
+    .hero-stat .val{font-size:18px;font-weight:700;color:var(--gray-900)}
+    .hero-stat .lbl{font-size:11px;color:var(--gray-500);margin-top:2px}
+    .community-status-live{color:var(--green-dark);background:var(--green-light)}
+    .community-status-mid{color:#92400e;background:#fef3c7}
+    .community-status-early{color:var(--gray-600);background:var(--gray-200)}
+    .comm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+    .comm-card{background:white;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border-top:4px solid var(--gray-200);transition:box-shadow .15s}
+    .comm-card:hover{box-shadow:var(--shadow-md)}
+    .comm-card.live{border-top-color:var(--green)}
+    .comm-card.mid-stage{border-top-color:var(--yellow)}
+    .comm-card.early{border-top-color:var(--gray-300)}
+    .comm-name{font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:6px;line-height:1.3}
+    .comm-meta{display:flex;align-items:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+    .comm-status{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em}
+    .comm-dims{display:flex;flex-direction:column;gap:8px}
+    .comm-dim{display:flex;flex-direction:column;gap:3px;cursor:pointer}
+    .comm-dim:hover .dim-name{color:var(--brand)}
+    .comm-dim-row{display:flex;justify-content:space-between}
+    .comm-dim-name{font-size:11px;color:var(--gray-500)}
+    .comm-dim-val{font-size:11px;font-weight:600;color:var(--gray-700)}
+    .comm-dim-val.na{color:var(--gray-300);font-weight:400}
+    .comm-progress{height:4px;background:var(--gray-100);border-radius:2px;overflow:hidden}
+    .comm-progress .fill{height:100%;border-radius:2px}
+    .comm-progress .fill.green{background:var(--green)}
+    .comm-progress .fill.yellow{background:var(--yellow)}
+    .comm-progress .fill.red{background:var(--red)}
+    .comm-progress .fill.na{background:var(--gray-200);width:100%!important}
+    .comm-footer{margin-top:10px;padding-top:8px;border-top:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between}
+    .data-coverage{font-size:10px;color:var(--gray-400)}
+    .unnamed-notice{text-align:center;padding:20px;background:var(--gray-50);border-radius:var(--radius);color:var(--gray-500);font-size:13px;margin-top:12px;border:1px dashed var(--gray-200)}
+
+    /* ── TRENDS VIEW ── */
+    .trends-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+    .trends-toolbar h2{font-size:15px;font-weight:600;color:var(--gray-800)}
+    .metric-toggles{display:flex;gap:6px;flex-wrap:wrap}
+    .metric-toggle{padding:4px 12px;border-radius:16px;font-size:12px;font-weight:500;cursor:pointer;border:1.5px solid;transition:all .15s;background:white}
+    .metric-toggle.active{color:white}
+    .chart-card{background:white;border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;margin-bottom:16px}
+    .chart-card h3{font-size:14px;font-weight:600;color:var(--gray-800);margin-bottom:16px}
+    .chart-wrap{width:100%;overflow:hidden}
+    .chart-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .legend-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--gray-600)}
+    .legend-dot{width:10px;height:10px;border-radius:50%}
+    .chart-empty{text-align:center;padding:40px;color:var(--gray-400);font-size:13px}
+    .company-toggles{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+    .company-toggle{padding:4px 12px;border-radius:16px;font-size:12px;font-weight:500;cursor:pointer;border:1.5px solid var(--gray-200);background:white;color:var(--gray-600);transition:all .15s}
+    .company-toggle.active{border-color:var(--brand);color:var(--brand);background:var(--brand-light)}
+
+    /* ── RAW DATA TABLE ── */
+    .data-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+    .data-toolbar-left{display:flex;align-items:center;gap:8px}
+    .data-toolbar h2{font-size:15px;font-weight:600;color:var(--gray-800)}
+    .data-toolbar .sub{font-size:13px;color:var(--gray-500)}
+    .data-toolbar-right{display:flex;gap:8px}
+    .table-wrap{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .data-table{width:100%;border-collapse:collapse;font-size:13px}
+    .data-table th{background:var(--gray-50);color:var(--gray-600);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:10px 14px;text-align:left;border-bottom:1px solid var(--gray-200);white-space:nowrap;cursor:pointer;user-select:none}
+    .data-table th:hover{background:var(--gray-100)}
+    .data-table th .sort-icon{margin-left:4px;opacity:.4}
+    .data-table th.sorted .sort-icon{opacity:1}
+    .data-table td{padding:10px 14px;border-bottom:1px solid var(--gray-100);vertical-align:top}
+    .data-table tr:last-child td{border-bottom:none}
+    .data-table tr:hover td{background:var(--gray-50)}
+    .score-chip{display:inline-flex;align-items:center;justify-content:center;width:38px;height:24px;border-radius:6px;font-size:12px;font-weight:700}
+    .score-chip.green{background:var(--green-light);color:var(--green-dark)}
+    .score-chip.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+    .score-chip.red{background:var(--red-light);color:var(--red-dark)}
+    .score-chip.na{background:var(--gray-100);color:var(--gray-400);font-weight:400;font-size:10px}
+    .company-cell{font-weight:500;color:var(--gray-900);white-space:nowrap}
+    .date-cell{color:var(--gray-500);white-space:nowrap}
+    .actions-cell{max-width:280px;font-size:11px;color:var(--gray-600);line-height:1.5}
+    .notes-cell{max-width:200px;font-size:11px;color:var(--gray-500);font-style:italic}
+    .table-empty{padding:48px;text-align:center;color:var(--gray-500);font-size:14px}
+
+    /* ── METRIC DETAIL MODAL ── */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:center;justify-content:center}
+    .modal-overlay.open{display:flex}
+    .modal{background:white;border-radius:14px;padding:0;width:560px;max-width:calc(100vw - 32px);max-height:80vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.18);overflow:hidden}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px 16px;border-bottom:1px solid var(--gray-100);flex-shrink:0}
+    .modal-head-left .modal-title{font-size:16px;font-weight:700;color:var(--gray-900)}
+    .modal-head-left .modal-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    .modal-close{background:none;border:none;font-size:20px;color:var(--gray-400);cursor:pointer;padding:0;line-height:1}
+    .modal-close:hover{color:var(--gray-700)}
+    .modal-body{padding:20px 24px;overflow-y:auto;flex:1}
+    .detail-section{margin-bottom:18px}
+    .detail-section:last-child{margin-bottom:0}
+    .detail-label{font-size:11px;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+    .detail-summary{font-size:13px;color:var(--gray-700);line-height:1.6;padding:10px 12px;background:var(--gray-50);border-radius:7px}
+    .signal-list{display:flex;flex-direction:column;gap:6px}
+    .signal-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--gray-700);padding:6px 10px;background:var(--gray-50);border-radius:6px}
+    .signal-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);margin-top:4px;flex-shrink:0}
+    .nps-table{width:100%;border-collapse:collapse;font-size:12px}
+    .nps-table th{background:var(--gray-50);color:var(--gray-500);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:7px 10px;text-align:left;border-bottom:1px solid var(--gray-200)}
+    .nps-table td{padding:7px 10px;border-bottom:1px solid var(--gray-100);vertical-align:top}
+    .nps-table tr:last-child td{border-bottom:none}
+    .nps-score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:22px;border-radius:5px;font-weight:700;font-size:12px}
+    .nps-score.s5,.nps-score.s4{background:var(--green-light);color:var(--green-dark)}
+    .nps-score.s3{background:var(--yellow-light);color:var(--yellow-dark)}
+    .nps-score.s2,.nps-score.s1{background:var(--red-light);color:var(--red-dark)}
+    .support-counts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+    .support-count{text-align:center;padding:12px;border-radius:8px;background:var(--gray-50)}
+    .support-count .num{font-size:22px;font-weight:700;line-height:1}
+    .support-count .lbl{font-size:11px;color:var(--gray-500);margin-top:3px}
+    .support-count.high .num{color:var(--red-dark)}
+    .support-count.med .num{color:var(--yellow-dark)}
+    .support-count.low .num{color:var(--gray-500)}
+    .ob-progress-bar{display:flex;height:22px;border-radius:6px;overflow:hidden;margin-bottom:8px;gap:2px}
+    .ob-seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:white;transition:width .4s}
+    .ob-seg.live{background:var(--green)}
+    .ob-seg.mid{background:var(--yellow)}
+    .ob-seg.early{background:var(--gray-300)}
+    .ob-legend{display:flex;gap:14px;font-size:12px;color:var(--gray-600)}
+    .ob-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+
+    /* ── NEW SCORE MODAL ── */
+    .ns-modal{background:white;border-radius:14px;padding:28px;width:500px;max-width:calc(100vw - 32px);box-shadow:0 24px 64px rgba(0,0,0,.18)}
+    .ns-modal-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px}
+    .ns-modal-title{font-size:17px;font-weight:700;color:var(--gray-900)}
+    .ns-modal-sub{font-size:13px;color:var(--gray-500);margin-top:4px;line-height:1.5}
+    .modal-field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+    .modal-field label{font-size:12px;font-weight:600;color:var(--gray-700)}
+    .modal-field input,.modal-field select{padding:9px 12px;border:1px solid var(--gray-300);border-radius:7px;font-size:13px;color:var(--gray-900);outline:none;transition:border-color .15s;font-family:inherit;width:100%}
+    .modal-field input:focus,.modal-field select:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+    .modal-field input::placeholder{color:var(--gray-400)}
+    .modal-hint{font-size:11px;color:var(--gray-500);margin-top:6px;padding:10px 12px;background:var(--gray-50);border-radius:7px;border:1px solid var(--gray-200);line-height:1.6}
+    .modal-hint strong{color:var(--gray-700)}
+    .modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}
+    .prompt-preview{margin-top:16px;padding:12px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;font-size:12px;color:#0369a1;font-family:monospace;white-space:pre-wrap;word-break:break-all;display:none}
+    .prompt-preview.show{display:block}
+
+    /* ── RENEWAL BADGE ── */
+    .renewal-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap}
+    .renewal-badge.urgent{background:var(--red-light);color:var(--red-dark)}
+    .renewal-badge.soon{background:var(--yellow-light);color:var(--yellow-dark)}
+    .renewal-badge.ok{background:var(--gray-100);color:var(--gray-500)}
+
+    /* ── SCORE DELTA BADGE ── */
+    .score-wrap{position:relative;flex-shrink:0}
+    .delta-badge{position:absolute;bottom:-4px;right:-8px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:8px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+    .delta-badge.up{background:#dcfce7;color:#15803d}
+    .delta-badge.down{background:#fee2e2;color:#991b1b}
+    .delta-badge.flat{background:var(--gray-100);color:var(--gray-500)}
+
+    /* ── ACTION CHECKBOXES ── */
+    .actions-list li{display:flex;align-items:flex-start;gap:8px;padding:5px 0 5px 0}
+    .actions-list li::before{display:none}
+    .action-check{width:14px;height:14px;border-radius:3px;border:1.5px solid var(--gray-300);cursor:pointer;flex-shrink:0;margin-top:1px;appearance:none;-webkit-appearance:none;background:white;transition:all .15s}
+    .action-check:checked{background:var(--brand);border-color:var(--brand)}
+    .action-check:checked+span{text-decoration:line-through;color:var(--gray-400)}
+    .actions-progress{font-size:11px;color:var(--gray-400);margin-left:6px}
+
+    /* ── TOAST ── */
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--gray-900);color:white;font-size:13px;padding:10px 20px;border-radius:8px;box-shadow:var(--shadow-md);opacity:0;transition:opacity .2s;pointer-events:none;z-index:999}
+    .toast.show{opacity:1}
+
+    @media(max-width:640px){
+      .dimensions-grid{grid-template-columns:1fr}
+      .stats-row{grid-template-columns:repeat(2,1fr)}
+      .card-header-right .sparkline-wrap{display:none}
+      .data-table{font-size:12px}
+      .comm-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ DATA LOADING STATE ══ -->
+<div id="data-loading" style="display:none;position:fixed;inset:0;background:white;z-index:9999;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-size:32px;animation:spin 1s linear infinite">⟳</div>
+  <div style="font-size:14px;color:var(--gray-500);font-weight:500">Loading dashboard…</div>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<div id="app-content" style="display:none">
+<header>
+  <div class="header-left">
+    <span class="logo">Veras</span>
+    <div class="header-divider"></div>
+    <span class="header-title">Customer Health Dashboard</span>
+  </div>
+  <div class="header-tabs">
+    <button class="tab-btn active" onclick="switchTab('dashboard',this)">Dashboard</button>
+    <button class="tab-btn" onclick="switchTab('allcommunities',this)">Communities</button>
+    <button class="tab-btn" onclick="switchTab('trends',this)">Trends</button>
+    <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-ghost" onclick="loadData()">↻ Refresh</button>
+    <button class="btn btn-primary" onclick="openNewScoreModal()">＋ New Health Score</button>
+  </div>
+</header>
+
+<!-- ══ DASHBOARD VIEW ══ -->
+<div id="view-dashboard" class="view active">
+  <main>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-label">Total Accounts</div><div class="stat-value" id="statTotal">—</div></div>
+      <div class="stat-card green"><div class="stat-label">🟢 Green</div><div class="stat-value" id="statGreen">—</div></div>
+      <div class="stat-card yellow"><div class="stat-label">🟡 Yellow</div><div class="stat-value" id="statYellow">—</div></div>
+      <div class="stat-card red"><div class="stat-label">🔴 Red</div><div class="stat-value" id="statRed">—</div></div>
+    </div>
+    <div class="summary-bar">
+      <div class="filter-pills">
+        <div class="pill active" onclick="setFilter('all',this)">All</div>
+        <div class="pill green" onclick="setFilter('green',this)">🟢 Green</div>
+        <div class="pill yellow" onclick="setFilter('yellow',this)">🟡 Yellow</div>
+        <div class="pill red" onclick="setFilter('red',this)">🔴 Red</div>
+      </div>
+      <div class="controls-right">
+        <select class="rep-select" onchange="setRepFilter(this.value)" id="repFilter">
+          <option value="all">All CS Reps</option>
+        </select>
+        <span class="count-label" id="countLabel"></span>
+        <select class="sort-select" onchange="setSort(this.value)">
+          <option value="date-desc" selected>Most Recent</option>
+          <option value="score-asc">Score ↑</option>
+          <option value="score-desc">Score ↓</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="renewal-asc">Renewal Date ↑</option>
+          <option value="change-desc">Most Changed</option>
+        </select>
+      </div>
+    </div>
+    <div class="cards-grid" id="cardsGrid"></div>
+  </main>
+</div>
+
+<!-- ══ COMMUNITIES SUB-VIEW (inside dashboard tab) ══ -->
+<div id="view-communities" class="view">
+  <main>
+    <div class="breadcrumb">
+      <a onclick="backToDashboard()">Dashboard</a>
+      <span class="sep">›</span>
+      <span id="commBreadcrumbName">Company</span>
+    </div>
+    <div id="companyHero"></div>
+    <div class="summary-bar" style="margin-bottom:16px">
+      <div class="filter-pills">
+        <div class="pill active" onclick="setCommFilter('all',this)">All</div>
+        <div class="pill green" onclick="setCommFilter('live',this)">🟢 Live</div>
+        <div class="pill yellow" onclick="setCommFilter('mid-stage',this)">🟡 Mid-Stage</div>
+        <div class="pill red" onclick="setCommFilter('early',this)">⚪ Early</div>
+      </div>
+      <div class="controls-right">
+        <select class="rep-select" onchange="setCommRepFilter(this.value)" id="commRepFilter">
+          <option value="all">All CS Reps</option>
+        </select>
+        <span class="count-label" id="commCountLabel"></span>
+      </div>
+    </div>
+    <div class="comm-grid" id="commGrid"></div>
+    <div id="unnamedNotice"></div>
+  </main>
+</div>
+
+<!-- ══ ALL COMMUNITIES VIEW ══ -->
+<div id="view-allcommunities" class="view">
+  <main>
+    <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+      <div class="stat-card green"><div class="stat-label">🟢 Live</div><div class="stat-value" id="acStatLive">—</div></div>
+      <div class="stat-card yellow"><div class="stat-label">🟡 Mid-Stage</div><div class="stat-value" id="acStatMid">—</div></div>
+      <div class="stat-card"><div class="stat-label">⚪ Early</div><div class="stat-value" id="acStatEarly">—</div></div>
+    </div>
+    <div class="summary-bar" style="margin-bottom:16px">
+      <div class="filter-pills">
+        <div class="pill active" onclick="setACFilter('all',this)">All</div>
+        <div class="pill green" onclick="setACFilter('live',this)">🟢 Live</div>
+        <div class="pill yellow" onclick="setACFilter('mid-stage',this)">🟡 Mid-Stage</div>
+        <div class="pill" onclick="setACFilter('early',this)">⚪ Early</div>
+      </div>
+      <div class="controls-right">
+        <select class="rep-select" id="acCompanyFilter" onchange="setACCompanyFilter(this.value)">
+          <option value="all">All Companies</option>
+        </select>
+        <select class="rep-select" id="acRepFilter" onchange="setACRepFilter(this.value)">
+          <option value="all">All CS Reps</option>
+        </select>
+        <select class="sort-select" id="acSort" onchange="setACSort(this.value)">
+          <option value="name">Name A–Z</option>
+          <option value="company">Company</option>
+          <option value="nps-desc">NPS ↓</option>
+          <option value="nps-asc">NPS ↑</option>
+          <option value="status">Status</option>
+        </select>
+        <span class="count-label" id="acCountLabel"></span>
+      </div>
+    </div>
+    <div class="comm-grid" id="acGrid"></div>
+  </main>
+</div>
+
+<!-- ══ TRENDS VIEW ══ -->
+<div id="view-trends" class="view">
+  <main>
+    <div class="trends-toolbar">
+      <div>
+        <h2>Health Score Trends</h2>
+      </div>
+      <div class="controls-right">
+        <select class="rep-select" onchange="setTrendRepFilter(this.value)" id="trendRepFilter">
+          <option value="all">All CS Reps</option>
+        </select>
+      </div>
+    </div>
+    <div class="chart-card">
+      <h3>Overall Score Over Time</h3>
+      <div style="margin-bottom:12px">
+        <div class="company-toggles" id="companyToggles"></div>
+      </div>
+      <div class="chart-wrap" id="overallChartWrap"></div>
+      <div class="chart-legend" id="overallChartLegend"></div>
+    </div>
+    <div class="chart-card">
+      <h3>Score by Metric — Latest Snapshot</h3>
+      <div style="margin-bottom:12px">
+        <div class="metric-toggles" id="metricToggles"></div>
+      </div>
+      <div class="chart-wrap" id="metricChartWrap"></div>
+    </div>
+  </main>
+</div>
+
+<!-- ══ RAW DATA VIEW ══ -->
+<div id="view-data" class="view">
+  <main>
+    <div class="data-toolbar">
+      <div class="data-toolbar-left">
+        <h2>All Score Entries</h2>
+        <span class="sub" id="tableCount"></span>
+      </div>
+      <div class="data-toolbar-right">
+        <button class="btn btn-outline" onclick="copyTableCSV()">⎘ Copy CSV</button>
+        <button class="btn btn-primary" onclick="downloadCSV()">↓ Export CSV</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table" id="dataTable">
+        <thead>
+          <tr>
+            <th onclick="tableSort('company')">Company <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('date')">Date <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('csRep')">CS Rep <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('overallScore')">Overall <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('platformUsage')">Platform <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('customerSentiment')">Sentiment <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('npsSurvey')">NPS <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('onboardingHealth')">Onboarding <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('supportLoad')">Support <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('engagementCadence')">Engagement <span class="sort-icon">↕</span></th>
+            <th>Actions</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ══ METRIC DETAIL MODAL ══ -->
+<div class="modal-overlay" id="metricModal" onclick="closeMetricModalOutside(event)">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="modal-head-left">
+        <div class="modal-title" id="metricModalTitle">—</div>
+        <div class="modal-sub" id="metricModalSub">—</div>
+      </div>
+      <button class="modal-close" onclick="closeMetricModal()">✕</button>
+    </div>
+    <div class="modal-body" id="metricModalBody"></div>
+  </div>
+</div>
+
+<!-- ══ NEW HEALTH SCORE MODAL ══ -->
+<div class="modal-overlay" id="newScoreOverlay" onclick="closeNewScoreOutside(event)">
+  <div class="ns-modal">
+    <div class="ns-modal-header">
+      <div>
+        <div class="ns-modal-title">New Health Score</div>
+        <div class="ns-modal-sub">Fill in the account details — a ready-to-run prompt will be copied to your clipboard.</div>
+      </div>
+      <button class="modal-close" onclick="closeNewScoreModal()">✕</button>
+    </div>
+    <div class="modal-field">
+      <label for="nsCompany">Company Name <span style="color:var(--gray-400);font-weight:400">(optional)</span></label>
+      <input type="text" id="nsCompany" placeholder="e.g. Heritage Senior Living" />
+    </div>
+    <div class="modal-field">
+      <label for="nsHubspot">HubSpot Record URL <span style="color:var(--red);font-size:11px">*</span></label>
+      <input type="url" id="nsHubspot" placeholder="https://app.hubspot.com/contacts/.../record/0-2/..." />
+    </div>
+    <div class="modal-field">
+      <label for="nsMetabase">Metabase Employer ID <span style="color:var(--red);font-size:11px">*</span></label>
+      <input type="text" id="nsMetabase" placeholder="e.g. cmirywohn000gok01tupuwqb4" />
+    </div>
+    <div class="modal-field">
+      <label for="nsCsRep">CS Rep</label>
+      <select id="nsCsRep"></select>
+    </div>
+    <div class="modal-hint"><strong>How it works:</strong> Clicking "Copy Prompt" copies a formatted message to your clipboard. Paste it into Cowork and the health score will run automatically — pulling from HubSpot, Metabase, meeting notes, and Slack — then post the result back here.</div>
+    <div class="prompt-preview" id="nsPromptPreview"></div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeNewScoreModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="copyNewScorePrompt()">⎘ Copy Prompt</button>
+    </div>
+  </div>
+</div>
+</div><!-- /#app-content -->
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// DATA — loaded from data.json at runtime
+// CS reps and health entries are populated by loadData() below.
+// To add team members, edit csReps in data.json.
+// ═══════════════════════════════════════════════════════════════
+let CS_REPS = [];
+let HEALTH_DATA = [];
+
+// ═══════════════════════════════════════════════════════════════
+// METRIC CHART COLORS
+// ═══════════════════════════════════════════════════════════════
+const METRIC_META = [
+  {key:'overallScore',    label:'Overall',    color:'#6366f1', weight:null},
+  {key:'platformUsage',   label:'Platform',   color:'#3b82f6', weight:'30%'},
+  {key:'customerSentiment',label:'Sentiment', color:'#a855f7', weight:'20%'},
+  {key:'npsSurvey',       label:'NPS',        color:'#f97316', weight:'15%'},
+  {key:'onboardingHealth',label:'Onboarding', color:'#14b8a6', weight:'15%'},
+  {key:'supportLoad',     label:'Support',    color:'#ef4444', weight:'10%'},
+  {key:'engagementCadence',label:'Engagement',color:'#22c55e', weight:'10%'},
+];
+
+// ═══════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════
+let currentFilter='all', currentSort='date-desc', currentRepFilter='all';
+let commFilter='all', commRepFilter='all', trendRepFilter='all';
+let acFilter='all', acRepFilter='all', acCompanyFilter='all', acSort='name';
+let tableSortKey='date', tableSortDir='desc';
+let companies=[], selectedCompany=null;
+let activeMetricToggles=new Set(['overallScore','platformUsage','npsSurvey']);
+let activeCompanyToggles=new Set();
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  loadData();
+});
+
+function loadData() {
+  const loading = document.getElementById('data-loading');
+  const app = document.getElementById('app-content');
+  if(loading) loading.style.display='flex';
+  if(app) app.style.display='none';
+
+  fetch('data.json?_=' + Date.now())
+    .then(r => { if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(d => {
+      HEALTH_DATA = Array.isArray(d) ? d : (d.entries || []);
+      CS_REPS = d.csReps || [];
+      if(loading) loading.style.display='none';
+      if(app) app.style.display='block';
+      populateRepFilters();
+      renderAll();
+    })
+    .catch(err => {
+      if(loading) loading.innerHTML = `
+        <div style="text-align:center;color:var(--red-dark)">
+          <div style="font-size:28px;margin-bottom:8px">⚠️</div>
+          <div style="font-weight:600;margin-bottom:4px">Could not load data.json</div>
+          <div style="font-size:13px;color:var(--gray-500)">${err.message} — make sure data.json is in the same folder as index.html</div>
+        </div>`;
+      console.error('Failed to load data.json:', err);
+    });
+}
+
+function renderAll() {
+  aggregateCompanies();
+  renderDashboard();
+  if(selectedCompany) renderCommunities();
+  renderAllCommunities();
+  renderTrends();
+  renderTable();
+}
+
+function populateRepFilters() {
+  const reps = [...new Set([...CS_REPS, ...HEALTH_DATA.map(r=>r.csRep).filter(Boolean)])];
+  ['repFilter','commRepFilter','trendRepFilter','nsCsRep','acRepFilter'].forEach(id => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    const isSelect = id === 'nsCsRep';
+    const opts = isSelect ? reps : ['all', ...reps];
+    opts.forEach(r => {
+      const o = document.createElement('option');
+      o.value = r;
+      o.textContent = isSelect ? r : (r==='all' ? 'All CS Reps' : r);
+      el.appendChild(o);
+    });
+  });
+  // Populate company filter for all-communities view
+  const coEl = document.getElementById('acCompanyFilter');
+  if(coEl) {
+    const coNames = [...new Set(HEALTH_DATA.map(r=>r.company))];
+    coNames.forEach(n => { const o=document.createElement('option'); o.value=n; o.textContent=n; coEl.appendChild(o); });
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// AGGREGATION
+// ═══════════════════════════════════════════════════════════════
+function aggregateCompanies() {
+  const map = {};
+  HEALTH_DATA.forEach(row => {
+    if (!map[row.company]) map[row.company] = [];
+    map[row.company].push(row);
+  });
+  companies = Object.entries(map).map(([name, entries]) => {
+    entries.sort((a,b) => new Date(b.date) - new Date(a.date));
+    const delta = entries.length > 1 ? entries[0].overallScore - entries[1].overallScore : null;
+    return { name, latest: entries[0], history: entries.map(e => ({date:e.date, score:e.overallScore})), entries, delta };
+  });
+  // init company toggles for trend chart
+  if(activeCompanyToggles.size === 0) companies.forEach(c => activeCompanyToggles.add(c.name));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DASHBOARD VIEW
+// ═══════════════════════════════════════════════════════════════
+function renderDashboard() {
+  let visible = [...companies];
+  if(currentFilter !== 'all') visible = visible.filter(c => status(c.latest.overallScore) === currentFilter);
+  if(currentRepFilter !== 'all') visible = visible.filter(c => c.latest.csRep === currentRepFilter);
+  if(currentSort==='score-asc') visible.sort((a,b)=>a.latest.overallScore-b.latest.overallScore);
+  else if(currentSort==='score-desc') visible.sort((a,b)=>b.latest.overallScore-a.latest.overallScore);
+  else if(currentSort==='name-asc') visible.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(currentSort==='renewal-asc') visible.sort((a,b)=>{
+    const ad=a.latest.renewalDate?new Date(a.latest.renewalDate):new Date('9999-01-01');
+    const bd=b.latest.renewalDate?new Date(b.latest.renewalDate):new Date('9999-01-01');
+    return ad-bd;
+  });
+  else if(currentSort==='change-desc') visible.sort((a,b)=>(Math.abs(b.delta??0))-(Math.abs(a.delta??0)));
+  else visible.sort((a,b)=>new Date(b.latest.date)-new Date(a.latest.date));
+
+  const g = s => visible.filter(c=>status(c.latest.overallScore)===s).length;
+  document.getElementById('statTotal').textContent = visible.length;
+  document.getElementById('statGreen').textContent = g('green');
+  document.getElementById('statYellow').textContent = g('yellow');
+  document.getElementById('statRed').textContent = g('red');
+  document.getElementById('countLabel').textContent = `${visible.length} account${visible.length!==1?'s':''}`;
+
+  const grid = document.getElementById('cardsGrid');
+  if(!visible.length){
+    grid.innerHTML=`<div style="text-align:center;padding:60px;color:var(--gray-500)"><div style="font-size:36px;margin-bottom:12px">🔍</div><h3 style="color:var(--gray-700);margin-bottom:6px">No accounts found</h3><p style="font-size:13px">Try a different filter.</p></div>`;
+    return;
+  }
+  grid.innerHTML = visible.map(renderCard).join('');
+}
+
+const DIMS = [
+  ['Platform Usage','30%','platformUsage'],
+  ['Customer Sentiment','20%','customerSentiment'],
+  ['NPS / Survey','15%','npsSurvey'],
+  ['Onboarding Health','15%','onboardingHealth'],
+  ['Support Load','10%','supportLoad'],
+  ['Engagement Cadence','10%','engagementCadence'],
+];
+
+function renderCard(c) {
+  const s = status(c.latest.overallScore);
+  const id = 'c-'+c.name.replace(/\W+/g,'-').toLowerCase();
+  const dimsHtml = DIMS.map(([label,weight,key]) => {
+    const val = c.latest[key];
+    const u = val===null||val===undefined;
+    const ds = u ? 'unknown' : status(val);
+    const hasDetail = c.latest.metricDetails && c.latest.metricDetails[key];
+    return `<div class="dimension" ${hasDetail?`onclick="event.stopPropagation();openMetricDetail('${esc(c.name)}','${key}',event)"`:''} title="${hasDetail?'Click to see detail':''}">
+      <div class="dim-row">
+        <span class="dim-name">${label} <span style="color:var(--gray-400);font-weight:400">${weight}</span></span>
+        <span class="dim-score ${u?'unknown':''}">${u?'N/A':val+'/100'}</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill ${u?'unknown':ds}" style="width:${u?100:val}%"></div></div>
+    </div>`;
+  }).join('');
+
+  const actions = Array.isArray(c.latest.actions)?c.latest.actions:(c.latest.actions||'').split('|').map(a=>a.trim()).filter(Boolean);
+  const doneCount = actions.filter((_,i)=>isActionDone(c.name,c.latest.date,i)).length;
+  const progressTxt = doneCount>0?`<span class="actions-progress">${doneCount}/${actions.length} done</span>`:'';
+  const actionsHtml = actions.length?`<div class="actions-section">
+    <span class="actions-toggle" onclick="toggleActions(this)">▸ Recommended actions (${actions.length})${progressTxt?` ${progressTxt}`:''}</span>
+    <ul class="actions-list">${actions.map((a,i)=>{
+      const done=isActionDone(c.name,c.latest.date,i);
+      return `<li><input type="checkbox" class="action-check" ${done?'checked':''} onclick="event.stopPropagation();toggleAction('${esc(c.name)}','${esc(c.latest.date)}',${i},this)"><span>${esc(a)}</span></li>`;
+    }).join('')}</ul>
+  </div>`:'';
+
+  const hsUrl = c.latest.hubspotUrl||'';
+  const hsLink = hsUrl?`<a class="hs-link" href="${esc(hsUrl)}" target="_blank" onclick="event.stopPropagation()">⬡ HubSpot ↗</a>`:'';
+
+  const npsTickets = c.latest.npsTicketUrls||[];
+  const bugTickets = c.latest.bugTicketUrls||[];
+  const openBugs = bugTickets.filter(t=>t.status!=='closed');
+  const closedBugs = bugTickets.filter(t=>t.status==='closed');
+  let ticketsHtml='';
+  if(npsTickets.length||bugTickets.length){
+    const npsGroup=npsTickets.length?`<div class="ticket-group"><div class="ticket-group-label">NPS Tickets</div>${npsTickets.map(t=>`<a class="ticket-link" href="${esc(t.url)}" target="_blank"><span class="ticket-tag nps">NPS ${t.score!==undefined?t.score:''}</span>${esc(t.label)}</a>`).join('')}</div>`:'';
+    let bugGroup='';
+    if(bugTickets.length){
+      const openHtml = openBugs.length
+        ? openBugs.map(t=>`<a class="ticket-link" href="${esc(t.url)}" target="_blank"><span class="ticket-tag ${(t.priority||'').toLowerCase()}">${esc(t.priority||'')}</span>${esc(t.label)}</a>`).join('')
+        : `<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
+      const closedHtml = closedBugs.length
+        ? `<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedBugs.length} resolved ticket${closedBugs.length>1?'s':''}</summary><div style="margin-top:4px">${closedBugs.map(t=>`<a class="ticket-link" href="${esc(t.url)}" target="_blank" style="opacity:.55;text-decoration:line-through"><span class="ticket-tag ${(t.priority||'').toLowerCase()}">${esc(t.priority||'')}</span>${esc(t.label)}</a>`).join('')}</div></details>`
+        : '';
+      bugGroup=`<div class="ticket-group"><div class="ticket-group-label">Bug Tickets</div>${openHtml}${closedHtml}</div>`;
+    }
+    ticketsHtml=`<div class="tickets-section">${npsGroup}${bugGroup}</div>`;
+  }
+
+  const repBadge = c.latest.csRep?`<span class="rep-badge">👤 ${esc(c.latest.csRep)}</span>`:'';
+  const commCount = (c.latest.communities||[]).length;
+  const sparkSvg = c.history.length>1?buildSparkline(c.history.map(h=>h.score),s):'';
+
+  // Renewal badge
+  const rdDays = renewalDays(c.latest.renewalDate);
+  const rdBadge = rdDays!==null ? `<span class="renewal-badge ${rdDays<30?'urgent':rdDays<90?'soon':'ok'}">🗓 ${rdDays<0?'Expired':'Renews'} ${Math.abs(rdDays)}d${rdDays>=0?' away':' ago'}</span>` : '';
+
+  // Score delta badge
+  const deltaBadge = c.delta!==null&&c.delta!==undefined ? `<span class="delta-badge ${c.delta>0?'up':c.delta<0?'down':'flat'}">${c.delta>0?'↑':'↓'}${Math.abs(c.delta)}</span>` : '';
+
+  return `<div class="company-card ${s}" id="${id}">
+    <div class="card-header" onclick="toggleCard('${id}')">
+      <div class="card-header-left">
+        <div class="score-wrap">
+          <div class="score-badge ${s}">${c.latest.overallScore}</div>
+          ${deltaBadge}
+        </div>
+        <div>
+          <div class="company-name">${esc(c.name)}</div>
+          <div class="company-meta">
+            <span class="status-badge ${s}">${statusLabel(s)}</span>
+            <span>${fmtDate(c.latest.date)}</span>
+            ${repBadge}
+            ${hsLink}
+            ${rdBadge}
+          </div>
+        </div>
+      </div>
+      <div class="card-header-right">
+        ${c.history.length>1?`<div class="sparkline-wrap"><span class="sparkline-label">${c.history.length} scores</span>${sparkSvg}</div>`:''}
+        <span class="chevron" id="${id}-chev">⌄</span>
+      </div>
+    </div>
+    <div class="card-body" id="${id}-body">
+      <div class="dimensions-grid">${dimsHtml}</div>
+      ${actionsHtml}
+      ${ticketsHtml}
+      <div class="card-footer">
+        <span class="notes-text">${esc(c.latest.notes||'')}</span>
+        <div class="card-footer-meta">
+          <span class="last-updated">Last scored: ${fmtDate(c.latest.date)}</span>
+          ${commCount?`<button class="communities-btn" onclick="event.stopPropagation();openCompany('${esc(c.name)}')">${commCount} Communities →</button>`:''}
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// COMMUNITIES VIEW
+// ═══════════════════════════════════════════════════════════════
+function openCompany(name) {
+  selectedCompany = name;
+  commFilter = 'all'; commRepFilter = 'all';
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-communities').classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.tab-btn[onclick*="dashboard"]').classList.add('active');
+  renderCommunities();
+}
+
+function backToDashboard() {
+  selectedCompany = null;
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-dashboard').classList.add('active');
+}
+
+function renderCommunities() {
+  const co = companies.find(c=>c.name===selectedCompany);
+  if(!co) return;
+  const latest = co.latest;
+  const s = status(latest.overallScore);
+  document.getElementById('commBreadcrumbName').textContent = co.name;
+
+  // Hero
+  const named9 = (latest.communities||[]).filter(c=>!c.name.includes('Community'));
+  const mid = (latest.communities||[]).filter(c=>c.status==='mid-stage').length;
+  const early = (latest.communities||[]).filter(c=>c.status==='early').length;
+  const live = (latest.communities||[]).filter(c=>c.status==='live').length;
+  document.getElementById('companyHero').innerHTML=`
+    <div class="company-hero">
+      <div class="company-hero-left">
+        <div class="hero-score ${s}">${latest.overallScore}</div>
+        <div>
+          <div class="hero-name">${esc(co.name)}</div>
+          <div class="hero-meta">
+            <span class="status-badge ${s}">${statusLabel(s)}</span>
+            ${latest.csRep?`<span class="rep-badge">👤 ${esc(latest.csRep)}</span>`:''}
+            ${latest.hubspotUrl?`<a class="hs-link" href="${esc(latest.hubspotUrl)}" target="_blank">⬡ HubSpot ↗</a>`:''}
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="val" style="color:var(--green-dark)">${live}</div><div class="lbl">Live</div></div>
+        <div class="hero-stat"><div class="val" style="color:var(--yellow-dark)">${mid}</div><div class="lbl">Mid-Stage</div></div>
+        <div class="hero-stat"><div class="val" style="color:var(--gray-500)">${early}</div><div class="lbl">Early</div></div>
+        <div class="hero-stat"><div class="val">${(latest.communities||[]).length}</div><div class="lbl">Total</div></div>
+      </div>
+    </div>`;
+
+  let comms = [...(latest.communities||[])];
+  if(commFilter!=='all') comms=comms.filter(c=>c.status===commFilter);
+  if(commRepFilter!=='all') comms=comms.filter(c=>c.csRep===commRepFilter);
+  document.getElementById('commCountLabel').textContent=`${comms.length} communit${comms.length!==1?'ies':'y'}`;
+
+  // Populate rep filter
+  const repEl = document.getElementById('commRepFilter');
+  const reps = [...new Set((latest.communities||[]).map(c=>c.csRep).filter(Boolean))];
+  repEl.innerHTML='<option value="all">All CS Reps</option>';
+  reps.forEach(r=>{const o=document.createElement('option');o.value=r;o.textContent=r;repEl.appendChild(o);});
+  repEl.value=commRepFilter;
+
+  const grid = document.getElementById('commGrid');
+  if(!comms.length){grid.innerHTML='<div class="table-empty">No communities match the current filter.</div>';document.getElementById('unnamedNotice').innerHTML='';return;}
+
+  const unnamedCount = (latest.communities||[]).filter(c=>c.name.includes('Community')||c.name.includes('Building')).length;
+
+  grid.innerHTML = comms.map(comm=>renderCommunityCard(comm, latest)).join('');
+  document.getElementById('unnamedNotice').innerHTML = unnamedCount>0?`<div class="unnamed-notice">⚠ ${unnamedCount} additional communit${unnamedCount!==1?'ies':'y'} identified but not yet named — run a new health score to populate full community details.</div>`:'';
+}
+
+const COMM_DIMS = [
+  ['Platform Usage','platformUsage'],
+  ['NPS / Survey','npsSurvey'],
+  ['Onboarding','onboardingHealth'],
+  ['Support','supportLoad'],
+  ['Sentiment','customerSentiment'],
+  ['Engagement','engagementCadence'],
+];
+
+function renderCommunityCard(comm, parentEntry) {
+  const statusClass={'live':'live','mid-stage':'mid-stage','early':'early'}[comm.status]||'early';
+  const statusLabel2={'live':'🟢 Live','mid-stage':'🟡 Mid-Stage','early':'⚪ Early'}[comm.status]||comm.status;
+  const repBadge=comm.csRep?`<span class="rep-badge" style="font-size:10px">👤 ${esc(comm.csRep)}</span>`:'';
+
+  const dims = COMM_DIMS.map(([label,key])=>{
+    const val=comm[key];
+    const u=val===null||val===undefined;
+    const ds=u?'na':status(val);
+    return `<div class="comm-dim" onclick="openCommMetricDetail('${esc(comm.name)}','${key}','${esc(parentEntry.company)}')">
+      <div class="comm-dim-row">
+        <span class="comm-dim-name">${label}</span>
+        <span class="comm-dim-val ${u?'na':''}">${u?'—':val}</span>
+      </div>
+      <div class="comm-progress"><div class="fill ${ds}" style="width:${u?100:val}%"></div></div>
+    </div>`;
+  }).join('');
+
+  const scoredCount = COMM_DIMS.filter(([,k])=>comm[k]!==null&&comm[k]!==undefined).length;
+  const coverage = `${scoredCount}/${COMM_DIMS.length} metrics scored`;
+
+  return `<div class="comm-card ${statusClass}">
+    <div class="comm-name">${esc(comm.name)}</div>
+    <div class="comm-meta">
+      <span class="comm-status community-status-${statusClass==='live'?'live':statusClass==='mid-stage'?'mid':'early'}">${statusLabel2}</span>
+      ${repBadge}
+    </div>
+    <div class="comm-dims">${dims}</div>
+    <div class="comm-footer">
+      <span class="data-coverage">${coverage}</span>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ALL COMMUNITIES VIEW
+// ═══════════════════════════════════════════════════════════════
+function renderAllCommunities() {
+  // Flatten all communities from all companies
+  let all = [];
+  companies.forEach(co => {
+    (co.latest.communities||[]).forEach(comm => {
+      all.push({...comm, companyName: co.name, parentEntry: co.latest});
+    });
+  });
+
+  // Update stat counts (unfiltered)
+  document.getElementById('acStatLive').textContent = all.filter(c=>c.status==='live').length;
+  document.getElementById('acStatMid').textContent = all.filter(c=>c.status==='mid-stage').length;
+  document.getElementById('acStatEarly').textContent = all.filter(c=>c.status==='early').length;
+
+  // Apply filters
+  let filtered = [...all];
+  if(acFilter!=='all') filtered = filtered.filter(c=>c.status===acFilter);
+  if(acRepFilter!=='all') filtered = filtered.filter(c=>c.csRep===acRepFilter);
+  if(acCompanyFilter!=='all') filtered = filtered.filter(c=>c.companyName===acCompanyFilter);
+
+  // Sort
+  if(acSort==='name') filtered.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(acSort==='company') filtered.sort((a,b)=>a.companyName.localeCompare(b.companyName)||a.name.localeCompare(b.name));
+  else if(acSort==='nps-desc') filtered.sort((a,b)=>(b.npsSurvey??-1)-(a.npsSurvey??-1));
+  else if(acSort==='nps-asc') filtered.sort((a,b)=>(a.npsSurvey??101)-(b.npsSurvey??101));
+  else if(acSort==='status') {
+    const ord={'live':0,'mid-stage':1,'early':2};
+    filtered.sort((a,b)=>(ord[a.status]??9)-(ord[b.status]??9)||a.name.localeCompare(b.name));
+  }
+
+  document.getElementById('acCountLabel').textContent = `${filtered.length} communit${filtered.length!==1?'ies':'y'}`;
+
+  const grid = document.getElementById('acGrid');
+  if(!filtered.length) {
+    grid.innerHTML='<div class="table-empty">No communities match the current filter.</div>';
+    return;
+  }
+  grid.innerHTML = filtered.map(c=>renderAllCommCard(c)).join('');
+}
+
+function renderAllCommCard(comm) {
+  const statusClass={'live':'live','mid-stage':'mid-stage','early':'early'}[comm.status]||'early';
+  const statusLabel2={'live':'🟢 Live','mid-stage':'🟡 Mid-Stage','early':'⚪ Early'}[comm.status]||comm.status;
+  const repBadge=comm.csRep?`<span class="rep-badge" style="font-size:10px">👤 ${esc(comm.csRep)}</span>`:'';
+
+  const dims = COMM_DIMS.map(([label,key])=>{
+    const val=comm[key];
+    const u=val===null||val===undefined;
+    const ds=u?'na':status(val);
+    return `<div class="comm-dim" onclick="openCommMetricDetail('${esc(comm.name)}','${key}','${esc(comm.companyName)}')">
+      <div class="comm-dim-row">
+        <span class="comm-dim-name">${label}</span>
+        <span class="comm-dim-val ${u?'na':''}">${u?'—':val}</span>
+      </div>
+      <div class="comm-progress"><div class="fill ${ds}" style="width:${u?100:val}%"></div></div>
+    </div>`;
+  }).join('');
+
+  const scoredCount = COMM_DIMS.filter(([,k])=>comm[k]!==null&&comm[k]!==undefined).length;
+
+  return `<div class="comm-card ${statusClass}">
+    <div class="comm-name">${esc(comm.name)}</div>
+    <div style="font-size:11px;color:var(--brand);font-weight:500;margin-bottom:6px;cursor:pointer" onclick="openCompany('${esc(comm.companyName)}')">${esc(comm.companyName)} →</div>
+    <div class="comm-meta">
+      <span class="comm-status community-status-${statusClass==='live'?'live':statusClass==='mid-stage'?'mid':'early'}">${statusLabel2}</span>
+      ${repBadge}
+    </div>
+    <div class="comm-dims">${dims}</div>
+    <div class="comm-footer">
+      <span class="data-coverage">${scoredCount}/${COMM_DIMS.length} metrics scored</span>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// METRIC DETAIL MODAL
+// ═══════════════════════════════════════════════════════════════
+function openMetricDetail(companyName, dimKey, event) {
+  const co = companies.find(c=>c.name===companyName);
+  if(!co) return;
+  const details = co.latest.metricDetails;
+  if(!details||!details[dimKey]) return;
+  const dim = DIMS.find(d=>d[2]===dimKey);
+  const label = dim?dim[0]:dimKey;
+  const score = co.latest[dimKey];
+  document.getElementById('metricModalTitle').textContent = label;
+  document.getElementById('metricModalSub').textContent = `${companyName} · Score: ${score!==null&&score!==undefined?score+'/100':'N/A'}`;
+  document.getElementById('metricModalBody').innerHTML = buildMetricDetailBody(dimKey, details[dimKey], co.latest);
+  document.getElementById('metricModal').classList.add('open');
+}
+
+function openCommMetricDetail(commName, dimKey, companyName) {
+  const co = companies.find(c=>c.name===companyName);
+  if(!co) return;
+  const comm = (co.latest.communities||[]).find(c=>c.name===commName);
+  if(!comm) return;
+  const dim = COMM_DIMS.find(d=>d[1]===dimKey);
+  const label = dim?dim[0]:dimKey;
+  const val = comm[dimKey];
+  const details = co.latest.metricDetails;
+
+  document.getElementById('metricModalTitle').textContent = `${label} — ${commName}`;
+  document.getElementById('metricModalSub').textContent = `${companyName} · Score: ${val!==null&&val!==undefined?val+'/100':'No data yet'}`;
+
+  let body='';
+
+  if(dimKey==='npsSurvey') {
+    // Filter NPS responses to just this community's building
+    const responses = details?.npsSurvey?.responses?.filter(r=>r.building===commName)||[];
+    if(responses.length) {
+      const avg = (responses.reduce((s,r)=>s+r.score,0)/responses.length).toFixed(1);
+      body = buildMetricDetailBody(dimKey, {
+        ...details.npsSurvey,
+        responses,
+        avgScore: parseFloat(avg),
+        responseCount: responses.length,
+        trend: null,
+        summary: null
+      }, co.latest);
+    } else {
+      body=`<div class="detail-section"><div class="detail-summary" style="color:var(--gray-500)">No NPS responses found for <strong>${esc(commName)}</strong> in the most recent period. This building may not have been surveyed yet.</div></div>`;
+    }
+
+  } else if(dimKey==='onboardingHealth') {
+    // Community-specific: show its individual status
+    const statusMap={'live':'🟢 Live','mid-stage':'🟡 Mid-Stage','early':'⚪ Early'};
+    const statusDesc={'live':'This community is fully live on Veras.','mid-stage':'This community is mid-way through the onboarding process.','early':'This community is in early-stage onboarding.'};
+    body=`<div class="detail-section">
+      <div class="detail-label">Onboarding Status</div>
+      <div class="detail-summary"><strong>${statusMap[comm.status]||comm.status}</strong> — ${statusDesc[comm.status]||''}${val!==null&&val!==undefined?` Score: ${val}/100.`:''}</div>
+    </div>`;
+    if(details?.onboardingHealth) {
+      const d=details.onboardingHealth;
+      const lw=Math.round(d.live/d.total*100), mw=Math.round(d.midStage/d.total*100), ew=Math.round(d.earlyStage/d.total*100);
+      body+=`<div class="detail-section">
+        <div class="detail-label">Account Overview (${esc(co.name)})</div>
+        <div class="ob-progress-bar">
+          <div class="ob-seg live" style="width:${lw}%">${d.live>0?d.live:''}</div>
+          <div class="ob-seg mid" style="width:${mw}%">${d.midStage>0?d.midStage:''}</div>
+          <div class="ob-seg early" style="width:${ew}%">${d.earlyStage>0?d.earlyStage:''}</div>
+        </div>
+        <div class="ob-legend">
+          <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--green)"></div><span>Live: ${d.live}</span></div>
+          <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--yellow)"></div><span>Mid-Stage: ${d.midStage}</span></div>
+          <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-300)"></div><span>Early: ${d.earlyStage}</span></div>
+        </div>
+      </div>`;
+    }
+
+  } else if(dimKey==='supportLoad') {
+    // Tickets are company-level — show score + note + company ticket list for context
+    if(val!==null&&val!==undefined) {
+      body=`<div class="detail-section"><div class="detail-label">Community Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
+    }
+    body+=`<div class="detail-section"><div class="detail-label">Note</div><div class="detail-summary" style="color:var(--gray-500)">Bug tickets are tracked at the company level. Per-community breakdown is not yet available.</div></div>`;
+    const allCoTickets=(co.latest.bugTicketUrls||[]);
+    const openCoTickets=allCoTickets.filter(t=>t.status!=='closed');
+    const closedCoTickets=allCoTickets.filter(t=>t.status==='closed');
+    if(allCoTickets.length) {
+      const openCoHtml=openCoTickets.length
+        ?`<div class="signal-list">${openCoTickets.map(t=>`<div class="signal-item"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
+        :`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
+      const closedCoHtml=closedCoTickets.length
+        ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedCoTickets.length} resolved ticket${closedCoTickets.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedCoTickets.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
+      body+=`<div class="detail-section"><div class="detail-label">Bug Tickets — ${esc(co.name)}</div>${openCoHtml}${closedCoHtml}</div>`;
+    }
+
+  } else {
+    // platformUsage, customerSentiment, engagementCadence — no per-community data yet
+    if(val!==null&&val!==undefined) {
+      body=`<div class="detail-section"><div class="detail-label">Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
+    }
+    body+=`<div class="detail-section"><div class="detail-summary" style="color:var(--gray-500)">Per-community detail for <strong>${label}</strong> will be available on the next health score run for this community.</div></div>`;
+  }
+
+  document.getElementById('metricModalBody').innerHTML=body;
+  document.getElementById('metricModal').classList.add('open');
+}
+
+function buildMetricDetailBody(dimKey, detail, entry) {
+  if(dimKey==='platformUsage'){
+    const items=(detail.highlights||[]).map(h=>`<div class="signal-item"><div class="signal-dot" style="background:#3b82f6"></div><span>${esc(h)}</span></div>`).join('');
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    ${items?`<div class="detail-section"><div class="detail-label">Highlights</div><div class="signal-list">${items}</div></div>`:''}`;
+  }
+  if(dimKey==='npsSurvey'){
+    const rows=(detail.responses||[]).map(r=>`<tr><td>${esc(r.building)}</td><td>${esc(r.respondent)}</td><td><span class="nps-score s${r.score}">${r.score}</span></td><td style="font-style:italic;color:var(--gray-500)">${esc(r.note||'—')}</td></tr>`).join('');
+    return `<div class="detail-section"><div class="detail-label">Period</div><div class="detail-summary"><strong>${esc(detail.period||'')}</strong> · Avg score: <strong>${detail.avgScore}/5</strong> · ${detail.responseCount} responses · Trend: ${esc(detail.trend||'—')}</div></div>
+    <div class="detail-section"><div class="detail-label">Individual Responses</div>
+    <table class="nps-table"><thead><tr><th>Building</th><th>Respondent</th><th>Score</th><th>Note</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+  if(dimKey==='supportLoad'){
+    const allBugLinks=(entry.bugTicketUrls||[]);
+    const openBugLinks=allBugLinks.filter(t=>t.status!=='closed');
+    const closedBugLinks=allBugLinks.filter(t=>t.status==='closed');
+    const openSection=openBugLinks.length
+      ?`<div class="signal-list">${openBugLinks.map(t=>`<div class="signal-item"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
+      :`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
+    const closedSection=closedBugLinks.length
+      ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedBugLinks.length} resolved ticket${closedBugLinks.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedBugLinks.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0;text-decoration:line-through">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
+    const bugHtml=(allBugLinks.length)?`<div class="detail-section"><div class="detail-label">Bug Tickets</div>${openSection}${closedSection}</div>`:'';
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    <div class="detail-section"><div class="detail-label">Breakdown</div><div class="support-counts">
+      <div class="support-count high"><div class="num">${detail.openHigh||0}</div><div class="lbl">HIGH Open</div></div>
+      <div class="support-count med"><div class="num">${detail.openMedium||0}</div><div class="lbl">MEDIUM Open</div></div>
+      <div class="support-count low"><div class="num">${(detail.openLow||0)+(detail.backlogItems||0)}</div><div class="lbl">Low/Backlog</div></div>
+    </div></div>${bugHtml}`;
+  }
+  if(dimKey==='onboardingHealth'){
+    const t=detail.total||1, l=detail.live||0, m=detail.midStage||0, e=detail.earlyStage||0;
+    const lw=Math.round(l/t*100), mw=Math.round(m/t*100), ew=Math.round(e/t*100);
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    <div class="detail-section"><div class="detail-label">Community Breakdown</div>
+    <div class="ob-progress-bar">
+      <div class="ob-seg live" style="width:${lw}%">${l>0?l:''}</div>
+      <div class="ob-seg mid" style="width:${mw}%">${m>0?m:''}</div>
+      <div class="ob-seg early" style="width:${ew}%">${e>0?e:''}</div>
+    </div>
+    <div class="ob-legend">
+      <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--green)"></div><span>Live: ${l}</span></div>
+      <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--yellow)"></div><span>Mid-Stage: ${m}</span></div>
+      <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-300)"></div><span>Early: ${e}</span></div>
+      <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-200)"></div><span>Total: ${t}</span></div>
+    </div></div>`;
+  }
+  if(dimKey==='customerSentiment'){
+    const items=(detail.signals||[]).map(s=>`<div class="signal-item"><div class="signal-dot"></div><span>${esc(s)}</span></div>`).join('');
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    ${items?`<div class="detail-section"><div class="detail-label">Key Signals</div><div class="signal-list">${items}</div></div>`:''}`;
+  }
+  if(dimKey==='engagementCadence'){
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    ${detail.avgDaysBetween?`<div class="detail-section"><div class="detail-label">Avg Days Between Touchpoints</div><div class="detail-summary" style="font-size:24px;font-weight:700;color:var(--brand)">${detail.avgDaysBetween} days</div></div>`:''}`;
+  }
+  return `<div class="detail-summary">${esc(JSON.stringify(detail,null,2))}</div>`;
+}
+
+function closeMetricModal(){document.getElementById('metricModal').classList.remove('open')}
+function closeMetricModalOutside(e){if(e.target===document.getElementById('metricModal'))closeMetricModal()}
+
+// ═══════════════════════════════════════════════════════════════
+// TRENDS / CHARTS
+// ═══════════════════════════════════════════════════════════════
+function renderTrends() {
+  let filteredCompanies = [...companies];
+  if(trendRepFilter!=='all') filteredCompanies=filteredCompanies.filter(c=>c.latest.csRep===trendRepFilter);
+
+  // Company toggle buttons
+  const compToggleEl = document.getElementById('companyToggles');
+  compToggleEl.innerHTML = filteredCompanies.map(c=>{
+    const active = activeCompanyToggles.has(c.name);
+    const s = status(c.latest.overallScore);
+    const colors={green:var_('--green'),yellow:var_('--yellow'),red:var_('--red')};
+    return `<button class="company-toggle ${active?'active':''}" onclick="toggleCompanyTrend('${esc(c.name)}')" style="${active?`border-color:${colors[s]||'#6366f1'};color:${colors[s]||'#6366f1'};background:${s==='green'?'#dcfce7':s==='yellow'?'#fef9c3':'#fee2e2'}`:''}">
+      ${esc(c.name)}
+    </button>`;
+  }).join('');
+
+  // Metric toggle buttons
+  const metricToggleEl = document.getElementById('metricToggles');
+  metricToggleEl.innerHTML = METRIC_META.map(m=>{
+    const active=activeMetricToggles.has(m.key);
+    return `<button class="metric-toggle ${active?'active':''}" onclick="toggleMetricTrend('${m.key}')"
+      style="border-color:${m.color};${active?`background:${m.color};color:white`:`color:${m.color}`}">
+      ${m.label}${m.weight?` <span style="opacity:.7;font-size:10px">${m.weight}</span>`:''}
+    </button>`;
+  }).join('');
+
+  // Overall trend chart
+  const activeComps = filteredCompanies.filter(c=>activeCompanyToggles.has(c.name));
+  buildTrendChart(activeComps, document.getElementById('overallChartWrap'), document.getElementById('overallChartLegend'));
+
+  // Metric snapshot bar chart
+  buildMetricBarChart(activeComps, document.getElementById('metricChartWrap'));
+}
+
+function var_(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim()}
+
+function buildTrendChart(activeComps, wrap, legendEl) {
+  const W=900,H=240,padL=44,padR=16,padT=16,padB=36;
+  const innerW=W-padL-padR, innerH=H-padT-padB;
+
+  // Collect all dates
+  const allDates=[...new Set(activeComps.flatMap(c=>c.history.map(h=>h.date)))].sort();
+
+  if(allDates.length<2){
+    const singlePoint=allDates.length===1;
+    wrap.innerHTML=`<div class="chart-empty">
+      ${singlePoint?`<div style="font-size:28px;margin-bottom:8px">📍</div><strong>One data point recorded</strong><br>Run health scores over time to build trend lines.`:`<div style="font-size:28px;margin-bottom:8px">📊</div><strong>No trend data yet</strong><br>Run health scores to start tracking trends.`}
+    </div>`;
+    if(singlePoint&&activeComps.length){
+      // Show a single-point "chart" as a summary
+      const summary=activeComps.map(c=>{
+        const s=status(c.latest.overallScore);
+        const color={green:'#22c55e',yellow:'#eab308',red:'#ef4444'}[s];
+        return `<div style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:white;border-radius:8px;box-shadow:var(--shadow);margin:4px">
+          <div style="width:36px;height:36px;border-radius:50%;background:${color}20;display:flex;align-items:center;justify-content:center;font-weight:700;color:${color}">${c.latest.overallScore}</div>
+          <div><div style="font-size:13px;font-weight:600;color:var(--gray-900)">${esc(c.name)}</div><div style="font-size:11px;color:var(--gray-500)">${fmtDate(c.latest.date)}</div></div>
+        </div>`;
+      }).join('');
+      wrap.innerHTML+=`<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px">${summary}</div>`;
+    }
+    legendEl.innerHTML='';
+    return;
+  }
+
+  const xStep=allDates.length>1?innerW/(allDates.length-1):innerW;
+  const dateX=d=>padL+allDates.indexOf(d)*xStep;
+  const scoreY=s=>padT+innerH-(s/100)*innerH;
+
+  let svgLines='', svgDots='';
+  const legendItems=[];
+  const compColors=['#6366f1','#22c55e','#eab308','#ef4444','#3b82f6','#a855f7','#f97316'];
+
+  activeComps.forEach((c,i)=>{
+    const color=compColors[i%compColors.length];
+    const pts=c.history.filter(h=>allDates.includes(h.date)).sort((a,b)=>new Date(a.date)-new Date(b.date));
+    if(!pts.length)return;
+    const points=pts.map(h=>`${dateX(h.date).toFixed(1)},${scoreY(h.score).toFixed(1)}`).join(' ');
+    svgLines+=`<polyline fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${points}" opacity="0.9"/>`;
+    pts.forEach(h=>{svgDots+=`<circle cx="${dateX(h.date).toFixed(1)}" cy="${scoreY(h.score).toFixed(1)}" r="4" fill="${color}" stroke="white" stroke-width="2"/>`;});
+    legendItems.push({color,name:c.name});
+  });
+
+  // Gridlines + labels
+  let gridlines='',yLabels='';
+  [0,25,50,75,100].forEach(v=>{
+    const y=scoreY(v).toFixed(1);
+    const isThreshold=v===50||v===75;
+    gridlines+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="${isThreshold?'#e5e7eb':'#f3f4f6'}" stroke-width="${isThreshold?1.5:1}" stroke-dasharray="${isThreshold?'4,3':''}"/>`;
+    yLabels+=`<text x="${padL-6}" y="${parseFloat(y)+4}" text-anchor="end" font-size="10" fill="#9ca3af">${v}</text>`;
+  });
+
+  // X axis labels
+  let xLabels='';
+  const maxLabels=Math.min(allDates.length,8);
+  const step=Math.max(1,Math.floor(allDates.length/maxLabels));
+  allDates.filter((_,i)=>i%step===0||i===allDates.length-1).forEach(d=>{
+    xLabels+=`<text x="${dateX(d).toFixed(1)}" y="${H-6}" text-anchor="middle" font-size="10" fill="#9ca3af">${fmtDateShort(d)}</text>`;
+  });
+
+  wrap.innerHTML=`<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+    ${gridlines}${yLabels}${xLabels}${svgLines}${svgDots}
+    <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="#e5e7eb" stroke-width="1"/>
+    <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="#e5e7eb" stroke-width="1"/>
+  </svg>`;
+
+  legendEl.innerHTML=legendItems.map(l=>`<div class="legend-item"><div class="legend-dot" style="background:${l.color}"></div><span>${esc(l.name)}</span></div>`).join('');
+}
+
+function buildMetricBarChart(activeComps, wrap) {
+  if(!activeComps.length){wrap.innerHTML='<div class="chart-empty">No companies selected.</div>';return;}
+  const W=900,H=220,padL=100,padR=20,padT=16,padB=40;
+  const innerW=W-padL-padR, innerH=H-padT-padB;
+  const activeMets=METRIC_META.filter(m=>activeMetricToggles.has(m.key));
+  if(!activeMets.length){wrap.innerHTML='<div class="chart-empty">Select at least one metric to display.</div>';return;}
+
+  const groupW=innerW/activeMets.length;
+  const barW=Math.min(28,groupW/activeComps.length-4);
+  const compColors=['#6366f1','#22c55e','#eab308','#ef4444','#3b82f6','#a855f7','#f97316'];
+
+  let bars='',xLabels='',gridlines='',yLabels='';
+  [0,25,50,75,100].forEach(v=>{
+    const y=(padT+innerH-v/100*innerH).toFixed(1);
+    gridlines+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/>`;
+    yLabels+=`<text x="${padL-6}" y="${parseFloat(y)+4}" text-anchor="end" font-size="10" fill="#9ca3af">${v}</text>`;
+  });
+
+  activeMets.forEach((m,mi)=>{
+    const gCenterX=padL+mi*groupW+groupW/2;
+    const totalBarsW=(barW+3)*activeComps.length;
+    const startX=gCenterX-totalBarsW/2;
+    activeComps.forEach((c,ci)=>{
+      const val=c.latest[m.key];
+      if(val===null||val===undefined)return;
+      const barH=(val/100)*innerH;
+      const x=startX+ci*(barW+3);
+      const y=padT+innerH-barH;
+      const color=compColors[ci%compColors.length];
+      bars+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW}" height="${barH.toFixed(1)}" rx="3" fill="${color}" opacity="0.85"/>`;
+      bars+=`<text x="${(x+barW/2).toFixed(1)}" y="${(y-3).toFixed(1)}" text-anchor="middle" font-size="9" fill="#6b7280">${val}</text>`;
+    });
+    xLabels+=`<text x="${gCenterX.toFixed(1)}" y="${H-6}" text-anchor="middle" font-size="11" fill="#6b7280">${m.label}</text>`;
+  });
+
+  wrap.innerHTML=`<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+    ${gridlines}${yLabels}${bars}${xLabels}
+    <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="#e5e7eb" stroke-width="1"/>
+    <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="#e5e7eb" stroke-width="1"/>
+  </svg>`;
+}
+
+function toggleCompanyTrend(name){
+  if(activeCompanyToggles.has(name))activeCompanyToggles.delete(name);
+  else activeCompanyToggles.add(name);
+  renderTrends();
+}
+function toggleMetricTrend(key){
+  if(activeMetricToggles.has(key))activeMetricToggles.delete(key);
+  else activeMetricToggles.add(key);
+  renderTrends();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RAW DATA TABLE
+// ═══════════════════════════════════════════════════════════════
+function renderTable() {
+  const sorted=[...HEALTH_DATA].sort((a,b)=>{
+    let av=a[tableSortKey],bv=b[tableSortKey];
+    if(av===null||av===undefined)av=tableSortDir==='asc'?Infinity:-Infinity;
+    if(bv===null||bv===undefined)bv=tableSortDir==='asc'?Infinity:-Infinity;
+    if(typeof av==='string')return tableSortDir==='asc'?av.localeCompare(bv):bv.localeCompare(av);
+    return tableSortDir==='asc'?av-bv:bv-av;
+  });
+  document.getElementById('tableCount').textContent=`${sorted.length} entr${sorted.length!==1?'ies':'y'}`;
+  document.querySelectorAll('.data-table th').forEach(th=>{th.classList.remove('sorted');const ic=th.querySelector('.sort-icon');if(ic)ic.textContent='↕';});
+  const sortedTh=Array.from(document.querySelectorAll('.data-table th')).find(th=>th.onclick?.toString().includes(`'${tableSortKey}'`));
+  if(sortedTh){sortedTh.classList.add('sorted');const ic=sortedTh.querySelector('.sort-icon');if(ic)ic.textContent=tableSortDir==='asc'?'↑':'↓';}
+  const tbody=document.getElementById('tableBody');
+  if(!sorted.length){tbody.innerHTML=`<tr><td colspan="12" class="table-empty">No data yet.</td></tr>`;return;}
+  const chip=v=>v===null||v===undefined?`<span class="score-chip na">N/A</span>`:`<span class="score-chip ${status(v)}">${v}</span>`;
+  tbody.innerHTML=sorted.map(row=>{
+    const actions=Array.isArray(row.actions)?row.actions:(row.actions||'').split('|').map(a=>a.trim()).filter(Boolean);
+    return `<tr>
+      <td class="company-cell">${esc(row.company)}</td>
+      <td class="date-cell">${fmtDate(row.date)}</td>
+      <td style="font-size:12px;color:var(--gray-600)">${esc(row.csRep||'—')}</td>
+      <td>${chip(row.overallScore)}</td>
+      <td>${chip(row.platformUsage)}</td>
+      <td>${chip(row.customerSentiment)}</td>
+      <td>${chip(row.npsSurvey)}</td>
+      <td>${chip(row.onboardingHealth)}</td>
+      <td>${chip(row.supportLoad)}</td>
+      <td>${chip(row.engagementCadence)}</td>
+      <td class="actions-cell">${actions.map(a=>`• ${esc(a)}`).join('<br>')}</td>
+      <td class="notes-cell">${esc(row.notes||'')}</td>
+    </tr>`;
+  }).join('');
+}
+function tableSort(key){
+  if(tableSortKey===key)tableSortDir=tableSortDir==='asc'?'desc':'asc';
+  else{tableSortKey=key;tableSortDir=key==='company'||key==='date'?'asc':'desc';}
+  renderTable();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CSV
+// ═══════════════════════════════════════════════════════════════
+function buildCSV(){
+  const headers=['Company','Date','CS Rep','Overall Score','Platform Usage','Customer Sentiment','NPS Survey','Onboarding Health','Support Load','Engagement Cadence','Actions','Notes'];
+  const rows=HEALTH_DATA.map(r=>{
+    const acts=Array.isArray(r.actions)?r.actions.join(' | '):(r.actions||'');
+    return [r.company,r.date,r.csRep||'',r.overallScore,r.platformUsage??'',r.customerSentiment??'',r.npsSurvey??'',r.onboardingHealth??'',r.supportLoad??'',r.engagementCadence??'',acts,r.notes||'']
+      .map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',');
+  });
+  return[headers.join(','),...rows].join('\n');
+}
+function downloadCSV(){
+  const csv=buildCSV();
+  const blob=new Blob([csv],{type:'text/csv'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=`veras-health-scores-${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();URL.revokeObjectURL(url);
+}
+function copyTableCSV(){navigator.clipboard.writeText(buildCSV()).then(()=>showToast('CSV copied to clipboard'))}
+
+// ═══════════════════════════════════════════════════════════════
+// NEW HEALTH SCORE MODAL
+// ═══════════════════════════════════════════════════════════════
+function openNewScoreModal(){
+  document.getElementById('newScoreOverlay').classList.add('open');
+  document.getElementById('nsCompany').value='';
+  document.getElementById('nsHubspot').value='';
+  document.getElementById('nsMetabase').value='';
+  document.getElementById('nsPromptPreview').classList.remove('show');
+  setTimeout(()=>document.getElementById('nsCompany').focus(),50);
+}
+function closeNewScoreModal(){document.getElementById('newScoreOverlay').classList.remove('open')}
+function closeNewScoreOutside(e){if(e.target===document.getElementById('newScoreOverlay'))closeNewScoreModal()}
+function copyNewScorePrompt(){
+  const company=document.getElementById('nsCompany').value.trim();
+  const hubspot=document.getElementById('nsHubspot').value.trim();
+  const metabase=document.getElementById('nsMetabase').value.trim();
+  const rep=document.getElementById('nsCsRep').value;
+  if(!hubspot||!metabase){showToast('Please fill in the HubSpot URL and Metabase ID');return;}
+  const companyPart=company?`for ${company} `:'';
+  const repPart=rep?` Assign to CS rep: ${rep}.`:'';
+  const prompt=`Run a health score ${companyPart}— HubSpot record: ${hubspot}, Metabase employer ID: ${metabase}.${repPart}`;
+  document.getElementById('nsPromptPreview').textContent=prompt;
+  document.getElementById('nsPromptPreview').classList.add('show');
+  navigator.clipboard.writeText(prompt).then(()=>showToast('Prompt copied! Paste it into Cowork to run the score.')).catch(()=>showToast('Copy failed — select the text above and copy manually'));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+function status(s){return s>=75?'green':s>=50?'yellow':'red'}
+function statusLabel(s){return{green:'🟢 Green',yellow:'🟡 Yellow',red:'🔴 Red'}[s]}
+
+// ── RENEWAL HELPERS ──────────────────────────────────────────
+function renewalDays(dateStr) {
+  if(!dateStr) return null;
+  return Math.ceil((new Date(dateStr+' 00:00:00') - new Date()) / (1000*60*60*24));
+}
+
+// ── ACTION TRACKING (localStorage) ──────────────────────────
+function actionKey(company, date, idx) { return `${company}||${date}||${idx}`; }
+function getCompletedActions() {
+  try { return new Set(JSON.parse(localStorage.getItem('veras_completed_actions')||'[]')); }
+  catch { return new Set(); }
+}
+function isActionDone(company, date, idx) {
+  return getCompletedActions().has(actionKey(company, date, idx));
+}
+function toggleAction(company, date, idx, checkbox) {
+  const done = getCompletedActions();
+  const key = actionKey(company, date, idx);
+  if(checkbox.checked) done.add(key); else done.delete(key);
+  localStorage.setItem('veras_completed_actions', JSON.stringify([...done]));
+  // Update progress label without full re-render
+  const cardId = 'c-'+company.replace(/\W+/g,'-').toLowerCase();
+  const toggle = document.querySelector(`#${cardId} .actions-toggle`);
+  if(toggle) {
+    const allActions = companies.find(c=>c.name===company)?.latest.actions||[];
+    const doneNow = allActions.filter((_,i)=>isActionDone(company,date,i)).length;
+    const prog = toggle.querySelector('.actions-progress');
+    if(prog) prog.textContent = doneNow>0?`${doneNow}/${allActions.length} done`:'';
+    else if(doneNow>0) toggle.innerHTML += ` <span class="actions-progress">${doneNow}/${allActions.length} done</span>`;
+  }
+  // Strikethrough handled by CSS :checked + span selector
+}
+function fmtDate(str){if(!str)return'—';try{return new Date(str+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}catch{return str}}
+function fmtDateShort(str){if(!str)return'—';try{return new Date(str+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}catch{return str}}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function buildSparkline(history,s){
+  const W=80,H=28,pad=3,pts=[...history].reverse();
+  const mn=Math.max(0,Math.min(...pts)-5),mx=Math.min(100,Math.max(...pts)+5),range=mx-mn||1;
+  const xStep=(W-pad*2)/(pts.length-1);
+  const coords=pts.map((v,i)=>`${(pad+i*xStep).toFixed(1)},${(H-pad-((v-mn)/range)*(H-pad*2)).toFixed(1)}`);
+  const color={green:'#22c55e',yellow:'#eab308',red:'#ef4444'}[s];
+  return`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords.join(' ')}"/><circle cx="${coords[coords.length-1].split(',')[0]}" cy="${coords[coords.length-1].split(',')[1]}" r="3" fill="${color}"/></svg>`;
+}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+
+// ═══════════════════════════════════════════════════════════════
+// INTERACTIONS
+// ═══════════════════════════════════════════════════════════════
+function switchTab(view, btn) {
+  if(view==='dashboard'&&selectedCompany){
+    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+    document.getElementById('view-communities').classList.add('active');
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    return;
+  }
+  selectedCompany=null;
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+view).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(view==='trends')renderTrends();
+  if(view==='allcommunities')renderAllCommunities();
+}
+function setACFilter(val,el){acFilter=val;document.querySelectorAll('#view-allcommunities .pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderAllCommunities()}
+function setACRepFilter(val){acRepFilter=val;renderAllCommunities()}
+function setACCompanyFilter(val){acCompanyFilter=val;renderAllCommunities()}
+function setACSort(val){acSort=val;renderAllCommunities()}
+function setFilter(val,el){currentFilter=val;document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderDashboard()}
+function setRepFilter(val){currentRepFilter=val;renderDashboard()}
+function setSort(val){currentSort=val;renderDashboard()}
+function setCommFilter(val,el){commFilter=val;document.querySelectorAll('#view-communities .pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderCommunities()}
+function setCommRepFilter(val){commRepFilter=val;renderCommunities()}
+function setTrendRepFilter(val){trendRepFilter=val;renderTrends()}
+function toggleCard(id){document.getElementById(id+'-body').classList.toggle('open');document.getElementById(id+'-chev').classList.toggle('open')}
+function toggleActions(el){el.nextElementSibling.classList.toggle('open');el.textContent=el.nextElementSibling.classList.contains('open')?el.textContent.replace('▸','▾'):el.textContent.replace('▾','▸')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMetricModal();closeNewScoreModal()}});
+</script>
+</body>
+</html>
