@@ -561,6 +561,359 @@
           "engagementCadence": null
         }
       ]
+    },
+    {
+      "company": "Aspen Health",
+      "date": "2026-04-01",
+      "csRep": "Cayden Fox",
+      "overallScore": 62,
+      "platformUsage": 62,
+      "customerSentiment": 75,
+      "npsSurvey": 25,
+      "onboardingHealth": 52,
+      "supportLoad": 58,
+      "engagementCadence": 80,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45165127196",
+      "renewalDate": "2026-03-26",
+      "npsTicketUrls": [
+        {
+          "label": "Kei-Ai Los Angeles HC - Feb 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41746453157"
+        },
+        {
+          "label": "Country Crest Post Acute - Feb 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41770669949"
+        },
+        {
+          "label": "Country Crest Post Acute - Jan 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39956966024"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Shared Calendar View not working",
+          "priority": "HIGH",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39109781867"
+        },
+        {
+          "label": "Send home / facility call off flow (FR)",
+          "priority": "HIGH",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/33118971741"
+        },
+        {
+          "label": "Overtime Calculations Incorrect (Consolidated)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/42773943663"
+        },
+        {
+          "label": "First shift incorrectly flagged as overtime when double scheduled",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39779769943"
+        },
+        {
+          "label": "Change shift template display/print order (FR)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40472136027"
+        },
+        {
+          "label": "Schedule doesn't display w/ area as secondary grouping",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34224983605"
+        },
+        {
+          "label": "Staff contact info visible to everyone on web",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37837952792"
+        },
+        {
+          "label": "Agency appears on schedule twice when they have a called off shift",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050897763"
+        },
+        {
+          "label": "Automatically stagger sending shift invites (FR)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41173666489"
+        },
+        {
+          "label": "Daily Print View Enhancements (Consolidated)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050215680"
+        },
+        {
+          "label": "Change credential expiry notification threshold",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34023124085"
+        },
+        {
+          "label": "Share open shifts that aren't published (FR)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050215981"
+        },
+        {
+          "label": "Position groups/preset filters on schedule (FR)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050401032"
+        },
+        {
+          "label": "Submit pending time off requests from scheduler side (FR)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37727275845"
+        }
+      ],
+      "actions": [
+        "Address Lodi urgently \u2014 schedule a call this week, clarify unresolved issues, consider increasing check-in frequency",
+        "Get Sierra Vista to a go-live plan \u2014 identify the blocker (3,529 drafts, 0 published) and set a firm target date",
+        "Investigate low shift invite fill rate (2-4%) \u2014 check app adoption at top facilities and consider re-engagement push",
+        "Drive NPS submissions \u2014 only 3 responses across 35+ facilities; expand outreach to get 5-6 live facility responses",
+        "Build TX-batch onboarding roadmap \u2014 ~25 facilities not started; sequence with Marcus over Q2"
+      ],
+      "notes": "Large portfolio in active expansion. Marcus relationship is healthy and forward-looking (API/analytics discussions). NPS dragging score down significantly \u2014 avg 1.67/5 from 3 responses. Lodi and Sierra Vista both flagged at-risk in Slack. Fill rate at 2-4% is a concern. ~25 TX-suffix facilities not yet started.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "10 of 14 facilities publishing shifts. Messaging volume 160x growth Oct-Mar. Fill rate 2-4% \u2014 weak engagement with shift invites. 4 facilities at zero published shifts.",
+          "highlights": [
+            "14 facilities active in platform",
+            "Messaging: 10/mo (Oct) \u2192 1,608/mo (Mar) \u2014 strong growth",
+            "Fill rate: 3.9% (Jan) / 2.3% (Feb) / 4.1% (Mar) \u2014 consistently low",
+            "Lodi, Tracy, University Post-Acute, Oakland Heights: 0 published shifts"
+          ]
+        },
+        "npsSurvey": {
+          "period": "Jan-Feb 2026",
+          "avgScore": 1.67,
+          "responseCount": 3,
+          "trend": "Only 3 responses total \u2014 insufficient for trend",
+          "responses": [
+            {
+              "building": "Kei-Ai Los Angeles HC",
+              "respondent": "Osvaldo Heredia",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Country Crest Post Acute",
+              "respondent": "Shoua Yang",
+              "score": 1,
+              "note": null
+            },
+            {
+              "building": "Country Crest Post Acute",
+              "respondent": "Shoua Yang",
+              "score": 2,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 2,
+          "openMedium": 9,
+          "openLow": 3,
+          "backlogItems": 6,
+          "summary": "2 HIGH open (Shared Calendar View + facility call off FR). Multiple MEDIUM bugs including overtime calculations and web privacy issue. Active backlog with no recent resolutions."
+        },
+        "onboardingHealth": {
+          "total": 40,
+          "live": 5,
+          "midStage": 8,
+          "earlyStage": 27,
+          "summary": "5 live, 4 in soft-launch/training, 4 in early setup, ~27 not started (TX-suffix batch). Large pipeline ahead."
+        },
+        "customerSentiment": {
+          "summary": "Marcus engaged and expanding \u2014 API/analytics integration discussions underway. No escalations in transcripts. Lodi is the one substantive risk signal. Facilities going live reporting positive experiences.",
+          "signals": [
+            "Marcus pursuing UKG API + billing + analytics integration \u2014 strong commitment signal",
+            "Multiple facilities successfully onboarded in Q1 2026 with positive staff adoption",
+            "Lodi flagged at-risk \u2014 contact frustrated with rep time allocation",
+            "Sierra Vista flagged at-risk \u2014 no clear go-live path"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Strong weekly/biweekly cadence across all active facilities. Corporate sync with Marcus Feb 24 + API meeting Mar 20. No facilities have gone dark.",
+          "avgDaysBetween": 10,
+          "recentMeetings": [
+            "Aspen Health API Discussion \u2014 Mar 20, 2026",
+            "Aspen Skilled Healthcare go-live \u2014 Apr 1, 2026",
+            "Woodland Post Acute Check-In \u2014 Mar 24, 2026",
+            "South Marin Pre-Live Check-In \u2014 Mar 19, 2026",
+            "The Avenues Check-In \u2014 Mar 17, 2026",
+            "Riverwood Pre-Live Check-In \u2014 Mar 13, 2026"
+          ]
+        }
+      },
+      "communities": [
+        {
+          "name": "Kei-Ai Los Angeles HC",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 90,
+          "onboardingHealth": 85,
+          "npsSurvey": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Cottonwood Post-Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 75,
+          "onboardingHealth": 85,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "NorthPark Post-Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 70,
+          "onboardingHealth": 85,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Avenues Transitional",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 65,
+          "onboardingHealth": 85,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Country Crest Post Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 72,
+          "onboardingHealth": 85,
+          "npsSurvey": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Woodland Post Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "platformUsage": 70,
+          "onboardingHealth": 65,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Riverwood Healthcare",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 40,
+          "onboardingHealth": 55,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "South Marin H&W Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 38,
+          "onboardingHealth": 50,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Palazzo ALF",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 35,
+          "onboardingHealth": 50,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Sierra Vista Healthcare",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 5,
+          "onboardingHealth": 30,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lodi Nursing & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 5,
+          "onboardingHealth": 25,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Tracy Nursing & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 5,
+          "onboardingHealth": 20,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "University Post-Acute",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 5,
+          "onboardingHealth": 20,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Oakland Heights N&R",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "platformUsage": 5,
+          "onboardingHealth": 20,
+          "npsSurvey": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
     }
   ]
 }
