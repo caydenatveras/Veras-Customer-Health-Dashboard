@@ -117,6 +117,8 @@
     .last-updated{font-size:11px;color:var(--gray-400)}
     .communities-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:500;background:var(--brand-light);color:var(--brand-dark);border:none;cursor:pointer;transition:all .15s}
     .communities-btn:hover{background:#e0e7ff}
+    .rescore-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:500;background:var(--gray-50);color:var(--gray-600);border:1px solid var(--gray-200);cursor:pointer;transition:all .15s}
+    .rescore-btn:hover{background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300)}
 
     /* ── TICKET + HS LINKS ── */
     .hs-link{font-size:11px;color:#e8622a;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:3px}
@@ -312,14 +314,6 @@
 </head>
 <body>
 
-<!-- ══ DATA LOADING STATE ══ -->
-<div id="data-loading" style="display:none;position:fixed;inset:0;background:white;z-index:9999;align-items:center;justify-content:center;flex-direction:column;gap:12px">
-  <div style="font-size:32px;animation:spin 1s linear infinite">⟳</div>
-  <div style="font-size:14px;color:var(--gray-500);font-weight:500">Loading dashboard…</div>
-</div>
-<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
-
-<div id="app-content" style="display:none">
 <header>
   <div class="header-left">
     <span class="logo">Veras</span>
@@ -333,7 +327,7 @@
     <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
   </div>
   <div class="header-actions">
-    <button class="btn btn-ghost" onclick="loadData()">↻ Refresh</button>
+    <button class="btn btn-ghost" onclick="renderAll()">↻ Refresh</button>
     <button class="btn btn-primary" onclick="openNewScoreModal()">＋ New Health Score</button>
   </div>
 </header>
@@ -555,16 +549,128 @@
     </div>
   </div>
 </div>
-</div><!-- /#app-content -->
 
 <script>
 // ═══════════════════════════════════════════════════════════════
-// DATA — loaded from data.json at runtime
-// CS reps and health entries are populated by loadData() below.
-// To add team members, edit csReps in data.json.
+// CS REPS — edit this list to add/remove team members
 // ═══════════════════════════════════════════════════════════════
-let CS_REPS = [];
-let HEALTH_DATA = [];
+const CS_REPS = [
+  "Cayden Fox"
+  // Add more reps here, e.g.: "Bryan Ortega", "Tegan Perry"
+];
+
+// ═══════════════════════════════════════════════════════════════
+// HEALTH DATA — updated automatically by the health score skill
+// ═══════════════════════════════════════════════════════════════
+// HEALTH_DATA_BEGIN
+const HEALTH_DATA = [
+  {
+    "company": "Heritage Senior Living",
+    "date": "2026-03-31",
+    "csRep": "Cayden Fox",
+    "overallScore": 64,
+    "platformUsage": 68,
+    "customerSentiment": 60,
+    "npsSurvey": 50,
+    "onboardingHealth": 57,
+    "supportLoad": 78,
+    "engagementCadence": 78,
+    "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
+    "npsTicketUrls": [
+      {"label": "Latoya Henry — Birches of Lehigh Valley (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41905403719"},
+      {"label": "Leslie Juan — Manor at Market Square (Feb 2026)", "score": 4, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41758140264"},
+      {"label": "Aiesha Roach — Birches at Newtown (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41903235750"},
+      {"label": "Scott Garverich — Chestnut Knoll (Feb 2026)", "score": 2, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41744439411"},
+      {"label": "Jemetrice Blakely — Heritage Green Hanover (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"}
+    ],
+    "bugTicketUrls": [
+      {"label": "Not able to approve shifts", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38330230296"},
+      {"label": "Staffing Ladder budgets not budgeting by shift", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41812347246"},
+      {"label": "Shared Calendar View setting not working properly", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39109781867"},
+      {"label": "\"Enjoy Day Off\" displays when shifts are scheduled", "priority": "MEDIUM", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39636914522"},
+      {"label": "Approve open shift, reject the rest", "priority": "LOW", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31460037465"}
+    ],
+    "actions": [
+      "Monitor backlog (4 items) — all open bugs now resolved, watch for regressions",
+      "Address Paylocity integration delays before April 1 position transition",
+      "Launch targeted staff training push based on NPS usability feedback"
+    ],
+    "notes": "18 facilities — 11 live, 4 mid-stage, 3 early. Loyal account, technical friction.",
+    "renewalDate": "2026-12-12",
+    "metricDetails": {
+      "platformUsage": {
+        "summary": "11 of 18 buildings actively publishing daily. Message volume up 7× over last quarter. Call-off rate declining.",
+        "highlights": [
+          "11/18 buildings publishing daily",
+          "Monthly message volume: ~7,200 (up from ~1,050 — 7× growth)",
+          "Call-off rate declining quarter-over-quarter",
+          "7 buildings still in onboarding — not yet contributing usage data"
+        ]
+      },
+      "npsSurvey": {
+        "period": "February 2026",
+        "avgScore": 3.0,
+        "responseCount": 5,
+        "trend": "Stable vs. January average (2.9)",
+        "responses": [
+          {"building": "The Birches of Lehigh Valley", "respondent": "Latoya Henry", "score": 3, "note": "Still getting used to it"},
+          {"building": "The Manor at Market Square", "respondent": "Leslie Juan", "score": 4, "note": null},
+          {"building": "The Birches at Newtown", "respondent": "Aiesha Roach", "score": 3, "note": null},
+          {"building": "Chestnut Knoll", "respondent": "Scott Garverich", "score": 2, "note": null},
+          {"building": "Heritage Green Hanover", "respondent": "Jemetrice Blakely", "score": 3, "note": "it not easy to learn all the gadgets"}
+        ]
+      },
+      "supportLoad": {
+        "openHigh": 0,
+        "openMedium": 0,
+        "openLow": 0,
+        "backlogItems": 4,
+        "summary": "All previously open tickets resolved. No active bugs open as of this run. 4 items remain in backlog."
+      },
+      "onboardingHealth": {
+        "total": 18,
+        "live": 11,
+        "midStage": 4,
+        "earlyStage": 3,
+        "summary": "11 of 18 buildings fully live. 4 mid-stage and 3 early-stage remain. Paylocity integration delays affecting several buildings."
+      },
+      "customerSentiment": {
+        "summary": "Loyal, long-term account with active CS engagement. Technical friction creating some frustration but no escalation risk.",
+        "signals": [
+          "Active CS engagement — responsive to outreach from Cayden",
+          "Paylocity integration delays affecting multiple buildings ahead of April 1 position transition",
+          "Staff feedback: usability concerns noted in NPS (gadgets comment, learning curve)",
+          "Chestnut Knoll NPS average 1.5/5 — outlier, warrants a check-in",
+          "No escalation signals in Slack at-risk channel"
+        ]
+      },
+      "engagementCadence": {
+        "summary": "Regular cadence maintained. 4 meetings logged in last 90 days. Avg ~22 days between touchpoints.",
+        "avgDaysBetween": 22,
+        "recentMeetings": []
+      }
+    },
+    "communities": [
+      {"name": "The Birches of Lehigh Valley", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "The Manor at Market Square", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 75, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "The Birches at Newtown", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Chestnut Knoll", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 20, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Heritage Green Hanover", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Keystone Villa at Douglassville, PC", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Senior Commons at Powder Mill", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Keystone Villa at Fleetwood", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Heritage Green Assisted Living", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Mid-Stage Community A", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Mid-Stage Community B", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Mid-Stage Community C", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Mid-Stage Community D", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Early-Stage Community A", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Early-Stage Community B", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
+      {"name": "Early-Stage Community C", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null}
+    ]
+  }
+];
+// HEALTH_DATA_END
 
 // ═══════════════════════════════════════════════════════════════
 // METRIC CHART COLORS
@@ -594,35 +700,9 @@ let activeCompanyToggles=new Set();
 // INIT
 // ═══════════════════════════════════════════════════════════════
 window.addEventListener('DOMContentLoaded', () => {
-  loadData();
+  populateRepFilters();
+  renderAll();
 });
-
-function loadData() {
-  const loading = document.getElementById('data-loading');
-  const app = document.getElementById('app-content');
-  if(loading) loading.style.display='flex';
-  if(app) app.style.display='none';
-
-  fetch('data.json?_=' + Date.now())
-    .then(r => { if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(d => {
-      HEALTH_DATA = Array.isArray(d) ? d : (d.entries || []);
-      CS_REPS = d.csReps || [];
-      if(loading) loading.style.display='none';
-      if(app) app.style.display='block';
-      populateRepFilters();
-      renderAll();
-    })
-    .catch(err => {
-      if(loading) loading.innerHTML = `
-        <div style="text-align:center;color:var(--red-dark)">
-          <div style="font-size:28px;margin-bottom:8px">⚠️</div>
-          <div style="font-weight:600;margin-bottom:4px">Could not load data.json</div>
-          <div style="font-size:13px;color:var(--gray-500)">${err.message} — make sure data.json is in the same folder as index.html</div>
-        </div>`;
-      console.error('Failed to load data.json:', err);
-    });
-}
 
 function renderAll() {
   aggregateCompanies();
@@ -808,6 +888,7 @@ function renderCard(c) {
         <span class="notes-text">${esc(c.latest.notes||'')}</span>
         <div class="card-footer-meta">
           <span class="last-updated">Last scored: ${fmtDate(c.latest.date)}</span>
+          <button class="rescore-btn" onclick="copyRescorePrompt('${esc(c.name)}',event)" title="Copy prompt to re-run this health score">⎘ Re-score</button>
           ${commCount?`<button class="communities-btn" onclick="event.stopPropagation();openCompany('${esc(c.name)}')">${commCount} Communities →</button>`:''}
         </div>
       </div>
@@ -1426,6 +1507,28 @@ function copyNewScorePrompt(){
   document.getElementById('nsPromptPreview').textContent=prompt;
   document.getElementById('nsPromptPreview').classList.add('show');
   navigator.clipboard.writeText(prompt).then(()=>showToast('Prompt copied! Paste it into Cowork to run the score.')).catch(()=>showToast('Copy failed — select the text above and copy manually'));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RE-SCORE EXISTING COMPANY
+// ═══════════════════════════════════════════════════════════════
+function copyRescorePrompt(companyName, event) {
+  if(event) event.stopPropagation();
+  const matches = HEALTH_DATA.filter(d => d.company === companyName).sort((a,b) => new Date(b.date) - new Date(a.date));
+  const company = matches[0];
+  if(!company) { showToast('Company not found'); return; }
+  const hubspot = company.hubspotUrl || '';
+  const employerId = company.metabaseEmployerId || '';
+  const rep = company.csRep || '';
+  if(!hubspot) { showToast('No HubSpot URL on file for ' + companyName); return; }
+  const parts = [`Run a health score for ${companyName} — HubSpot record: ${hubspot}`];
+  if(employerId) parts[0] += `, Metabase employer ID: ${employerId}`;
+  parts[0] += '.';
+  if(rep) parts.push(`Assign to CS rep: ${rep}.`);
+  const prompt = parts.join(' ');
+  navigator.clipboard.writeText(prompt)
+    .then(() => showToast('Prompt copied! Paste it into Cowork.'))
+    .catch(() => showToast('Copy failed — try again'));
 }
 
 // ═══════════════════════════════════════════════════════════════
