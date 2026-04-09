@@ -1,0 +1,31 @@
+{
+  "lastUpdated": "2026-04-09",
+  "accounts": {
+    "Heritage Senior Living": {
+      "hubspotCompanyId": "49138203519",
+      "metabaseEmployerId": "",
+      "csRep": "Cayden Fox",
+      "renewalDate": "",
+      "communities": [
+        "Traditions of Hanover",
+        "Keystone Villa at Douglassville, PC",
+        "Chestnut Knoll",
+        "Keystone Villa at Ephrata",
+        "Birches at Harleysville",
+        "The Birches at Newtown",
+        "The Birches at New Hope",
+        "Keystone Villa at Fleetwood",
+        "Manor at Market Square",
+        "Traditions of Lansdale",
+        "Birches of Lehigh Valley",
+        "Traditions of Hershey",
+        "Heritage Green Hanover",
+        "Senior Commons at Powder Mill",
+        "Heritage Green Lynchburg",
+        "Chancellor's Village",
+        "The Crossroads at Bon Air",
+        "Keystone Villa at Douglassville, IL"
+      ]
+    }
+  }
+}
