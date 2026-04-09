@@ -291,7 +291,30 @@
     .delta-badge.down{background:#fee2e2;color:#991b1b}
     .delta-badge.flat{background:var(--gray-100);color:var(--gray-500)}
 
-    /* ── ACTION CHECKBOXES ── */
+    /* ── SENTIMENT TABS ── */
+    .sentiment-tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+    .sentiment-tab{padding:5px 14px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;border:1.5px solid var(--gray-200);background:white;color:var(--gray-600);transition:all .15s}
+    .sentiment-tab:hover{background:var(--gray-50);border-color:var(--gray-300)}
+    .sentiment-tab.active{background:var(--brand-light);color:var(--brand-dark);border-color:var(--brand)}
+    .sentiment-entry{padding:9px 12px;background:var(--gray-50);border-radius:7px;margin-bottom:7px;border-left:3px solid var(--gray-200)}
+    .sentiment-entry.pos{border-left-color:var(--green)}
+    .sentiment-entry.neg{border-left-color:var(--red)}
+    .sentiment-entry.neu{border-left-color:var(--gray-300)}
+    .sentiment-entry-text{font-size:12px;color:var(--gray-700);line-height:1.6}
+    .sentiment-entry-src{margin-top:5px;display:flex;gap:6px;flex-wrap:wrap}
+    .sentiment-src-link{display:inline-flex;align-items:center;gap:3px;font-size:11px;color:var(--brand);text-decoration:none;font-weight:500;padding:2px 8px;background:var(--brand-light);border-radius:4px}
+    .sentiment-src-link:hover{text-decoration:underline}
+    /* ── COMMUNITY MODAL TABLE ── */
+    .comm-modal-table{width:100%;border-collapse:collapse;font-size:12px}
+    .comm-modal-table th{background:var(--gray-50);color:var(--gray-500);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:7px 10px;text-align:left;border-bottom:1px solid var(--gray-200)}
+    .comm-modal-table td{padding:7px 10px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
+    .comm-modal-table tr:last-child td{border-bottom:none}
+    .comm-modal-status{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:10px;white-space:nowrap}
+    .comm-modal-status.live{background:var(--green-light);color:var(--green-dark)}
+    .comm-modal-status.mid{background:#fef3c7;color:#92400e}
+    .comm-modal-status.early{background:var(--gray-200);color:var(--gray-600)}
+
+        /* ── ACTION CHECKBOXES ── */
     .actions-list li{display:flex;align-items:flex-start;gap:8px;padding:5px 0 5px 0}
     .actions-list li::before{display:none}
     .action-check{width:14px;height:14px;border-radius:3px;border:1.5px solid var(--gray-300);cursor:pointer;flex-shrink:0;margin-top:1px;appearance:none;-webkit-appearance:none;background:white;transition:all .15s}
@@ -327,7 +350,7 @@
     <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
   </div>
   <div class="header-actions">
-    <button class="btn btn-ghost" onclick="renderAll()">↻ Refresh</button>
+    <button class="btn btn-ghost" onclick="reloadAndRender()">↻ Refresh</button>
     <button class="btn btn-primary" onclick="openNewScoreModal()">＋ New Health Score</button>
   </div>
 </header>
@@ -562,114 +585,9 @@ const CS_REPS = [
 // ═══════════════════════════════════════════════════════════════
 // HEALTH DATA — updated automatically by the health score skill
 // ═══════════════════════════════════════════════════════════════
-// HEALTH_DATA_BEGIN
-const HEALTH_DATA = [
-  {
-    "company": "Heritage Senior Living",
-    "date": "2026-03-31",
-    "csRep": "Cayden Fox",
-    "overallScore": 64,
-    "platformUsage": 68,
-    "customerSentiment": 60,
-    "npsSurvey": 50,
-    "onboardingHealth": 57,
-    "supportLoad": 78,
-    "engagementCadence": 78,
-    "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
-    "npsTicketUrls": [
-      {"label": "Latoya Henry — Birches of Lehigh Valley (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41905403719"},
-      {"label": "Leslie Juan — Manor at Market Square (Feb 2026)", "score": 4, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41758140264"},
-      {"label": "Aiesha Roach — Birches at Newtown (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41903235750"},
-      {"label": "Scott Garverich — Chestnut Knoll (Feb 2026)", "score": 2, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41744439411"},
-      {"label": "Jemetrice Blakely — Heritage Green Hanover (Feb 2026)", "score": 3, "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"}
-    ],
-    "bugTicketUrls": [
-      {"label": "Not able to approve shifts", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38330230296"},
-      {"label": "Staffing Ladder budgets not budgeting by shift", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41812347246"},
-      {"label": "Shared Calendar View setting not working properly", "priority": "HIGH", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39109781867"},
-      {"label": "\"Enjoy Day Off\" displays when shifts are scheduled", "priority": "MEDIUM", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39636914522"},
-      {"label": "Approve open shift, reject the rest", "priority": "LOW", "status": "closed", "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31460037465"}
-    ],
-    "actions": [
-      "Monitor backlog (4 items) — all open bugs now resolved, watch for regressions",
-      "Address Paylocity integration delays before April 1 position transition",
-      "Launch targeted staff training push based on NPS usability feedback"
-    ],
-    "notes": "18 facilities — 11 live, 4 mid-stage, 3 early. Loyal account, technical friction.",
-    "renewalDate": "2026-12-12",
-    "metricDetails": {
-      "platformUsage": {
-        "summary": "11 of 18 buildings actively publishing daily. Message volume up 7× over last quarter. Call-off rate declining.",
-        "highlights": [
-          "11/18 buildings publishing daily",
-          "Monthly message volume: ~7,200 (up from ~1,050 — 7× growth)",
-          "Call-off rate declining quarter-over-quarter",
-          "7 buildings still in onboarding — not yet contributing usage data"
-        ]
-      },
-      "npsSurvey": {
-        "period": "February 2026",
-        "avgScore": 3.0,
-        "responseCount": 5,
-        "trend": "Stable vs. January average (2.9)",
-        "responses": [
-          {"building": "The Birches of Lehigh Valley", "respondent": "Latoya Henry", "score": 3, "note": "Still getting used to it"},
-          {"building": "The Manor at Market Square", "respondent": "Leslie Juan", "score": 4, "note": null},
-          {"building": "The Birches at Newtown", "respondent": "Aiesha Roach", "score": 3, "note": null},
-          {"building": "Chestnut Knoll", "respondent": "Scott Garverich", "score": 2, "note": null},
-          {"building": "Heritage Green Hanover", "respondent": "Jemetrice Blakely", "score": 3, "note": "it not easy to learn all the gadgets"}
-        ]
-      },
-      "supportLoad": {
-        "openHigh": 0,
-        "openMedium": 0,
-        "openLow": 0,
-        "backlogItems": 4,
-        "summary": "All previously open tickets resolved. No active bugs open as of this run. 4 items remain in backlog."
-      },
-      "onboardingHealth": {
-        "total": 18,
-        "live": 11,
-        "midStage": 4,
-        "earlyStage": 3,
-        "summary": "11 of 18 buildings fully live. 4 mid-stage and 3 early-stage remain. Paylocity integration delays affecting several buildings."
-      },
-      "customerSentiment": {
-        "summary": "Loyal, long-term account with active CS engagement. Technical friction creating some frustration but no escalation risk.",
-        "signals": [
-          "Active CS engagement — responsive to outreach from Cayden",
-          "Paylocity integration delays affecting multiple buildings ahead of April 1 position transition",
-          "Staff feedback: usability concerns noted in NPS (gadgets comment, learning curve)",
-          "Chestnut Knoll NPS average 1.5/5 — outlier, warrants a check-in",
-          "No escalation signals in Slack at-risk channel"
-        ]
-      },
-      "engagementCadence": {
-        "summary": "Regular cadence maintained. 4 meetings logged in last 90 days. Avg ~22 days between touchpoints.",
-        "avgDaysBetween": 22,
-        "recentMeetings": []
-      }
-    },
-    "communities": [
-      {"name": "The Birches of Lehigh Valley", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "The Manor at Market Square", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 75, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "The Birches at Newtown", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Chestnut Knoll", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 20, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Heritage Green Hanover", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Keystone Villa at Douglassville, PC", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Senior Commons at Powder Mill", "csRep": "Cayden Fox", "status": "live", "npsSurvey": 52, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Keystone Villa at Fleetwood", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Heritage Green Assisted Living", "csRep": "Cayden Fox", "status": "live", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 100, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Mid-Stage Community A", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Mid-Stage Community B", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Mid-Stage Community C", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Mid-Stage Community D", "csRep": "Cayden Fox", "status": "mid-stage", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 55, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Early-Stage Community A", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Early-Stage Community B", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null},
-      {"name": "Early-Stage Community C", "csRep": "Cayden Fox", "status": "early", "npsSurvey": null, "platformUsage": null, "onboardingHealth": 20, "supportLoad": null, "customerSentiment": null, "engagementCadence": null}
-    ]
-  }
-];
+// HEALTH_DATA_BEGIN — data is loaded from data.json at runtime
+// Do NOT embed scores here. Use push_health_score.py to publish to GitHub.
+let HEALTH_DATA = [];
 // HEALTH_DATA_END
 
 // ═══════════════════════════════════════════════════════════════
@@ -699,10 +617,37 @@ let activeCompanyToggles=new Set();
 // ═══════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════
-window.addEventListener('DOMContentLoaded', () => {
+async function loadAndRender() {
+  const grid = document.getElementById('cardsGrid');
+  if (grid) grid.innerHTML = '<div style="text-align:center;padding:60px;color:var(--gray-500)"><div style="font-size:28px;margin-bottom:10px">⏳</div>Loading health data…</div>';
+  try {
+    const resp = await fetch('data.json?_=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const json = await resp.json();
+    HEALTH_DATA = json.entries || [];
+  } catch(e) {
+    console.warn('Could not load data.json:', e);
+    if (grid) grid.innerHTML = '<div style="text-align:center;padding:60px;color:var(--red-dark)"><div style="font-size:28px;margin-bottom:10px">⚠️</div><strong>Could not load health data.</strong><br><span style="font-size:12px;color:var(--gray-500)">Make sure data.json is deployed alongside index.html and refresh the page.</span></div>';
+    return;
+  }
   populateRepFilters();
   renderAll();
-});
+}
+
+async function reloadAndRender() {
+  try {
+    const resp = await fetch('data.json?_=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const json = await resp.json();
+    HEALTH_DATA = json.entries || [];
+    renderAll();
+    showToast('Refreshed — ' + HEALTH_DATA.length + ' entr' + (HEALTH_DATA.length !== 1 ? 'ies' : 'y') + ' loaded');
+  } catch(e) {
+    showToast('Could not refresh data — check your connection');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadAndRender);
 
 function renderAll() {
   aggregateCompanies();
@@ -1226,8 +1171,24 @@ function buildMetricDetailBody(dimKey, detail, entry) {
   if(dimKey==='onboardingHealth'){
     const t=detail.total||1, l=detail.live||0, m=detail.midStage||0, e=detail.earlyStage||0;
     const lw=Math.round(l/t*100), mw=Math.round(m/t*100), ew=Math.round(e/t*100);
+    // Build sorted community table
+    const comms=(entry.communities||[]).slice().sort((a,b)=>{
+      const ord={'live':0,'mid-stage':1,'early':2};
+      return (ord[a.status]??9)-(ord[b.status]??9)||a.name.localeCompare(b.name);
+    });
+    const commRows=comms.map(c=>{
+      const sc={'live':'live','mid-stage':'mid','early':'early'}[c.status]||'early';
+      const sl={'live':'\uD83D\uDFE2 Live','mid-stage':'\uD83D\uDFE1 Mid-Stage','early':'\u26AA Early'}[c.status]||c.status;
+      const hsCell=c.hubspotTicketUrl
+        ?`<a href="${esc(c.hubspotTicketUrl)}" target="_blank" class="hs-link" style="font-size:11px">\u2B21 HubSpot \u2197</a>`
+        :`<span style="color:var(--gray-300);font-size:11px">\u2014</span>`;
+      return `<tr><td style="font-size:12px;font-weight:500;color:var(--gray-900)">${esc(c.name)}</td><td><span class="comm-modal-status ${sc}">${sl}</span></td><td>${hsCell}</td></tr>`;
+    }).join('');
+    const commTable=comms.length
+      ?`<div class="detail-section"><div class="detail-label">All Communities (${comms.length})</div><table class="comm-modal-table"><thead><tr><th>Community</th><th>Status</th><th>HubSpot</th></tr></thead><tbody>${commRows}</tbody></table></div>`
+      :'';
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
-    <div class="detail-section"><div class="detail-label">Community Breakdown</div>
+    <div class="detail-section"><div class="detail-label">Breakdown</div>
     <div class="ob-progress-bar">
       <div class="ob-seg live" style="width:${lw}%">${l>0?l:''}</div>
       <div class="ob-seg mid" style="width:${mw}%">${m>0?m:''}</div>
@@ -1238,14 +1199,44 @@ function buildMetricDetailBody(dimKey, detail, entry) {
       <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--yellow)"></div><span>Mid-Stage: ${m}</span></div>
       <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-300)"></div><span>Early: ${e}</span></div>
       <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-200)"></div><span>Total: ${t}</span></div>
-    </div></div>`;
+    </div></div>${commTable}`;
   }
-  if(dimKey==='customerSentiment'){
+    if(dimKey==='customerSentiment'){
+    // Support both legacy (signals[]) and new (positive/negative/neutral[]) formats
+    const hasTabs=!!(detail.positive||detail.negative||detail.neutral);
+    const summaryHtml=detail.summary
+      ?`<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary)}</div></div>`
+      :'';
+    if(hasTabs){
+      const pos=detail.positive||[], neg=detail.negative||[], neu=detail.neutral||[];
+      const srcIcons={'granola':'\uD83D\uDCDD','circleback':'\uD83D\uDCDE','intercom':'\uD83D\uDCAC','email':'\u2709\uFE0F','slack':'#\uFE0F\u20E3','meeting':'\uD83D\uDCC5'};
+      const renderItems=(items,cls)=>items.length
+        ?items.map(item=>{
+          const icon=srcIcons[item.sourceType]||'\uD83D\uDCCC';
+          const label=item.sourceType?(item.sourceType.charAt(0).toUpperCase()+item.sourceType.slice(1)):'Source';
+          const srcHtml=item.sourceUrl
+            ?`<div class="sentiment-entry-src"><a class="sentiment-src-link" href="${esc(item.sourceUrl)}" target="_blank">${icon} ${esc(label)} \u2197</a></div>`
+            :'';
+          return `<div class="sentiment-entry ${cls}"><div class="sentiment-entry-text">${esc(item.text)}</div>${srcHtml}</div>`;
+        }).join('')
+        :`<div style="color:var(--gray-400);font-size:12px;padding:8px 4px;font-style:italic">None recorded</div>`;
+      return `${summaryHtml}<div class="detail-section">
+        <div class="detail-label">Feedback Breakdown</div>
+        <div class="sentiment-tabs">
+          <button class="sentiment-tab active" onclick="setSentimentTab(this,'stab-pos')">\u2705 Positive (${pos.length})</button>
+          <button class="sentiment-tab" onclick="setSentimentTab(this,'stab-neg')">\u26A0\uFE0F Negative (${neg.length})</button>
+          <button class="sentiment-tab" onclick="setSentimentTab(this,'stab-neu')">\u27A1\uFE0F Neutral (${neu.length})</button>
+        </div>
+        <div class="sentiment-panel" id="stab-pos">${renderItems(pos,'pos')}</div>
+        <div class="sentiment-panel" id="stab-neg" style="display:none">${renderItems(neg,'neg')}</div>
+        <div class="sentiment-panel" id="stab-neu" style="display:none">${renderItems(neu,'neu')}</div>
+      </div>`;
+    }
+    // Legacy fallback: signals array
     const items=(detail.signals||[]).map(s=>`<div class="signal-item"><div class="signal-dot"></div><span>${esc(s)}</span></div>`).join('');
-    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
-    ${items?`<div class="detail-section"><div class="detail-label">Key Signals</div><div class="signal-list">${items}</div></div>`:''}`;
+    return `${summaryHtml}${items?`<div class="detail-section"><div class="detail-label">Key Signals</div><div class="signal-list">${items}</div></div>`:''}`;
   }
-  if(dimKey==='engagementCadence'){
+    if(dimKey==='engagementCadence'){
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
     ${detail.avgDaysBetween?`<div class="detail-section"><div class="detail-label">Avg Days Between Touchpoints</div><div class="detail-summary" style="font-size:24px;font-weight:700;color:var(--brand)">${detail.avgDaysBetween} days</div></div>`:''}`;
   }
@@ -1581,6 +1572,15 @@ function buildSparkline(history,s){
   return`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords.join(' ')}"/><circle cx="${coords[coords.length-1].split(',')[0]}" cy="${coords[coords.length-1].split(',')[1]}" r="3" fill="${color}"/></svg>`;
 }
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+
+function setSentimentTab(btn, targetId) {
+  const section = btn.closest('.detail-section');
+  section.querySelectorAll('.sentiment-tab').forEach(t => t.classList.remove('active'));
+  section.querySelectorAll('.sentiment-panel').forEach(p => p.style.display = 'none');
+  btn.classList.add('active');
+  const panel = document.getElementById(targetId);
+  if (panel) panel.style.display = 'block';
+}
 
 // ═══════════════════════════════════════════════════════════════
 // INTERACTIONS
