@@ -333,6 +333,46 @@
       .data-table{font-size:12px}
       .comm-grid{grid-template-columns:1fr}
     }
+  /* ── Signals tab ─────────────────────────────────────── */
+  .signals-toolbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+  .signals-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+  .signals-summary-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px;text-align:center}
+  .signals-summary-card .ssc-num{font-size:26px;font-weight:700;line-height:1}
+  .signals-summary-card .ssc-lbl{font-size:11px;color:var(--gray-400);margin-top:4px}
+  .signals-summary-card.sc-red .ssc-num{color:var(--red)}
+  .signals-summary-card.sc-yellow .ssc-num{color:var(--yellow-dark)}
+  .signals-summary-card.sc-blue .ssc-num{color:var(--brand)}
+  .signals-section{margin-bottom:32px}
+  .signals-section-title{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .signals-section-title h3{font-size:15px;font-weight:700;color:var(--gray-800);margin:0}
+  .signals-section-title .sst-sub{font-size:12px;color:var(--gray-400)}
+  .signals-divider{height:1px;background:var(--gray-200);margin:28px 0}
+  .signal-cards{display:flex;flex-direction:column;gap:8px}
+  .signal-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:13px 15px;display:flex;gap:11px;align-items:flex-start}
+  .signal-card.sev-high{border-left:3px solid var(--red)}
+  .signal-card.sev-medium{border-left:3px solid var(--yellow)}
+  .signal-card.sev-low{border-left:3px solid var(--gray-300)}
+  .signal-body{flex:1;min-width:0}
+  .signal-title{font-size:13px;font-weight:600;color:var(--gray-800);margin-bottom:2px}
+  .signal-desc{font-size:12px;color:var(--gray-500);margin-bottom:6px}
+  .signal-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:7px}
+  .signal-tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500;white-space:nowrap}
+  .signal-tag.st-default{background:var(--gray-100);color:var(--gray-600)}
+  .signal-tag.st-company{background:var(--brand-light);color:var(--brand);cursor:pointer}
+  .signal-tag.st-company:hover{background:#dde4ff}
+  .signal-tag.st-bug{background:#fee2e2;color:#991b1b}
+  .signal-tag.st-fr{background:#eff6ff;color:#1d4ed8}
+  .signal-tag.st-nps{background:#fef3c7;color:#92400e}
+  .signal-tag.st-usage{background:#dcfce7;color:#166534}
+  .signal-tag.st-sentiment{background:#f3e8ff;color:#7e22ce}
+  .signal-ticket-list{display:flex;flex-direction:column;gap:3px;margin-top:4px}
+  .signal-ticket{font-size:11px;color:var(--gray-500);line-height:1.4}
+  .signal-ticket a{color:var(--brand);text-decoration:none}
+  .signal-ticket a:hover{text-decoration:underline}
+  .signals-empty{text-align:center;padding:36px 20px;color:var(--gray-400);font-size:13px;background:var(--gray-50);border-radius:var(--radius)}
+  .sig-company-group{margin-bottom:18px}
+  .sig-company-name{font-size:13px;font-weight:700;color:var(--gray-700);margin-bottom:7px;display:flex;align-items:center;gap:6px;cursor:pointer}
+  .sig-company-name:hover{color:var(--brand)}
   </style>
 </head>
 <body>
@@ -347,7 +387,8 @@
     <button class="tab-btn active" onclick="switchTab('dashboard',this)">Dashboard</button>
     <button class="tab-btn" onclick="switchTab('allcommunities',this)">Communities</button>
     <button class="tab-btn" onclick="switchTab('trends',this)">Trends</button>
-    <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
+    <button class="tab-btn" onclick="switchTab('signals',this)">Signals</button>
+  <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
   </div>
   <div class="header-actions">
     <button class="btn btn-ghost" onclick="reloadAndRender()">↻ Refresh</button>
@@ -489,6 +530,38 @@
 </div>
 
 <!-- ══ RAW DATA VIEW ══ -->
+<div id="view-signals" class="view">
+  <main>
+    <div class="signals-toolbar">
+      <div>
+        <h2 style="font-size:20px;font-weight:700;color:var(--gray-900);margin:0">Signals</h2>
+        <div style="font-size:12px;color:var(--gray-400);margin-top:3px">Proactive indicators across accounts, communities, and the Veras product</div>
+      </div>
+    </div>
+    <div class="signals-summary">
+      <div class="signals-summary-card sc-red"><div class="ssc-num" id="sigSummaryHigh">—</div><div class="ssc-lbl">High Priority</div></div>
+      <div class="signals-summary-card sc-yellow"><div class="ssc-num" id="sigSummaryMed">—</div><div class="ssc-lbl">Watch Items</div></div>
+      <div class="signals-summary-card sc-blue"><div class="ssc-num" id="sigSummaryProduct">—</div><div class="ssc-lbl">Product Patterns</div></div>
+      <div class="signals-summary-card"><div class="ssc-num" id="sigSummaryAccount">—</div><div class="ssc-lbl">Account Signals</div></div>
+    </div>
+    <div class="signals-section">
+      <div class="signals-section-title">
+        <h3>🔬 Product Signals</h3>
+        <span class="sst-sub">Patterns appearing across multiple companies — indicators for the product roadmap and training priorities</span>
+      </div>
+      <div class="signal-cards" id="sigProductCards"><div class="signals-empty">Loading…</div></div>
+    </div>
+    <div class="signals-divider"></div>
+    <div class="signals-section">
+      <div class="signals-section-title">
+        <h3>📊 Account & Community Signals</h3>
+        <span class="sst-sub">Usage drops, NPS concerns, score declines, and other per-account indicators</span>
+      </div>
+      <div id="sigAccountCards"><div class="signals-empty">Loading…</div></div>
+    </div>
+  </main>
+</div>
+
 <div id="view-data" class="view">
   <main>
     <div class="data-toolbar">
@@ -1684,6 +1757,262 @@ function setSentimentTab(btn, targetId) {
 // ═══════════════════════════════════════════════════════════════
 // INTERACTIONS
 // ═══════════════════════════════════════════════════════════════
+// ─── Signals Tab ──────────────────────────────────────────────────────────────
+
+const PRODUCT_THEMES = [
+  {id:'meal-break',   kw:['meal break','missed meal','break deduct','ppd'],                    label:'Meal Break & PPD Accuracy'},
+  {id:'preferences',  kw:['preference','availability','master schedule','suggested worker'],   label:'Staff Preferences & Scheduling Visibility'},
+  {id:'call-off',     kw:['call off','call-off','calloff'],                                    label:'Call-Off Policies'},
+  {id:'ai-suggest',   kw:['overstaffed','ai suggest','ai feature','ai overstaff'],            label:'AI Scheduling Suggestions'},
+  {id:'agency',       kw:['agency','shiftkey','nursa'],                                        label:'Agency Integration'},
+  {id:'reporting',    kw:['report card','daily report','report card','ppd','report'],          label:'Reporting & Metrics'},
+  {id:'pto',          kw:['pto','time off','time-off','blackout'],                             label:'PTO / Time Off'},
+  {id:'messaging',    kw:['messag','group message'],                                           label:'Messaging Features'},
+  {id:'print',        kw:['print','day print'],                                                label:'Schedule Printing'},
+  {id:'invite-login', kw:['invite code','invite link','app login'],                            label:'App Invite / Login'},
+  {id:'overtime',     kw:['overtime','early clock','late clock','ot '],                       label:'Overtime & Clock Management'},
+  {id:'shift-swap',   kw:['shift swap','swap shift'],                                          label:'Shift Swap'},
+  {id:'publish',      kw:['publish rate','unpublished','draft shift','schedule publish'],      label:'Schedule Publishing'},
+];
+
+function _themeMatch(text, kws) {
+  const t = (text||'').toLowerCase();
+  return kws.some(k => t.includes(k));
+}
+
+function computeProductSignals(latestEntries) {
+  const themes = {};
+  const ensureTheme = id => {
+    const def = PRODUCT_THEMES.find(t=>t.id===id);
+    if(!themes[id]) themes[id] = {label:def.label, bugs:[], frs:[], complaints:[], sentiments:[]};
+  };
+
+  latestEntries.forEach(({company, entry}) => {
+    (entry.bugTicketUrls||[]).forEach(t => {
+      PRODUCT_THEMES.forEach(th => {
+        if(_themeMatch(t.label, th.kw)) {
+          ensureTheme(th.id);
+          if(!themes[th.id].bugs.find(b=>b.company===company&&b.label===t.label))
+            themes[th.id].bugs.push({company, label:t.label, url:t.url, priority:t.priority});
+        }
+      });
+    });
+    (entry.featureRequestUrls||[]).forEach(t => {
+      PRODUCT_THEMES.forEach(th => {
+        if(_themeMatch(t.label, th.kw)) {
+          ensureTheme(th.id);
+          if(!themes[th.id].frs.find(f=>f.company===company&&f.label===t.label))
+            themes[th.id].frs.push({company, label:t.label, url:t.url});
+        }
+      });
+    });
+    (entry.metricDetails?.npsSurvey?.responses||[]).forEach(r => {
+      if(!r.note||!r.note.trim()||r.score>3) return;
+      PRODUCT_THEMES.forEach(th => {
+        if(_themeMatch(r.note, th.kw)) {
+          ensureTheme(th.id);
+          themes[th.id].complaints.push({company, building:r.building, score:r.score, note:r.note});
+        }
+      });
+    });
+    (entry.metricDetails?.customerSentiment?.negative||[]).forEach(s => {
+      PRODUCT_THEMES.forEach(th => {
+        if(_themeMatch(s.text, th.kw)) {
+          ensureTheme(th.id);
+          themes[th.id].sentiments.push({company, text:s.text});
+        }
+      });
+    });
+  });
+
+  // Only surface themes affecting 2+ distinct companies
+  return Object.entries(themes).map(([id, data]) => {
+    const allCompanies = [...new Set([
+      ...data.bugs.map(b=>b.company),
+      ...data.frs.map(f=>f.company),
+      ...data.complaints.map(c=>c.company),
+      ...data.sentiments.map(s=>s.company),
+    ])];
+    if(allCompanies.length < 2) return null;
+    const hasBug = data.bugs.length > 0;
+    const types = [hasBug&&'Bug', data.frs.length&&'Feature Request',
+                   data.complaints.length&&'NPS Complaint', data.sentiments.length&&'Sentiment'].filter(Boolean);
+    return {id, label:data.label, severity:hasBug?'high':'medium', allCompanies, types, data};
+  }).filter(Boolean).sort((a,b)=>(a.severity==='high'?0:1)-(b.severity==='high'?0:1));
+}
+
+function computeAccountSignals(latestEntries) {
+  const today = new Date();
+  return latestEntries.map(({company, entry, prev}) => {
+    const items = [];
+
+    // Score drop
+    if(prev && entry.overallScore!=null && prev.overallScore!=null) {
+      const drop = prev.overallScore - entry.overallScore;
+      if(drop >= 8) items.push({sev:'high', cat:'Score', icon:'📉',
+        msg:`Score dropped ${drop} pts since ${prev.date} (${prev.overallScore} → ${entry.overallScore})`});
+      else if(drop >= 4) items.push({sev:'medium', cat:'Score', icon:'📉',
+        msg:`Score declined ${drop} pts since ${prev.date} (${prev.overallScore} → ${entry.overallScore})`});
+    }
+
+    // Red zone
+    if(entry.overallScore < 50) items.push({sev:'high', cat:'Score', icon:'🔴',
+      msg:`Red zone — overall score ${entry.overallScore}/100`});
+
+    // HIGH priority bugs
+    const highBugs = (entry.bugTicketUrls||[]).filter(t=>t.priority==='HIGH');
+    if(highBugs.length) items.push({sev:'high', cat:'Support', icon:'🐛',
+      msg:`${highBugs.length} HIGH priority open bug${highBugs.length>1?'s':''}`,
+      links: highBugs.map(t=>({label:t.label, url:t.url}))});
+
+    // Live communities with low current-month publish rate
+    (entry.communities||[]).forEach(c => {
+      if(c.status!=='live') return;
+      const ud = c.usageDetail;
+      if(!ud) return;
+      let rate = ud.currentMonth
+        ? (ud.currentMonth.total>0 ? ud.currentMonth.published/ud.currentMonth.total*100 : null)
+        : (ud.publishRate??null);
+      if(rate===null) return;
+      const r = Math.round(rate);
+      if(r < 25) items.push({sev:'high', cat:'Usage', icon:'📅',
+        msg:`${c.name}: ${r}% current-month publish rate`, communityName:c.name, companyName:company});
+      else if(r < 40) items.push({sev:'medium', cat:'Usage', icon:'📅',
+        msg:`${c.name}: ${r}% current-month publish rate`, communityName:c.name, companyName:company});
+    });
+
+    // Low NPS community scores
+    (entry.communities||[]).forEach(c => {
+      if(c.npsSurvey==null) return;
+      if(c.npsSurvey<=20) items.push({sev:'high', cat:'NPS', icon:'📋',
+        msg:`${c.name}: NPS ${c.npsSurvey}/100`, communityName:c.name, companyName:company});
+      else if(c.npsSurvey<=35) items.push({sev:'medium', cat:'NPS', icon:'📋',
+        msg:`${c.name}: NPS ${c.npsSurvey}/100`, communityName:c.name, companyName:company});
+    });
+
+    // Notable NPS feedback notes (score ≤2 with text)
+    (entry.metricDetails?.npsSurvey?.responses||[]).forEach(r => {
+      if(!r.note||!r.note.trim()||r.score>2) return;
+      const snip = r.note.length>90 ? r.note.slice(0,87)+'…' : r.note;
+      items.push({sev:'medium', cat:'NPS', icon:'💬',
+        msg:`"${snip}" — ${r.building||'unknown'} (score ${r.score}/5)`});
+    });
+
+    // Stale score (>60 days onboarding, >90 days post-live)
+    const daysSince = Math.floor((today - new Date(entry.date)) / 86400000);
+    const staleThres = entry.lifecycle==='active-onboarding' ? 60 : 90;
+    if(daysSince > staleThres) items.push({sev:'medium', cat:'Cadence', icon:'📆',
+      msg:`Health score is ${daysSince} days old — due for a refresh`});
+
+    // Unresolved registry mappings
+    const unresolved = (entry.communities||[]).filter(c=>c.mappingConfidence==='unresolved');
+    if(unresolved.length) items.push({sev:'low', cat:'Registry', icon:'🗺️',
+      msg:`${unresolved.length} community mapping${unresolved.length>1?'s':''} unresolved — verify IDs in registry`});
+
+    // Multiple live communities with no NPS data at all
+    const liveNoNps = (entry.communities||[]).filter(c=>c.status==='live'&&c.npsSurvey==null);
+    if(liveNoNps.length>=3) items.push({sev:'low', cat:'NPS', icon:'📊',
+      msg:`${liveNoNps.length} live communities with no NPS data on record`});
+
+    return {company, entry, items};
+  }).filter(cs=>cs.items.length>0);
+}
+
+function renderProductSignalCard(s) {
+  const dot = s.severity==='high'?'🔴':'🟡';
+  const compTags = s.allCompanies.map(c=>
+    `<span class="signal-tag st-company" onclick="openCompany('${esc(c)}')">${esc(c)}</span>`
+  ).join('');
+  const typeTags = s.types.map(t=>{
+    const cls = t==='Bug'?'st-bug':t==='Feature Request'?'st-fr':t.includes('NPS')?'st-nps':'st-sentiment';
+    return `<span class="signal-tag ${cls}">${t}</span>`;
+  }).join('');
+  const tickets = [
+    ...s.data.bugs.map(b=>`<div class="signal-ticket">🐛 <strong>${esc(b.company)}</strong> — <a href="${esc(b.url)}" target="_blank">${esc(b.label)}</a></div>`),
+    ...s.data.frs.map(f=>`<div class="signal-ticket">💡 <strong>${esc(f.company)}</strong> — <a href="${esc(f.url)}" target="_blank">${esc(f.label)}</a></div>`),
+    ...s.data.complaints.map(c=>{
+      const snip=c.note.length>90?c.note.slice(0,87)+'…':c.note;
+      return `<div class="signal-ticket">💬 <strong>${esc(c.company)}</strong> — ${esc(c.building||'')} (${c.score}/5): "${esc(snip)}"</div>`;
+    }),
+    ...s.data.sentiments.map(s2=>{
+      const snip=s2.text.length>110?s2.text.slice(0,107)+'…':s2.text;
+      return `<div class="signal-ticket">📝 <strong>${esc(s2.company)}</strong>: ${esc(snip)}</div>`;
+    }),
+  ].join('');
+  return `<div class="signal-card sev-${s.severity}">
+    <div style="font-size:16px;flex-shrink:0;margin-top:1px">${dot}</div>
+    <div class="signal-body">
+      <div class="signal-title">${esc(s.label)}</div>
+      <div class="signal-desc">Affects ${s.allCompanies.length} compan${s.allCompanies.length>1?'ies':'y'}</div>
+      <div class="signal-tags">${typeTags}${compTags}</div>
+      <div class="signal-ticket-list">${tickets}</div>
+    </div>
+  </div>`;
+}
+
+function renderAccountSignalGroup(cs) {
+  const highCount = cs.items.filter(i=>i.sev==='high').length;
+  const dot = highCount>0?'🔴':cs.items.some(i=>i.sev==='medium')?'🟡':'⚪';
+  const catCls = {Usage:'st-usage',NPS:'st-nps',Sentiment:'st-sentiment',Support:'st-bug',Score:'st-default',Registry:'st-default',Cadence:'st-default'};
+  const rows = [...cs.items]
+    .sort((a,b)=>({high:0,medium:1,low:2}[a.sev]||1)-({high:0,medium:1,low:2}[b.sev]||1))
+    .map(item => {
+      const sevDot = item.sev==='high'?'🔴':item.sev==='medium'?'🟡':'⚪';
+      const cls = catCls[item.cat]||'st-default';
+      const commLink = item.communityName
+        ? `<span style="font-size:11px;color:var(--brand);cursor:pointer;margin-left:6px" onclick="openCompany('${esc(item.companyName)}')">View →</span>`
+        : '';
+      const links = (item.links||[]).map(l=>`<div class="signal-ticket"><a href="${esc(l.url)}" target="_blank">${esc(l.label)}</a></div>`).join('');
+      return `<div class="signal-card sev-${item.sev}" style="padding:9px 14px">
+        <div style="font-size:13px;flex-shrink:0">${sevDot}</div>
+        <div class="signal-body">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span class="signal-tag ${cls}" style="font-size:10px">${esc(item.cat)}</span>
+            <span style="font-size:12px;color:var(--gray-700)">${esc(item.msg)}</span>
+            ${commLink}
+          </div>
+          ${links?`<div class="signal-ticket-list">${links}</div>`:''}
+        </div>
+      </div>`;
+    }).join('');
+  return `<div class="sig-company-group">
+    <div class="sig-company-name" onclick="openCompany('${esc(cs.company)}')">${dot} ${esc(cs.company)} →</div>
+    <div class="signal-cards">${rows}</div>
+  </div>`;
+}
+
+function renderSignals() {
+  if(!allData||!allData.entries) return;
+  const byCompany = {};
+  (allData.entries||[]).forEach(e => {
+    if(!byCompany[e.company]) byCompany[e.company]=[];
+    byCompany[e.company].push(e);
+  });
+  const latestEntries = Object.entries(byCompany).map(([company, entries]) => {
+    const sorted = [...entries].sort((a,b)=>b.date.localeCompare(a.date));
+    return {company, entry:sorted[0], prev:sorted[1]||null};
+  });
+
+  const productSignals = computeProductSignals(latestEntries);
+  const accountSignals = computeAccountSignals(latestEntries);
+
+  const allItems = accountSignals.flatMap(c=>c.items);
+  document.getElementById('sigSummaryHigh').textContent =
+    productSignals.filter(s=>s.severity==='high').length + allItems.filter(i=>i.sev==='high').length;
+  document.getElementById('sigSummaryMed').textContent =
+    productSignals.filter(s=>s.severity==='medium').length + allItems.filter(i=>i.sev==='medium').length;
+  document.getElementById('sigSummaryProduct').textContent = productSignals.length;
+  document.getElementById('sigSummaryAccount').textContent = allItems.length;
+
+  document.getElementById('sigProductCards').innerHTML = productSignals.length
+    ? productSignals.map(renderProductSignalCard).join('')
+    : `<div class="signals-empty">No cross-portfolio patterns detected yet — patterns surface when the same issue appears in 2+ companies.</div>`;
+
+  document.getElementById('sigAccountCards').innerHTML = accountSignals.length
+    ? accountSignals.map(renderAccountSignalGroup).join('')
+    : `<div class="signals-empty" style="background:#f0fdf4;border:1px solid #bbf7d0;color:var(--green-dark)">✓ No account or community signals detected.</div>`;
+}
+
 function switchTab(view, btn) {
   if(view==='dashboard'&&selectedCompany){
     document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
@@ -1699,6 +2028,7 @@ function switchTab(view, btn) {
   btn.classList.add('active');
   if(view==='trends')renderTrends();
   if(view==='allcommunities')renderAllCommunities();
+  if(view==='signals')renderSignals();
 }
 function setACFilter(val,el){acFilter=val;document.querySelectorAll('#view-allcommunities .pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderAllCommunities()}
 function setACRepFilter(val){acRepFilter=val;renderAllCommunities()}
