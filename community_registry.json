@@ -566,6 +566,104 @@
           "implRep": null
         }
       ]
+    },
+    "Stellar": {
+      "hubspotCompanyId": "50094352242",
+      "metabaseEmployerId": "cmf5qhii9000008lhdfp02680",
+      "csRep": "Tegan Perry",
+      "renewalDate": "",
+      "communities": [
+        {
+          "displayName": "Lincoln Court",
+          "hubspotOnboardingTicketId": "40857812396",
+          "metabaseFacilityIds": [
+            "cml963ok5a1ks01pp53qbfmpt"
+          ],
+          "npsKeyword": "Lincoln Court",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Bear Creek",
+          "hubspotOnboardingTicketId": "30789693106",
+          "metabaseFacilityIds": [
+            "cmf5qwvqb03iihkpseay71qk1"
+          ],
+          "npsKeyword": "Bear Creek",
+          "mappingConfidence": "inferred",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "La Villa Grande",
+          "hubspotOnboardingTicketId": "30543193888",
+          "metabaseFacilityIds": [
+            "cmf5qwvqd03ilhkpsc4jo2nlj"
+          ],
+          "npsKeyword": "La Villa Grande",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Willow Tree",
+          "hubspotOnboardingTicketId": "30793861431",
+          "metabaseFacilityIds": [
+            "cmf5qwvqf03iphkpsa3syeczi"
+          ],
+          "npsKeyword": "Willow Tree",
+          "mappingConfidence": "inferred",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Cedars Health Care Center",
+          "hubspotOnboardingTicketId": "30533086611",
+          "metabaseFacilityIds": [
+            "cmf5qwvqc03ijhkpsaleve9z4"
+          ],
+          "npsKeyword": "Cedars",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Cherrelyn Healthcare Center",
+          "hubspotOnboardingTicketId": "30138899266",
+          "metabaseFacilityIds": [
+            "cmf5qwvqd03ikhkpsdcm76jce"
+          ],
+          "npsKeyword": "Cherrelyn",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Mantey Heights",
+          "hubspotOnboardingTicketId": "30423768868",
+          "metabaseFacilityIds": [
+            "cmf5qwvqe03imhkpsdyjc8l82"
+          ],
+          "npsKeyword": "Mantey Heights",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Skyline Ridge",
+          "hubspotOnboardingTicketId": "30420049836",
+          "metabaseFacilityIds": [
+            "cmf5qwvqe03inhkps8oq5496n"
+          ],
+          "npsKeyword": "Skyline Ridge",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Springs Village Care Center",
+          "hubspotOnboardingTicketId": "30423767972",
+          "metabaseFacilityIds": [
+            "cmf5qwvqe03iohkps017k8cvp"
+          ],
+          "npsKeyword": "Springs Village",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        }
+      ]
     }
   }
 }
