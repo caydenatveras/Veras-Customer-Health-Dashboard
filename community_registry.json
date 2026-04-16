@@ -11,7 +11,7 @@
       "implRep": "CS rep who onboarded this community (from HubSpot ticket owner). May differ from account-level csRep."
     }
   },
-  "lastUpdated": "2026-04-15",
+  "lastUpdated": "2026-04-16",
   "accounts": {
     "Cottonwood": {
       "hubspotCompanyId": "45778087555",
@@ -403,6 +403,167 @@
           "npsKeyword": "Bon Air",
           "mappingConfidence": "confirmed",
           "implRep": "Tegan Perry"
+        }
+      ]
+    },
+    "SAL Management": {
+      "hubspotCompanyId": "45215952686",
+      "metabaseEmployerId": "cm1kwehus000008jy6nn576u3",
+      "csRep": "Tegan Perry",
+      "renewalDate": "",
+      "communities": [
+        {
+          "displayName": "Our House Tremonton",
+          "hubspotOnboardingTicketId": "31578592256",
+          "metabaseFacilityIds": [
+            "cm1kwr8x07qan8ypkgc15ahxn"
+          ],
+          "npsKeyword": "Tremonton",
+          "mappingConfidence": "inferred",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Our House Tooele",
+          "hubspotOnboardingTicketId": "30747152995",
+          "metabaseFacilityIds": [
+            "cm1kwr8rh7q9r8ypk2d6cg8og"
+          ],
+          "npsKeyword": "Tooele",
+          "mappingConfidence": "inferred",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Sunridge Assisted Living Roy",
+          "hubspotOnboardingTicketId": "32169066421",
+          "metabaseFacilityIds": [
+            "cm1kwr8ot7q9b8ypka61d29kv"
+          ],
+          "npsKeyword": "Roy",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Ridgeview Gardens St. George",
+          "hubspotOnboardingTicketId": "32482207892",
+          "metabaseFacilityIds": [
+            "cm1kwr8xs7qar8ypkefz34ucr"
+          ],
+          "npsKeyword": "Ridgeview",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Sunridge Assisted Living Layton",
+          "hubspotOnboardingTicketId": "30887515284",
+          "metabaseFacilityIds": [
+            "cm1kwr8ob7q978ypk4qmvgi1k"
+          ],
+          "npsKeyword": "Layton",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Tradition Assisted Living",
+          "hubspotOnboardingTicketId": "30895322698",
+          "metabaseFacilityIds": [
+            "cm1kwr8ni7q938ypkdt2y4slk"
+          ],
+          "npsKeyword": "Tradition",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Riverway Assisted Living",
+          "hubspotOnboardingTicketId": "30884261463",
+          "metabaseFacilityIds": [
+            "cm1kwr8iq7q8b8ypkcgek99pt"
+          ],
+          "npsKeyword": "Riverway",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Blacksmith Fork Assisted Living",
+          "hubspotOnboardingTicketId": "30595487760",
+          "metabaseFacilityIds": [
+            "cm1kwr8ma7q8v8ypk79mncpox"
+          ],
+          "npsKeyword": "Blacksmith",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Whisper Cove",
+          "hubspotOnboardingTicketId": "37701585267",
+          "metabaseFacilityIds": [
+            "cm1kwr8us7qab8ypk2rq1domf"
+          ],
+          "npsKeyword": "Whisper Cove",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Our House Cedar City",
+          "hubspotOnboardingTicketId": "30713862200",
+          "metabaseFacilityIds": [
+            "cm1kwr8va7qaf8ypk3bn92ef4"
+          ],
+          "npsKeyword": "Cedar City",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Birch Creek Assisted Living",
+          "hubspotOnboardingTicketId": "30719647635",
+          "metabaseFacilityIds": [
+            "cm1kwr8ti7qa38ypk3e69brrh"
+          ],
+          "npsKeyword": "Birch Creek",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Our House Ogden",
+          "hubspotOnboardingTicketId": "30586294053",
+          "metabaseFacilityIds": [
+            "cm1kwr8hb7q838ypk1cq09n2l"
+          ],
+          "npsKeyword": "Our House of Ogden",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Using longer keyword 'Our House of Ogden' to avoid false match against 'South Ogden Post-Acute' which also appears in NPS data",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Sunridge West Jordan",
+          "hubspotOnboardingTicketId": "37583476648",
+          "metabaseFacilityIds": [
+            "cm1kwr8i27q878ypk6a6jd97s"
+          ],
+          "npsKeyword": "West Jordan",
+          "mappingConfidence": "inferred",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) \u2014 stage may be stale, verify with Bryan Ovalle",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "The Beaumont",
+          "hubspotOnboardingTicketId": "37647793184",
+          "metabaseFacilityIds": [
+            "cm1kwr8w87qaj8ypk7cuw3wqt"
+          ],
+          "npsKeyword": "Beaumont",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Cache Valley Assisted Living",
+          "hubspotOnboardingTicketId": null,
+          "metabaseFacilityIds": [
+            "cm1kwr8yg7qav8ypk4ddj0zz6"
+          ],
+          "npsKeyword": "Cache Valley",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot \u2014 verify whether this is a standalone community or part of another entity",
+          "implRep": null
         }
       ]
     }
