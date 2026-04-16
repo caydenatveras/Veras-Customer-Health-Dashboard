@@ -1142,13 +1142,18 @@ function openCommMetricDetail(commName, dimKey, companyName) {
     const allCoTickets=(co.latest.bugTicketUrls||[]);
     const openCoTickets=allCoTickets.filter(t=>t.status!=='closed');
     const closedCoTickets=allCoTickets.filter(t=>t.status==='closed');
-    if(allCoTickets.length) {
-      const openCoHtml=openCoTickets.length
-        ?`<div class="signal-list">${openCoTickets.map(t=>`<div class="signal-item"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
-        :`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
-      const closedCoHtml=closedCoTickets.length
-        ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedCoTickets.length} resolved ticket${closedCoTickets.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedCoTickets.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
-      body+=`<div class="detail-section"><div class="detail-label">Bug Tickets — ${esc(co.name)}</div>${openCoHtml}${closedCoHtml}</div>`;
+    const openCoHtml=openCoTickets.length
+      ?`<div class="signal-list">${openCoTickets.map(t=>`<div class="signal-item"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
+      :`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
+    const closedCoHtml=closedCoTickets.length
+      ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedCoTickets.length} resolved ticket${closedCoTickets.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedCoTickets.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
+    body+=`<div class="detail-section"><div class="detail-label">Bug Tickets — ${esc(co.name)}</div>${openCoHtml}${closedCoHtml}</div>`;
+    const frCoLinks=(co.latest.featureRequestUrls||[]).filter(t=>t.status!=='closed');
+    if(frCoLinks.length) {
+      body+=`<div class="detail-section">
+        <div class="detail-label" style="display:flex;align-items:center;gap:6px">Feature Requests — ${esc(co.name)}<span style="font-size:10px;font-weight:400;color:var(--gray-400);background:var(--gray-100);padding:1px 6px;border-radius:10px">not factored into score</span></div>
+        <div class="signal-list">${frCoLinks.map(t=>`<div class="signal-item"><span class="ticket-tag" style="flex-shrink:0;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>
+      </div>`;
     }
 
   } else if(dimKey==='platformUsage') {
@@ -1210,17 +1215,28 @@ function buildMetricDetailBody(dimKey, detail, entry) {
     const openBugLinks=allBugLinks.filter(t=>t.status!=='closed');
     const closedBugLinks=allBugLinks.filter(t=>t.status==='closed');
     const openSection=openBugLinks.length
-      ?`<div class="signal-list">${openBugLinks.map(t=>`<div class="signal-item"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
+      ?`<div class="signal-list">${openBugLinks.map(t=>`<div class="signal-item"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>`
       :`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`;
     const closedSection=closedBugLinks.length
-      ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedBugLinks.length} resolved ticket${closedBugLinks.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedBugLinks.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${t.priority.toLowerCase()}" style="flex-shrink:0;text-decoration:line-through">${t.priority}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
-    const bugHtml=(allBugLinks.length)?`<div class="detail-section"><div class="detail-label">Bug Tickets</div>${openSection}${closedSection}</div>`:'';
+      ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedBugLinks.length} resolved ticket${closedBugLinks.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedBugLinks.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0;text-decoration:line-through">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
+    const bugHtml=`<div class="detail-section"><div class="detail-label">Bug Tickets</div>${openSection}${closedSection}</div>`;
+    // Feature requests — shown for visibility but not factored into score
+    const frLinks=(entry.featureRequestUrls||[]).filter(t=>t.status!=='closed');
+    const frHtml=frLinks.length
+      ?`<div class="detail-section">
+          <div class="detail-label" style="display:flex;align-items:center;gap:6px">
+            Feature Requests
+            <span style="font-size:10px;font-weight:400;color:var(--gray-400);background:var(--gray-100);padding:1px 6px;border-radius:10px">not factored into score</span>
+          </div>
+          <div class="signal-list">${frLinks.map(t=>`<div class="signal-item"><span class="ticket-tag" style="flex-shrink:0;background:var(--blue-50,#eff6ff);color:var(--blue-600,#2563eb);border:1px solid var(--blue-200,#bfdbfe)">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>
+        </div>`
+      :'';
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
     <div class="detail-section"><div class="detail-label">Breakdown</div><div class="support-counts">
       <div class="support-count high"><div class="num">${detail.openHigh||0}</div><div class="lbl">HIGH Open</div></div>
       <div class="support-count med"><div class="num">${detail.openMedium||0}</div><div class="lbl">MEDIUM Open</div></div>
       <div class="support-count low"><div class="num">${(detail.openLow||0)+(detail.backlogItems||0)}</div><div class="lbl">Low/Backlog</div></div>
-    </div></div>${bugHtml}`;
+    </div></div>${bugHtml}${frHtml}`;
   }
   if(dimKey==='onboardingHealth'){
     const t=detail.total||1, l=detail.live||0, m=detail.midStage||0, e=detail.earlyStage||0;
