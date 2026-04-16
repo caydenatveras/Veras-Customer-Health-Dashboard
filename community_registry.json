@@ -1,30 +1,409 @@
 {
-  "lastUpdated": "2026-04-09",
+  "_schema": {
+    "description": "Registry of all Veras accounts and their communities. Drives automated health score runs.",
+    "communityFields": {
+      "displayName": "Dashboard label \u2014 decoupled from HubSpot/Metabase naming",
+      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID \u2014 no name matching.",
+      "metabaseFacilityIds": "Array of Metabase Facility.id values. Array supports multi-entity buildings.",
+      "npsKeyword": "Short unique substring matched against NPS ticket subjects to identify this community's responses.",
+      "mappingConfidence": "'confirmed' = manually verified | 'inferred' = auto-matched, should verify | 'unresolved' = needs manual mapping",
+      "mappingNote": "Optional. Explains uncertainty or what needs to be verified.",
+      "implRep": "CS rep who onboarded this community (from HubSpot ticket owner). May differ from account-level csRep."
+    }
+  },
+  "lastUpdated": "2026-04-15",
   "accounts": {
-    "Heritage Senior Living": {
-      "hubspotCompanyId": "49138203519",
-      "metabaseEmployerId": "",
+    "Cottonwood": {
+      "hubspotCompanyId": "45778087555",
+      "metabaseEmployerId": "cm1kwooyg000009k3956aex4v",
       "csRep": "Cayden Fox",
       "renewalDate": "",
       "communities": [
-        "Traditions of Hanover",
-        "Keystone Villa at Douglassville, PC",
-        "Chestnut Knoll",
-        "Keystone Villa at Ephrata",
-        "Birches at Harleysville",
-        "The Birches at Newtown",
-        "The Birches at New Hope",
-        "Keystone Villa at Fleetwood",
-        "Manor at Market Square",
-        "Traditions of Lansdale",
-        "Birches of Lehigh Valley",
-        "Traditions of Hershey",
-        "Heritage Green Hanover",
-        "Senior Commons at Powder Mill",
-        "Heritage Green Lynchburg",
-        "Chancellor's Village",
-        "The Crossroads at Bon Air",
-        "Keystone Villa at Douglassville, IL"
+        {
+          "displayName": "Crestwood Rehab & Nursing",
+          "hubspotOnboardingTicketId": "35023432347",
+          "metabaseFacilityIds": [
+            "cmhkc99k131hx01poav1h2y9b"
+          ],
+          "npsKeyword": "Crestwood",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Alpine Meadow Rehab & Nursing",
+          "hubspotOnboardingTicketId": "35028342165",
+          "metabaseFacilityIds": [
+            "cmi5rvuljhpwe01oa3ducf1rc"
+          ],
+          "npsKeyword": "Alpine Meadow",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Columbine West Health & Rehab",
+          "hubspotOnboardingTicketId": "35031439249",
+          "metabaseFacilityIds": [
+            "cmi5rvuljhpwj01oa2zgu6tus"
+          ],
+          "npsKeyword": "Columbine West",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Columbine Commons Health & Rehab",
+          "hubspotOnboardingTicketId": "35034228397",
+          "metabaseFacilityIds": [
+            "cmi5rvulkhpwk01oahsg18hw9"
+          ],
+          "npsKeyword": "Columbine Commons",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Columbine Commons ALF",
+          "hubspotOnboardingTicketId": "35009261995",
+          "metabaseFacilityIds": [
+            "cmi5rvulkhpwl01oa4jo53gal"
+          ],
+          "npsKeyword": "Commons ALF",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Centre Avenue Health & Rehab",
+          "hubspotOnboardingTicketId": "35035466552",
+          "metabaseFacilityIds": [
+            "cmi5rvulkhpwm01oafbyl0k6m"
+          ],
+          "npsKeyword": "Centre Avenue",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Lemay Avenue Health & Rehab",
+          "hubspotOnboardingTicketId": "35010965160",
+          "metabaseFacilityIds": [
+            "cmi5rvuljhpwi01oacqjla1xs"
+          ],
+          "npsKeyword": "Lemay Avenue",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Maple Ridge Rehab & Nursing",
+          "hubspotOnboardingTicketId": "35008023406",
+          "metabaseFacilityIds": [
+            "cmi5rvuljhpwg01oa23c68og7"
+          ],
+          "npsKeyword": "Maple Ridge",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Spanish Fork Nursing & Rehab",
+          "hubspotOnboardingTicketId": "35031593867",
+          "metabaseFacilityIds": [
+            "cmi5rvulihpwc01oa384naud0"
+          ],
+          "npsKeyword": "Spanish Fork",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Millcreek Rehab & Nursing",
+          "hubspotOnboardingTicketId": "35008023391",
+          "metabaseFacilityIds": [
+            "cmi5rvulihpwd01oa3i1o1wpl"
+          ],
+          "npsKeyword": "Millcreek",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Lomond Peak Nursing & Rehab",
+          "hubspotOnboardingTicketId": "35021109807",
+          "metabaseFacilityIds": [
+            "cmi5rvulihpwb01oa4rm3hv1f"
+          ],
+          "npsKeyword": "Lomond Peak",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "North Shore Health & Rehab",
+          "hubspotOnboardingTicketId": "43264631820",
+          "metabaseFacilityIds": [
+            "cmmnqd65n000b01myafkxgszd"
+          ],
+          "npsKeyword": "North Shore",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Willow Haven Health & Rehab",
+          "hubspotOnboardingTicketId": "43569010818",
+          "metabaseFacilityIds": [
+            "cmmz7sf3v0onk01prayslhgst"
+          ],
+          "npsKeyword": "Willow Haven",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Silver Oak Health & Rehab",
+          "hubspotOnboardingTicketId": "43569009199",
+          "metabaseFacilityIds": [
+            "cmmz7sf3v0onl01prhupr2x05"
+          ],
+          "npsKeyword": "Silver Oak",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Highland Manor Fallon",
+          "hubspotOnboardingTicketId": "43566944598",
+          "metabaseFacilityIds": [
+            "cmmz7sf3q0on901pr6y7pdh2s",
+            "cmmz7sf3q0ona01prhrvfhlvs",
+            "cmmz7sf3q0onb01pr1rj62coh"
+          ],
+          "npsKeyword": "Fallon",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Highland Manor Elko",
+          "hubspotOnboardingTicketId": "43576323190",
+          "metabaseFacilityIds": [
+            "cmmz7sf3r0onc01prc6d43dbt",
+            "cmmz7sf3r0one01pr3wd0g41n"
+          ],
+          "npsKeyword": "Elko",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data \u2014 verify",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Bella Terra Nursing & Rehab",
+          "hubspotOnboardingTicketId": "43604506413",
+          "metabaseFacilityIds": [
+            "cmmz35fq404a901oh41z96m27"
+          ],
+          "npsKeyword": "Bella Terra",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Mesquite TX",
+          "hubspotOnboardingTicketId": "43579270486",
+          "metabaseFacilityIds": [
+            "cmmz7sf3p0on801pr73k400yw"
+          ],
+          "npsKeyword": "Mesquite",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Cottonwood Nevada",
+          "hubspotOnboardingTicketId": "43420544853",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Nevada",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending",
+          "implRep": "Tegan Perry"
+        }
+      ]
+    },
+    "Heritage Senior Living": {
+      "hubspotCompanyId": "49138203519",
+      "metabaseEmployerId": "cmirywohn000gok01tupuwqb4",
+      "csRep": "Cayden Fox",
+      "renewalDate": "2026-12-12",
+      "communities": [
+        {
+          "displayName": "The Birches of Lehigh Valley",
+          "hubspotOnboardingTicketId": "37583448706",
+          "metabaseFacilityIds": [
+            "cmiyan1aibi7001pr1v6tehdr"
+          ],
+          "npsKeyword": "Lehigh Valley",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "The Manor at Market Square",
+          "hubspotOnboardingTicketId": "37452222616",
+          "metabaseFacilityIds": [
+            "cmirz26ge000201pk3a9p96sv"
+          ],
+          "npsKeyword": "Market Square",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "The Birches at Newtown",
+          "hubspotOnboardingTicketId": "37308738864",
+          "metabaseFacilityIds": [
+            "cmiyan1agbi6r01prghadgj07"
+          ],
+          "npsKeyword": "at Newtown",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Chestnut Knoll",
+          "hubspotOnboardingTicketId": "37308735907",
+          "metabaseFacilityIds": [
+            "cmirz26ge000101pk7e6t5w8p"
+          ],
+          "npsKeyword": "Chestnut Knoll",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Heritage Green Hanover",
+          "hubspotOnboardingTicketId": "37593220727",
+          "metabaseFacilityIds": [
+            "cmiyan1ahbi6y01prfdku6utb"
+          ],
+          "npsKeyword": "Green Hanover",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Heritage Green Lynchburg",
+          "hubspotOnboardingTicketId": "37429227266",
+          "metabaseFacilityIds": [
+            "cmiyan1ahbi6x01prcm1492te"
+          ],
+          "npsKeyword": "Green Lynchburg",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Birches at Harleysville",
+          "hubspotOnboardingTicketId": "37308737133",
+          "metabaseFacilityIds": [
+            "cmiyan1ahbi6u01pr7iaxfyr6"
+          ],
+          "npsKeyword": "Harleysville",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "The Birches at New Hope",
+          "hubspotOnboardingTicketId": "37415608480",
+          "metabaseFacilityIds": [
+            "cmiyan1aibi7101pr8t6ectud"
+          ],
+          "npsKeyword": "at New Hope",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Chancellor's Village",
+          "hubspotOnboardingTicketId": "37727203484",
+          "metabaseFacilityIds": [
+            "cmirz26ge000301pk40ouh9v5"
+          ],
+          "npsKeyword": "Chancellor",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Senior Commons at Powder Mill",
+          "hubspotOnboardingTicketId": "37595710879",
+          "metabaseFacilityIds": [
+            "cmiyan1aibi6z01prgexoahgu"
+          ],
+          "npsKeyword": "Powder Mill",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Keystone Villa at Ephrata",
+          "hubspotOnboardingTicketId": "37583265072",
+          "metabaseFacilityIds": [
+            "cmiyan1ajbi7401prbtahfyx6"
+          ],
+          "npsKeyword": "Ephrata",
+          "mappingConfidence": "confirmed",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Keystone Villa at Fleetwood",
+          "hubspotOnboardingTicketId": "37415685505",
+          "metabaseFacilityIds": [
+            "cmirz26gf000401pka0u56ggm"
+          ],
+          "npsKeyword": "Fleetwood",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Keystone Villa at Douglassville IL",
+          "hubspotOnboardingTicketId": "37842410872",
+          "metabaseFacilityIds": [
+            "cmj2kyvix2x7001olcwbt6m23"
+          ],
+          "npsKeyword": "Douglassville, IL",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Two Metabase Douglassville records \u2014 verify 'cmj2kyvix2x7001olcwbt6m23' (Il) maps to IL, not PC. Old record excluded.",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Keystone Villa at Douglassville PC",
+          "hubspotOnboardingTicketId": "37073906970",
+          "metabaseFacilityIds": [
+            "cmj2kyvix2x6z01ol6k3ugj83"
+          ],
+          "npsKeyword": "Douglassville, PC",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Two Metabase Douglassville records \u2014 verify 'cmj2kyvix2x6z01ol6k3ugj83' (PC) is correct. Old record excluded.",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Traditions of Hanover",
+          "hubspotOnboardingTicketId": "37148824707",
+          "metabaseFacilityIds": [
+            "cmiyan1agbi6s01pr50ov0g63"
+          ],
+          "npsKeyword": "Traditions of Hanover",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        },
+        {
+          "displayName": "Traditions of Hershey",
+          "hubspotOnboardingTicketId": "37583510799",
+          "metabaseFacilityIds": [
+            "cmiyan1ahbi6w01prcrqya0ss"
+          ],
+          "npsKeyword": "Traditions of Hershey",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Traditions of Lansdale",
+          "hubspotOnboardingTicketId": "37462556508",
+          "metabaseFacilityIds": [
+            "cmiyan1ajbi7601pr3z4gdan1"
+          ],
+          "npsKeyword": "Traditions of Lansdale",
+          "mappingConfidence": "confirmed",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "The Crossroads at Bon Air",
+          "hubspotOnboardingTicketId": "37804325748",
+          "metabaseFacilityIds": [
+            "cmiyan1ajbi7701praz3145w7"
+          ],
+          "npsKeyword": "Bon Air",
+          "mappingConfidence": "confirmed",
+          "implRep": "Tegan Perry"
+        }
       ]
     }
   }
