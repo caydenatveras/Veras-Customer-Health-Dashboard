@@ -1682,12 +1682,12 @@
       "company": "Cottonwood",
       "date": "2026-04-15",
       "csRep": "Cayden Fox",
-      "overallScore": 56,
+      "overallScore": 59,
       "platformUsage": 68,
       "customerSentiment": 42,
       "npsSurvey": 35,
       "onboardingHealth": 72,
-      "supportLoad": 50,
+      "supportLoad": 80,
       "engagementCadence": 62,
       "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555",
       "renewalDate": null,
@@ -1735,16 +1735,10 @@
       ],
       "bugTicketUrls": [
         {
-          "label": "Meal breaks not updating when shift templates change",
-          "priority": "HIGH",
-          "status": "open",
-          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43489962009"
-        },
-        {
-          "label": "Admin approves time off but staff still gets scheduled on it",
+          "label": "Manually added PTO immediately disappears from schedule",
           "priority": "MEDIUM",
           "status": "open",
-          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43677723775"
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36689149470"
         },
         {
           "label": "Overtime not populating correctly",
@@ -1830,11 +1824,11 @@
           ]
         },
         "supportLoad": {
-          "openHigh": 1,
+          "openHigh": 0,
           "openMedium": 1,
           "openLow": 1,
           "backlogItems": 4,
-          "summary": "3 open bugs including 1 HIGH (meal breaks). Time-off scheduling bugs are a recurring theme causing operational pain at multiple buildings."
+          "summary": "2 open bug tickets (1 MEDIUM, 1 LOW). 3 feature requests in backlog. No HIGH priority issues. Two previously flagged HIGH/MEDIUM tickets were already resolved (Done)."
         },
         "onboardingHealth": {
           "total": 19,
@@ -2233,32 +2227,44 @@
             "period": "Mar\u2013Apr 2026"
           }
         }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "Budget Feature Request",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39455305086"
+        },
+        {
+          "label": "Schedule Calendar View Suggestions",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37647809664"
+        },
+        {
+          "label": "Shift Picked Up Indicator on Schedule",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37804130612"
+        }
       ]
     },
     {
       "company": "Arbors",
       "date": "2026-04-16",
       "csRep": "Tegan Perry",
-      "overallScore": 56,
+      "overallScore": 60,
       "platformUsage": 30,
       "customerSentiment": 65,
       "npsSurvey": null,
       "onboardingHealth": 83,
-      "supportLoad": 55,
+      "supportLoad": 100,
       "engagementCadence": 85,
       "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/52808132015",
       "renewalDate": "",
       "npsTicketUrls": [],
-      "bugTicketUrls": [
-        {
-          "label": "scheduler can't mark call off (permissions are set to )",
-          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41662847327",
-          "priority": "HIGH",
-          "status": "open"
-        }
-      ],
+      "bugTicketUrls": [],
       "actions": [
-        "Resolve HIGH priority bug: scheduler can't mark call off \u2014 open 64 days (ticket #41662847327)",
         "Drive publish rate up from 24.5% \u2014 focus on Dracut (18.3%), Taunton (19.4%), and Amherst (22.7%)",
         "Prepare The Ivy at Watertown for May 1 go-live \u2014 Jessica Orsatti needs more hands-on practice",
         "Kickstart The Ivy at Ellington onboarding \u2014 near-zero platform usage (0.4%)",
@@ -2346,8 +2352,8 @@
           "earlyStage": 1
         },
         "supportLoad": {
-          "summary": "1 HIGH priority open bug ticket \u2014 scheduler unable to mark call-off despite permissions correctly configured. Open since February 12 (64 days). No other open tickets.",
-          "openHigh": 1,
+          "summary": "No open bug tickets. The one previously reported issue (scheduler can't mark call-off, permissions) has been resolved (marked Done in HubSpot).",
+          "openHigh": 0,
           "openMedium": 0,
           "openLow": 0,
           "backlogItems": 0
@@ -2552,7 +2558,8 @@
             "note": "Near-zero published shifts \u2014 not yet meaningfully using the platform"
           }
         }
-      ]
+      ],
+      "featureRequestUrls": []
     }
   ]
 }
