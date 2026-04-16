@@ -1,0 +1,799 @@
+{
+  "company": "Cottonwood",
+  "entries": [
+    {
+      "company": "Cottonwood",
+      "date": "2026-04-01",
+      "csRep": "Cayden Fox",
+      "overallScore": 62,
+      "platformUsage": 65,
+      "customerSentiment": 55,
+      "npsSurvey": 40,
+      "onboardingHealth": 72,
+      "supportLoad": 72,
+      "engagementCadence": 70,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555",
+      "renewalDate": "2026-11-14",
+      "npsTicketUrls": [
+        {
+          "label": "Angie Wheeler \u2014 Crestwood (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41797011310"
+        },
+        {
+          "label": "Kathleen Wilke \u2014 Columbine Commons (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41761858935"
+        },
+        {
+          "label": "Erika Upchurch \u2014 Columbine West (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41940439312"
+        },
+        {
+          "label": "Staci Day \u2014 Alpine Meadow (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41759845381"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Manually added PTO immediately disappears from schedule",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36689149470"
+        }
+      ],
+      "actions": [
+        "Resolve PTO bug \u2014 open MEDIUM ticket active; flag to engineering and follow up with affected buildings",
+        "NPS follow-up for Crestwood and Alpine Meadow (scored 2/5) \u2014 check in on pain points and schedule targeted training",
+        "Validate April 1 go-lives (North Shore, Nevada sites) \u2014 confirm Paylogics/iSolved sync is working day-of"
+      ],
+      "notes": "19 communities \u2014 12 live, 4 mid-stage, 1 early, 2 new go-lives April 1. Multi-state enterprise. iSolved/Paylogics HRIS integration.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "11 of 18 facilities publishing schedules. Monthly message volume ~7K (healthy). Fill rate low at 1.9% \u2014 likely a data artifact from invite strategy, not adoption issue.",
+          "highlights": [
+            "11/18 facilities publishing schedules in last 30 days",
+            "Monthly message volume: ~7,000",
+            "Shift fill rate: ~1.9% (low \u2014 investigate invite strategy)",
+            "7 facilities not yet publishing (onboarding or recently added)"
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 2.5,
+          "responseCount": 4,
+          "trend": "Below average \u2014 2 scores of 2, 2 scores of 3",
+          "responses": [
+            {
+              "building": "Crestwood",
+              "respondent": "Angie Wheeler",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Columbine Commons",
+              "respondent": "Kathleen Wilke",
+              "score": 3,
+              "note": null
+            },
+            {
+              "building": "Columbine West",
+              "respondent": "Erika Upchurch",
+              "score": 3,
+              "note": "The view change (needing to use the multi-view) has been an adjustment"
+            },
+            {
+              "building": "Alpine Meadow",
+              "respondent": "Staci Day",
+              "score": 2,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 1,
+          "openLow": 0,
+          "backlogItems": 1,
+          "summary": "1 open MEDIUM bug in backlog: PTO disappearing from schedule after manual entry. No HIGH priority open tickets."
+        },
+        "onboardingHealth": {
+          "total": 19,
+          "live": 12,
+          "midStage": 4,
+          "earlyStage": 1,
+          "summary": "12 of 19 communities fully live. 4 mid-stage and 1 early-stage remain. 2 new go-lives planned April 1 (North Shore, Nevada). iSolved/Paylogics integration active."
+        },
+        "customerSentiment": {
+          "summary": "Engaged account with active CS relationship. NPS feedback points to usability friction (multi-view adjustment, UI changes). No escalations. Integration complexity is the main risk area.",
+          "signals": [
+            "Responsive to CS outreach \u2014 regular meeting cadence maintained",
+            "iSolved/Paylogics HRIS integration adds complexity; no reported failures but requires monitoring",
+            "Multi-view UI change causing adjustment friction (noted in NPS)",
+            "2 April 1 go-lives adding workload pressure",
+            "No entries in Slack #at-risk channel"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Regular cadence with active onboarding ongoing. Multiple meetings logged across the team in last 90 days.",
+          "avgDaysBetween": null,
+          "recentMeetings": []
+        }
+      },
+      "communities": [
+        {
+          "name": "Crestwood",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine Commons",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine West",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Alpine Meadow",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "North Shore",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Nevada Site 1",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Mid-Stage Community B",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 55,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Early-Stage Community A",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 20,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
+    },
+    {
+      "company": "Cottonwood",
+      "date": "2026-04-15",
+      "csRep": "Cayden Fox",
+      "overallScore": 59,
+      "platformUsage": 68,
+      "customerSentiment": 42,
+      "npsSurvey": 35,
+      "onboardingHealth": 72,
+      "supportLoad": 80,
+      "engagementCadence": 62,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555",
+      "renewalDate": null,
+      "npsTicketUrls": [
+        {
+          "label": "Omar Cerda \u2014 Crestwood (Jan 2026)",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39974630770"
+        },
+        {
+          "label": "Dawn Mack \u2014 Crestwood (Jan 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39940972200"
+        },
+        {
+          "label": "Angie Wheeler \u2014 Crestwood (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41797011310"
+        },
+        {
+          "label": "Staci Day \u2014 Alpine Meadow (Feb 2026)",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41759845381"
+        },
+        {
+          "label": "Clarissa Soto Ramirez \u2014 Columbine Commons (Jan 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39942675578"
+        },
+        {
+          "label": "Erika Upchurch \u2014 Columbine West (Jan 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39960444534"
+        },
+        {
+          "label": "Erika Upchurch \u2014 Columbine West (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41940439312"
+        },
+        {
+          "label": "Kathleen Wilke \u2014 Columbine Commons (Feb 2026)",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41761858935"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Manually added PTO immediately disappears from schedule",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36689149470"
+        },
+        {
+          "label": "Overtime not populating correctly",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44362138223"
+        }
+      ],
+      "actions": [
+        "Highland Manor Fallon: 0 published shifts + HIGH #at-risk flag \u2014 immediate outreach needed",
+        "Crestwood: time-off routing bug eroded trust for a month \u2014 confirm fix held, rebuild confidence before QBR",
+        "Address HIGH meal break bug \u2014 hitting multiple buildings",
+        "QBR coming up: prep with Metabase overtime + shift analytics as value story",
+        "NPS avg 2.4/5 \u2014 schedule 1:1 with Crestwood and Alpine Meadow schedulers on usability pain"
+      ],
+      "notes": "23 facilities, 7,478 employees, 149 admins. Established UT/CO buildings solid; TX/NV expansion in mid-stage onboarding. Time-off bugs are recurring theme and biggest trust risk.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "18 of 23 buildings active in Mar\u2013Apr 2026. 41,525 total shifts, 25,388 published (61%). Established buildings at 80\u201390% publish rate; new TX/NV facilities dragging aggregate.",
+          "highlights": [
+            "41,525 shifts created in Mar\u2013Apr 2026 across 18 facilities",
+            "25,388 published (61% publish rate)",
+            "7,478 active employees, 149 admins on platform",
+            "Highland Manor Fallon: 1,096 shifts created, 0 published \u2014 completely blocked",
+            "Lemay Ave, Centre Ave, Columbine West, Crestwood all publishing at 80\u201390%+",
+            "Willow Haven, Mesquite, Elko: under 20% publish rate \u2014 still onboarding"
+          ]
+        },
+        "npsSurvey": {
+          "period": "Jan\u2013Feb 2026",
+          "avgScore": 2.4,
+          "responseCount": 8,
+          "trend": "Flat \u2014 consistent 2\u20133 range across both months",
+          "responses": [
+            {
+              "building": "Crestwood",
+              "respondent": "Omar Cerda",
+              "score": 1,
+              "note": "Very Glitchy, confusing interface to apply schedules if they don't have fixed schedules"
+            },
+            {
+              "building": "Crestwood",
+              "respondent": "Dawn Mack",
+              "score": 2,
+              "note": "would be better if when adding cnas to days i could see their hours so i dont put them in overtime"
+            },
+            {
+              "building": "Crestwood",
+              "respondent": "Angie Wheeler",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Alpine Meadow",
+              "respondent": "Staci Day",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Columbine Commons",
+              "respondent": "Clarissa Soto Ramirez",
+              "score": 3,
+              "note": null
+            },
+            {
+              "building": "Columbine West",
+              "respondent": "Erika Upchurch",
+              "score": 3,
+              "note": "Veras keeps adding people to the schedule even after I've removed them. No option to share shifts with message. Want 2 schedule views open simultaneously."
+            },
+            {
+              "building": "Columbine West",
+              "respondent": "Erika Upchurch",
+              "score": 3,
+              "note": "Slow. Can't send message for all shared shifts. Can't view 2 schedule views at the same time."
+            },
+            {
+              "building": "Columbine Commons",
+              "respondent": "Kathleen Wilke",
+              "score": 3,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 1,
+          "openLow": 1,
+          "backlogItems": 4,
+          "summary": "2 open bug tickets (1 MEDIUM, 1 LOW). 3 feature requests in backlog. No HIGH priority issues. Two previously flagged HIGH/MEDIUM tickets were already resolved (Done)."
+        },
+        "onboardingHealth": {
+          "total": 19,
+          "live": 12,
+          "midStage": 5,
+          "earlyStage": 2,
+          "summary": "12 of 19 buildings fully live. 5 in mid-stage (TX/NV expansion). Highland Manor Fallon mid-stage but 0 published shifts \u2014 likely stuck."
+        },
+        "customerSentiment": {
+          "summary": "Mixed. Expanding rapidly (3 new contracts since Oct 2025) but recurring bugs are creating trust issues. One building flagged HIGH in #at-risk. $14K bill required creative nudging to collect.",
+          "signals": [
+            "Highland Manor Fallon: HIGH risk flag in #at-risk (Apr 3) \u2014 'Things are bad'",
+            "Crestwood: time-off routing bug caused 1 month of paper workarounds \u2014 trust eroded",
+            "Active expansion (Nevada x6, North Shore) shows account not considering churn",
+            "$14K overdue bill \u2014 billing friction signal",
+            "NPS comments: 'glitchy', 'confusing interface', recurring scheduling reliability issues",
+            "Low Intercom volume \u2014 only 1 support conversation (billing inquiry from Treasury)"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Active internal Slack channel. QBR planned (Spencer requested, Cayden leading). Onboarding touchpoints ongoing for new buildings. No recent exec-level meeting logged in Circleback for cottonwoodhc.com contacts.",
+          "avgDaysBetween": null,
+          "recentMeetings": [
+            "Crestwood time-off bug escalation \u2014 March 9",
+            "New Nevada community integration setup \u2014 March 20",
+            "North Shore contract signed + setup \u2014 March 10"
+          ]
+        }
+      },
+      "communities": [
+        {
+          "name": "Crestwood Rehab & Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 20,
+          "platformUsage": 74,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Crestwood",
+          "usageDetail": {
+            "totalShifts": 2719,
+            "publishedShifts": 2002,
+            "publishRate": 74,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Alpine Meadow Rehab & Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 25,
+          "platformUsage": 87,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Alpine Meadow",
+          "usageDetail": {
+            "totalShifts": 863,
+            "publishedShifts": 756,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Columbine West Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": 92,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Columbine West",
+          "usageDetail": {
+            "totalShifts": 3070,
+            "publishedShifts": 2811,
+            "publishRate": 92,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Columbine Commons Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": 69,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Columbine Commons",
+          "usageDetail": {
+            "totalShifts": 2999,
+            "publishedShifts": 2071,
+            "publishRate": 69,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Lemay Avenue Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 88,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Lemay Avenue",
+          "usageDetail": {
+            "totalShifts": 5252,
+            "publishedShifts": 4597,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Centre Avenue Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 67,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Centre Avenue",
+          "usageDetail": {
+            "totalShifts": 5015,
+            "publishedShifts": 3360,
+            "publishRate": 67,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Lomond Peak Nursing & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 94,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Lomond Peak",
+          "usageDetail": {
+            "totalShifts": 1874,
+            "publishedShifts": 1770,
+            "publishRate": 94,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Spanish Fork Nursing & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 73,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Spanish Fork",
+          "usageDetail": {
+            "totalShifts": 1752,
+            "publishedShifts": 1285,
+            "publishRate": 73,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Millcreek Rehab & Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 79,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Millcreek",
+          "usageDetail": {
+            "totalShifts": 1132,
+            "publishedShifts": 895,
+            "publishRate": 79,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Maple Ridge Rehab & Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 96,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Maple Ridge",
+          "usageDetail": {
+            "totalShifts": 452,
+            "publishedShifts": 436,
+            "publishRate": 96,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Columbine Commons ALF",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 88,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Commons ALF",
+          "usageDetail": {
+            "totalShifts": 1158,
+            "publishedShifts": 1023,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "North Shore Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 48,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "North Shore",
+          "usageDetail": {
+            "totalShifts": 3723,
+            "publishedShifts": 1790,
+            "publishRate": 48,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Willow Haven Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": 6,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Willow Haven",
+          "usageDetail": {
+            "totalShifts": 2611,
+            "publishedShifts": 148,
+            "publishRate": 6,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Silver Oak Health & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": 87,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Silver Oak",
+          "usageDetail": {
+            "totalShifts": 1207,
+            "publishedShifts": 1053,
+            "publishRate": 87,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Highland Manor Fallon",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": 0,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data",
+          "npsKeyword": "Fallon",
+          "usageDetail": {
+            "totalShifts": 1096,
+            "publishedShifts": 0,
+            "publishRate": 0,
+            "period": "Mar\u2013Apr 2026",
+            "note": "Rehabilitation facility only \u2014 AL/IL usage may be additional"
+          }
+        },
+        {
+          "name": "Elko Rehab",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": 16,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Bella Terra Nursing & Rehab",
+          "csRep": "Cayden Fox",
+          "status": "mid-stage",
+          "npsSurvey": null,
+          "platformUsage": 52,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Bella Terra",
+          "usageDetail": {
+            "totalShifts": 1424,
+            "publishedShifts": 740,
+            "publishRate": 52,
+            "period": "Mar\u2013Apr 2026"
+          }
+        },
+        {
+          "name": "Cottonwood Nevada",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 25,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending",
+          "npsKeyword": "Nevada"
+        },
+        {
+          "name": "Mesquite TX",
+          "csRep": "Cayden Fox",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": 8,
+          "onboardingHealth": 25,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Mesquite",
+          "usageDetail": {
+            "totalShifts": 2196,
+            "publishedShifts": 172,
+            "publishRate": 8,
+            "period": "Mar\u2013Apr 2026"
+          }
+        }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "Budget Feature Request",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39455305086"
+        },
+        {
+          "label": "Schedule Calendar View Suggestions",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37647809664"
+        },
+        {
+          "label": "Shift Picked Up Indicator on Schedule",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37804130612"
+        }
+      ]
+    }
+  ]
+}

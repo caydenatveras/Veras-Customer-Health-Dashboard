@@ -1,0 +1,340 @@
+{
+  "company": "Avista",
+  "entries": [
+    {
+      "company": "Avista",
+      "date": "2026-04-08",
+      "csRep": "Tegan Perry",
+      "overallScore": 67,
+      "platformUsage": 55,
+      "customerSentiment": 55,
+      "npsSurvey": 85,
+      "onboardingHealth": 60,
+      "supportLoad": 90,
+      "engagementCadence": 85,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49011577969",
+      "metabaseEmployerId": "cmald5zki000d08l267l9e5to",
+      "renewalDate": null,
+      "npsTicketUrls": [
+        {
+          "label": "North Mountain - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41906283096"
+        },
+        {
+          "label": "Sumner - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41884319244"
+        },
+        {
+          "label": "Apache Junction - Jul 2025",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32587931244"
+        },
+        {
+          "label": "Spring Gardens Meridian - Aug 2025",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32555699088"
+        },
+        {
+          "label": "Tucson - Jun 2025",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32559341945"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Schedule messages to send later",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/42520040018"
+        },
+        {
+          "label": "Have staff confirm shifts once posted",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31465456543"
+        }
+      ],
+      "actions": [
+        "Address Twin Falls resistance \u2014 admin stated she won't use Veras; confirm status, identify backup champion, or escalate",
+        "Get 5 non-publishing facilities (Apache Junction, Garden City, Sunland Springs, Tucson + Yuma) on a publish target date",
+        "Follow up on Tucson NPS (2/5, format concerns) \u2014 one of the non-publishing facilities, may be connected"
+      ],
+      "notes": "Large 16-facility portfolio, 6 weeks into active onboarding. Messaging adoption standout success (2K+/mo). Biggest risks: 5 facilities not publishing, Twin Falls admin explicitly resistant, and Lake Havasu had a published-schedule wipe incident on Apr 7 (Amanda reapplied master, undid all published shifts).",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "9 of 16 facilities publishing schedules. Messages exploded from 84/mo (Oct 2025) to 2,046/mo (Mar 2026). Fill rate via invites chronically low (under 8%). 5 facilities with zero published shifts.",
+          "highlights": [
+            "9/16 facilities publishing",
+            "Messages: 84/mo \u2192 2,046/mo (Oct 2025 \u2013 Mar 2026)",
+            "Fill rate: 1.7\u20137.7% range",
+            "5 facilities: 0 published shifts"
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 4.5,
+          "responseCount": 2,
+          "trend": "Up from 4.0 historical avg",
+          "responses": [
+            {
+              "building": "North Mountain",
+              "respondent": "Joanna Alvarez",
+              "score": 5,
+              "note": null
+            },
+            {
+              "building": "Sumner",
+              "respondent": "Kelly Holm",
+              "score": 4,
+              "note": null
+            },
+            {
+              "building": "Apache Junction",
+              "respondent": "Elizabeth Clark",
+              "score": 5,
+              "note": null
+            },
+            {
+              "building": "Spring Gardens Meridian",
+              "respondent": "Linda Beltran",
+              "score": 4,
+              "note": null
+            },
+            {
+              "building": "Tucson",
+              "respondent": "Phoebe Nason",
+              "score": 2,
+              "note": "Schedule format is not user friendly"
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 0,
+          "openLow": 0,
+          "backlogItems": 2,
+          "summary": "Clean support load. 2 backlog feature requests only (schedule later messages, shift confirmation). No active bugs."
+        },
+        "onboardingHealth": {
+          "total": 12,
+          "live": 6,
+          "midStage": 2,
+          "earlyStage": 3,
+          "summary": "6 of 12 tracked buildings in Customer Success stage (live). 2 in pre-live check-in. 3 in Training Call stage. 4 additional facilities active in Metabase not tracked in HubSpot pipeline."
+        },
+        "customerSentiment": {
+          "summary": "Relationship is 6 weeks old. Setup and training went well for Lake Havasu. Main contacts cooperative and engaged. Apr 7 check-in revealed Amanda accidentally unpublished all April shifts by reapplying the master template \u2014 Cayden is investigating a restore. Amanda also flagged no confirmation prompt when making schedule changes. Twin Falls admin resistance is the key risk signal. No other documented frustration.",
+          "signals": [
+            "Twin Falls admin told Tegan (Mar 24): does not want to use Veras, won't be in the platform \u2014 flagged #at-risk",
+            "Apr 7: Amanda accidentally wiped April published schedule by reapplying master template \u2014 investigating restore possibility; she noted frustration at lack of confirmation safeguard on published schedules",
+            "Lake Havasu setup/training smooth \u2014 homework completed, all features covered",
+            "No Circleback transcript data found for avistaseniorliving.com",
+            "Apr 2 and Apr 7 check-in notes not captured in Granola"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "4 calls in 13 days (Mar 26 \u2013 Apr 7). Weekly cadence appropriate for active onboarding stage. Last touch yesterday.",
+          "avgDaysBetween": 3,
+          "recentMeetings": [
+            {
+              "date": "2026-04-07",
+              "title": "Avista | Veras Check-In"
+            },
+            {
+              "date": "2026-04-02",
+              "title": "Havasu | Veras Check-In"
+            },
+            {
+              "date": "2026-03-30",
+              "title": "Havasu | Veras Training"
+            },
+            {
+              "date": "2026-03-26",
+              "title": "Veras Welcome & Setup Call | Avista"
+            }
+          ]
+        }
+      },
+      "communities": [
+        {
+          "name": "Spring Gardens Meridian",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": 70,
+          "platformUsage": 85,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Avista Yakima",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 85,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "North Mountain",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": 100,
+          "platformUsage": 80,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Spokane",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 80,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Sumner",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": 80,
+          "platformUsage": 80,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Albuquerque",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 75,
+          "onboardingHealth": 75,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Nampa",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 75,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Ferndale",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 75,
+          "onboardingHealth": 90,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lake Havasu",
+          "csRep": "Tegan Perry",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": 65,
+          "onboardingHealth": 70,
+          "supportLoad": null,
+          "customerSentiment": 75,
+          "engagementCadence": null
+        },
+        {
+          "name": "Twin Falls",
+          "csRep": "Tegan Perry",
+          "status": "mid",
+          "npsSurvey": null,
+          "platformUsage": 15,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": 20,
+          "engagementCadence": null
+        },
+        {
+          "name": "Garden City",
+          "csRep": "Tegan Perry",
+          "status": "mid",
+          "npsSurvey": null,
+          "platformUsage": 20,
+          "onboardingHealth": 50,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Oquirrh Mountain",
+          "csRep": "Tegan Perry",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": 10,
+          "onboardingHealth": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Apache Junction",
+          "csRep": "Tegan Perry",
+          "status": "early",
+          "npsSurvey": 100,
+          "platformUsage": 20,
+          "onboardingHealth": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Yuma",
+          "csRep": "Tegan Perry",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": 10,
+          "onboardingHealth": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Tucson",
+          "csRep": "Tegan Perry",
+          "status": "early",
+          "npsSurvey": 40,
+          "platformUsage": 15,
+          "onboardingHealth": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Summit at Sunland Springs",
+          "csRep": "Tegan Perry",
+          "status": "early",
+          "npsSurvey": null,
+          "platformUsage": 15,
+          "onboardingHealth": 40,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "company": "Stellar",
+  "entries": [
+    {
+      "company": "Stellar",
+      "date": "2026-04-16",
+      "csRep": "Tegan Perry",
+      "lifecycle": "active-onboarding",
+      "overallScore": 66,
+      "platformUsage": 52,
+      "customerSentiment": 68,
+      "npsSurvey": 62,
+      "onboardingHealth": 98,
+      "supportLoad": 72,
+      "engagementCadence": 55,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/50094352242",
+      "renewalDate": "",
+      "npsTicketUrls": [
+        {
+          "label": "Dustin DeProspo - Mantey Heights - February 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41950479371"
+        },
+        {
+          "label": "Kelli Waddell - Willow Tree - February 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41920852150"
+        },
+        {
+          "label": "Wendi Sorden - Willow Tree - January 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39976179832"
+        },
+        {
+          "label": "Kelli Waddell - Willow Tree - January 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39950927636"
+        },
+        {
+          "label": "Kristine Ong - Springs Village Care Center - January 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39977109308"
+        },
+        {
+          "label": "Demeish Golding - Cherrelyn - December 2025",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41846933924"
+        },
+        {
+          "label": "Kelli Waddell - Willow Tree - December 2025",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41821603860"
+        },
+        {
+          "label": "Shelby Jacobs - Mantey Heights - November 2025",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34437675297"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Daily Report Card Isn't Displaying Yesterday's Metrics",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40471452542"
+        },
+        {
+          "label": "AI Overstaffed Suggestions - Confusing UI & Incorrect Numbers (Consolidated)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34442930479"
+        }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "Call off Policys v2",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31564501558"
+        },
+        {
+          "label": "Meal Break Message & Configuration Enhancements (Consolidated)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31442211596"
+        },
+        {
+          "label": "pto rejection if certain amount of days prior",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34730491515"
+        },
+        {
+          "label": "Day Print Adjustments",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31876640425"
+        },
+        {
+          "label": "Agency Integration (Shiftkey + Nursa)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31570476566"
+        },
+        {
+          "label": "Remove primary contact for agency",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31829163839"
+        }
+      ],
+      "actions": [
+        "Cherrelyn has zero May shifts published (18.8% combined rate) and a 2/5 NPS \u2014 schedule a focused session to unblock scheduling and address whatever is causing disengagement.",
+        "Follow up on meal break PPD bug with engineering \u2014 this is causing inaccurate calculations for all SNF communities and was flagged by Cayden in the March 19 Cedars check-in. Track to resolution.",
+        "Reach out to Kristine Ong at Springs Village about the January 1/5 NPS \u2014 no note was left, so the reason is unknown. Proactive outreach before the next survey cycle.",
+        "Bear Creek is at 29.3% combined publish rate with no NPS data \u2014 it's a live community with no visibility. Schedule a check-in.",
+        "Schedule a follow-up for Lincoln Court kitchen manager (unstructured shift setup) \u2014 Cayden offered a 1:1 in the April 2 check-in."
+      ],
+      "notes": "9-community SNF/AL portfolio in Colorado, almost fully live. Strong engagement with Lincoln Court rollout. Meal break PPD bug is the most impactful open issue. Cherrelyn and Bear Creek are both live with low publish rates and limited contact \u2014 need proactive outreach.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "41.8% weighted average publish rate across all 9 facilities (Apr\u2013May combined window). Three facilities \u2014 Cedars (69%), La Villa Grande (69%), Springs Village (70%) \u2014 are performing well with May nearly fully scheduled. Cherrelyn (19%) and Bear Creek (29%) are the main concerns: Cherrelyn has zero May shifts published despite being the second-largest facility. Lincoln Court at 26% is expected given pending-go-live status. Message volume stable at 6\u20137K/month; fill rate has improved from 1.0% to 2.4% over the past 6 months.",
+          "highlights": [
+            "Springs Village 69.6% combined \u2014 May 74% published",
+            "Cedars 69.3% \u2014 May 74% published; fresh off 12-hour shift transition (Apr 1)",
+            "La Villa Grande 68.8% \u2014 May 86% published",
+            "Cherrelyn: 0 shifts published for May out of 2,099 total \u2014 urgent attention needed",
+            "Bear Creek: 29% combined rate, both months low",
+            "Fill rate improved: 1.0% Oct 2025 \u2192 2.4% Mar 2026",
+            "Message volume stable at ~6\u20137K/month",
+            "Lincoln Court (pending go-live): 26% combined \u2014 April partially scheduled, May just starting"
+          ]
+        },
+        "customerSentiment": {
+          "summary": "Two Circleback meetings in the lookback window, both positive. Lincoln Court rollout is smooth with staff adapting well. Angelica Garcia proactively managed the Cedars 12-hour shift config change ahead of April 1. Main open issue is the meal break PPD bug (inaccurate calculations, engineering aware). Granola confirms positive trajectory with Paylocity integration friction now resolved. No at-risk Slack mentions.",
+          "positive": [
+            {
+              "text": "Lincoln Court live on Veras, rollout going smoothly \u2014 Robin running parallel schedules as safety net while staff adjusts",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Angelica Garcia proactively managed Cedars 12-hour shift config change, got April schedule posted same day",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Early Paylocity integration delays resolved",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "No at-risk Slack mentions",
+              "sourceType": "slack",
+              "sourceUrl": ""
+            }
+          ],
+          "negative": [
+            {
+              "text": "Meal break PPD bug: 30-min meal breaks not deducted in PPD calculations \u2014 Cayden reported to engineering Mar 19, still open",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            },
+            {
+              "text": "App invite code bug affecting new staff onboarding \u2014 workaround exists (manual login)",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Mantey Heights NPS Nov 2025: 'There are still a lot of bugs'",
+              "sourceType": "hubspot",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Willow Tree NPS Jan 2026: 'I do not like the AI feature \u2014 it adds shifts that should not be showing up'",
+              "sourceType": "hubspot",
+              "sourceUrl": ""
+            }
+          ],
+          "neutral": [
+            {
+              "text": "Budget numbers will look off for rest of March due to future-dating limitation in Veras \u2014 accepted as tradeoff by Angelica",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Position import errors from Paylocity sync (dishwashers as cooks) required manual corrections",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            }
+          ]
+        },
+        "npsSurvey": {
+          "period": "Nov 2025\u2013Feb 2026",
+          "avgScore": 3.3,
+          "responseCount": 8,
+          "trend": "Slight uptick \u2014 Dec 2025 avg 3.0 \u2192 Jan\u2013Feb 2026 avg 3.4",
+          "responses": [
+            {
+              "building": "Mantey Heights",
+              "respondent": "Dustin DeProspo",
+              "score": 4,
+              "note": "Feb 2026"
+            },
+            {
+              "building": "Willow Tree",
+              "respondent": "Kelli Waddell",
+              "score": 4,
+              "note": "Feb 2026"
+            },
+            {
+              "building": "Willow Tree",
+              "respondent": "Wendi Sorden",
+              "score": 4,
+              "note": "Jan 2026"
+            },
+            {
+              "building": "Willow Tree",
+              "respondent": "Kelli Waddell",
+              "score": 4,
+              "note": "Jan 2026 \u2014 'I do not like the AI feature as it adds shifts that should not be showing up'"
+            },
+            {
+              "building": "Springs Village",
+              "respondent": "Kristine Ong",
+              "score": 1,
+              "note": "Jan 2026 \u2014 no note left"
+            },
+            {
+              "building": "Cherrelyn",
+              "respondent": "Demeish Golding",
+              "score": 2,
+              "note": "Dec 2025"
+            },
+            {
+              "building": "Willow Tree",
+              "respondent": "Kelli Waddell",
+              "score": 4,
+              "note": "Dec 2025"
+            },
+            {
+              "building": "Mantey Heights",
+              "respondent": "Shelby Jacobs",
+              "score": 3,
+              "note": "Nov 2025 \u2014 'There are still a lot of bugs'"
+            }
+          ]
+        },
+        "onboardingHealth": {
+          "total": 9,
+          "live": 8,
+          "midStage": 0,
+          "earlyStage": 1,
+          "summary": "8 of 9 communities fully live (stage 1176560694). Lincoln Court is pending go-live (stage 1314057886) \u2014 Circleback confirms it is operationally live as of April 2, running parallel schedules during transition."
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 1,
+          "openLow": 1,
+          "backlogItems": 2,
+          "summary": "2 open bug tickets (1 MEDIUM: Daily Report Card PPD display; 1 LOW: AI overstaffed suggestions consolidated). Additionally, meeting notes flag 2 unreported issues: meal break PPD bug (engineering aware, Mar 19) and app invite code bug (workaround in place). 6 open feature requests including call-off policy v2 (With Eng)."
+        },
+        "engagementCadence": {
+          "summary": "2 Circleback meetings in the 90-day lookback window \u2014 Lincoln Court check-in Apr 2 and Cedars config session Mar 19. Cadence is below ideal for active onboarding (2 meetings in 90 days vs. expected biweekly). Both meetings were substantive with action items. May reflect selective meeting logging rather than low engagement.",
+          "avgDaysBetween": 45
+        }
+      },
+      "communities": [
+        {
+          "name": "Lincoln Court",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "pending-go-live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Lincoln Court",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40857812396",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 80,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 3166,
+              "published": 1130,
+              "rate": 35.7
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 1257,
+              "published": 7,
+              "rate": 0.6
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Pending go-live \u2014 excluded from platform usage scoring. Circleback (Apr 2) confirms live rollout in progress, running parallel schedules."
+          }
+        },
+        {
+          "name": "Bear Creek",
+          "csRep": "Tegan Perry",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Bear Creek",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30789693106",
+          "npsSurvey": null,
+          "platformUsage": 35,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1375,
+              "published": 447,
+              "rate": 32.5
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 1672,
+              "published": 447,
+              "rate": 26.7
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Live community with low publish rates both months and no NPS data \u2014 no recent check-in on record."
+          }
+        },
+        {
+          "name": "La Villa Grande",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "La Villa Grande",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30543193888",
+          "npsSurvey": 75,
+          "platformUsage": 72,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1243,
+              "published": 704,
+              "rate": 56.6
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 881,
+              "published": 757,
+              "rate": 85.9
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Willow Tree",
+          "csRep": "Tegan Perry",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Willow Tree",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30793861431",
+          "npsSurvey": 75,
+          "platformUsage": 51,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1293,
+              "published": 542,
+              "rate": 41.9
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 998,
+              "published": 484,
+              "rate": 48.5
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "NPS respondent flagged AI feature adding incorrect shifts \u2014 worth addressing in next check-in."
+          }
+        },
+        {
+          "name": "Cedars Health Care Center",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Cedars",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30533086611",
+          "npsSurvey": 50,
+          "platformUsage": 72,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1255,
+              "published": 817,
+              "rate": 65.1
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 1153,
+              "published": 851,
+              "rate": 73.8
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Transitioned to 12-hour shifts Apr 1 \u2014 budget numbers off through March by design."
+          }
+        },
+        {
+          "name": "Cherrelyn Healthcare Center",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Cherrelyn",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30138899266",
+          "npsSurvey": 35,
+          "platformUsage": 23,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 2713,
+              "published": 906,
+              "rate": 33.4
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 2099,
+              "published": 0,
+              "rate": 0.0
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Zero May shifts published \u2014 largest concern in the account. 2/5 NPS. Needs urgent outreach."
+          }
+        },
+        {
+          "name": "Mantey Heights",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Mantey Heights",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30423768868",
+          "npsSurvey": 75,
+          "platformUsage": 52,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1526,
+              "published": 912,
+              "rate": 59.8
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 1717,
+              "published": 635,
+              "rate": 37.0
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Skyline Ridge",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Skyline Ridge",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30420049836",
+          "npsSurvey": null,
+          "platformUsage": 52,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1768,
+              "published": 856,
+              "rate": 48.4
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 484,
+              "published": 222,
+              "rate": 45.9
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Springs Village Care Center",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Springs Village",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30423767972",
+          "npsSurvey": 10,
+          "platformUsage": 73,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1051,
+              "published": 689,
+              "rate": 65.6
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 938,
+              "published": 696,
+              "rate": 74.2
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Strong publish rate but 1/5 NPS in January 2026 \u2014 no reason given, follow up needed."
+          }
+        }
+      ]
+    }
+  ]
+}
