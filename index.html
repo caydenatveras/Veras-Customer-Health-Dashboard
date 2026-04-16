@@ -440,6 +440,9 @@
         <select class="rep-select" id="acRepFilter" onchange="setACRepFilter(this.value)">
           <option value="all">All CS Reps</option>
         </select>
+        <select class="rep-select" id="acImplRepFilter" onchange="setACImplRepFilter(this.value)">
+          <option value="all">All Impl Reps</option>
+        </select>
         <select class="sort-select" id="acSort" onchange="setACSort(this.value)">
           <option value="name">Name A–Z</option>
           <option value="company">Company</option>
@@ -608,7 +611,7 @@ const METRIC_META = [
 // ═══════════════════════════════════════════════════════════════
 let currentFilter='all', currentSort='date-desc', currentRepFilter='all';
 let commFilter='all', commRepFilter='all', trendRepFilter='all';
-let acFilter='all', acRepFilter='all', acCompanyFilter='all', acSort='name';
+let acFilter='all', acRepFilter='all', acImplRepFilter='all', acCompanyFilter='all', acSort='name';
 let tableSortKey='date', tableSortDir='desc';
 let companies=[], selectedCompany=null;
 let activeMetricToggles=new Set(['overallScore','platformUsage','npsSurvey']);
@@ -677,6 +680,14 @@ function populateRepFilters() {
   if(coEl) {
     const coNames = [...new Set(HEALTH_DATA.map(r=>r.company))];
     coNames.forEach(n => { const o=document.createElement('option'); o.value=n; o.textContent=n; coEl.appendChild(o); });
+  }
+  // Populate impl rep filter for all-communities view
+  const implEl = document.getElementById('acImplRepFilter');
+  if(implEl) {
+    let allComms = [];
+    HEALTH_DATA.forEach(e => (e.communities||[]).forEach(c => allComms.push(c)));
+    const implReps = [...new Set(allComms.map(c=>c.implRep).filter(Boolean))].sort();
+    implReps.forEach(r => { const o=document.createElement('option'); o.value=r; o.textContent=r; implEl.appendChild(o); });
   }
 }
 
@@ -978,6 +989,7 @@ function renderAllCommunities() {
   let filtered = [...all];
   if(acFilter!=='all') filtered = filtered.filter(c=>c.status===acFilter);
   if(acRepFilter!=='all') filtered = filtered.filter(c=>c.csRep===acRepFilter);
+  if(acImplRepFilter!=='all') filtered = filtered.filter(c=>c.implRep===acImplRepFilter);
   if(acCompanyFilter!=='all') filtered = filtered.filter(c=>c.companyName===acCompanyFilter);
 
   // Sort
@@ -1003,7 +1015,16 @@ function renderAllCommunities() {
 function renderAllCommCard(comm) {
   const statusClass={'live':'live','mid-stage':'mid-stage','early':'early'}[comm.status]||'early';
   const statusLabel2={'live':'🟢 Live','mid-stage':'🟡 Mid-Stage','early':'⚪ Early'}[comm.status]||comm.status;
-  const repBadge=comm.csRep?`<span class="rep-badge" style="font-size:10px">👤 ${esc(comm.csRep)}</span>`:'';
+  const repBadge=comm.implRep
+    ?`<span class="rep-badge" style="font-size:10px">🔧 ${esc(comm.implRep)}</span>`
+    :(comm.csRep?`<span class="rep-badge" style="font-size:10px">👤 ${esc(comm.csRep)}</span>`:'');
+  const conf=comm.mappingConfidence;
+  const confNote=esc(comm.mappingNote||'');
+  const confBadge=conf==='unresolved'
+    ?`<span title="${confNote||'Mapping unresolved — needs manual verification'}" style="cursor:help;font-size:10px;color:#dc2626;font-weight:600;margin-left:4px">🔴 Needs mapping</span>`
+    :conf==='inferred'
+    ?`<span title="${confNote||'Auto-inferred mapping — please verify'}" style="cursor:help;font-size:10px;color:#d97706;font-weight:600;margin-left:4px">⚠️ Verify</span>`
+    :'';
 
   const dims = COMM_DIMS.map(([label,key])=>{
     const val=comm[key];
@@ -1025,7 +1046,7 @@ function renderAllCommCard(comm) {
     <div style="font-size:11px;color:var(--brand);font-weight:500;margin-bottom:6px;cursor:pointer" onclick="openCompany('${esc(comm.companyName)}')">${esc(comm.companyName)} →</div>
     <div class="comm-meta">
       <span class="comm-status community-status-${statusClass==='live'?'live':statusClass==='mid-stage'?'mid':'early'}">${statusLabel2}</span>
-      ${repBadge}
+      ${repBadge}${confBadge}
     </div>
     <div class="comm-dims">${dims}</div>
     <div class="comm-footer">
@@ -1603,6 +1624,7 @@ function switchTab(view, btn) {
 }
 function setACFilter(val,el){acFilter=val;document.querySelectorAll('#view-allcommunities .pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderAllCommunities()}
 function setACRepFilter(val){acRepFilter=val;renderAllCommunities()}
+function setACImplRepFilter(val){acImplRepFilter=val;renderAllCommunities()}
 function setACCompanyFilter(val){acCompanyFilter=val;renderAllCommunities()}
 function setACSort(val){acSort=val;renderAllCommunities()}
 function setFilter(val,el){currentFilter=val;document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderDashboard()}
@@ -1617,3 +1639,4 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMetricModal();
 </script>
 </body>
 </html>
+
