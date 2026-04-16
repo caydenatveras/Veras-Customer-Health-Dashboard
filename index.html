@@ -693,14 +693,31 @@ let activeCompanyToggles=new Set();
 // ═══════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════
+async function fetchAllEntries(cacheBust) {
+  const qs = cacheBust ? '?_=' + Date.now() : '';
+  const indexResp = await fetch('data.json' + qs);
+  if (!indexResp.ok) throw new Error('HTTP ' + indexResp.status);
+  const index = await indexResp.json();
+
+  // New format: index has .companies array with per-file references
+  if (index.companies) {
+    const companyFiles = await Promise.all(
+      index.companies.map(c => fetch(c.file + qs).then(r => r.ok ? r.json() : null))
+    );
+    const allEntries = [];
+    companyFiles.forEach(cf => { if (cf && cf.entries) allEntries.push(...cf.entries); });
+    return { entries: allEntries, index };
+  }
+  // Legacy format: flat entries array
+  return { entries: index.entries || [], index };
+}
+
 async function loadAndRender() {
   const grid = document.getElementById('cardsGrid');
   if (grid) grid.innerHTML = '<div style="text-align:center;padding:60px;color:var(--gray-500)"><div style="font-size:28px;margin-bottom:10px">⏳</div>Loading health data…</div>';
   try {
-    const resp = await fetch('data.json?_=' + Date.now());
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const json = await resp.json();
-    HEALTH_DATA = json.entries || [];
+    const { entries } = await fetchAllEntries(false);
+    HEALTH_DATA = entries;
   } catch(e) {
     console.warn('Could not load data.json:', e);
     if (grid) grid.innerHTML = '<div style="text-align:center;padding:60px;color:var(--red-dark)"><div style="font-size:28px;margin-bottom:10px">⚠️</div><strong>Could not load health data.</strong><br><span style="font-size:12px;color:var(--gray-500)">Make sure data.json is deployed alongside index.html and refresh the page.</span></div>';
@@ -712,12 +729,11 @@ async function loadAndRender() {
 
 async function reloadAndRender() {
   try {
-    const resp = await fetch('data.json?_=' + Date.now());
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const json = await resp.json();
-    HEALTH_DATA = json.entries || [];
+    const { entries, index } = await fetchAllEntries(true);
+    HEALTH_DATA = entries;
     renderAll();
-    showToast('Refreshed — ' + HEALTH_DATA.length + ' entr' + (HEALTH_DATA.length !== 1 ? 'ies' : 'y') + ' loaded');
+    const n = (index.companies || []).length || entries.length;
+    showToast('Refreshed — ' + n + ' account' + (n !== 1 ? 's' : '') + ' loaded');
   } catch(e) {
     showToast('Could not refresh data — check your connection');
   }
@@ -1982,9 +1998,9 @@ function renderAccountSignalGroup(cs) {
 }
 
 function renderSignals() {
-  if(!allData||!allData.entries) return;
+  if(!HEALTH_DATA||!HEALTH_DATA.length) return;
   const byCompany = {};
-  (allData.entries||[]).forEach(e => {
+  HEALTH_DATA.forEach(e => {
     if(!byCompany[e.company]) byCompany[e.company]=[];
     byCompany[e.company].push(e);
   });
