@@ -171,7 +171,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "The Manor at Market Square",
@@ -182,7 +184,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "The Birches at Newtown",
@@ -193,7 +197,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Chestnut Knoll",
@@ -204,7 +210,10 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility"
         },
         {
           "name": "Heritage Green Hanover",
@@ -215,7 +224,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Keystone Villa at Douglassville, PC",
@@ -237,7 +248,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Keystone Villa at Fleetwood",
@@ -248,7 +261,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Heritage Green Assisted Living",
@@ -1422,7 +1437,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Keystone Villa at Douglassville, PC",
@@ -1444,7 +1461,10 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility"
         },
         {
           "name": "Keystone Villa at Ephrata",
@@ -1455,7 +1475,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Birches at Harleysville",
@@ -1466,7 +1488,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "The Birches at Newtown",
@@ -1477,7 +1501,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "The Birches at New Hope",
@@ -1488,7 +1514,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Keystone Villa at Fleetwood",
@@ -1499,7 +1527,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Manor at Market Square",
@@ -1521,7 +1551,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Birches of Lehigh Valley",
@@ -1543,7 +1575,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Heritage Green Hanover",
@@ -1554,7 +1588,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Senior Commons at Powder Mill",
@@ -1565,7 +1601,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Heritage Green Lynchburg",
@@ -1576,7 +1614,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Chancellor's Village",
@@ -1587,7 +1627,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "The Crossroads at Bon Air",
@@ -1598,7 +1640,9 @@
           "activeAdmins": null,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Keystone Villa at Douglassville, IL",
@@ -1809,7 +1853,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Alpine Meadow Rehab & Nursing",
@@ -1820,7 +1866,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Columbine West Health & Rehab",
@@ -1831,7 +1879,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Columbine Commons Health & Rehab",
@@ -1842,7 +1892,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Lemay Avenue Health & Rehab",
@@ -1853,7 +1905,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Centre Avenue Health & Rehab",
@@ -1864,7 +1918,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Lomond Peak Nursing & Rehab",
@@ -1875,7 +1931,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Spanish Fork Nursing & Rehab",
@@ -1886,7 +1944,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Millcreek Rehab & Nursing",
@@ -1897,7 +1957,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Maple Ridge Rehab & Nursing",
@@ -1908,7 +1970,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Columbine Commons ALF",
@@ -1919,7 +1983,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "North Shore Health & Rehab",
@@ -1930,7 +1996,9 @@
           "onboardingHealth": 100,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Cayden Fox",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Willow Haven Health & Rehab",
@@ -1941,7 +2009,9 @@
           "onboardingHealth": 50,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Silver Oak Health & Rehab",
@@ -1952,7 +2022,9 @@
           "onboardingHealth": 50,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Highland Manor Fallon",
@@ -1963,7 +2035,10 @@
           "onboardingHealth": 50,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data"
         },
         {
           "name": "Elko Rehab",
@@ -1985,7 +2060,9 @@
           "onboardingHealth": 50,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Bryan Ovalle",
+          "mappingConfidence": "confirmed"
         },
         {
           "name": "Cottonwood Nevada",
@@ -1996,7 +2073,10 @@
           "onboardingHealth": 25,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending"
         },
         {
           "name": "Mesquite TX",
@@ -2007,7 +2087,9 @@
           "onboardingHealth": 25,
           "supportLoad": null,
           "customerSentiment": null,
-          "engagementCadence": null
+          "engagementCadence": null,
+          "implRep": "Tegan Perry",
+          "mappingConfidence": "confirmed"
         }
       ]
     }
