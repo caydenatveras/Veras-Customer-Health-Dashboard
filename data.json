@@ -173,7 +173,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Lehigh Valley"
         },
         {
           "name": "The Manor at Market Square",
@@ -186,7 +187,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Market Square"
         },
         {
           "name": "The Birches at Newtown",
@@ -199,7 +201,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "at Newtown"
         },
         {
           "name": "Chestnut Knoll",
@@ -213,7 +216,8 @@
           "engagementCadence": null,
           "implRep": "Tegan Perry",
           "mappingConfidence": "inferred",
-          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility"
+          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility",
+          "npsKeyword": "Chestnut Knoll"
         },
         {
           "name": "Heritage Green Hanover",
@@ -226,7 +230,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Green Hanover"
         },
         {
           "name": "Keystone Villa at Douglassville, PC",
@@ -250,7 +255,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Powder Mill"
         },
         {
           "name": "Keystone Villa at Fleetwood",
@@ -263,7 +269,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Fleetwood"
         },
         {
           "name": "Heritage Green Assisted Living",
@@ -1439,7 +1446,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Traditions of Hanover"
         },
         {
           "name": "Keystone Villa at Douglassville, PC",
@@ -1464,7 +1472,8 @@
           "engagementCadence": null,
           "implRep": "Tegan Perry",
           "mappingConfidence": "inferred",
-          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility"
+          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility",
+          "npsKeyword": "Chestnut Knoll"
         },
         {
           "name": "Keystone Villa at Ephrata",
@@ -1477,7 +1486,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Ephrata"
         },
         {
           "name": "Birches at Harleysville",
@@ -1490,7 +1500,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Harleysville"
         },
         {
           "name": "The Birches at Newtown",
@@ -1503,7 +1514,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "at Newtown"
         },
         {
           "name": "The Birches at New Hope",
@@ -1516,7 +1528,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "at New Hope"
         },
         {
           "name": "Keystone Villa at Fleetwood",
@@ -1529,7 +1542,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Fleetwood"
         },
         {
           "name": "Manor at Market Square",
@@ -1553,7 +1567,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Traditions of Lansdale"
         },
         {
           "name": "Birches of Lehigh Valley",
@@ -1577,7 +1592,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Traditions of Hershey"
         },
         {
           "name": "Heritage Green Hanover",
@@ -1590,7 +1606,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Green Hanover"
         },
         {
           "name": "Senior Commons at Powder Mill",
@@ -1603,7 +1620,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Powder Mill"
         },
         {
           "name": "Heritage Green Lynchburg",
@@ -1616,7 +1634,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Green Lynchburg"
         },
         {
           "name": "Chancellor's Village",
@@ -1629,7 +1648,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Chancellor"
         },
         {
           "name": "The Crossroads at Bon Air",
@@ -1642,7 +1662,8 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Bon Air"
         },
         {
           "name": "Keystone Villa at Douglassville, IL",
@@ -1855,7 +1876,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Crestwood",
+          "usageDetail": {
+            "totalShifts": 2719,
+            "publishedShifts": 2002,
+            "publishRate": 74,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Alpine Meadow Rehab & Nursing",
@@ -1868,7 +1896,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Alpine Meadow",
+          "usageDetail": {
+            "totalShifts": 863,
+            "publishedShifts": 756,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Columbine West Health & Rehab",
@@ -1881,7 +1916,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Columbine West",
+          "usageDetail": {
+            "totalShifts": 3070,
+            "publishedShifts": 2811,
+            "publishRate": 92,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Columbine Commons Health & Rehab",
@@ -1894,7 +1936,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Columbine Commons",
+          "usageDetail": {
+            "totalShifts": 2999,
+            "publishedShifts": 2071,
+            "publishRate": 69,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Lemay Avenue Health & Rehab",
@@ -1907,7 +1956,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Lemay Avenue",
+          "usageDetail": {
+            "totalShifts": 5252,
+            "publishedShifts": 4597,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Centre Avenue Health & Rehab",
@@ -1920,7 +1976,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Centre Avenue",
+          "usageDetail": {
+            "totalShifts": 5015,
+            "publishedShifts": 3360,
+            "publishRate": 67,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Lomond Peak Nursing & Rehab",
@@ -1933,7 +1996,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Lomond Peak",
+          "usageDetail": {
+            "totalShifts": 1874,
+            "publishedShifts": 1770,
+            "publishRate": 94,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Spanish Fork Nursing & Rehab",
@@ -1946,7 +2016,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Spanish Fork",
+          "usageDetail": {
+            "totalShifts": 1752,
+            "publishedShifts": 1285,
+            "publishRate": 73,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Millcreek Rehab & Nursing",
@@ -1959,7 +2036,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Millcreek",
+          "usageDetail": {
+            "totalShifts": 1132,
+            "publishedShifts": 895,
+            "publishRate": 79,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Maple Ridge Rehab & Nursing",
@@ -1972,7 +2056,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Maple Ridge",
+          "usageDetail": {
+            "totalShifts": 452,
+            "publishedShifts": 436,
+            "publishRate": 96,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Columbine Commons ALF",
@@ -1985,7 +2076,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Commons ALF",
+          "usageDetail": {
+            "totalShifts": 1158,
+            "publishedShifts": 1023,
+            "publishRate": 88,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "North Shore Health & Rehab",
@@ -1998,7 +2096,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Cayden Fox",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "North Shore",
+          "usageDetail": {
+            "totalShifts": 3723,
+            "publishedShifts": 1790,
+            "publishRate": 48,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Willow Haven Health & Rehab",
@@ -2011,7 +2116,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Willow Haven",
+          "usageDetail": {
+            "totalShifts": 2611,
+            "publishedShifts": 148,
+            "publishRate": 6,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Silver Oak Health & Rehab",
@@ -2024,7 +2136,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Silver Oak",
+          "usageDetail": {
+            "totalShifts": 1207,
+            "publishedShifts": 1053,
+            "publishRate": 87,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Highland Manor Fallon",
@@ -2038,7 +2157,15 @@
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
           "mappingConfidence": "inferred",
-          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data"
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data",
+          "npsKeyword": "Fallon",
+          "usageDetail": {
+            "totalShifts": 1096,
+            "publishedShifts": 0,
+            "publishRate": 0,
+            "period": "Mar\u2013Apr 2026",
+            "note": "Rehabilitation facility only \u2014 AL/IL usage may be additional"
+          }
         },
         {
           "name": "Elko Rehab",
@@ -2062,7 +2189,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Bryan Ovalle",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Bella Terra",
+          "usageDetail": {
+            "totalShifts": 1424,
+            "publishedShifts": 740,
+            "publishRate": 52,
+            "period": "Mar\u2013Apr 2026"
+          }
         },
         {
           "name": "Cottonwood Nevada",
@@ -2076,7 +2210,8 @@
           "engagementCadence": null,
           "implRep": "Tegan Perry",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending"
+          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending",
+          "npsKeyword": "Nevada"
         },
         {
           "name": "Mesquite TX",
@@ -2089,7 +2224,14 @@
           "customerSentiment": null,
           "engagementCadence": null,
           "implRep": "Tegan Perry",
-          "mappingConfidence": "confirmed"
+          "mappingConfidence": "confirmed",
+          "npsKeyword": "Mesquite",
+          "usageDetail": {
+            "totalShifts": 2196,
+            "publishedShifts": 172,
+            "publishRate": 8,
+            "period": "Mar\u2013Apr 2026"
+          }
         }
       ]
     }
