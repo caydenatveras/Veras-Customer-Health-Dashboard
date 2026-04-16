@@ -1088,8 +1088,11 @@ function openCommMetricDetail(commName, dimKey, companyName) {
   let body='';
 
   if(dimKey==='npsSurvey') {
-    // Filter NPS responses to just this community's building
-    const responses = details?.npsSurvey?.responses?.filter(r=>r.building===commName)||[];
+    // Filter NPS responses to this community using npsKeyword (short unique substring)
+    const kw = (comm.npsKeyword||'').toLowerCase();
+    const responses = details?.npsSurvey?.responses?.filter(r=>
+      kw ? r.building.toLowerCase().includes(kw) : r.building===commName
+    )||[];
     if(responses.length) {
       const avg = (responses.reduce((s,r)=>s+r.score,0)/responses.length).toFixed(1);
       body = buildMetricDetailBody(dimKey, {
@@ -1148,8 +1151,38 @@ function openCommMetricDetail(commName, dimKey, companyName) {
       body+=`<div class="detail-section"><div class="detail-label">Bug Tickets — ${esc(co.name)}</div>${openCoHtml}${closedCoHtml}</div>`;
     }
 
+  } else if(dimKey==='platformUsage') {
+    const ud = comm.usageDetail;
+    if(ud) {
+      const scoreNote = val!==null&&val!==undefined ? ` · Score: <strong>${val}/100</strong>` : '';
+      body=`<div class="detail-section">
+        <div class="detail-label">Shift Activity — ${esc(ud.period||'')}</div>
+        <div class="detail-summary">
+          <strong>${ud.publishRate}%</strong> publish rate · <strong>${(ud.publishedShifts||0).toLocaleString()}</strong> published / <strong>${(ud.totalShifts||0).toLocaleString()}</strong> total shifts${scoreNote}
+        </div>
+        ${ud.note?`<div style="margin-top:6px;font-size:12px;color:var(--gray-400);font-style:italic">${esc(ud.note)}</div>`:''}
+      </div>`;
+    } else {
+      if(val!==null&&val!==undefined) {
+        body=`<div class="detail-section"><div class="detail-label">Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
+      }
+      body+=`<div class="detail-section"><div class="detail-summary" style="color:var(--gray-500)">No usage data recorded for <strong>${esc(commName)}</strong> yet.</div></div>`;
+    }
+
+  } else if(dimKey==='customerSentiment'||dimKey==='engagementCadence') {
+    if(val!==null&&val!==undefined) {
+      body=`<div class="detail-section"><div class="detail-label">Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
+    }
+    const dimDetail = details?.[dimKey];
+    if(dimDetail) {
+      const dimLabel = dimKey==='customerSentiment' ? 'Sentiment' : 'Cadence';
+      body+=`<div class="detail-section"><div class="detail-summary" style="color:var(--gray-500);font-size:12px">${dimLabel} is tracked at the account level — data below covers all of <strong>${esc(co.name)}</strong>.</div></div>`;
+      body+=buildMetricDetailBody(dimKey, dimDetail, co.latest);
+    } else {
+      body+=`<div class="detail-section"><div class="detail-summary" style="color:var(--gray-500)">No ${dimKey==='customerSentiment'?'sentiment':'cadence'} data available.</div></div>`;
+    }
+
   } else {
-    // platformUsage, customerSentiment, engagementCadence — no per-community data yet
     if(val!==null&&val!==undefined) {
       body=`<div class="detail-section"><div class="detail-label">Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
     }
