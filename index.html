@@ -1159,14 +1159,43 @@ function openCommMetricDetail(commName, dimKey, companyName) {
   } else if(dimKey==='platformUsage') {
     const ud = comm.usageDetail;
     if(ud) {
-      const scoreNote = val!==null&&val!==undefined ? ` · Score: <strong>${val}/100</strong>` : '';
-      body=`<div class="detail-section">
-        <div class="detail-label">Shift Activity — ${esc(ud.period||'')}</div>
-        <div class="detail-summary">
-          <strong>${ud.publishRate}%</strong> publish rate · <strong>${(ud.publishedShifts||0).toLocaleString()}</strong> published / <strong>${(ud.totalShifts||0).toLocaleString()}</strong> total shifts${scoreNote}
-        </div>
-        ${ud.note?`<div style="margin-top:6px;font-size:12px;color:var(--gray-400);font-style:italic">${esc(ud.note)}</div>`:''}
-      </div>`;
+      const scoreNote = val!==null&&val!==undefined ? `Score: <strong>${val}/100</strong>` : '';
+      // New windowed format: ud.currentMonth exists
+      if(ud.currentMonth) {
+        const cm = ud.currentMonth;
+        const nm = ud.nextMonth;
+        const cmRate = cm.rate!==null&&cm.rate!==undefined ? cm.rate : (cm.total>0 ? Math.round(cm.published/cm.total*100) : null);
+        const cmBar = cmRate!==null ? `<div style="margin-top:6px;background:var(--gray-100);border-radius:4px;height:8px;overflow:hidden"><div style="width:${Math.min(cmRate,100)}%;height:100%;background:${cmRate>=80?'var(--green)':cmRate>=50?'var(--yellow)':'var(--red)'};border-radius:4px"></div></div>` : '';
+        let nmHtml = '';
+        if(nm && nm.total>0) {
+          const nmRate = nm.rate!==null&&nm.rate!==undefined ? nm.rate : Math.round(nm.published/nm.total*100);
+          const nmBar = `<div style="margin-top:6px;background:var(--gray-100);border-radius:4px;height:8px;overflow:hidden"><div style="width:${Math.min(nmRate,100)}%;height:100%;background:${nmRate>=80?'var(--green)':nmRate>=50?'var(--yellow)':'var(--red)'};border-radius:4px"></div></div>`;
+          nmHtml = `<div class="detail-section">
+            <div class="detail-label">${esc(nm.label||'Next Month')}</div>
+            <div class="detail-summary"><strong>${nmRate}%</strong> publish rate · <strong>${(nm.published||0).toLocaleString()}</strong> published / <strong>${(nm.total||0).toLocaleString()}</strong> total shifts${ud.scoringWindow&&ud.scoringWindow.includes('–')?' <span style="font-size:11px;color:var(--gray-400)">(included in score)</span>':' <span style="font-size:11px;color:var(--gray-400)">(not yet scored)</span>'}</div>
+            ${nmBar}
+          </div>`;
+        }
+        body=`<div class="detail-section">
+          <div class="detail-label">${esc(cm.label||'Current Month')}</div>
+          <div class="detail-summary"><strong>${cmRate!==null?cmRate+'%':'—'}</strong> publish rate · <strong>${(cm.published||0).toLocaleString()}</strong> published / <strong>${(cm.total||0).toLocaleString()}</strong> total shifts</div>
+          ${cmBar}
+        </div>${nmHtml}`;
+        if(scoreNote||ud.scoringWindow) {
+          body+=`<div class="detail-section"><div class="detail-summary" style="font-size:12px;color:var(--gray-500)">Scoring window: <strong>${esc(ud.scoringWindow||cm.label||'')}</strong>${scoreNote?' · '+scoreNote:''}</div></div>`;
+        }
+        if(ud.note) body+=`<div class="detail-section"><div style="font-size:12px;color:var(--gray-400);font-style:italic">${esc(ud.note)}</div></div>`;
+      } else {
+        // Legacy flat format
+        const scoreNote2 = val!==null&&val!==undefined ? ` · Score: <strong>${val}/100</strong>` : '';
+        body=`<div class="detail-section">
+          <div class="detail-label">Shift Activity — ${esc(ud.period||'')}</div>
+          <div class="detail-summary">
+            <strong>${ud.publishRate}%</strong> publish rate · <strong>${(ud.publishedShifts||0).toLocaleString()}</strong> published / <strong>${(ud.totalShifts||0).toLocaleString()}</strong> total shifts${scoreNote2}
+          </div>
+          ${ud.note?`<div style="margin-top:6px;font-size:12px;color:var(--gray-400);font-style:italic">${esc(ud.note)}</div>`:''}
+        </div>`;
+      }
     } else {
       if(val!==null&&val!==undefined) {
         body=`<div class="detail-section"><div class="detail-label">Score</div><div class="detail-summary">Score: <strong>${val}/100</strong></div></div>`;
