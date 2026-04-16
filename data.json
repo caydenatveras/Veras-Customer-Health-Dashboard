@@ -2560,6 +2560,750 @@
         }
       ],
       "featureRequestUrls": []
+    },
+    {
+      "company": "SAL Management",
+      "date": "2026-04-16",
+      "csRep": "Tegan Perry",
+      "lifecycle": "active-onboarding",
+      "overallScore": 62,
+      "platformUsage": 52,
+      "customerSentiment": 60,
+      "npsSurvey": 45,
+      "onboardingHealth": 81,
+      "supportLoad": 95,
+      "engagementCadence": null,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45215952686",
+      "renewalDate": "",
+      "npsTicketUrls": [
+        {
+          "label": "Amanda Potter - Our House Cedar City - February 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41742115491"
+        },
+        {
+          "label": "Heidi Jones - Sunridge Assisted Living of Roy - January 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39958586544"
+        },
+        {
+          "label": "Brandi Neff - Ridgeview Gardens Assisted Living of St. George - January 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39932493976"
+        },
+        {
+          "label": "Ruth Salazar - Ridgeview Gardens Assisted Living of St. George - January 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39939423827"
+        },
+        {
+          "label": "Priscilia Candelaria - Tradition Assisted Living - January 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39938804266"
+        },
+        {
+          "label": "Heidi Jones - Sunridge Assisted Living of Roy - December 2025",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41815405677"
+        },
+        {
+          "label": "Solange Ackerman - Sunridge Assisted Living of Roy - December 2025",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41766642749"
+        },
+        {
+          "label": "Jessica Mortensen - Cache Valley Assisted Living and Memory Care - December 2025",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41755509405"
+        }
+      ],
+      "bugTicketUrls": [],
+      "featureRequestUrls": [
+        {
+          "label": "Option to show availability on schedule",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32798170288"
+        },
+        {
+          "label": "Ability to search for a schedule by employee on the mobile app",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32482207323"
+        },
+        {
+          "label": "Messaging Groups across communities",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31550587483"
+        },
+        {
+          "label": "Include Preferences as a metric when trying to assign an open shift",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31447937126"
+        },
+        {
+          "label": "Add blackout dates for time off requests & unavailability",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/32798170029"
+        },
+        {
+          "label": "Preferences back in suggested workers + refactor",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31553072642"
+        },
+        {
+          "label": "\"Master schedule\" type view for user preferences/availability",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31466388134"
+        },
+        {
+          "label": "Shift swap & overtime visibility",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31466541918"
+        }
+      ],
+      "actions": [
+        "Targeted retraining for The Beaumont \u2014 highest overtime ($25K), lowest publish rate (22%), and not effectively sharing open shifts. Specific overtime offenders (Violetta Jensen, Totelena, Aubrey) need manager coaching alongside the Veras workflow.",
+        "Address low publish rates at Whisper Cove (25%), West Jordan (29%), and Ridgeview St. George (30%) \u2014 these are live communities with significant shift volumes. Schedule working sessions to identify why schedules aren't being published.",
+        "Follow up on Cache Valley NPS score of 1 ('time off requests do not work') \u2014 investigate and resolve before it becomes a churn risk. Resurvey after fix.",
+        "Investigate Sunridge Layton sending zero messages through the system (per QBR data) despite high publish rate \u2014 users may not be engaging with the messaging feature.",
+        "Review the preferences feature requests backlog with product (5 open items dating to July 2025). SAL explicitly called out the suggested workers dropdown as confusing and wants preferences factored back in."
+      ],
+      "notes": "Large 14-community account, active onboarding. Strong momentum (messaging 4x growth, zero agency usage, overtime reductions at West Jordan and Ogden) mixed with significant problem communities \u2014 Beaumont in particular is dragging multiple metrics. NPS trending low at 2.8/5 with Cache Valley scoring 1. Cadence data unavailable from Circleback; Granola confirms QBR occurred.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "42.9% weighted average publish rate across 14 active facilities (Apr\u2013May window). Sharp bifurcation: Layton (99%), Cedar City (98%), and Ogden (76%) are exemplary; Beaumont (22%), Whisper Cove (25%), and West Jordan (29%) are the lowest among live communities and are large enough to significantly drag the account average. Message volume grew from ~3K/month in Oct 2025 to ~13K in Mar 2026 \u2014 strong adoption signal. Fill rate is consistently low (~1%) but steady.",
+          "highlights": [
+            "Sunridge Layton 99% published (Apr+May) \u2014 both months fully scheduled",
+            "Our House Cedar City 98% \u2014 May fully published already",
+            "Message volume: 3,224 Oct 2025 \u2192 13,359 Mar 2026 (4\u00d7 growth in 6 months)",
+            "Zero agency usage across almost all communities",
+            "The Beaumont: 22% publish rate \u2014 highest overtime, largest unresolved scheduling gap",
+            "Whisper Cove: 25% \u2014 4,630 total shifts, only 1,154 published",
+            "West Jordan: 29% \u2014 4,060 total shifts, only 1,177 published",
+            "Our House Tremonton (early stage): 0.4% \u2014 expected, pre-live excluded from scoring"
+          ]
+        },
+        "customerSentiment": {
+          "summary": "Circleback returned no meeting matches for SAL Management. Granola data from QBR shows an overall positive relationship \u2014 SAL is engaged with outcomes (overtime reduction, zero agency) and views Veras as the tool to hit their 2026 goals. Main friction points: Beaumont community (disproportionate overtime, same staff repeating it), low-utilization communities (Tremont, Riverway, Whisper Cove), and extra time costs ($107K Q4). No at-risk Slack mentions. Note: sentiment data limited to Granola only \u2014 may reflect Cayden's perspective.",
+          "positive": [
+            {
+              "text": "Messages nearly doubled QoQ: 25K sent in Q4 vs 12K in Q3",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Shift sharing up: 14K shifts shared Q4 vs 9K Q3",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Overtime down $5,800 QoQ; West Jordan (-375 hrs) and Ogden (-228 hrs) leading improvements",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Zero agency usage across almost all communities",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Call-off efficiency improved: 1,600 shifts shared post call-off vs 752 in Q3",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "No at-risk Slack mentions",
+              "sourceType": "slack",
+              "sourceUrl": ""
+            }
+          ],
+          "negative": [
+            {
+              "text": "The Beaumont: highest overtime ($25K), same staff repeatedly accumulating extra hours, not sharing open shifts effectively",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Extra time costs $107K in Q4 \u2014 mostly late clock-outs; Beaumont and St. George worst offenders",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Layton sent zero messages through the system despite being live",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Tremont, Riverway, Whisper Cove not sharing shifts or call-offs consistently",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Missed meals: $10K cost from 901 missed breaks",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            }
+          ],
+          "neutral": [
+            {
+              "text": "SAL's 2026 priorities: zero agency, reducing early clock-ins/late clock-outs, better shift sharing \u2014 wants measurable results from Veras",
+              "sourceType": "granola",
+              "sourceUrl": ""
+            },
+            {
+              "text": "Circleback returned 0 meetings \u2014 cadence data unavailable",
+              "sourceType": "circleback",
+              "sourceUrl": ""
+            }
+          ]
+        },
+        "npsSurvey": {
+          "period": "Jan\u2013Feb 2026",
+          "avgScore": 2.8,
+          "responseCount": 5,
+          "trend": "Up (Dec 2025 avg 2.33 \u2192 Jan-Feb 2026 avg 2.8)",
+          "responses": [
+            {
+              "building": "Our House Cedar City",
+              "respondent": "Amanda Potter",
+              "score": 4,
+              "note": ""
+            },
+            {
+              "building": "Sunridge Assisted Living of Roy",
+              "respondent": "Heidi Jones",
+              "score": 3,
+              "note": ""
+            },
+            {
+              "building": "Ridgeview Gardens St. George",
+              "respondent": "Brandi Neff",
+              "score": 3,
+              "note": ""
+            },
+            {
+              "building": "Ridgeview Gardens St. George",
+              "respondent": "Ruth Salazar",
+              "score": 2,
+              "note": ""
+            },
+            {
+              "building": "Tradition Assisted Living",
+              "respondent": "Priscilia Candelaria",
+              "score": 2,
+              "note": ""
+            },
+            {
+              "building": "Sunridge Assisted Living of Roy",
+              "respondent": "Heidi Jones",
+              "score": 3,
+              "note": "Dec 2025"
+            },
+            {
+              "building": "Sunridge Assisted Living of Roy",
+              "respondent": "Solange Ackerman",
+              "score": 3,
+              "note": "Dec 2025"
+            },
+            {
+              "building": "Cache Valley Assisted Living",
+              "respondent": "Jessica Mortensen",
+              "score": 1,
+              "note": "Dec 2025 \u2014 'Time off request does not work'"
+            }
+          ]
+        },
+        "onboardingHealth": {
+          "total": 14,
+          "live": 8,
+          "midStage": 5,
+          "earlyStage": 1,
+          "summary": "8 communities live (1176560694), 5 mid-stage (1176560693), 1 early (1176560691 \u2014 Our House Tremonton). Note: Cache Valley Assisted Living appears in Metabase usage data and NPS but has no onboarding ticket in HubSpot \u2014 added to communities array as unresolved. Note: Sun Ridge West Jordan is staged as mid-stage in HubSpot but shows live-level usage (2,000+ shifts/month) \u2014 stage may need updating."
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 0,
+          "openLow": 0,
+          "backlogItems": 0,
+          "summary": "No open bug tickets. 8 feature requests open in backlog, mostly around preferences/availability visibility (submitted Jul\u2013Oct 2025). Feature requests not scored."
+        },
+        "engagementCadence": {
+          "summary": "Circleback returned 0 meeting matches for SAL Management \u2014 cadence score is Unknown. Granola confirms at least one QBR occurred within the lookback window with detailed outcome data, suggesting active engagement. Unable to calculate meeting frequency without Circleback coverage.",
+          "avgDaysBetween": null
+        }
+      },
+      "communities": [
+        {
+          "name": "Our House Tremonton",
+          "csRep": "Tegan Perry",
+          "implRep": "Tegan Perry",
+          "status": "early",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Tremonton",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/31578592256",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 30,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 243,
+              "published": 1,
+              "rate": 0.4
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 75,
+              "published": 0,
+              "rate": 0.0
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Early-stage community \u2014 excluded from platform usage scoring"
+          }
+        },
+        {
+          "name": "Our House Tooele",
+          "csRep": "Tegan Perry",
+          "implRep": "Tegan Perry",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Tooele",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30747152995",
+          "npsSurvey": null,
+          "platformUsage": 60,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 722,
+              "published": 569,
+              "rate": 78.8
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 278,
+              "published": 3,
+              "rate": 1.1
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Current month strong (79%); May not yet scheduled"
+          }
+        },
+        {
+          "name": "Sunridge Assisted Living Roy",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Roy",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32169066421",
+          "npsSurvey": 50,
+          "platformUsage": 55,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1193,
+              "published": 850,
+              "rate": 71.2
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 578,
+              "published": 51,
+              "rate": 8.8
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Ridgeview Gardens St. George",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Ridgeview",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32482207892",
+          "npsSurvey": 43,
+          "platformUsage": 35,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 622,
+              "published": 230,
+              "rate": 37.0
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 173,
+              "published": 8,
+              "rate": 4.6
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Low publish rate for a live community \u2014 also in extra-time concern list per QBR"
+          }
+        },
+        {
+          "name": "Sunridge Assisted Living Layton",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Layton",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30887515284",
+          "npsSurvey": null,
+          "platformUsage": 98,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 718,
+              "published": 710,
+              "rate": 98.9
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 473,
+              "published": 473,
+              "rate": 100.0
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Excellent publish rate \u2014 both months fully scheduled. Note: sent zero messages per QBR data."
+          }
+        },
+        {
+          "name": "Tradition Assisted Living",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Tradition",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30895322698",
+          "npsSurvey": 35,
+          "platformUsage": 43,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 791,
+              "published": 439,
+              "rate": 55.5
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 468,
+              "published": 33,
+              "rate": 7.1
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Riverway Assisted Living",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Riverway",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30884261463",
+          "npsSurvey": null,
+          "platformUsage": 53,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 611,
+              "published": 392,
+              "rate": 64.2
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 397,
+              "published": 29,
+              "rate": 7.3
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Noted as low-utilization in QBR (not sharing call-offs consistently)"
+          }
+        },
+        {
+          "name": "Blacksmith Fork Assisted Living",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Blacksmith",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30595487760",
+          "npsSurvey": null,
+          "platformUsage": 62,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 424,
+              "published": 335,
+              "rate": 79.0
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 213,
+              "published": 46,
+              "rate": 21.6
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Whisper Cove",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Whisper Cove",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37701585267",
+          "npsSurvey": 75,
+          "platformUsage": 30,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 2308,
+              "published": 1109,
+              "rate": 48.1
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 2322,
+              "published": 45,
+              "rate": 1.9
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Largest facility by shift volume \u2014 only 25% combined publish rate. Low utilization noted in QBR."
+          }
+        },
+        {
+          "name": "Our House Cedar City",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Cedar City",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30713862200",
+          "npsSurvey": 75,
+          "platformUsage": 96,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 522,
+              "published": 505,
+              "rate": 96.7
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 413,
+              "published": 413,
+              "rate": 100.0
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Excellent \u2014 May fully published already despite being mid-stage"
+          }
+        },
+        {
+          "name": "Birch Creek Assisted Living",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Birch Creek",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30719647635",
+          "npsSurvey": null,
+          "platformUsage": 53,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1323,
+              "published": 571,
+              "rate": 43.2
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 61,
+              "published": 2,
+              "rate": 3.3
+            },
+            "scoringWindow": "Apr\u2013May 2026"
+          }
+        },
+        {
+          "name": "Our House Ogden",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Our House of Ogden",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/30586294053",
+          "npsSurvey": null,
+          "platformUsage": 77,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1813,
+              "published": 1358,
+              "rate": 74.9
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 145,
+              "published": 128,
+              "rate": 88.3
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Noted as leading overtime reduction per QBR (-228 hrs QoQ)"
+          }
+        },
+        {
+          "name": "Sunridge West Jordan",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month). Stage may be stale \u2014 verify with Bryan Ovalle.",
+          "npsKeyword": "West Jordan",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37583476648",
+          "npsSurvey": 85,
+          "platformUsage": 35,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 1997,
+              "published": 935,
+              "rate": 46.8
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 2063,
+              "published": 242,
+              "rate": 11.7
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Second-largest facility. Led overtime reduction per QBR (-375 hrs QoQ) but only 29% publish rate combined window."
+          }
+        },
+        {
+          "name": "The Beaumont",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Beaumont",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37647793184",
+          "npsSurvey": null,
+          "platformUsage": 28,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 2421,
+              "published": 784,
+              "rate": 32.4
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 1212,
+              "published": 13,
+              "rate": 1.1
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Highest overtime ($25K Q4), worst publish rate among live communities. Key concern per QBR \u2014 needs targeted intervention."
+          }
+        },
+        {
+          "name": "Cache Valley Assisted Living",
+          "csRep": "Tegan Perry",
+          "implRep": null,
+          "status": "live",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot. Verify whether this is a standalone community or part of another entity.",
+          "npsKeyword": "Cache Valley",
+          "hubspotTicketUrl": null,
+          "npsSurvey": 10,
+          "platformUsage": 71,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": {
+            "currentMonth": {
+              "label": "April 2026",
+              "total": 527,
+              "published": 434,
+              "rate": 82.4
+            },
+            "nextMonth": {
+              "label": "May 2026",
+              "total": 157,
+              "published": 10,
+              "rate": 6.4
+            },
+            "scoringWindow": "Apr\u2013May 2026",
+            "note": "Good current-month publish rate but NPS score of 1 ('time off requests do not work')"
+          }
+        }
+      ]
     }
   ]
 }
