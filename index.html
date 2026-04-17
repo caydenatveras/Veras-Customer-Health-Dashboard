@@ -373,6 +373,106 @@
   .sig-company-group{margin-bottom:18px}
   .sig-company-name{font-size:13px;font-weight:700;color:var(--gray-700);margin-bottom:7px;display:flex;align-items:center;gap:6px;cursor:pointer}
   .sig-company-name:hover{color:var(--brand)}
+  /* FR Portfolio */
+  .fr-portfolio-table{width:100%;border-collapse:collapse;font-size:12px}
+  .fr-portfolio-table th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-500);border-bottom:1px solid var(--gray-200);white-space:nowrap}
+  .fr-portfolio-table td{padding:8px 10px;border-bottom:1px solid var(--gray-100);vertical-align:top}
+  .fr-portfolio-table tr:last-child td{border-bottom:none}
+  .fr-portfolio-table tr:hover td{background:var(--gray-50)}
+  .fr-theme-label{font-weight:600;color:var(--gray-800)}
+  .fr-co-chips{display:flex;flex-wrap:wrap;gap:4px}
+  .fr-co-chip{font-size:11px;padding:2px 8px;border-radius:10px;background:var(--brand-light);color:var(--brand-dark);cursor:pointer;font-weight:500}
+  .fr-co-chip:hover{background:#dde4ff}
+  .fr-ticket-list{display:flex;flex-direction:column;gap:2px}
+  .fr-ticket-list a{font-size:11px;color:var(--brand);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px;display:block}
+  .fr-ticket-list a:hover{text-decoration:underline}
+  /* QBR Modal */
+  #qbr-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+  #qbr-modal-overlay.open{display:flex}
+  #qbr-modal{background:#fff;border-radius:14px;box-shadow:var(--shadow-lg);width:100%;max-width:660px;max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+  .qbr-modal-header{padding:18px 22px 14px;border-bottom:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+  .qbr-modal-title{font-size:15px;font-weight:700;color:var(--gray-900)}
+  .qbr-modal-subtitle{font-size:12px;color:var(--gray-500);margin-top:2px}
+  .qbr-modal-close{background:none;border:none;cursor:pointer;font-size:20px;color:var(--gray-400);padding:4px;border-radius:6px;line-height:1}
+  .qbr-modal-close:hover{background:var(--gray-100);color:var(--gray-700)}
+  .qbr-modal-body{padding:18px 22px;overflow-y:auto;flex:1}
+  .qbr-modal-footer{padding:12px 22px;border-top:1px solid var(--gray-200);display:flex;gap:8px;justify-content:flex-end;flex-shrink:0}
+  .qbr-section{margin-bottom:18px}
+  .qbr-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:8px}
+  .qbr-score-row{display:flex;align-items:center;gap:14px;padding:12px 14px;background:var(--gray-50);border-radius:8px;margin-bottom:4px}
+  .qbr-score-badge{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;flex-shrink:0}
+  .qbr-score-badge.green{background:var(--green-light);color:var(--green-dark)}
+  .qbr-score-badge.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+  .qbr-score-badge.red{background:var(--red-light);color:var(--red-dark)}
+  .qbr-score-detail{flex:1}
+  .qbr-score-name{font-size:14px;font-weight:700;color:var(--gray-900)}
+  .qbr-score-meta{font-size:12px;color:var(--gray-500);margin-top:2px}
+  .qbr-delta{font-size:12px;font-weight:600;padding:3px 9px;border-radius:12px}
+  .qbr-delta.up{background:var(--green-light);color:var(--green-dark)}
+  .qbr-delta.down{background:var(--red-light);color:var(--red-dark)}
+  .qbr-delta.flat{background:var(--gray-100);color:var(--gray-600)}
+  .qbr-renewal{font-size:12px;padding:7px 12px;border-radius:8px;background:#eff6ff;color:#1d4ed8;display:flex;align-items:center;gap:7px}
+  .qbr-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+  .qbr-list li{font-size:13px;color:var(--gray-700);padding:6px 10px;border-radius:7px;display:flex;align-items:flex-start;gap:7px;background:var(--gray-50)}
+  .qbr-list li.green{background:var(--green-light);color:var(--green-dark)}
+  .qbr-list li.red{background:var(--red-light);color:var(--red-dark)}
+  .qbr-list li .qbr-src{font-size:10px;color:var(--gray-400);margin-left:auto;white-space:nowrap;padding-left:6px}
+  .qbr-action-item{font-size:13px;color:var(--gray-700);padding:6px 10px;border-radius:7px;background:var(--brand-light);color:var(--brand-dark);display:flex;gap:7px}
+  /* Pulse Tab */
+  .pulse-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+  .pulse-stat{background:#fff;border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow);text-align:center}
+  .pulse-stat-num{font-size:28px;font-weight:700;line-height:1;margin-bottom:4px}
+  .pulse-stat-lbl{font-size:12px;color:var(--gray-500);font-weight:500}
+  .pulse-stat.attention .pulse-stat-num{color:var(--red-dark)}
+  .pulse-stat.renewal .pulse-stat-num{color:#1d4ed8}
+  .pulse-stat.stale .pulse-stat-num{color:var(--yellow-dark)}
+  .pulse-account-list{display:flex;flex-direction:column;gap:8px}
+  .pulse-account{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:13px 16px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:box-shadow .15s}
+  .pulse-account:hover{box-shadow:var(--shadow-md)}
+  .pulse-acc-score{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+  .pulse-acc-score.green{background:var(--green-light);color:var(--green-dark)}
+  .pulse-acc-score.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+  .pulse-acc-score.red{background:var(--red-light);color:var(--red-dark)}
+  .pulse-acc-body{flex:1;min-width:0}
+  .pulse-acc-name{font-size:14px;font-weight:600;color:var(--gray-900)}
+  .pulse-acc-meta{font-size:12px;color:var(--gray-500);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .pulse-acc-signals{margin-top:6px;display:flex;flex-direction:column;gap:3px}
+  .pulse-acc-signal{font-size:12px;color:var(--gray-600);display:flex;align-items:flex-start;gap:5px}
+  .pulse-acc-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
+  .pulse-stale-badge{font-size:11px;padding:2px 8px;border-radius:10px;background:var(--yellow-light);color:var(--yellow-dark);font-weight:600}
+  .pulse-renewal-badge{font-size:11px;padding:2px 8px;border-radius:10px;background:#eff6ff;color:#1d4ed8;font-weight:600}
+  /* Timeline */
+  .timeline-section{margin-top:16px;border-top:1px solid var(--gray-100);padding-top:14px}
+  .timeline-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-400);margin-bottom:10px}
+  .timeline-rows{display:flex;flex-direction:column;gap:8px}
+  .timeline-row{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;background:var(--gray-50);border-radius:8px;font-size:12px}
+  .timeline-row.latest{background:var(--brand-light)}
+  .tl-score{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+  .tl-score.green{background:var(--green-light);color:var(--green-dark)}
+  .tl-score.yellow{background:var(--yellow-light);color:var(--yellow-dark)}
+  .tl-score.red{background:var(--red-light);color:var(--red-dark)}
+  .tl-body{flex:1;min-width:0}
+  .tl-date{font-size:11px;color:var(--gray-500);margin-bottom:5px}
+  .tl-dims{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px}
+  .tl-dim{font-size:10px;padding:2px 6px;border-radius:8px;font-weight:600;white-space:nowrap}
+  .tl-dim.up{background:var(--green-light);color:var(--green-dark)}
+  .tl-dim.down{background:var(--red-light);color:var(--red-dark)}
+  .tl-dim.flat{background:var(--gray-100);color:var(--gray-500)}
+  .tl-actions{font-size:11px;color:var(--gray-500);margin-top:4px}
+  /* Training Gap */
+  .training-gap-panel{background:#fffbeb;border:1px solid #fde68a;border-radius:var(--radius);padding:14px 16px;margin-bottom:20px}
+  .training-gap-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .training-gap-header h4{font-size:13px;font-weight:700;color:#92400e;margin:0}
+  .training-gap-header span{font-size:12px;color:#a16207}
+  .training-gap-rows{display:flex;flex-direction:column;gap:5px}
+  .training-gap-row{display:flex;align-items:center;gap:10px;font-size:12px;padding:6px 8px;background:#fff;border-radius:6px;border:1px solid #fde68a}
+  .tg-rate{font-weight:700;color:var(--red-dark);min-width:36px}
+  .tg-rate.warn{color:var(--yellow-dark)}
+  .tg-name{font-weight:600;color:var(--gray-800);flex:1}
+  .tg-company{color:var(--gray-500)}
+  .tg-shifts{color:var(--gray-400)}
+  .tg-link{margin-left:auto;font-size:11px;color:var(--brand);text-decoration:none}
+  .tg-link:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -388,7 +488,8 @@
     <button class="tab-btn" onclick="switchTab('allcommunities',this)">Communities</button>
     <button class="tab-btn" onclick="switchTab('trends',this)">Trends</button>
     <button class="tab-btn" onclick="switchTab('signals',this)">Signals</button>
-  <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
+    <button class="tab-btn" onclick="switchTab('pulse',this)">Pulse</button>
+    <button class="tab-btn" onclick="switchTab('data',this)">Raw Data</button>
   </div>
   <div class="header-actions">
     <button class="btn btn-ghost" onclick="reloadAndRender()">↻ Refresh</button>
@@ -494,6 +595,7 @@
         <span class="count-label" id="acCountLabel"></span>
       </div>
     </div>
+    <div id="trainingGapPanel" style="display:none"></div>
     <div class="comm-grid" id="acGrid"></div>
   </main>
 </div>
@@ -559,6 +661,32 @@
       </div>
       <div id="sigAccountCards"><div class="signals-empty">Loading…</div></div>
     </div>
+    <div class="signals-divider"></div>
+    <div class="signals-section">
+      <div class="signals-section-title">
+        <h3>💬 Feature Requests Across Portfolio</h3>
+        <span class="sst-sub">Open feature requests grouped by theme — useful for product syncs and roadmap conversations</span>
+      </div>
+      <div id="sigFRCards"><div class="signals-empty">Loading…</div></div>
+    </div>
+  </main>
+</div>
+
+<div id="view-pulse" class="view">
+  <main>
+    <div class="summary-bar" style="margin-bottom:20px">
+      <div>
+        <h2 style="font-size:17px;font-weight:700;color:var(--gray-900);margin:0">Portfolio Pulse</h2>
+        <p style="font-size:12px;color:var(--gray-500);margin:3px 0 0">Weekly snapshot — accounts needing attention, upcoming renewals, stale scores</p>
+      </div>
+      <button class="btn btn-outline btn-sm" onclick="copyPulseSummary()">⎘ Copy for Slack</button>
+    </div>
+    <div class="pulse-stats">
+      <div class="pulse-stat attention"><div class="pulse-stat-num" id="pulseNeedsAttention">—</div><div class="pulse-stat-lbl">Needs Attention</div></div>
+      <div class="pulse-stat renewal"><div class="pulse-stat-num" id="pulseRenewals">—</div><div class="pulse-stat-lbl">Renewals in 90 Days</div></div>
+      <div class="pulse-stat stale"><div class="pulse-stat-num" id="pulseStale">—</div><div class="pulse-stat-lbl">Score Overdue</div></div>
+    </div>
+    <div class="pulse-account-list" id="pulseAccountList"><div class="signals-empty">Loading…</div></div>
   </main>
 </div>
 
@@ -934,9 +1062,11 @@ function renderCard(c) {
         <div class="card-footer-meta">
           <span class="last-updated">Last scored: ${fmtDate(c.latest.date)}</span>
           <button class="rescore-btn" onclick="copyRescorePrompt('${esc(c.name)}',event)" title="Copy prompt to re-run this health score">⎘ Re-score</button>
+          <button class="rescore-btn" style="background:var(--brand-light);color:var(--brand-dark);border-color:var(--brand-light)" onclick="event.stopPropagation();openQBRModal('${esc(c.name)}')" title="Generate QBR prep summary">📋 Prep QBR</button>
           ${commCount?`<button class="communities-btn" onclick="event.stopPropagation();openCompany('${esc(c.name)}')">${commCount} Communities →</button>`:''}
         </div>
       </div>
+      ${renderTimeline(c)}
     </div>
   </div>`;
 }
@@ -1061,6 +1191,7 @@ function renderCommunityCard(comm, parentEntry) {
 // ALL COMMUNITIES VIEW
 // ═══════════════════════════════════════════════════════════════
 function renderAllCommunities() {
+  renderTrainingGaps();
   // Flatten all communities from all companies
   let all = [];
   companies.forEach(co => {
@@ -1237,7 +1368,7 @@ function openCommMetricDetail(commName, dimKey, companyName) {
     const closedCoHtml=closedCoTickets.length
       ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedCoTickets.length} resolved ticket${closedCoTickets.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedCoTickets.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
     body+=`<div class="detail-section"><div class="detail-label">Bug Tickets — ${esc(co.name)}</div>${openCoHtml}${closedCoHtml}</div>`;
-    const frCoLinks=(co.latest.featureRequestUrls||[]).filter(t=>t.status!=='closed');
+    const frCoLinks=(co.latest.featureRequestUrls||co.latest.featureRequestTicketUrls||[]).filter(t=>t.status!=='closed');
     if(frCoLinks.length) {
       body+=`<div class="detail-section">
         <div class="detail-label" style="display:flex;align-items:center;gap:6px">Feature Requests — ${esc(co.name)}<span style="font-size:10px;font-weight:400;color:var(--gray-400);background:var(--gray-100);padding:1px 6px;border-radius:10px">not factored into score</span></div>
@@ -1339,7 +1470,7 @@ function buildMetricDetailBody(dimKey, detail, entry) {
       ?`<details style="margin-top:6px"><summary style="font-size:11px;color:var(--gray-400);cursor:pointer">${closedBugLinks.length} resolved ticket${closedBugLinks.length>1?'s':''}</summary><div style="margin-top:4px" class="signal-list">${closedBugLinks.map(t=>`<div class="signal-item" style="opacity:.55"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0;text-decoration:line-through">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank" style="text-decoration:line-through">${esc(t.label)}</a></div>`).join('')}</div></details>`:'';
     const bugHtml=`<div class="detail-section"><div class="detail-label">Bug Tickets</div>${openSection}${closedSection}</div>`;
     // Feature requests — shown for visibility but not factored into score
-    const frLinks=(entry.featureRequestUrls||[]).filter(t=>t.status!=='closed');
+    const frLinks=(entry.featureRequestUrls||entry.featureRequestTicketUrls||[]).filter(t=>t.status!=='closed');
     const frHtml=frLinks.length
       ?`<div class="detail-section">
           <div class="detail-label" style="display:flex;align-items:center;gap:6px">
@@ -1813,7 +1944,7 @@ function computeProductSignals(latestEntries) {
         }
       });
     });
-    (entry.featureRequestUrls||[]).forEach(t => {
+    (entry.featureRequestUrls||entry.featureRequestTicketUrls||[]).forEach(t => {
       PRODUCT_THEMES.forEach(th => {
         if(_themeMatch(t.label, th.kw)) {
           ensureTheme(th.id);
@@ -2027,6 +2158,9 @@ function renderSignals() {
   document.getElementById('sigAccountCards').innerHTML = accountSignals.length
     ? accountSignals.map(renderAccountSignalGroup).join('')
     : `<div class="signals-empty" style="background:#f0fdf4;border:1px solid #bbf7d0;color:var(--green-dark)">✓ No account or community signals detected.</div>`;
+
+  const frRows = computeFRPortfolio(latestEntries);
+  document.getElementById('sigFRCards').innerHTML = renderFRPortfolio(frRows);
 }
 
 function switchTab(view, btn) {
@@ -2045,6 +2179,7 @@ function switchTab(view, btn) {
   if(view==='trends')renderTrends();
   if(view==='allcommunities')renderAllCommunities();
   if(view==='signals')renderSignals();
+  if(view==='pulse')renderPulse();
 }
 function setACFilter(val,el){acFilter=val;document.querySelectorAll('#view-allcommunities .pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderAllCommunities()}
 function setACRepFilter(val){acRepFilter=val;renderAllCommunities()}
@@ -2059,8 +2194,366 @@ function setCommRepFilter(val){commRepFilter=val;renderCommunities()}
 function setTrendRepFilter(val){trendRepFilter=val;renderTrends()}
 function toggleCard(id){document.getElementById(id+'-body').classList.toggle('open');document.getElementById(id+'-chev').classList.toggle('open')}
 function toggleActions(el){el.nextElementSibling.classList.toggle('open');el.textContent=el.nextElementSibling.classList.contains('open')?el.textContent.replace('▸','▾'):el.textContent.replace('▾','▸')}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMetricModal();closeNewScoreModal()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMetricModal();closeNewScoreModal();closeQBRModal()}});
+
+// ═══════════════════════════════════════════════════════════════
+// FEATURE REQUEST PORTFOLIO (P5)
+// ═══════════════════════════════════════════════════════════════
+function computeFRPortfolio(latestEntries) {
+  const themes = {};
+  const unthemed = []; // FRs that don't match any theme
+  latestEntries.forEach(({company, entry}) => {
+    const frs = entry.featureRequestUrls || entry.featureRequestTicketUrls || [];
+    frs.filter(t=>t.status!=='closed').forEach(t => {
+      let matched = false;
+      PRODUCT_THEMES.forEach(th => {
+        if(_themeMatch(t.label, th.kw)) {
+          if(!themes[th.id]) themes[th.id] = {label:th.label, items:[]};
+          if(!themes[th.id].items.find(i=>i.company===company&&i.label===t.label))
+            themes[th.id].items.push({company, label:t.label, url:t.url});
+          matched = true;
+        }
+      });
+      if(!matched) unthemed.push({company, label:t.label, url:t.url});
+    });
+  });
+  const rows = Object.entries(themes).map(([id, d]) => {
+    const cos = [...new Set(d.items.map(i=>i.company))];
+    return {id, label:d.label, items:d.items, companies:cos};
+  }).sort((a,b)=>b.companies.length-a.companies.length);
+  if(unthemed.length) rows.push({id:'other', label:'Other', items:unthemed, companies:[...new Set(unthemed.map(i=>i.company))]});
+  return rows;
+}
+
+function renderFRPortfolio(rows) {
+  if(!rows.length) return `<div class="signals-empty">No open feature requests found across portfolio.</div>`;
+  const total = rows.reduce((s,r)=>s+r.items.length,0);
+  return `<div style="font-size:12px;color:var(--gray-500);margin-bottom:10px">${total} open request${total!==1?'s':''} across ${rows.length} theme${rows.length!==1?'s':''}</div>
+  <table class="fr-portfolio-table">
+    <thead><tr><th>Theme</th><th>Accounts</th><th>Tickets</th></tr></thead>
+    <tbody>
+    ${rows.map(r=>`<tr>
+      <td><span class="fr-theme-label">${esc(r.label)}</span><br><span style="font-size:10px;color:var(--gray-400)">${r.items.length} request${r.items.length!==1?'s':''}</span></td>
+      <td><div class="fr-co-chips">${r.companies.map(c=>`<span class="fr-co-chip" onclick="openCompany('${esc(c)}')">${esc(c)}</span>`).join('')}</div></td>
+      <td><div class="fr-ticket-list">${r.items.map(i=>`<a href="${esc(i.url)}" target="_blank" title="${esc(i.company)}: ${esc(i.label)}"><span style="color:var(--gray-400)">${esc(i.company)}: </span>${esc(i.label)}</a>`).join('')}</div></td>
+    </tr>`).join('')}
+    </tbody>
+  </table>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// QBR PREP MODAL (P1)
+// ═══════════════════════════════════════════════════════════════
+function openQBRModal(companyName) {
+  const co = companies.find(c=>c.name===companyName);
+  if(!co) return;
+  const entry = co.latest;
+  const prev = co.entries.length > 1 ? co.entries[co.entries.length-2] : null;
+  const delta = prev ? entry.overallScore - prev.overallScore : null;
+  const st = status(entry.overallScore);
+
+  // Score delta interpretation
+  let deltaHtml = '';
+  if(delta !== null) {
+    const sign = delta > 0 ? '+' : '';
+    const cls = delta > 0 ? 'up' : delta < 0 ? 'down' : 'flat';
+    const drivers = [];
+    if(prev) {
+      const dims = ['platformUsage','customerSentiment','npsSurvey','onboardingHealth','supportLoad','engagementCadence'];
+      const dimNames = {'platformUsage':'Usage','customerSentiment':'Sentiment','npsSurvey':'NPS','onboardingHealth':'Onboarding','supportLoad':'Support','engagementCadence':'Cadence'};
+      dims.forEach(d=>{
+        if(entry[d]!=null && prev[d]!=null) {
+          const dd = entry[d]-prev[d];
+          if(Math.abs(dd)>=4) drivers.push({name:dimNames[d],d:dd});
+        }
+      });
+      drivers.sort((a,b)=>Math.abs(b.d)-Math.abs(a.d));
+    }
+    const driverText = drivers.length ? ' — ' + drivers.slice(0,2).map(d=>`${d.name} ${d.d>0?'+':''}${d.d}`).join(', ') : '';
+    deltaHtml = `<span class="qbr-delta ${cls}">${sign}${delta} pts since ${prev.date}${driverText}</span>`;
+  }
+
+  // Renewal
+  let renewalHtml = '';
+  if(entry.renewalDate) {
+    const days = Math.round((new Date(entry.renewalDate)-new Date())/86400000);
+    const urgency = days <= 30 ? '🔴' : days <= 90 ? '🟡' : '🟢';
+    renewalHtml = `<div class="qbr-section"><div class="qbr-section-label">Renewal</div>
+      <div class="qbr-renewal">${urgency} ${entry.renewalDate} — ${days > 0 ? days + ' days away' : 'overdue'}</div></div>`;
+  }
+
+  // Wins
+  const wins = (entry.metricDetails?.customerSentiment?.positive || []).slice(0,3);
+  // Also add top NPS scores as wins
+  const goodNPS = (entry.metricDetails?.npsSurvey?.responses || []).filter(r=>r.score>=4).slice(0,2);
+
+  // Risks
+  const risks = [];
+  (entry.metricDetails?.customerSentiment?.negative || []).slice(0,3).forEach(s=>risks.push({text:s.text, src:'Sentiment'}));
+  const openBugs = (entry.bugTicketUrls || []).filter(t=>t.priority==='HIGH'||t.status==='open').slice(0,2);
+  openBugs.forEach(b=>risks.push({text:b.label, src:'Bug', url:b.url}));
+  const lowNPS = (entry.metricDetails?.npsSurvey?.responses || []).filter(r=>r.score<=2).slice(0,2);
+  lowNPS.forEach(r=>risks.push({text:`${r.building||'Community'} NPS ${r.score}/5${r.note?' — "'+r.note+'"':''}`, src:'NPS'}));
+
+  // Actions
+  const actions = (entry.actions || []).slice(0,5);
+
+  const overlay = document.getElementById('qbr-modal-overlay');
+  document.getElementById('qbr-modal-body').innerHTML = `
+    <div class="qbr-section">
+      <div class="qbr-score-row">
+        <div class="qbr-score-badge ${st}">${entry.overallScore}</div>
+        <div class="qbr-score-detail">
+          <div class="qbr-score-name">${esc(entry.company)}</div>
+          <div class="qbr-score-meta">Last scored: ${entry.date}${entry.csRep?' · '+esc(entry.csRep):''}</div>
+        </div>
+        ${deltaHtml}
+      </div>
+    </div>
+    ${renewalHtml}
+    ${wins.length+goodNPS.length ? `<div class="qbr-section">
+      <div class="qbr-section-label">Wins to Highlight</div>
+      <ul class="qbr-list">
+        ${wins.map(w=>`<li class="green">✓ ${esc(typeof w==='string'?w:w.text||w)}</li>`).join('')}
+        ${goodNPS.map(r=>`<li class="green">✓ ${esc(r.building||'Community')} gave a ${r.score}/5 NPS</li>`).join('')}
+      </ul>
+    </div>` : ''}
+    ${risks.length ? `<div class="qbr-section">
+      <div class="qbr-section-label">Risks to Address</div>
+      <ul class="qbr-list">
+        ${risks.map(r=>`<li class="red">⚠ ${r.url?`<a href="${esc(r.url)}" target="_blank" style="color:inherit">${esc(r.text)}</a>`:esc(r.text)}<span class="qbr-src">${esc(r.src)}</span></li>`).join('')}
+      </ul>
+    </div>` : ''}
+    ${actions.length ? `<div class="qbr-section">
+      <div class="qbr-section-label">Recommended Actions</div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        ${actions.map(a=>`<div class="qbr-action-item">→ ${esc(typeof a==='string'?a:a.text||a)}</div>`).join('')}
+      </div>
+    </div>` : ''}
+  `;
+  document.getElementById('qbr-modal-title').textContent = entry.company + ' — QBR Prep';
+  document.getElementById('qbr-modal-subtitle').textContent = 'Score: ' + entry.overallScore + '/100 · ' + entry.date;
+  document.getElementById('qbr-copy-btn').onclick = () => copyQBRSummary(entry, wins, risks, actions, delta, prev);
+  overlay.classList.add('open');
+}
+function closeQBRModal() { document.getElementById('qbr-modal-overlay').classList.remove('open'); }
+
+function copyQBRSummary(entry, wins, risks, actions, delta, prev) {
+  const sign = delta > 0 ? '+' : '';
+  const deltaStr = delta !== null ? ` (${sign}${delta} pts vs ${prev.date})` : '';
+  const lines = [
+    `*${entry.company} — QBR Prep* · Score: ${entry.overallScore}/100${deltaStr}`,
+    '',
+    wins.length ? '*Wins:*\n' + wins.slice(0,3).map(w=>'• '+(typeof w==='string'?w:w.text||w)).join('\n') : '',
+    risks.length ? '*Risks:*\n' + risks.slice(0,3).map(r=>'• '+r.text).join('\n') : '',
+    actions.length ? '*Actions:*\n' + actions.slice(0,4).map(a=>'• '+(typeof a==='string'?a:a.text||a)).join('\n') : '',
+  ].filter(Boolean).join('\n');
+  navigator.clipboard.writeText(lines).then(()=>showToast('QBR summary copied'));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TRAINING GAP DETECTOR (P4)
+// ═══════════════════════════════════════════════════════════════
+function computeTrainingGaps() {
+  const gaps = [];
+  companies.forEach(co => {
+    const entry = co.latest;
+    if(!entry.communities) return;
+    entry.communities.forEach(c => {
+      if(c.status !== 'live') return;
+      const ud = c.usageDetail;
+      if(!ud) return;
+      // Support both old flat format and new windowed format
+      let rate = null;
+      let total = 0;
+      if(ud.currentMonth) {
+        rate = ud.currentMonth.rate != null ? ud.currentMonth.rate : (ud.currentMonth.total > 0 ? Math.round(ud.currentMonth.published/ud.currentMonth.total*100) : null);
+        total = ud.currentMonth.total || 0;
+      } else if(ud.publishRate != null) {
+        rate = ud.publishRate;
+        total = ud.totalShifts || 0;
+      }
+      if(rate === null || total < 50) return; // skip low-volume / no-data
+      if(rate < 35) gaps.push({
+        community: c.name, company: co.name, rate, total,
+        hubspotUrl: c.hubspotTicketUrl, sev: rate < 20 ? 'high' : 'medium'
+      });
+    });
+  });
+  return gaps.sort((a,b)=>a.rate-b.rate);
+}
+
+function renderTrainingGaps() {
+  const panel = document.getElementById('trainingGapPanel');
+  if(!panel) return;
+  const gaps = computeTrainingGaps();
+  if(!gaps.length) { panel.style.display='none'; return; }
+  panel.style.display='block';
+  panel.innerHTML = `<div class="training-gap-panel">
+    <div class="training-gap-header">
+      <h4>🎓 Possible Training Gaps</h4>
+      <span>${gaps.length} live communit${gaps.length!==1?'ies':'y'} with publish rate below 35%</span>
+    </div>
+    <div class="training-gap-rows">
+      ${gaps.map(g=>`<div class="training-gap-row">
+        <span class="tg-rate ${g.sev==='high'?'':'warn'}">${g.rate}%</span>
+        <span class="tg-name">${esc(g.community)}</span>
+        <span class="tg-company">${esc(g.company)}</span>
+        <span class="tg-shifts">${g.total.toLocaleString()} shifts</span>
+        ${g.hubspotUrl ? `<a class="tg-link" href="${esc(g.hubspotUrl)}" target="_blank">HubSpot →</a>` : ''}
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PORTFOLIO PULSE (P3)
+// ═══════════════════════════════════════════════════════════════
+function renderPulse() {
+  if(!companies.length) return;
+  const today = new Date();
+
+  const accountSignals = computeAccountSignals(companies.map(co=>({
+    company:co.name, entry:co.latest, prev:co.entries.length>1?co.entries[co.entries.length-2]:null
+  })));
+  const sigsByCompany = {};
+  accountSignals.forEach(cs=>{ sigsByCompany[cs.company]=cs.items; });
+
+  const needsAttention = companies.filter(co=>{
+    const s = co.latest.overallScore;
+    const delta = co.entries.length>1 ? co.latest.overallScore - co.entries[co.entries.length-2].overallScore : null;
+    return s < 60 || (delta !== null && delta <= -5);
+  });
+
+  const renewals90 = companies.filter(co=>{
+    if(!co.latest.renewalDate) return false;
+    const days = Math.round((new Date(co.latest.renewalDate)-today)/86400000);
+    return days >= 0 && days <= 90;
+  });
+
+  const stale = companies.filter(co=>{
+    const days = Math.round((today-new Date(co.latest.date))/86400000);
+    const isOnboarding = co.latest.lifecycle==='active-onboarding' || co.latest.status==='active-onboarding';
+    return isOnboarding ? days > 60 : days > 90;
+  });
+
+  document.getElementById('pulseNeedsAttention').textContent = needsAttention.length;
+  document.getElementById('pulseRenewals').textContent = renewals90.length;
+  document.getElementById('pulseStale').textContent = stale.length;
+
+  // Sort: needs attention first, then by score asc
+  const sorted = [...companies].sort((a,b)=>{
+    const aAttn = needsAttention.includes(a) ? 0 : 1;
+    const bAttn = needsAttention.includes(b) ? 0 : 1;
+    if(aAttn !== bAttn) return aAttn-bAttn;
+    return a.latest.overallScore - b.latest.overallScore;
+  });
+
+  document.getElementById('pulseAccountList').innerHTML = sorted.map(co=>{
+    const entry = co.latest;
+    const prev = co.entries.length>1 ? co.entries[co.entries.length-2] : null;
+    const delta = prev ? entry.overallScore - prev.overallScore : null;
+    const st = status(entry.overallScore);
+    const sign = delta != null ? (delta > 0 ? '+' : '') : '';
+    const deltaStr = delta != null ? `${sign}${delta} pts` : 'First run';
+    const deltaCls = delta != null ? (delta > 0 ? 'color:var(--green-dark)' : delta < 0 ? 'color:var(--red-dark)' : 'color:var(--gray-400)') : 'color:var(--gray-400)';
+    const sigs = (sigsByCompany[co.name]||[]).slice(0,2);
+    const days = Math.round((today-new Date(entry.date))/86400000);
+    const renewalDays = entry.renewalDate ? Math.round((new Date(entry.renewalDate)-today)/86400000) : null;
+    const isStale = stale.includes(co);
+    return `<div class="pulse-account" onclick="openCompany('${esc(co.name)}')">
+      <div class="pulse-acc-score ${st}">${entry.overallScore}</div>
+      <div class="pulse-acc-body">
+        <div class="pulse-acc-name">${esc(co.name)}</div>
+        <div class="pulse-acc-meta">
+          <span style="${deltaCls}">${deltaStr}</span>
+          <span>·</span>
+          <span>${entry.csRep||''}</span>
+          <span>·</span>
+          <span>${days}d ago</span>
+          ${entry.communities ? `<span>· ${entry.communities.length} communities</span>` : ''}
+        </div>
+        ${sigs.length ? `<div class="pulse-acc-signals">${sigs.map(s=>`<div class="pulse-acc-signal"><span>${s.icon||'•'}</span><span>${esc(s.msg)}</span></div>`).join('')}</div>` : ''}
+      </div>
+      <div class="pulse-acc-right">
+        ${isStale ? `<span class="pulse-stale-badge">Score overdue</span>` : ''}
+        ${renewalDays !== null && renewalDays <= 90 ? `<span class="pulse-renewal-badge">Renewal ${renewalDays}d</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function copyPulseSummary() {
+  const today = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const lines = [
+    `*Portfolio Health Pulse — ${today}*`,
+    '',
+    ...companies.sort((a,b)=>a.latest.overallScore-b.latest.overallScore).map(co=>{
+      const e = co.latest;
+      const prev = co.entries.length>1 ? co.entries[co.entries.length-2] : null;
+      const delta = prev ? e.overallScore - prev.overallScore : null;
+      const sign = delta!=null?(delta>0?'+':''):'';
+      const emoji = e.overallScore>=75?'🟢':e.overallScore>=50?'🟡':'🔴';
+      return `${emoji} *${e.company}* — ${e.overallScore}/100${delta!=null?' ('+sign+delta+' pts)':''}`;
+    })
+  ];
+  navigator.clipboard.writeText(lines.join('\n')).then(()=>showToast('Pulse summary copied for Slack'));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACCOUNT TIMELINE (P2)
+// ═══════════════════════════════════════════════════════════════
+function renderTimeline(co) {
+  if(!co || co.entries.length < 2) return '';
+  const DIMS_TL = [
+    ['platformUsage','Usage'],['customerSentiment','Sentiment'],['npsSurvey','NPS'],
+    ['onboardingHealth','Onboarding'],['supportLoad','Support'],['engagementCadence','Cadence']
+  ];
+  const sorted = [...co.entries].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const rows = sorted.map((entry, idx) => {
+    const prev = sorted[idx+1];
+    const st = status(entry.overallScore);
+    const isLatest = idx === 0;
+    const dimChips = prev ? DIMS_TL.map(([key,label])=>{
+      if(entry[key]==null||prev[key]==null) return '';
+      const d = entry[key]-prev[key];
+      if(Math.abs(d)<3) return `<span class="tl-dim flat">${label} ${d>0?'+':''}${d===0?'=':d}</span>`;
+      return `<span class="tl-dim ${d>0?'up':'down'}">${label} ${d>0?'+':''}${d}</span>`;
+    }).filter(Boolean).join('') : '';
+    const actions = (entry.actions||[]).slice(0,2).map(a=>typeof a==='string'?a:a.text||a);
+    return `<div class="timeline-row ${isLatest?'latest':''}">
+      <div class="tl-score ${st}">${entry.overallScore}</div>
+      <div class="tl-body">
+        <div class="tl-date">${entry.date}${isLatest?' · Latest':''}${prev?` · Overall ${entry.overallScore>prev.overallScore?'+':''}${entry.overallScore-prev.overallScore} vs prior`:''}</div>
+        ${dimChips ? `<div class="tl-dims">${dimChips}</div>` : ''}
+        ${actions.length ? `<div class="tl-actions">Actions: ${actions.map(a=>esc(a)).join(' · ')}</div>` : ''}
+      </div>
+    </div>`;
+  });
+  return `<div class="timeline-section">
+    <div class="timeline-section-label">Score History (${co.entries.length} runs)</div>
+    <div class="timeline-rows">${rows.join('')}</div>
+  </div>`;
+}
 </script>
+
+<!-- QBR Modal -->
+<div id="qbr-modal-overlay" onclick="if(event.target===this)closeQBRModal()">
+  <div id="qbr-modal">
+    <div class="qbr-modal-header">
+      <div>
+        <div class="qbr-modal-title" id="qbr-modal-title">QBR Prep</div>
+        <div class="qbr-modal-subtitle" id="qbr-modal-subtitle"></div>
+      </div>
+      <button class="qbr-modal-close" onclick="closeQBRModal()">✕</button>
+    </div>
+    <div class="qbr-modal-body" id="qbr-modal-body"></div>
+    <div class="qbr-modal-footer">
+      <button class="btn btn-outline btn-sm" onclick="closeQBRModal()">Close</button>
+      <button class="btn btn-primary btn-sm" id="qbr-copy-btn">⎘ Copy for Slack</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 
