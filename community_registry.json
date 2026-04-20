@@ -664,6 +664,82 @@
           "implRep": "Bryan Ovalle"
         }
       ]
+    },
+    "PACS": {
+      "hubspotCompanyId": "51690887207",
+      "metabaseEmployerId": "clud2zmdj000208k1bnx70lfx",
+      "csRep": "Tegan Perry",
+      "renewalDate": "",
+      "note": "Large enterprise account \u2014 hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
+      "communities": [
+        {
+          "displayName": "Aspen Hills",
+          "hubspotOnboardingTicketId": "40563344272",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Aspen Hills",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Sunnyvale Post Acute",
+          "hubspotOnboardingTicketId": "42061793058",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Sunnyvale",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Newport Beach Memory Care",
+          "hubspotOnboardingTicketId": "42037213510",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Newport Beach",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Villa Las Palmas",
+          "hubspotOnboardingTicketId": "40562725182",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Las Palmas",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Re-signup (new admin) \u2014 previous onboarding record may exist",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Forest Hill",
+          "hubspotOnboardingTicketId": "40569431837",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Forest Hill",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Spring Fields",
+          "hubspotOnboardingTicketId": "40574845833",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Spring Fields",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Ridgeway",
+          "hubspotOnboardingTicketId": "44235294000",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Ridgeway",
+          "mappingConfidence": "inferred",
+          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "implRep": null
+        },
+        {
+          "displayName": "Norwood Towers",
+          "hubspotOnboardingTicketId": "42492942362",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Norwood",
+          "mappingConfidence": "inferred",
+          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "implRep": null
+        }
+      ]
     }
   }
 }
