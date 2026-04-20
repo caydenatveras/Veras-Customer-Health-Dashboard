@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16",
+  "lastUpdated": "2026-04-20",
   "csReps": [
     "Cayden Fox",
     "Tegan Perry"
@@ -54,6 +54,16 @@
       "csRep": "Cayden Fox",
       "status": "",
       "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519"
+    },
+    {
+      "name": "PACS",
+      "file": "data/pacs.json",
+      "slug": "pacs",
+      "latestScore": 61,
+      "latestDate": "2026-04-20",
+      "csRep": "Tegan Perry",
+      "status": "",
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/51690887207"
     },
     {
       "name": "SAL Management",

@@ -1,0 +1,655 @@
+{
+  "company": "PACS",
+  "entries": [
+    {
+      "company": "PACS",
+      "date": "2026-04-20",
+      "csRep": "Tegan Perry",
+      "lifecycle": "active-onboarding",
+      "overallScore": 61,
+      "platformUsage": 65,
+      "customerSentiment": 44,
+      "npsSurvey": 65,
+      "onboardingHealth": 60,
+      "supportLoad": 58,
+      "engagementCadence": 82,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/51690887207",
+      "renewalDate": "",
+      "npsTicketUrls": [
+        {
+          "label": "Heidi Richmond - Orchard View PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41762320568"
+        },
+        {
+          "label": "Grace Bach - Willowbrook PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41817729093"
+        },
+        {
+          "label": "Amy Sutherland - Colonial Vista PA - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41848331153"
+        },
+        {
+          "label": "Tisha Batten - Cherrywood PA - Feb 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41746296631"
+        },
+        {
+          "label": "Jay Wainscott - Cherrywood PA - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41950014071"
+        },
+        {
+          "label": "kalia watkins - Western Slope HC - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41930051842"
+        },
+        {
+          "label": "Teya Williams - Palomar Heights PA - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41896943645"
+        },
+        {
+          "label": "Brittany Comstock - Stanley PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41741032754"
+        },
+        {
+          "label": "Myesha Cloyd - Timberline PA - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41772837144"
+        },
+        {
+          "label": "Kenya Wells - Eaton Creek PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41738248309"
+        },
+        {
+          "label": "Snehal Pewekar - Forest Grove PA - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41816954887"
+        },
+        {
+          "label": "DeWayson K. Thomas - Jackson Creek PA - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41786937899"
+        },
+        {
+          "label": "Paige Canning - Richland PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41846622559"
+        },
+        {
+          "label": "Betelehem Bante - Beavercreek PA - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41949548686"
+        },
+        {
+          "label": "Randy Borges - Western Slope HC - Feb 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41857809271"
+        },
+        {
+          "label": "Anika Taylor - Arvin PA - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41856102919"
+        },
+        {
+          "label": "Sarah White - Claremont AL - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41742115492"
+        },
+        {
+          "label": "Tyrone Malone - Cedar River HC - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41848331152"
+        },
+        {
+          "label": "Ashley Coulter - Richwood Nursing & Rehab - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41941521569"
+        },
+        {
+          "label": "Tamara Broadbent - Claremont AL - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41777486896"
+        },
+        {
+          "label": "Yvette Hall - Cherrywood PA - Feb 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41743820411"
+        },
+        {
+          "label": "Nate Hanson - Reedwood PA - Jan 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39937254221"
+        },
+        {
+          "label": "Raushanah Yasin - Barberton PA - Jan 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39946749803"
+        },
+        {
+          "label": "Madzda Habil - Canyon Vista PA - Jan 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39950617779"
+        },
+        {
+          "label": "Jeniffer Perez - South Creek PA - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39951856484"
+        },
+        {
+          "label": "Somer Devine - Arlington Gardens CC - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39937409109"
+        },
+        {
+          "label": "DeWayson K. Thomas - Jackson Creek PA - Jan 2026",
+          "score": 5,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39944736809"
+        },
+        {
+          "label": "Bonnie Carter - Sullivan Park CC - Jan 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39950308155"
+        },
+        {
+          "label": "Edith Mejia - Salinas Valley PA - Jan 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39940972201"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Calendar not syncing (multiple facilities)",
+          "priority": "HIGH",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43561838862"
+        },
+        {
+          "label": "Message character length pushes Send button off screen",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44522840373"
+        },
+        {
+          "label": "Reporting Issues #4 \u2014 duplicate late clock-ins",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43962961561"
+        },
+        {
+          "label": "Staff can't save profile picture in app",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43561841248"
+        },
+        {
+          "label": "All staff added to Nurse Channel (mapping issue)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43491942743"
+        },
+        {
+          "label": "Corporate users auto-assigned to facility channels",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40977913260"
+        },
+        {
+          "label": "Staff RN displays as LPN on printed schedule",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44377266817"
+        },
+        {
+          "label": "Draft shift visible on staff app schedule",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44276467382"
+        }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "PPD report \u2014 add PPD requirement column",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44600178224"
+        },
+        {
+          "label": "PPD overview \u2014 freeze columns when scrolling",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44599992359"
+        },
+        {
+          "label": "Rule Report \u2014 show compliance against configured rules",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44599434872"
+        },
+        {
+          "label": "OT report \u2014 multi-week view with trending graph",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44599992220"
+        },
+        {
+          "label": "Filter by job position on all reports",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44599496795"
+        },
+        {
+          "label": "Daily report card \u2014 download, more days, job position breakdown",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44600301827"
+        },
+        {
+          "label": "Census report \u2014 standalone (not embedded in PPD)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44599434931"
+        },
+        {
+          "label": "Show PPD on daily print view",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43399486764"
+        },
+        {
+          "label": "Rule: allow total hours (not consecutive) to satisfy requirement",
+          "priority": null,
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44600054314"
+        },
+        {
+          "label": "Report for Low Census / send-home tracking",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43489764915"
+        },
+        {
+          "label": "Cancelled Shift option (facility-initiated, excluded from PPD)",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43328463994"
+        },
+        {
+          "label": "Rule: prevent staff from picking up 4+ consecutive shifts",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/43235753074"
+        },
+        {
+          "label": "Admin notification for 2+ consecutive scheduled shifts",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/42993478289"
+        },
+        {
+          "label": "Automated recurring open shift reminders until filled",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/42774068782"
+        },
+        {
+          "label": "Permissions to restrict nurses from pressing Apply Schedule",
+          "priority": "LOW",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41681761620"
+        },
+        {
+          "label": "Message cut off on Android (long messages)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37462372704"
+        },
+        {
+          "label": "Show shift position on shift invite notification",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37416116010"
+        },
+        {
+          "label": "Archived worker not showing in Teams filter",
+          "priority": null,
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37069202464"
+        },
+        {
+          "label": "Edit/Delete buttons missing on open shifts in mobile app",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36343197298"
+        },
+        {
+          "label": "Report/dashboard section for coverage requests",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31570476567"
+        }
+      ],
+      "actions": [
+        "Escalate calendar sync bug (HIGH) \u2014 Diablo Valley, White Blossom, South Haven affected since Mar 19; same reliability category that drove Centerville to churn",
+        "Assign Ridgeway and Norwood Towers onboarding tickets to a rep \u2014 currently unowned",
+        "Sunnyvale go-live check \u2014 Matt Cherry was targeting mid-April, billing status was unclear as of Mar 31; follow up with Matt and Veras billing",
+        "Route today's reporting FRs to product team \u2014 8 FRs in one batch (PPD, census, OT, rule reports) suggest a feedback session; flag as a pattern",
+        "Resolve Metabase employer ID coverage \u2014 identify if additional employer IDs exist for PACS to get accurate platform usage data"
+      ],
+      "notes": "Large enterprise account \u2014 hundreds of facilities already live. Onboarding tickets represent new communities being added. Centerville PA churned in March (reliability bugs). 8 reporting FRs created April 20 likely from a feedback session. T&A implementation in progress.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "Single facility returned from Metabase shift query (66 total shifts, 44 published, 66.7% rate). Likely incomplete \u2014 PACS has 100+ active facilities based on 120K messages/month and 80K+ shift invites/month. Publish rate data should not be used as the primary usage signal for this account until Metabase employer ID coverage is confirmed.",
+          "highlights": [
+            "Message volume: 104K\u2013127K/month (Oct\u2013Apr) \u2014 one of the highest in portfolio",
+            "Call-offs tracked: 5.7K\u20137.3K/month \u2014 heavy feature adoption",
+            "Shift invites: 78K\u201391K/month \u2014 large staff pool using invite workflow",
+            "Shift invite acceptance rate: ~0.7\u20131% \u2014 very low; staff may not be accepting through app"
+          ]
+        },
+        "customerSentiment": {
+          "summary": "Centerville PA churned in March after reliability bugs caused data to revert. Mixed NPS with a meaningful frustrated segment. Active T&A implementation and bi-weekly syncs show partnership is intact at the account level. Slack at-risk flag from Bryan Ovalle in late March.",
+          "positive": [
+            {
+              "text": "T&A implementation progressing smoothly with no issues",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "Bi-weekly syncs active with Ksenia Thomason (PACS account lead)",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "QBR held April 10 \u2014 executive-level engagement ongoing",
+              "sourceType": "hubspot_meetings"
+            },
+            {
+              "text": "Multiple training sessions proceeding across Oregon and Frontier regions",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "Jackson Creek PA consistently scoring 4-5 NPS across three months",
+              "sourceType": "hubspot"
+            }
+          ],
+          "negative": [
+            {
+              "text": "Centerville PA churned in early March \u2014 switched to OnShift after schedule data, terminations, and phone numbers kept reverting",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "Slack at-risk mention from Bryan Ovalle, March 27 \u2014 general concern flagged during onboarding review",
+              "sourceType": "slack"
+            },
+            {
+              "text": "South Creek PA NPS score 1: 'too many issues'",
+              "sourceType": "hubspot"
+            },
+            {
+              "text": "Park Meadows PA NPS score 2: 'slow, glitches noted, unable to customize'",
+              "sourceType": "hubspot"
+            },
+            {
+              "text": "Cedar River HC NPS score 3: 'some tabs don't work or refresh, schedule and calendar not correct'",
+              "sourceType": "hubspot"
+            },
+            {
+              "text": "Calendar sync broken across multiple facilities since March 19 (HIGH bug)",
+              "sourceType": "hubspot"
+            }
+          ],
+          "neutral": [
+            {
+              "text": "Sunnyvale go-live pending \u2014 billing status unclear as of March 31",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "Oregon region training \u2014 two departments (housekeeping, dietary) being onboarded to Veras",
+              "sourceType": "circleback"
+            },
+            {
+              "text": "Frontier region training missed due to meeting link not reaching staff \u2014 rescheduled",
+              "sourceType": "circleback"
+            }
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 3.62,
+          "responseCount": 21,
+          "trend": "Stable (Dec 3.48 \u2192 Jan 4.13 \u2192 Feb 3.62)",
+          "responses": [
+            {
+              "building": "Cherrywood PA",
+              "respondent": "Tisha Batten",
+              "score": 2,
+              "note": "I wish there was a way to view someone's schedule one month at a time and print monthly schedule with everyone on it, Like Onshift."
+            },
+            {
+              "building": "Cherrywood PA",
+              "respondent": "Jay Wainscott",
+              "score": 3,
+              "note": "Meh. A lot of tabs and options to do a schedule. It needs to be simplified."
+            },
+            {
+              "building": "Palomar Heights PA",
+              "respondent": "Teya Williams",
+              "score": 3,
+              "note": "I wish there were more features that work for my facility with scheduling. Also the layout of the schedule is a bit 'busy'."
+            },
+            {
+              "building": "Western Slope HC",
+              "respondent": "Randy Borges",
+              "score": 1,
+              "note": null
+            },
+            {
+              "building": "Beavercreek PA",
+              "respondent": "Betelehem Bante",
+              "score": 4,
+              "note": "it's okay it has its good days and downtime"
+            },
+            {
+              "building": "Cedar River HC",
+              "respondent": "Tyrone Malone",
+              "score": 3,
+              "note": "Some tabs don't work or refresh. Won't update to current day. Schedule and calendar not correct."
+            },
+            {
+              "building": "Richwood Nursing & Rehab",
+              "respondent": "Ashley Coulter",
+              "score": 3,
+              "note": "shifts that are requested are not always coming thru to be accepted"
+            },
+            {
+              "building": "Colonial Vista PA",
+              "respondent": "Amy Sutherland",
+              "score": 5,
+              "note": null
+            },
+            {
+              "building": "Forest Grove PA",
+              "respondent": "Snehal Pewekar",
+              "score": 5,
+              "note": null
+            },
+            {
+              "building": "Jackson Creek PA",
+              "respondent": "DeWayson K. Thomas",
+              "score": 5,
+              "note": null
+            },
+            {
+              "building": "Cherrywood PA",
+              "respondent": "Yvette Hall",
+              "score": 5,
+              "note": "The reason for my answer is because when I have a question, I can look up the answer with the help of support."
+            },
+            {
+              "building": "Arvin PA",
+              "respondent": "Anika Taylor",
+              "score": 5,
+              "note": null
+            }
+          ]
+        },
+        "onboardingHealth": {
+          "total": 8,
+          "live": 1,
+          "midStage": 4,
+          "earlyStage": 2,
+          "pendingGoLive": 1,
+          "summary": "1 live (Aspen Hills), 1 pending go-live (Sunnyvale), 4 mid-stage (Newport Beach MC, Villa Las Palmas, Forest Hill, Spring Fields), 2 early/unknown stage (Ridgeway, Norwood Towers \u2014 no owner assigned). Avg stage score 60/100. Note: PACS has many more live communities beyond these 8 tracked onboarding tickets."
+        },
+        "supportLoad": {
+          "openHigh": 1,
+          "openMedium": 5,
+          "openLow": 2,
+          "backlogItems": 2,
+          "summary": "1 HIGH open (calendar sync, affects multiple facilities, With Eng since March 19). 4 MEDIUM bugs actively With Eng. Messaging channel assignment bug is recurring theme (2 separate tickets). Total 8 open bugs."
+        },
+        "engagementCadence": {
+          "summary": "Bi-weekly syncs with Ksenia Thomason ongoing. QBR held April 10. Multiple regional training sessions (Oregon, Frontier) in progress. T&A setup calls logged. RVP meeting prep scheduled for April 22. Active cadence for an enterprise account.",
+          "avgDaysBetween": 14
+        }
+      },
+      "communities": [
+        {
+          "name": "Aspen Hills",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Aspen Hills",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40563344272",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 100,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Sunnyvale Post Acute",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "pending-go-live",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Sunnyvale",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42061793058",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 80,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Newport Beach Memory Care",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Newport Beach",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42037213510",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Villa Las Palmas",
+          "csRep": "Tegan Perry",
+          "implRep": "Cayden Fox",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Re-signup (new admin) \u2014 previous onboarding may exist",
+          "npsKeyword": "Las Palmas",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40562725182",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Forest Hill",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Forest Hill",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40569431837",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Spring Fields",
+          "csRep": "Tegan Perry",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Spring Fields",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40574845833",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 60,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Ridgeway",
+          "csRep": "Tegan Perry",
+          "implRep": null,
+          "status": "early",
+          "mappingConfidence": "inferred",
+          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "npsKeyword": "Ridgeway",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/44235294000",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 30,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        },
+        {
+          "name": "Norwood Towers",
+          "csRep": "Tegan Perry",
+          "implRep": null,
+          "status": "early",
+          "mappingConfidence": "inferred",
+          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "npsKeyword": "Norwood",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42492942362",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": 30,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null,
+          "usageDetail": null
+        }
+      ]
+    }
+  ]
+}
