@@ -2,8 +2,8 @@
   "_schema": {
     "description": "Registry of all Veras accounts and their communities. Drives automated health score runs.",
     "communityFields": {
-      "displayName": "Dashboard label \u2014 decoupled from HubSpot/Metabase naming",
-      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID \u2014 no name matching.",
+      "displayName": "Dashboard label — decoupled from HubSpot/Metabase naming",
+      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID — no name matching.",
       "metabaseFacilityIds": "Array of Metabase Facility.id values. Array supports multi-entity buildings.",
       "npsKeyword": "Short unique substring matched against NPS ticket subjects to identify this community's responses.",
       "mappingConfidence": "'confirmed' = manually verified | 'inferred' = auto-matched, should verify | 'unresolved' = needs manual mapping",
@@ -11,7 +11,7 @@
       "implRep": "CS rep who onboarded this community (from HubSpot ticket owner). May differ from account-level csRep."
     }
   },
-  "lastUpdated": "2026-04-16",
+  "lastUpdated": "2026-05-06",
   "accounts": {
     "Cottonwood": {
       "hubspotCompanyId": "45778087555",
@@ -169,7 +169,7 @@
           ],
           "npsKeyword": "Fallon",
           "mappingConfidence": "inferred",
-          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u2014 verify which entities to include for usage data",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) — verify which entities to include for usage data",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -181,7 +181,7 @@
           ],
           "npsKeyword": "Elko",
           "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data \u2014 verify",
+          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data — verify",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -210,7 +210,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Nevada",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Nevada region facilities not yet in Metabase \u2014 6 communities signed Apr 2026, Metabase setup pending",
+          "mappingNote": "Nevada region facilities not yet in Metabase — 6 communities signed Apr 2026, Metabase setup pending",
           "implRep": "Tegan Perry"
         }
       ],
@@ -224,189 +224,24 @@
       "csRep": "Cayden Fox",
       "renewalDate": "2026-12-12",
       "communities": [
-        {
-          "displayName": "The Birches of Lehigh Valley",
-          "hubspotOnboardingTicketId": "37583448706",
-          "metabaseFacilityIds": [
-            "cmiyan1aibi7001pr1v6tehdr"
-          ],
-          "npsKeyword": "Lehigh Valley",
-          "mappingConfidence": "confirmed",
-          "implRep": "Cayden Fox"
-        },
-        {
-          "displayName": "The Manor at Market Square",
-          "hubspotOnboardingTicketId": "37452222616",
-          "metabaseFacilityIds": [
-            "cmirz26ge000201pk3a9p96sv"
-          ],
-          "npsKeyword": "Market Square",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "The Birches at Newtown",
-          "hubspotOnboardingTicketId": "37308738864",
-          "metabaseFacilityIds": [
-            "cmiyan1agbi6r01prghadgj07"
-          ],
-          "npsKeyword": "at Newtown",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "Chestnut Knoll",
-          "hubspotOnboardingTicketId": "37308735907",
-          "metabaseFacilityIds": [
-            "cmirz26ge000101pk7e6t5w8p"
-          ],
-          "npsKeyword": "Chestnut Knoll",
-          "mappingConfidence": "inferred",
-          "mappingNote": "Metabase record name is 'Chestnut Knoll AL - Boyertown' \u2014 confirm this is the right facility",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "Heritage Green Hanover",
-          "hubspotOnboardingTicketId": "37593220727",
-          "metabaseFacilityIds": [
-            "cmiyan1ahbi6y01prfdku6utb"
-          ],
-          "npsKeyword": "Green Hanover",
-          "mappingConfidence": "confirmed",
-          "implRep": "Cayden Fox"
-        },
-        {
-          "displayName": "Heritage Green Lynchburg",
-          "hubspotOnboardingTicketId": "37429227266",
-          "metabaseFacilityIds": [
-            "cmiyan1ahbi6x01prcm1492te"
-          ],
-          "npsKeyword": "Green Lynchburg",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "Birches at Harleysville",
-          "hubspotOnboardingTicketId": "37308737133",
-          "metabaseFacilityIds": [
-            "cmiyan1ahbi6u01pr7iaxfyr6"
-          ],
-          "npsKeyword": "Harleysville",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "The Birches at New Hope",
-          "hubspotOnboardingTicketId": "37415608480",
-          "metabaseFacilityIds": [
-            "cmiyan1aibi7101pr8t6ectud"
-          ],
-          "npsKeyword": "at New Hope",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "Chancellor's Village",
-          "hubspotOnboardingTicketId": "37727203484",
-          "metabaseFacilityIds": [
-            "cmirz26ge000301pk40ouh9v5"
-          ],
-          "npsKeyword": "Chancellor",
-          "mappingConfidence": "confirmed",
-          "implRep": "Cayden Fox"
-        },
-        {
-          "displayName": "Senior Commons at Powder Mill",
-          "hubspotOnboardingTicketId": "37595710879",
-          "metabaseFacilityIds": [
-            "cmiyan1aibi6z01prgexoahgu"
-          ],
-          "npsKeyword": "Powder Mill",
-          "mappingConfidence": "confirmed",
-          "implRep": "Cayden Fox"
-        },
-        {
-          "displayName": "Keystone Villa at Ephrata",
-          "hubspotOnboardingTicketId": "37583265072",
-          "metabaseFacilityIds": [
-            "cmiyan1ajbi7401prbtahfyx6"
-          ],
-          "npsKeyword": "Ephrata",
-          "mappingConfidence": "confirmed",
-          "implRep": "Cayden Fox"
-        },
-        {
-          "displayName": "Keystone Villa at Fleetwood",
-          "hubspotOnboardingTicketId": "37415685505",
-          "metabaseFacilityIds": [
-            "cmirz26gf000401pka0u56ggm"
-          ],
-          "npsKeyword": "Fleetwood",
-          "mappingConfidence": "confirmed",
-          "implRep": "Bryan Ovalle"
-        },
-        {
-          "displayName": "Keystone Villa at Douglassville IL",
-          "hubspotOnboardingTicketId": "37842410872",
-          "metabaseFacilityIds": [
-            "cmj2kyvix2x7001olcwbt6m23"
-          ],
-          "npsKeyword": "Douglassville, IL",
-          "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase Douglassville records \u2014 verify 'cmj2kyvix2x7001olcwbt6m23' (Il) maps to IL, not PC. Old record excluded.",
-          "implRep": "Bryan Ovalle"
-        },
-        {
-          "displayName": "Keystone Villa at Douglassville PC",
-          "hubspotOnboardingTicketId": "37073906970",
-          "metabaseFacilityIds": [
-            "cmj2kyvix2x6z01ol6k3ugj83"
-          ],
-          "npsKeyword": "Douglassville, PC",
-          "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase Douglassville records \u2014 verify 'cmj2kyvix2x6z01ol6k3ugj83' (PC) is correct. Old record excluded.",
-          "implRep": "Bryan Ovalle"
-        },
-        {
-          "displayName": "Traditions of Hanover",
-          "hubspotOnboardingTicketId": "37148824707",
-          "metabaseFacilityIds": [
-            "cmiyan1agbi6s01pr50ov0g63"
-          ],
-          "npsKeyword": "Traditions of Hanover",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        },
-        {
-          "displayName": "Traditions of Hershey",
-          "hubspotOnboardingTicketId": "37583510799",
-          "metabaseFacilityIds": [
-            "cmiyan1ahbi6w01prcrqya0ss"
-          ],
-          "npsKeyword": "Traditions of Hershey",
-          "mappingConfidence": "confirmed",
-          "implRep": "Bryan Ovalle"
-        },
-        {
-          "displayName": "Traditions of Lansdale",
-          "hubspotOnboardingTicketId": "37462556508",
-          "metabaseFacilityIds": [
-            "cmiyan1ajbi7601pr3z4gdan1"
-          ],
-          "npsKeyword": "Traditions of Lansdale",
-          "mappingConfidence": "confirmed",
-          "implRep": "Bryan Ovalle"
-        },
-        {
-          "displayName": "The Crossroads at Bon Air",
-          "hubspotOnboardingTicketId": "37804325748",
-          "metabaseFacilityIds": [
-            "cmiyan1ajbi7701praz3145w7"
-          ],
-          "npsKeyword": "Bon Air",
-          "mappingConfidence": "confirmed",
-          "implRep": "Tegan Perry"
-        }
+        "Chancellor's Village",
+        "Chestnut Knoll AL - Boyertown",
+        "Heritage Green Hanover",
+        "Heritage Green Lynchburg",
+        "Keystone Villa at Douglassville - IL",
+        "Keystone Villa at Douglassville PC",
+        "Keystone Villa at Ephrata",
+        "Keystone Villa at Fleetwood",
+        "Senior Commons at Powder Mill",
+        "The Birches at Harleysville",
+        "The Birches at New Hope",
+        "The Birches at Newtown",
+        "The Birches of Lehigh",
+        "The Crossroads at Bon Air",
+        "The Manor at Market Square",
+        "Traditions of Hanover",
+        "Traditions of Hershey",
+        "Traditions of Lansdale"
       ],
       "integrationType": "",
       "lastQbrDate": "",
@@ -547,7 +382,7 @@
           ],
           "npsKeyword": "West Jordan",
           "mappingConfidence": "inferred",
-          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) \u2014 stage may be stale, verify with Bryan Ovalle",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) — stage may be stale, verify with Bryan Ovalle",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -568,7 +403,7 @@
           ],
           "npsKeyword": "Cache Valley",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot \u2014 verify whether this is a standalone community or part of another entity",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot — verify whether this is a standalone community or part of another entity",
           "implRep": null
         }
       ],
@@ -682,7 +517,7 @@
       "metabaseEmployerId": "clud2zmdj000208k1bnx70lfx",
       "csRep": "Tegan Perry",
       "renewalDate": "",
-      "note": "Large enterprise account \u2014 hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
+      "note": "Large enterprise account — hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
       "communities": [
         {
           "displayName": "Aspen Hills",
@@ -714,7 +549,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Las Palmas",
           "mappingConfidence": "inferred",
-          "mappingNote": "Re-signup (new admin) \u2014 previous onboarding record may exist",
+          "mappingNote": "Re-signup (new admin) — previous onboarding record may exist",
           "implRep": "Cayden Fox"
         },
         {
@@ -739,7 +574,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Ridgeway",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket — needs rep assignment",
           "implRep": null
         },
         {
@@ -748,7 +583,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Norwood",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket \u2014 needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket — needs rep assignment",
           "implRep": null
         }
       ],
