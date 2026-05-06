@@ -738,12 +738,11 @@
             <th onclick="tableSort('date')">Date <span class="sort-icon">↕</span></th>
             <th onclick="tableSort('csRep')">CS Rep <span class="sort-icon">↕</span></th>
             <th onclick="tableSort('overallScore')">Overall <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('platformUsage')">Platform <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('customerSentiment')">Sentiment <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('npsSurvey')">NPS <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('onboardingHealth')">Onboarding <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('supportLoad')">Support <span class="sort-icon">↕</span></th>
-            <th onclick="tableSort('engagementCadence')">Engagement <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('productAdoption')">Adoption <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('outcomesRoi')">ROI <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('integrationHealth')">Integration <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('relationshipStrength')">Relationship <span class="sort-icon">↕</span></th>
+            <th onclick="tableSort('sentimentFriction')">Sentiment <span class="sort-icon">↕</span></th>
             <th>Actions</th>
             <th>Notes</th>
           </tr>
@@ -826,13 +825,12 @@ let HEALTH_DATA = [];
 // METRIC CHART COLORS
 // ═══════════════════════════════════════════════════════════════
 const METRIC_META = [
-  {key:'overallScore',    label:'Overall',    color:'#6366f1', weight:null},
-  {key:'platformUsage',   label:'Platform',   color:'#3b82f6', weight:'30%'},
-  {key:'customerSentiment',label:'Sentiment', color:'#a855f7', weight:'20%'},
-  {key:'npsSurvey',       label:'NPS',        color:'#f97316', weight:'15%'},
-  {key:'onboardingHealth',label:'Onboarding', color:'#14b8a6', weight:'15%'},
-  {key:'supportLoad',     label:'Support',    color:'#ef4444', weight:'10%'},
-  {key:'engagementCadence',label:'Engagement',color:'#22c55e', weight:'10%'},
+  {key:'overallScore',      label:'Overall',       color:'#6366f1', weight:null},
+  {key:'productAdoption',   label:'Adoption',      color:'#3b82f6', weight:'25%'},
+  {key:'outcomesRoi',       label:'ROI',           color:'#22c55e', weight:'25%'},
+  {key:'integrationHealth', label:'Integration',   color:'#14b8a6', weight:'15%'},
+  {key:'relationshipStrength',label:'Relationship',color:'#a855f7', weight:'15%'},
+  {key:'sentimentFriction', label:'Sentiment',     color:'#f97316', weight:'20%'},
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -843,7 +841,7 @@ let commFilter='all', commRepFilter='all', trendRepFilter='all';
 let acFilter='all', acRepFilter='all', acImplRepFilter='all', acCompanyFilter='all', acSort='name';
 let tableSortKey='date', tableSortDir='desc';
 let companies=[], selectedCompany=null;
-let activeMetricToggles=new Set(['overallScore','platformUsage','npsSurvey']);
+let activeMetricToggles=new Set(['overallScore','productAdoption','sentimentFriction']);
 let activeCompanyToggles=new Set();
 
 // ═══════════════════════════════════════════════════════════════
@@ -988,19 +986,19 @@ function renderDashboard() {
 }
 
 const DIMS = [
-  ['Platform Usage','30%','platformUsage'],
-  ['Customer Sentiment','20%','customerSentiment'],
-  ['NPS / Survey','15%','npsSurvey'],
-  ['Onboarding Health','15%','onboardingHealth'],
-  ['Support Load','10%','supportLoad'],
-  ['Engagement Cadence','10%','engagementCadence'],
+  // [label, weight, key, fallbackKey]  — fallbackKey handles pre-redesign entries
+  ['Product Adoption',   '25%', 'productAdoption',    'platformUsage'],
+  ['Outcomes / ROI',     '25%', 'outcomesRoi',         null],
+  ['Integration Health', '15%', 'integrationHealth',  'onboardingHealth'],
+  ['Relationship',       '15%', 'relationshipStrength','engagementCadence'],
+  ['Sentiment / Friction','20%','sentimentFriction',   'customerSentiment'],
 ];
 
 function renderCard(c) {
   const s = status(c.latest.overallScore);
   const id = 'c-'+c.name.replace(/\W+/g,'-').toLowerCase();
-  const dimsHtml = DIMS.map(([label,weight,key]) => {
-    const val = c.latest[key];
+  const dimsHtml = DIMS.map(([label,weight,key,fallback]) => {
+    const val = c.latest[key] ?? (fallback ? c.latest[fallback] : undefined);
     const u = val===null||val===undefined;
     const ds = u ? 'unknown' : status(val);
     const hasDetail = c.latest.metricDetails && c.latest.metricDetails[key];
@@ -1781,12 +1779,11 @@ function renderTable() {
       <td class="date-cell">${fmtDate(row.date)}</td>
       <td style="font-size:12px;color:var(--gray-600)">${esc(row.csRep||'—')}</td>
       <td>${chip(row.overallScore)}</td>
-      <td>${chip(row.platformUsage)}</td>
-      <td>${chip(row.customerSentiment)}</td>
-      <td>${chip(row.npsSurvey)}</td>
-      <td>${chip(row.onboardingHealth)}</td>
-      <td>${chip(row.supportLoad)}</td>
-      <td>${chip(row.engagementCadence)}</td>
+      <td>${chip(row.productAdoption??row.platformUsage)}</td>
+      <td>${chip(row.outcomesRoi)}</td>
+      <td>${chip(row.integrationHealth??row.onboardingHealth)}</td>
+      <td>${chip(row.relationshipStrength??row.engagementCadence)}</td>
+      <td>${chip(row.sentimentFriction??row.customerSentiment)}</td>
       <td class="actions-cell">${actions.map(a=>`• ${esc(a)}`).join('<br>')}</td>
       <td class="notes-cell">${esc(row.notes||'')}</td>
     </tr>`;
@@ -1802,10 +1799,10 @@ function tableSort(key){
 // CSV
 // ═══════════════════════════════════════════════════════════════
 function buildCSV(){
-  const headers=['Company','Date','CS Rep','Overall Score','Platform Usage','Customer Sentiment','NPS Survey','Onboarding Health','Support Load','Engagement Cadence','Actions','Notes'];
+  const headers=['Company','Date','CS Rep','Overall Score','Product Adoption','Outcomes/ROI','Integration Health','Relationship Strength','Sentiment/Friction','Actions','Notes'];
   const rows=HEALTH_DATA.map(r=>{
     const acts=Array.isArray(r.actions)?r.actions.join(' | '):(r.actions||'');
-    return [r.company,r.date,r.csRep||'',r.overallScore,r.platformUsage??'',r.customerSentiment??'',r.npsSurvey??'',r.onboardingHealth??'',r.supportLoad??'',r.engagementCadence??'',acts,r.notes||'']
+    return [r.company,r.date,r.csRep||'',r.overallScore,(r.productAdoption??r.platformUsage)??'',(r.outcomesRoi)??'',(r.integrationHealth??r.onboardingHealth)??'',(r.relationshipStrength??r.engagementCadence)??'',(r.sentimentFriction??r.customerSentiment)??'',acts,r.notes||'']
       .map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',');
   });
   return[headers.join(','),...rows].join('\n');
@@ -2287,8 +2284,8 @@ function openQBRModal(companyName) {
     const cls = delta > 0 ? 'up' : delta < 0 ? 'down' : 'flat';
     const drivers = [];
     if(prev) {
-      const dims = ['platformUsage','customerSentiment','npsSurvey','onboardingHealth','supportLoad','engagementCadence'];
-      const dimNames = {'platformUsage':'Usage','customerSentiment':'Sentiment','npsSurvey':'NPS','onboardingHealth':'Onboarding','supportLoad':'Support','engagementCadence':'Cadence'};
+      const dims = ['productAdoption','outcomesRoi','integrationHealth','relationshipStrength','sentimentFriction'];
+      const dimNames = {'productAdoption':'Adoption','outcomesRoi':'ROI','integrationHealth':'Integration','relationshipStrength':'Relationship','sentimentFriction':'Sentiment'};
       dims.forEach(d=>{
         if(entry[d]!=null && prev[d]!=null) {
           const dd = entry[d]-prev[d];
@@ -2534,8 +2531,8 @@ function copyPulseSummary() {
 function renderTimeline(co) {
   if(!co || co.entries.length < 2) return '';
   const DIMS_TL = [
-    ['platformUsage','Usage'],['customerSentiment','Sentiment'],['npsSurvey','NPS'],
-    ['onboardingHealth','Onboarding'],['supportLoad','Support'],['engagementCadence','Cadence']
+    ['productAdoption','Adoption'],['outcomesRoi','ROI'],
+    ['integrationHealth','Integration'],['relationshipStrength','Relationship'],['sentimentFriction','Sentiment']
   ];
   const sorted = [...co.entries].sort((a,b)=>new Date(b.date)-new Date(a.date));
   const rows = sorted.map((entry, idx) => {
