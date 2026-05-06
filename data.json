@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20",
+  "lastUpdated": "2026-05-06",
   "csReps": [
     "Cayden Fox",
     "Tegan Perry"
@@ -49,11 +49,13 @@
       "name": "Heritage Senior Living",
       "file": "data/heritage-senior-living.json",
       "slug": "heritage-senior-living",
-      "latestScore": 73,
-      "latestDate": "2026-04-09",
+      "latestScore": 58,
+      "latestDate": "2026-05-06",
       "csRep": "Cayden Fox",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519"
+      "status": "post-live",
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
+      "renewalDate": "2026-12-12",
+      "integrationType": "unknown"
     },
     {
       "name": "PACS",

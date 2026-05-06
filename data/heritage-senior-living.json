@@ -762,6 +762,773 @@
           "engagementCadence": null
         }
       ]
+    },
+    {
+      "company": "Heritage Senior Living",
+      "date": "2026-05-06",
+      "csRep": "Cayden Fox",
+      "lifecycle": "post-live",
+      "overallScore": 58,
+      "productAdoption": 47,
+      "outcomesRoi": 64,
+      "integrationHealth": 75,
+      "relationshipStrength": 50,
+      "sentimentFriction": 58,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
+      "renewalDate": "2026-12-12",
+      "integrationType": "unknown",
+      "qbrDates": [],
+      "lastTouchPoint": "2026-03-25",
+      "npsTicketUrls": [
+        {
+          "label": "Latoya Henry - Birches of Lehigh Valley - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41905403719"
+        },
+        {
+          "label": "Leslie Juan - Manor at Market Square - Feb 2026",
+          "score": 4,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41758140264"
+        },
+        {
+          "label": "Aiesha Roach - Birches at Newtown - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41903235750"
+        },
+        {
+          "label": "Scott Garverich - Chestnut Knoll - Feb 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41744439411"
+        },
+        {
+          "label": "Jemetrice Blakely - Heritage Green Hanover - Feb 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"
+        },
+        {
+          "label": "Teri Sheriff - KV Douglassville PC - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39951082278"
+        },
+        {
+          "label": "Jemetrice Blakely - Heritage Green Hanover - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39962767231"
+        },
+        {
+          "label": "Aiesha Roach - Birches at Newtown - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39992192256"
+        },
+        {
+          "label": "Scott Garverich - Chestnut Knoll - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39963076943"
+        },
+        {
+          "label": "Latoya Henry - Birches of Lehigh Valley - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39958431788"
+        },
+        {
+          "label": "Jemetrice Blakely - Heritage Green Hanover (2) - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39960289903"
+        },
+        {
+          "label": "Laura Schlichter - Chestnut Knoll - Jan 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39976644235"
+        },
+        {
+          "label": "Rachelle Storms - Senior Commons at Powder Mill - Jan 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39942830084"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Admin unable to change care level on integrated job position",
+          "priority": "NONE",
+          "status": "needs-info",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44081246498"
+        },
+        {
+          "label": "Dashboard/Schedule break with single Time of Day config",
+          "priority": "LOW",
+          "status": "backlog",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38896885651"
+        }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "Half Shifts on Staffing Ladder",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/42918941353"
+        },
+        {
+          "label": "Auto-deduct 30 minutes from timesheets",
+          "priority": "NONE",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40903011910"
+        },
+        {
+          "label": "Rules for credentials/certifications",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38565218350"
+        },
+        {
+          "label": "Rules by Care Level",
+          "priority": "HIGH",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38596180232"
+        },
+        {
+          "label": "Robust Training/Orientation Scheduling Features",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/38182707731"
+        },
+        {
+          "label": "Directly send shift to someone",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31462979739"
+        },
+        {
+          "label": "Attach docs/photos to call offs",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/31448866379"
+        }
+      ],
+      "actions": [
+        "Address low publish rates across portfolio (avg 40%) \u2014 priority buildings: Traditions of Hanover (0%), KV Douglassville IL (19%), Heritage Green Lynchburg (26%). Schedule 30-min targeted calls to identify blockers.",
+        "April check-ins should have happened per March cadence agreement \u2014 confirm April meetings occurred and schedule June building rounds now before the window passes.",
+        "NPS sitting at 3.0 avg (Chestnut Knoll at 2) \u2014 run a 30-min usability check-in at lowest-scoring buildings to address 'gadgets' and usability friction before next NPS cycle."
+      ],
+      "notes": "18-building post-live portfolio. Position template migration completed April 2026. Heritage exploring Veras HRIS as Paylocity replacement \u2014 COO Matt wants fully baked solution, not beta; timeline end-2026 selection / early-2027 implementation. Overtime trending up (+20% Apr MoM at ~12K hrs/mo) despite platform adoption \u2014 may present ROI conversation opportunity.",
+      "metricDetails": {
+        "productAdoption": {
+          "summary": "Portfolio-wide weighted publish rate of 39.6% (current month May 6). Strong outliers: Chancellor's Village 96%, Senior Commons 80%, Traditions of Hershey 72%. Laggards: Traditions of Hanover 0%, KV Douglassville IL 19%, Heritage Green Lynchburg 26%. Position template migration in April likely explains suppressed rates at several facilities. Messaging adoption is strong and growing (Dec 1,968 \u2192 Apr 7,938 messages/mo).",
+          "highlights": [
+            "Message volume up 7x since December \u2014 strong platform engagement",
+            "Chancellor's Village at 96% publish rate \u2014 top performer",
+            "Traditions of Hanover at 0% publish rate \u2014 requires immediate attention",
+            "Post-migration publish rates expected to normalize in May-June"
+          ],
+          "publishRate": 39.6,
+          "fillRate": 0.7,
+          "fillRateTrend": 0.1,
+          "messageVolumeTrend": "Up",
+          "loginUsage": null,
+          "mobileAdoption": null
+        },
+        "outcomesRoi": {
+          "summary": "Strong time savings story: 1,567.5 hrs over trailing 12 months across 18 facilities. Overtime is at high absolute levels (~12K hrs/mo) and trending up (+20% MoM in April) \u2014 this is both a concern and an ROI conversation opportunity for the HRIS/payroll expansion pitch.",
+          "timeSavings": {
+            "score": 92,
+            "hoursSaved": 1567.5,
+            "callOffs": 1546,
+            "scheduleMonths": 71,
+            "dailyCardDays": 942
+          },
+          "financialValue": {
+            "score": 35,
+            "overtimeByMonth": [
+              {
+                "month": "2025-11-01",
+                "otHours": 6946.8,
+                "otSpend": 154093.2
+              },
+              {
+                "month": "2025-12-01",
+                "otHours": 10510.8,
+                "otSpend": 250031.69
+              },
+              {
+                "month": "2026-01-01",
+                "otHours": 12147.7,
+                "otSpend": 300441.42
+              },
+              {
+                "month": "2026-02-01",
+                "otHours": 9641.5,
+                "otSpend": 241663.63
+              },
+              {
+                "month": "2026-03-01",
+                "otHours": 10254.1,
+                "otSpend": 253508.75
+              },
+              {
+                "month": "2026-04-01",
+                "otHours": 12320.2,
+                "otSpend": 300506.16
+              }
+            ],
+            "overtimeTrend": "Growing",
+            "proxyBasis": null
+          }
+        },
+        "integrationHealth": {
+          "summary": "All 18 communities fully live (stage 1176560694). Integration type not confirmed \u2014 flagged as unknown. No high-priority bugs open. One longstanding LOW backlog bug (single Time of Day config, 120+ days open) and one recent Needs Info item around care level editing on integrated job positions.",
+          "integrationType": "unknown",
+          "hrisIntegration": null,
+          "onboardingStages": {
+            "total": 18,
+            "live": 18,
+            "midStage": 0,
+            "earlyStage": 0
+          }
+        },
+        "relationshipStrength": {
+          "summary": "Active engagement cluster in early March (4 meetings in ~2 weeks) covering config migration, HRIS discussion, and portfolio alignment. Agreed bimonthly cadence going forward. Last confirmed meeting March 25 (Gary Miller). No QBR in lookback window. HRIS exploration signals deep strategic relationship with Nicolle Williams as key champion.",
+          "avgDaysBetween": 20,
+          "touchPoints": [
+            {
+              "type": "call",
+              "date": "2026-03-03",
+              "name": "HSL & Veras | HRIS Discussion",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-03-04",
+              "name": "Heritage Senior Living | Veras Meeting",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "training",
+              "date": "2026-03-11",
+              "name": "Chestnut Knoll | Veras Config Updates",
+              "sentiment": "neutral",
+              "source": "circleback"
+            },
+            {
+              "type": "training",
+              "date": "2026-03-13",
+              "name": "Heritage Senior Living | Veras Position Updates Discussion",
+              "sentiment": "neutral",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-03-25",
+              "name": "Gary Miller and Cayden Fox",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            }
+          ],
+          "qbrDates": [],
+          "giftsSent": []
+        },
+        "sentimentFriction": {
+          "summary": "Mixed but trending constructive. Heritage is actively exploring Veras HRIS expansion (strong positive signal). NPS at 3.0 avg with consistent '3' scores suggesting 'functional but not delighted' \u2014 Chestnut Knoll scoring 2 is a watch item. Nicolle flagged building autonomy causing budget gaming \u2014 she's pushing standardization which aligns well with Veras workflows.",
+          "nps": {
+            "period": "February 2026",
+            "avgScore": 3.0,
+            "responseCount": 5,
+            "trend": "Up",
+            "responses": [
+              {
+                "building": "The Birches of Lehigh Valley",
+                "respondent": "Latoya Henry",
+                "score": 3,
+                "note": null
+              },
+              {
+                "building": "The Manor at Market Square",
+                "respondent": "Leslie Juan",
+                "score": 4,
+                "note": null
+              },
+              {
+                "building": "The Birches at Newtown",
+                "respondent": "Aiesha Roach",
+                "score": 3,
+                "note": null
+              },
+              {
+                "building": "Chestnut Knoll",
+                "respondent": "Scott Garverich",
+                "score": 2,
+                "note": null
+              },
+              {
+                "building": "Heritage Green Hanover",
+                "respondent": "Jemetrice Blakely",
+                "score": 3,
+                "note": "it not easy to learn all the gadgets"
+              }
+            ]
+          },
+          "supportLoad": {
+            "openHigh": 0,
+            "openMedium": 0,
+            "openLow": 1,
+            "backlogItems": 1,
+            "summary": "2 open bugs: 1 LOW (single Time of Day config, 120+ days old in backlog) and 1 unclassified (care level edit on integrated positions, 33 days in Needs Info). No high-severity issues."
+          },
+          "atRiskMentions": 0,
+          "signals": {
+            "positive": [
+              {
+                "text": "Heritage exploring Veras HRIS as Paylocity replacement \u2014 COO Matt engaged, demo scheduled",
+                "sourceType": "circleback",
+                "sourceUrl": "https://app.circleback.ai/meetings/7010608"
+              },
+              {
+                "text": "Nicolle Williams in new platform oversight role \u2014 centralizing decisions, aligning with Veras workflows",
+                "sourceType": "circleback",
+                "sourceUrl": "https://app.circleback.ai/meetings/7042899"
+              }
+            ],
+            "negative": [
+              {
+                "text": "NPS feedback: 'not easy to learn all the gadgets' and 'harder for staff to read'",
+                "sourceType": "hubspot",
+                "sourceUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/41872297998"
+              },
+              {
+                "text": "Traditions of Hanover showing 0 published shifts in May \u2014 may be using workaround",
+                "sourceType": "metabase",
+                "sourceUrl": null
+              },
+              {
+                "text": "Overtime growing (+20% Apr MoM) despite 18-month platform use",
+                "sourceType": "metabase",
+                "sourceUrl": null
+              }
+            ],
+            "neutral": [
+              {
+                "text": "Building autonomy causing budget tracking issues \u2014 Nicolle working to standardize",
+                "sourceType": "circleback",
+                "sourceUrl": "https://app.circleback.ai/meetings/7042899"
+              },
+              {
+                "text": "Config session at Chestnut Knoll ended early \u2014 planned approach unworkable for floating staff",
+                "sourceType": "circleback",
+                "sourceUrl": "https://app.circleback.ai/meetings/7207449"
+              }
+            ]
+          }
+        }
+      },
+      "communities": [
+        {
+          "name": "Chancellor's Village",
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Chancellor",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37727203484",
+          "npsSurvey": null,
+          "productAdoption": 90,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 580,
+            "publishedShifts": 557,
+            "publishRate": 96.0,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "Chestnut Knoll AL - Boyertown",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": "HubSpot ticket subject 'Chestnut Knoll' \u2014 registry name includes 'AL - Boyertown'",
+          "npsKeyword": "Chestnut Knoll",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37308735907",
+          "npsSurvey": 2,
+          "productAdoption": 35,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 3036,
+            "publishedShifts": 1016,
+            "publishRate": 33.5,
+            "period": "May 2026",
+            "note": "High shift volume; publish rate lagging \u2014 position template migration may explain"
+          }
+        },
+        {
+          "name": "Heritage Green Hanover",
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Heritage Green Hanover",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37593220727",
+          "npsSurvey": 3,
+          "productAdoption": 35,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 614,
+            "publishedShifts": 209,
+            "publishRate": 34.0,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "Heritage Green Lynchburg",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Heritage Green Lynchburg",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37429227266",
+          "npsSurvey": null,
+          "productAdoption": 28,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 964,
+            "publishedShifts": 251,
+            "publishRate": 26.0,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "Keystone Villa at Douglassville - IL",
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Douglassville, IL",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37842410872",
+          "npsSurvey": null,
+          "productAdoption": 20,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 926,
+            "publishedShifts": 173,
+            "publishRate": 18.7,
+            "period": "May 2026",
+            "note": "Below 20% \u2014 needs follow-up"
+          }
+        },
+        {
+          "name": "Keystone Villa at Douglassville PC",
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Douglassville, PC",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37073906970",
+          "npsSurvey": 3,
+          "productAdoption": 28,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 3143,
+            "publishedShifts": 841,
+            "publishRate": 26.8,
+            "period": "May 2026",
+            "note": "High shift volume \u2014 large community"
+          }
+        },
+        {
+          "name": "Keystone Villa at Ephrata",
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Ephrata",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37583265072",
+          "npsSurvey": null,
+          "productAdoption": 40,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 3107,
+            "publishedShifts": 1173,
+            "publishRate": 37.8,
+            "period": "May 2026",
+            "note": "Large community; mid-range publish rate"
+          }
+        },
+        {
+          "name": "Keystone Villa at Fleetwood",
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Fleetwood",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37415685505",
+          "npsSurvey": null,
+          "productAdoption": 37,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1686,
+            "publishedShifts": 596,
+            "publishRate": 35.4,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "Senior Commons at Powder Mill",
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Powder Mill",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37595710879",
+          "npsSurvey": 3,
+          "productAdoption": 80,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1569,
+            "publishedShifts": 1251,
+            "publishRate": 79.7,
+            "period": "May 2026",
+            "note": "Strong publisher"
+          }
+        },
+        {
+          "name": "The Birches at Harleysville",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Harleysville",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37308737133",
+          "npsSurvey": null,
+          "productAdoption": 47,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2622,
+            "publishedShifts": 1153,
+            "publishRate": 44.0,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "The Birches at New Hope",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "New Hope",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37415608480",
+          "npsSurvey": null,
+          "productAdoption": 25,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2571,
+            "publishedShifts": 607,
+            "publishRate": 23.6,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "The Birches at Newtown",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Birches at Newtown",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37308738864",
+          "npsSurvey": 3,
+          "productAdoption": 31,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2480,
+            "publishedShifts": 730,
+            "publishRate": 29.4,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "The Birches of Lehigh",
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Registry name 'The Birches of Lehigh' \u2014 HubSpot ticket and Metabase facility both use 'Birches of Lehigh Valley'",
+          "npsKeyword": "Birches of Lehigh",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37583448706",
+          "npsSurvey": 3,
+          "productAdoption": 46,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1855,
+            "publishedShifts": 810,
+            "publishRate": 43.7,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "The Crossroads at Bon Air",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Bon Air",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37804325748",
+          "npsSurvey": null,
+          "productAdoption": 58,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2196,
+            "publishedShifts": 1214,
+            "publishRate": 55.3,
+            "period": "May 2026",
+            "note": "One of the stronger publishers in portfolio"
+          }
+        },
+        {
+          "name": "The Manor at Market Square",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Market Square",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37452222616",
+          "npsSurvey": 4,
+          "productAdoption": 54,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1527,
+            "publishedShifts": 785,
+            "publishRate": 51.4,
+            "period": "May 2026",
+            "note": null
+          }
+        },
+        {
+          "name": "Traditions of Hanover",
+          "csRep": "Cayden Fox",
+          "implRep": "Tegan Perry",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Hanover",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37148824707",
+          "npsSurvey": null,
+          "productAdoption": 5,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 117,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "0% publish rate \u2014 live but not publishing. Requires immediate outreach."
+          }
+        },
+        {
+          "name": "Traditions of Hershey",
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Hershey",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37583510799",
+          "npsSurvey": null,
+          "productAdoption": 73,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 505,
+            "publishedShifts": 365,
+            "publishRate": 72.3,
+            "period": "May 2026",
+            "note": "Strong publisher"
+          }
+        },
+        {
+          "name": "Traditions of Lansdale",
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "live",
+          "mappingConfidence": "inferred",
+          "mappingNote": null,
+          "npsKeyword": "Lansdale",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/37462556508",
+          "npsSurvey": null,
+          "productAdoption": 35,
+          "integrationHealth": 75,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 851,
+            "publishedShifts": 281,
+            "publishRate": 33.0,
+            "period": "May 2026",
+            "note": null
+          }
+        }
+      ]
     }
   ]
 }
