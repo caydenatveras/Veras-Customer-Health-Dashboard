@@ -1001,7 +1001,7 @@ function renderCard(c) {
     const val = c.latest[key] ?? (fallback ? c.latest[fallback] : undefined);
     const u = val===null||val===undefined;
     const ds = u ? 'unknown' : status(val);
-    const hasDetail = c.latest.metricDetails && c.latest.metricDetails[key];
+    const hasDetail = c.latest.metricDetails && (c.latest.metricDetails[key] || (fallback && c.latest.metricDetails[fallback]));
     return `<div class="dimension" ${hasDetail?`onclick="event.stopPropagation();openMetricDetail('${esc(c.name)}','${key}',event)"`:''} title="${hasDetail?'Click to see detail':''}">
       <div class="dim-row">
         <span class="dim-name">${label} <span style="color:var(--gray-400);font-weight:400">${weight}</span></span>
@@ -1308,13 +1308,16 @@ function openMetricDetail(companyName, dimKey, event) {
   const co = companies.find(c=>c.name===companyName);
   if(!co) return;
   const details = co.latest.metricDetails;
-  if(!details||!details[dimKey]) return;
+  if(!details) return;
   const dim = DIMS.find(d=>d[2]===dimKey);
+  const fallbackKey = dim?dim[3]:null;
+  const effectiveDetail = details[dimKey] || (fallbackKey ? details[fallbackKey] : null);
+  if(!effectiveDetail) return;
   const label = dim?dim[0]:dimKey;
-  const score = co.latest[dimKey];
+  const score = co.latest[dimKey] ?? (fallbackKey ? co.latest[fallbackKey] : null);
   document.getElementById('metricModalTitle').textContent = label;
   document.getElementById('metricModalSub').textContent = `${companyName} · Score: ${score!==null&&score!==undefined?score+'/100':'N/A'}`;
-  document.getElementById('metricModalBody').innerHTML = buildMetricDetailBody(dimKey, details[dimKey], co.latest);
+  document.getElementById('metricModalBody').innerHTML = buildMetricDetailBody(dimKey, effectiveDetail, co.latest);
   document.getElementById('metricModal').classList.add('open');
 }
 
@@ -1584,6 +1587,135 @@ function buildMetricDetailBody(dimKey, detail, entry) {
     if(dimKey==='engagementCadence'){
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
     ${detail.avgDaysBetween?`<div class="detail-section"><div class="detail-label">Avg Days Between Touchpoints</div><div class="detail-summary" style="font-size:24px;font-weight:700;color:var(--brand)">${detail.avgDaysBetween} days</div></div>`:''}`;
+  }
+
+  if(dimKey==='productAdoption') {
+    const items=(detail.highlights||[]).map(h=>`<div class="signal-item"><div class="signal-dot" style="background:#3b82f6"></div><span>${esc(h)}</span></div>`).join('');
+    const pr=detail.publishRate, fr=detail.fillRate, ft=detail.fillRateTrend;
+    const metricsHtml=[
+      pr!=null?`<div class="support-count med"><div class="num">${Math.round(pr*100)}%</div><div class="lbl">Publish Rate</div></div>`:'',
+      fr!=null?`<div class="support-count med"><div class="num">${Math.round(fr*100)}%</div><div class="lbl">Fill Rate</div></div>`:'',
+      ft!=null?`<div class="support-count ${ft>=0?'low':'high'}"><div class="num">${ft>=0?'+':''}${Math.round(ft*100)}%</div><div class="lbl">Fill Rate Trend</div></div>`:'',
+    ].filter(Boolean).join('');
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+      ${metricsHtml?`<div class="detail-section"><div class="detail-label">Metrics</div><div class="support-counts">${metricsHtml}</div></div>`:''}
+      ${items?`<div class="detail-section"><div class="detail-label">Highlights</div><div class="signal-list">${items}</div></div>`:''}`;
+  }
+  if(dimKey==='outcomesRoi') {
+    const ts=detail.timeSavings||{}, fv=detail.financialValue||{};
+    const hoursHtml=ts.hoursSaved!=null
+      ?`<div class="detail-section"><div class="detail-label">Time Savings (trailing 12 months)</div>
+          <div style="display:flex;align-items:baseline;gap:8px;padding:10px 12px;background:var(--gray-50);border-radius:7px;margin-bottom:8px">
+            <span style="font-size:32px;font-weight:700;color:var(--brand)">${ts.hoursSaved.toLocaleString()}</span>
+            <span style="font-size:14px;color:var(--gray-500)">hours saved</span>
+          </div>
+          <div class="support-counts">
+            <div class="support-count low"><div class="num">${ts.callOffs||0}</div><div class="lbl">Call-offs</div></div>
+            <div class="support-count low"><div class="num">${ts.scheduleMonths||0}</div><div class="lbl">Schedule Months</div></div>
+            <div class="support-count low"><div class="num">${ts.dailyCardDays||0}</div><div class="lbl">Daily Card Days</div></div>
+          </div></div>`
+      :'';
+    const otRows=(fv.overtimeByMonth||[]).map(m=>{
+      const d=new Date(m.month+'T00:00:00');
+      const label=d.toLocaleString('en-US',{month:'short',year:'numeric'});
+      return `<tr><td style="color:var(--gray-700)">${label}</td><td style="text-align:right;font-weight:500">${m.otHours!=null?Math.round(m.otHours).toLocaleString()+' hrs':'—'}</td><td style="text-align:right;color:var(--gray-600)">${m.otSpend!=null?'$'+Math.round(m.otSpend).toLocaleString():'—'}</td></tr>`;
+    }).join('');
+    const trend=fv.overtimeTrend;
+    const trendBadge=trend?`<span style="font-size:11px;padding:2px 7px;border-radius:10px;font-weight:500;background:${trend==='Growing'?'var(--red-light)':'var(--green-light)'};color:${trend==='Growing'?'var(--red-dark)':'var(--green-dark)'}">${esc(trend)}</span>`:'';
+    const otHtml=otRows
+      ?`<div class="detail-section"><div class="detail-label" style="display:flex;align-items:center;gap:8px">Overtime Trend ${trendBadge}</div>
+          <table class="nps-table"><thead><tr><th>Month</th><th style="text-align:right">OT Hours</th><th style="text-align:right">OT Spend</th></tr></thead>
+          <tbody>${otRows}</tbody></table></div>`
+      :'';
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>${hoursHtml}${otHtml}`;
+  }
+  if(dimKey==='integrationHealth') {
+    const it=detail.integrationType||entry.integrationType||'unknown';
+    const badgeStyle={'API':'background:#dbeafe;color:#1d4ed8','SFTP':'background:#d1fae5;color:#065f46','unknown':'background:var(--gray-100);color:var(--gray-400)'}[it]||'background:var(--gray-100);color:var(--gray-400)';
+    const stages=detail.onboardingStages||{};
+    const t=stages.total||0,l=stages.live||0,m=stages.midStage||0,e=stages.earlyStage||0;
+    const lw=t?Math.round(l/t*100):0, mw=t?Math.round(m/t*100):0, ew=t?Math.round(e/t*100):0;
+    const stagesHtml=t>0
+      ?`<div class="detail-section"><div class="detail-label">Community Onboarding</div>
+          <div class="ob-progress-bar">
+            <div class="ob-seg live" style="width:${lw}%">${l>0?l:''}</div>
+            <div class="ob-seg mid" style="width:${mw}%">${m>0?m:''}</div>
+            <div class="ob-seg early" style="width:${ew}%">${e>0?e:''}</div>
+          </div>
+          <div class="ob-legend">
+            <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--green)"></div><span>Live: ${l}</span></div>
+            <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--yellow)"></div><span>Mid-Stage: ${m}</span></div>
+            <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-300)"></div><span>Early: ${e}</span></div>
+            <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-200)"></div><span>Total: ${t}</span></div>
+          </div></div>`
+      :'';
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+      <div class="detail-section"><div class="detail-label">Integration Type</div>
+        <span style="display:inline-block;padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;${esc(badgeStyle)}">${esc(it==='unknown'||it===''?'— not set —':it)}</span>
+      </div>${stagesHtml}`;
+  }
+  if(dimKey==='relationshipStrength') {
+    const typeIcons={'QBR':'📊','training':'📚','in-person':'🤝','call':'📞','meeting':'📅'};
+    const sentColors={'positive':'var(--green-dark)','negative':'var(--red-dark)','neutral':'var(--gray-500)'};
+    const tpHtml=(detail.touchPoints||[]).slice(0,15).map(tp=>{
+      const icon=typeIcons[tp.type]||'📅';
+      const color=sentColors[tp.sentiment]||'var(--gray-500)';
+      const d=tp.date?new Date(tp.date+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
+      return `<div class="signal-item" style="align-items:flex-start">
+        <span style="flex-shrink:0;font-size:14px">${icon}</span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span style="font-weight:500;font-size:12px;color:var(--gray-800)">${esc(tp.type||'meeting')}</span>
+            ${d?`<span style="font-size:11px;color:var(--gray-400)">${d}</span>`:''}
+            ${tp.sentiment?`<span style="font-size:11px;color:${color}">${esc(tp.sentiment)}</span>`:''}
+          </div>
+          ${tp.source?`<div style="font-size:11px;color:var(--gray-400)">${esc(tp.source)}</div>`:''}
+        </div></div>`;
+    }).join('');
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+      ${detail.avgDaysBetween?`<div class="detail-section"><div class="detail-label">Avg Days Between Touchpoints</div><div class="detail-summary" style="font-size:24px;font-weight:700;color:var(--brand)">${detail.avgDaysBetween} days</div></div>`:''}
+      ${tpHtml?`<div class="detail-section"><div class="detail-label">Recent Touchpoints</div><div class="signal-list">${tpHtml}</div></div>`:''}`;
+  }
+  if(dimKey==='sentimentFriction') {
+    const signals=detail.signals||{};
+    const pos=signals.positive||[],neg=signals.negative||[],neu=signals.neutral||[];
+    const srcIcons={'circleback':'📞','hubspot':'⬡','intercom':'💬','slack':'#️⃣','email':'✉️','meeting':'📅'};
+    const renderSigs=(items,cls)=>items.length
+      ?items.map(item=>{
+          const icon=srcIcons[item.sourceType]||'📌';
+          const srcHtml=item.sourceUrl?`<div class="sentiment-entry-src"><a class="sentiment-src-link" href="${esc(item.sourceUrl)}" target="_blank">${icon} ${esc(item.sourceType||'source')} \u2197</a></div>`:'';
+          return `<div class="sentiment-entry ${cls}"><div class="sentiment-entry-text">${esc(item.text)}</div>${srcHtml}</div>`;
+        }).join('')
+      :`<div style="color:var(--gray-400);font-size:12px;padding:8px 4px;font-style:italic">None recorded</div>`;
+    const sigsHtml=(pos.length||neg.length||neu.length)
+      ?`<div class="detail-section"><div class="detail-label">Feedback Signals</div>
+          <div class="sentiment-tabs">
+            <button class="sentiment-tab active" onclick="setSentimentTab(this,'stab-pos')">\u2705 Positive (${pos.length})</button>
+            <button class="sentiment-tab" onclick="setSentimentTab(this,'stab-neg')">\u26a0\ufe0f Negative (${neg.length})</button>
+            <button class="sentiment-tab" onclick="setSentimentTab(this,'stab-neu')">\u27a1\ufe0f Neutral (${neu.length})</button>
+          </div>
+          <div class="sentiment-panel" id="stab-pos">${renderSigs(pos,'pos')}</div>
+          <div class="sentiment-panel" id="stab-neg" style="display:none">${renderSigs(neg,'neg')}</div>
+          <div class="sentiment-panel" id="stab-neu" style="display:none">${renderSigs(neu,'neu')}</div>
+        </div>`
+      :'';
+    const nps=detail.nps||{};
+    const npsHtml=nps.avgScore!=null
+      ?`<div class="detail-section"><div class="detail-label">NPS</div><div class="detail-summary"><strong>${esc(nps.period||'')}</strong> · Avg: <strong>${nps.avgScore}/5</strong> · ${nps.responseCount||0} responses · Trend: ${esc(nps.trend||'\u2014')}</div></div>`
+      :'';
+    const sl=detail.supportLoad||{};
+    const slHtml=(sl.openHigh!=null||sl.openMedium!=null||sl.openLow!=null)
+      ?`<div class="detail-section"><div class="detail-label">Open Bug Tickets</div><div class="support-counts">
+          <div class="support-count high"><div class="num">${sl.openHigh||0}</div><div class="lbl">HIGH</div></div>
+          <div class="support-count med"><div class="num">${sl.openMedium||0}</div><div class="lbl">MEDIUM</div></div>
+          <div class="support-count low"><div class="num">${sl.openLow||0}</div><div class="lbl">LOW</div></div>
+        </div></div>`
+      :'';
+    const atRiskHtml=detail.atRiskMentions>0
+      ?`<div class="detail-section"><div class="detail-label">At-Risk Signals</div><div class="detail-summary" style="color:var(--red-dark)">${detail.atRiskMentions} Slack #at-risk mention${detail.atRiskMentions>1?'s':''}</div></div>`
+      :'';
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+      ${sigsHtml}${npsHtml}${slHtml}${atRiskHtml}`;
   }
   return `<div class="detail-summary">${esc(JSON.stringify(detail,null,2))}</div>`;
 }
