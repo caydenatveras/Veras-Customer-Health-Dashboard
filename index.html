@@ -500,6 +500,9 @@
 .pat-modal-title{font-size:15px;font-weight:600;color:var(--gray-900);margin-bottom:6px}
 .pat-modal-desc{font-size:13px;color:var(--gray-500);margin-bottom:14px;line-height:1.5}
 .pat-modal-btns{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.excl-badge{display:inline-block;font-size:10px;padding:1px 6px;border-radius:10px;background:var(--gray-100);color:var(--gray-400);margin-left:6px;font-weight:500;vertical-align:middle}
+.excl-comm-label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gray-700);cursor:pointer;padding:4px 2px;border-radius:5px}
+.excl-comm-label:hover{background:var(--gray-50)}
 
 </style>
 </head>
@@ -1520,6 +1523,7 @@ function buildMetricDetailBody(dimKey, detail, entry) {
     const t=detail.total||1, l=detail.live||0, m=detail.midStage||0, e=detail.earlyStage||0;
     const lw=Math.round(l/t*100), mw=Math.round(m/t*100), ew=Math.round(e/t*100);
     // Build sorted community table
+    const _obExcl=(REGISTRY_DATA&&REGISTRY_DATA.accounts&&REGISTRY_DATA.accounts[entry.company]&&REGISTRY_DATA.accounts[entry.company].excludedCommunities)||[];
     const comms=(entry.communities||[]).slice().sort((a,b)=>{
       const ord={'live':0,'mid-stage':1,'early':2};
       return (ord[a.status]??9)-(ord[b.status]??9)||a.name.localeCompare(b.name);
@@ -1530,7 +1534,8 @@ function buildMetricDetailBody(dimKey, detail, entry) {
       const hsCell=c.hubspotTicketUrl
         ?`<a href="${esc(c.hubspotTicketUrl)}" target="_blank" class="hs-link" style="font-size:11px">\u2B21 HubSpot \u2197</a>`
         :`<span style="color:var(--gray-300);font-size:11px">\u2014</span>`;
-      return `<tr><td style="font-size:12px;font-weight:500;color:var(--gray-900)">${esc(c.name)}</td><td><span class="comm-modal-status ${sc}">${sl}</span></td><td>${hsCell}</td></tr>`;
+      const isObEx=_obExcl.includes(c.name);
+      return `<tr style="opacity:${isObEx?'.45':'1'}"><td style="font-size:12px;font-weight:500;color:var(--gray-900)">${esc(c.name)}${isObEx?'<span class="excl-badge">excluded</span>':''}</td><td><span class="comm-modal-status ${sc}">${sl}</span></td><td>${hsCell}</td></tr>`;
     }).join('');
     const commTable=comms.length
       ?`<div class="detail-section"><div class="detail-label">All Communities (${comms.length})</div><table class="comm-modal-table"><thead><tr><th>Community</th><th>Status</th><th>HubSpot</th></tr></thead><tbody>${commRows}</tbody></table></div>`
@@ -1649,10 +1654,24 @@ function buildMetricDetailBody(dimKey, detail, entry) {
             <div style="display:flex;align-items:center;gap:5px"><div class="ob-dot" style="background:var(--gray-200)"></div><span>Total: ${t}</span></div>
           </div></div>`
       :'';
-    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+    const _ihExcl=(REGISTRY_DATA&&REGISTRY_DATA.accounts&&REGISTRY_DATA.accounts[entry.company]&&REGISTRY_DATA.accounts[entry.company].excludedCommunities)||[];
+    const ihComms=(entry.communities||[]).slice().sort((a,b)=>{
+      const ord={'live':0,'mid-stage':1,'early':2};
+      return (ord[a.status]??9)-(ord[b.status]??9)||a.name.localeCompare(b.name);
+    });
+    const ihCommRows=ihComms.map(c=>{
+      const sc={'live':'live','mid-stage':'mid','early':'early'}[c.status]||'early';
+      const sl={'live':'\uD83D\uDFE2 Live','mid-stage':'\uD83D\uDFE1 Mid-Stage','early':'\u26AA Early'}[c.status]||c.status;
+      const isEx=_ihExcl.includes(c.name);
+      return `<tr style="opacity:${isEx?'.45':'1'}"><td style="font-size:12px;font-weight:500;color:var(--gray-900)">${esc(c.name)}${isEx?'<span class="excl-badge">excluded</span>':''}</td><td><span class="comm-modal-status ${sc}">${sl}</span></td></tr>`;
+    }).join('');
+    const ihCommTable=ihComms.length
+      ?`<div class="detail-section"><div class="detail-label">Communities (${ihComms.length})</div><table class="comm-modal-table"><thead><tr><th>Community</th><th>Status</th></tr></thead><tbody>${ihCommRows}</tbody></table></div>`
+      :'';
+    return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||''  )}</div></div>
       <div class="detail-section"><div class="detail-label">Integration Type</div>
         <span style="display:inline-block;padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;${esc(badgeStyle)}">${esc(it==='unknown'||it===''?'— not set —':it)}</span>
-      </div>${stagesHtml}`;
+      </div>${stagesHtml}${ihCommTable}`;
   }
   if(dimKey==='relationshipStrength') {
     const typeIcons={'QBR':'📊','training':'📚','in-person':'🤝','call':'📞','meeting':'📅'};
@@ -2725,6 +2744,22 @@ function openAccountPanel(companyName) {
   document.getElementById('acRenewalDate').value = acc.renewalDate || '';
   document.getElementById('acLastQbr').value = acc.lastQbrDate || '';
   document.getElementById('acNextQbr').value = acc.nextQbrDate || '';
+  var co = typeof companies !== 'undefined' ? companies.find(function(c){ return c.name === companyName; }) : null;
+  var comms = (co && co.latest && co.latest.communities) ? co.latest.communities : [];
+  var excluded = acc.excludedCommunities || [];
+  var excSection = document.getElementById('acCommExclSection');
+  var excList = document.getElementById('acCommExclList');
+  if (comms.length > 0) {
+    excList.innerHTML = comms.slice().sort(function(a,b){ return (a.name||'').localeCompare(b.name||''); }).map(function(c) {
+      var name = c.name || '';
+      var isExcl = excluded.indexOf(name) !== -1;
+      var safeName = name.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      return '<label class="excl-comm-label"><input type="checkbox"' + (isExcl ? ' checked' : '') + ' data-commname="' + safeName + '" style="width:14px;height:14px;accent-color:var(--brand);flex-shrink:0"><span>' + safeName + '</span></label>';
+    }).join('');
+    excSection.style.display = '';
+  } else {
+    excSection.style.display = 'none';
+  }
   document.getElementById('accountModal').classList.add('open');
 }
 
@@ -2792,6 +2827,8 @@ async function saveAccountSettings() {
     existing.integrationType = document.getElementById('acIntegrationType').value;
     existing.lastQbrDate     = document.getElementById('acLastQbr').value;
     existing.nextQbrDate     = document.getElementById('acNextQbr').value;
+    var excBoxes = document.querySelectorAll('#acCommExclList input[type="checkbox"]');
+    existing.excludedCommunities = Array.from(excBoxes).filter(function(cb){ return cb.checked; }).map(function(cb){ return cb.dataset.commname; });
     registry.accounts[_accountPanelCompany] = existing;
     registry.lastUpdated = new Date().toISOString().slice(0, 10);
     var newContent = btoa(unescape(encodeURIComponent(JSON.stringify(registry, null, 2))));
@@ -2874,6 +2911,11 @@ async function saveAccountSettings() {
           <label class="account-form-label" for="acNextQbr">Next QBR Date</label>
           <input type="date" class="account-form-input" id="acNextQbr">
         </div>
+      </div>
+      <div class="account-form-full" id="acCommExclSection" style="display:none;margin-top:4px">
+        <label class="account-form-label">Excluded from Scoring</label>
+        <div style="font-size:11px;color:var(--gray-400);margin-bottom:8px;line-height:1.5">Checked communities are excluded from all dimension scores. Re-run the health score after saving to see updated results.</div>
+        <div id="acCommExclList" style="display:flex;flex-direction:column;gap:2px;max-height:160px;overflow-y:auto;border:1px solid var(--gray-200);border-radius:7px;padding:6px 8px;background:var(--gray-50)"></div>
       </div>
     </div>
     <div class="account-modal-footer">
