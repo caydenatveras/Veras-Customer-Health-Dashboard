@@ -2,8 +2,8 @@
   "_schema": {
     "description": "Registry of all Veras accounts and their communities. Drives automated health score runs.",
     "communityFields": {
-      "displayName": "Dashboard label — decoupled from HubSpot/Metabase naming",
-      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID — no name matching.",
+      "displayName": "Dashboard label â decoupled from HubSpot/Metabase naming",
+      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID â no name matching.",
       "metabaseFacilityIds": "Array of Metabase Facility.id values. Array supports multi-entity buildings.",
       "npsKeyword": "Short unique substring matched against NPS ticket subjects to identify this community's responses.",
       "mappingConfidence": "'confirmed' = manually verified | 'inferred' = auto-matched, should verify | 'unresolved' = needs manual mapping",
@@ -169,7 +169,7 @@
           ],
           "npsKeyword": "Fallon",
           "mappingConfidence": "inferred",
-          "mappingNote": "Three Metabase records (Rehab, AL, IL) — verify which entities to include for usage data",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) â verify which entities to include for usage data",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -181,7 +181,7 @@
           ],
           "npsKeyword": "Elko",
           "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data — verify",
+          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data â verify",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -210,7 +210,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Nevada",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Nevada region facilities not yet in Metabase — 6 communities signed Apr 2026, Metabase setup pending",
+          "mappingNote": "Nevada region facilities not yet in Metabase â 6 communities signed Apr 2026, Metabase setup pending",
           "implRep": "Tegan Perry"
         }
       ],
@@ -400,7 +400,7 @@
           ],
           "npsKeyword": "Hanover",
           "mappingConfidence": "inferred",
-          "mappingNote": "0% publish rate in May 2026 — investigate",
+          "mappingNote": "0% publish rate in May 2026 â investigate",
           "implRep": "Tegan Perry"
         },
         {
@@ -562,7 +562,7 @@
           ],
           "npsKeyword": "West Jordan",
           "mappingConfidence": "inferred",
-          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) — stage may be stale, verify with Bryan Ovalle",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) â stage may be stale, verify with Bryan Ovalle",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -583,7 +583,7 @@
           ],
           "npsKeyword": "Cache Valley",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot — verify whether this is a standalone community or part of another entity",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot â verify whether this is a standalone community or part of another entity",
           "implRep": null
         }
       ],
@@ -697,7 +697,7 @@
       "metabaseEmployerId": "clud2zmdj000208k1bnx70lfx",
       "csRep": "Tegan Perry",
       "renewalDate": "",
-      "note": "Large enterprise account — hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
+      "note": "Large enterprise account â hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
       "communities": [
         {
           "displayName": "Aspen Hills",
@@ -729,7 +729,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Las Palmas",
           "mappingConfidence": "inferred",
-          "mappingNote": "Re-signup (new admin) — previous onboarding record may exist",
+          "mappingNote": "Re-signup (new admin) â previous onboarding record may exist",
           "implRep": "Cayden Fox"
         },
         {
@@ -754,7 +754,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Ridgeway",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket — needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket â needs rep assignment",
           "implRep": null
         },
         {
@@ -763,7 +763,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Norwood",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket — needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket â needs rep assignment",
           "implRep": null
         }
       ],
