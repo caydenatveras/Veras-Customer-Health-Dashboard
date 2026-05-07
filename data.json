@@ -371,6 +371,370 @@
           "engagementCadence": null
         }
       ]
+    },
+    {
+      "company": "Aspen Health",
+      "date": "2026-05-07",
+      "csRep": "Cayden Fox",
+      "overallScore": 55,
+      "platformUsage": 65,
+      "customerSentiment": 50,
+      "npsSurvey": 27,
+      "onboardingHealth": 50,
+      "supportLoad": 72,
+      "engagementCadence": 72,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/54589714729",
+      "metabaseEmployerId": "cmfh8985x000008kzci3h7v81",
+      "renewalDate": null,
+      "npsTicketUrls": [
+        {
+          "label": "Osvaldo Heredia - Kei-Ai Los Angeles - February 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41746453157"
+        },
+        {
+          "label": "Shoua Yang - Country Crest Post Acute - February 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41770669949"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Agency appears on schedule twice when they have a called off shift",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050897763"
+        },
+        {
+          "label": "Schedule doesn't display properly when area is secondary grouping with filter applied",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34224983605"
+        }
+      ],
+      "actions": [
+        "Lodi churn risk \u2014 Cayden flagged Lodi as HIGH risk (may cancel over limited weekly call time); proactively increase call frequency and confirm staffing ladder is entered before next session",
+        "Sierra Vista follow-up \u2014 flagged at-risk in #at-risk channel during CS review; clarify the concern and determine if onboarding is blocked or stalled",
+        "Ocean Pointe recovery \u2014 app went down at the start of today's training call; send apology, confirm the May 8 reschedule, and ensure smooth experience to prevent churn signal at this early stage"
+      ],
+      "notes": "Brand new expansion \u2014 deal closed March 26, 2026 (~6 weeks ago). Massive rollout: 8 buildings live, ~34 more in various onboarding stages. NPS scores are from 2 legacy buildings only (Kei-Ai LA and Country Crest) \u2014 not representative of the new cohort. Platform usage dominated by Kei-Ai LA. Message volume doubling MoM. Key risk: Lodi flagged as possible cancel; Sierra Vista flagged at-risk. HIGH priority compliance feature (facility call-off tracking) open 10 months.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "Active legacy buildings are strong performers \u2014 Kei-Ai LA alone has 12,973 published shifts. New buildings from the March expansion are mostly in draft mode (expected at this stage). Message volume nearly doubled MoM in April (1,608 \u2192 3,524). Call-off tracking growing steadily. Shift invite fill rate is low (1\u20134%) across the board. 12 of 20 Metabase facilities have meaningful published shifts; 8 are at 0 (all in early onboarding). Lodi (38 published, 3,552 drafts) and Sierra Vista (0 published, 4,065 drafts) are outliers to watch.",
+          "highlights": [
+            "12/20 Metabase facilities publishing shifts",
+            "Kei-Ai LA: 12,973 published shifts (dominant performer)",
+            "~3,524 messages sent in April (doubling MoM trend)",
+            "672 call-offs recorded in April",
+            "1.1% invite fill rate in April \u2014 staff app adoption gap"
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 1.5,
+          "responseCount": 2,
+          "trend": "Down vs. January 2026 (avg 2.0) \u2014 note: only 2 legacy buildings represented, not the new cohort",
+          "responses": [
+            {
+              "building": "Kei-Ai Los Angeles Healthcare Center",
+              "respondent": "Osvaldo Heredia",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Country Crest Post Acute",
+              "respondent": "Shoua Yang",
+              "score": 1,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 2,
+          "openLow": 0,
+          "backlogItems": 9,
+          "summary": "No high-priority open bugs. Two medium bugs open 5-6 months: agency staff appearing twice on schedule after call-off, and schedule display bug with secondary area grouping. 9 feature requests in backlog. Notable: HIGH-priority 'Send home (facility call off) flow' feature request has been With Eng since July 2025 \u2014 it's a union compliance requirement for Oregon buildings and is ~10 months old."
+        },
+        "onboardingHealth": {
+          "total": 42,
+          "live": 8,
+          "midStage": 10,
+          "earlyStage": 24,
+          "summary": "Deal closed March 26, 2026 \u2014 only 6 weeks ago. 8 buildings in Customer Success (live): Kei-Ai LA, Country Crest, The Avenues, NorthPark, Cottonwood Post-Acute, Riverwood, The Palazzo, Woodland. 1 Pending Go-Live (South Marin). ~10 in training/pre-live check-in (Lake Park, Lodi, Tracy, Berkley East, Ocean Pointe, University, Oakland Heights, Marina Pointe, Kei-Ai South Bay, Sierra Vista). ~24 in very early stage (stage 1 \u2014 bulk-created at contract signing). Rapid expansion, but Lodi and Sierra Vista are at risk of stalling."
+        },
+        "customerSentiment": {
+          "summary": "Mixed. The majority of training calls are going smoothly \u2014 Avenues launched March 1 with strong adoption, Woodland went live April 1 without issues, Marina Pointe and Lake Park kickoffs were clean. However, real at-risk signals exist: Lodi flagged by Cayden as possibly cancelling over limited rep call time, Sierra Vista flagged during CS review, Kei-Ai South Bay no-showed April 30, and the Veras app went down at the start of today's Ocean Pointe training. API discussion with Marcus Richards (March 20) was strategic and positive.",
+          "signals": [
+            "Lodi flagged HIGH risk by Cayden \u2014 may cancel over limited weekly call time (March 24 #at-risk)",
+            "Sierra Vista flagged HIGH and MEDIUM risk in #at-risk channel (March 25)",
+            "Veras app went down at the start of Ocean Pointe training today (May 7) \u2014 rescheduled to May 8",
+            "Kei-Ai South Bay no-show on April 30 \u2014 schedules still not entered as of May 5",
+            "Avenues, Woodland, Palazzo, Riverwood all launched smoothly",
+            "Marcus Richards (corporate) engaged on API integration \u2014 strategic interest in platform data"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Very high cadence driven by simultaneous onboarding of multiple buildings. 15+ Circleback meetings in 90 days. Appropriate for this lifecycle stage. No QBR yet (too early \u2014 deal closed 6 weeks ago). Engagement is primarily at the building level; corporate contact (Marcus Richards) engaged once on API scoping. Some engagement gaps: Kei-Ai South Bay no-show, Ocean Pointe dropout today.",
+          "avgDaysBetween": 6,
+          "recentMeetings": [
+            {
+              "title": "Veras Training Call | Aspen Ocean Pointe (app went down)",
+              "date": "2026-05-07"
+            },
+            {
+              "title": "Aspen Kei-Ai South Bay | Veras Training (rescheduled)",
+              "date": "2026-05-05"
+            },
+            {
+              "title": "Aspen Kei-Ai South Bay | Veras Training (no-show)",
+              "date": "2026-04-30"
+            },
+            {
+              "title": "Aspen Kei-Ai South Bay & Veras | Intro & Welcome Call",
+              "date": "2026-04-23"
+            },
+            {
+              "title": "Marina Pointe | Veras Training",
+              "date": "2026-04-17"
+            },
+            {
+              "title": "Marina Pointe & Veras | Welcome + Kick-off",
+              "date": "2026-04-10"
+            },
+            {
+              "title": "Aspen Lake Park | Veras Training",
+              "date": "2026-04-07"
+            },
+            {
+              "title": "ASPEN SKILLED HEALTHCARE | Lodi Veras Training",
+              "date": "2026-04-07"
+            }
+          ]
+        }
+      },
+      "communities": [
+        {
+          "name": "Kei-Ai Los Angeles Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 33,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Country Crest Post Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 10,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Avenues Transitional Care Center",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "NorthPark Post-Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Cottonwood Post-Acute Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Riverwood Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "The Palazzo ALF / Rehab Center at Palazzo",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Woodland Post Acute",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "South Marin Health & Wellness Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Berkley East Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "University Post-Acute Rehab",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Tracy Nursing and Rehabilitation Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Marina Pointe Healthcare & Subacute",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lodi Nursing & Rehabilitation",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lake Park Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Oakland Heights Nursing & Rehabilitation",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Ocean Pointe Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Sierra Vista Healthcare",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Kei-Ai South Bay Healthcare Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Camarillo Senior Living - Alta Camarillo",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
     }
   ]
 }
