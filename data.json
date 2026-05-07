@@ -1,91 +1,376 @@
 {
-  "lastUpdated": "2026-05-06",
+  "lastUpdated": "2026-05-07",
   "csReps": [
     "Cayden Fox",
     "Tegan Perry"
   ],
-  "companies": [
+  "entries": [
     {
-      "name": "Arbors",
-      "file": "data/arbors.json",
-      "slug": "arbors",
-      "latestScore": 60,
-      "latestDate": "2026-04-16",
-      "csRep": "Tegan Perry",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/52808132015"
-    },
-    {
-      "name": "Aspen Health",
-      "file": "data/aspen-health.json",
-      "slug": "aspen-health",
-      "latestScore": 62,
-      "latestDate": "2026-04-01",
+      "company": "Cottonwood",
+      "date": "2026-05-07",
       "csRep": "Cayden Fox",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45165127196"
-    },
-    {
-      "name": "Avista",
-      "file": "data/avista.json",
-      "slug": "avista",
-      "latestScore": 67,
-      "latestDate": "2026-04-08",
-      "csRep": "Tegan Perry",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49011577969"
-    },
-    {
-      "name": "Cottonwood",
-      "file": "data/cottonwood.json",
-      "slug": "cottonwood",
-      "latestScore": 59,
-      "latestDate": "2026-04-15",
-      "csRep": "Cayden Fox",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555"
-    },
-    {
-      "name": "Heritage Senior Living",
-      "file": "data/heritage-senior-living.json",
-      "slug": "heritage-senior-living",
-      "latestScore": 58,
-      "latestDate": "2026-05-06",
-      "csRep": "Cayden Fox",
-      "status": "post-live",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/49138203519",
-      "renewalDate": "2026-12-12",
-      "integrationType": "unknown"
-    },
-    {
-      "name": "PACS",
-      "file": "data/pacs.json",
-      "slug": "pacs",
-      "latestScore": 61,
-      "latestDate": "2026-04-20",
-      "csRep": "Tegan Perry",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/51690887207"
-    },
-    {
-      "name": "SAL Management",
-      "file": "data/sal-management.json",
-      "slug": "sal-management",
-      "latestScore": 62,
-      "latestDate": "2026-04-16",
-      "csRep": "Tegan Perry",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45215952686"
-    },
-    {
-      "name": "Stellar",
-      "file": "data/stellar.json",
-      "slug": "stellar",
-      "latestScore": 66,
-      "latestDate": "2026-04-16",
-      "csRep": "Tegan Perry",
-      "status": "",
-      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/50094352242"
+      "overallScore": 63,
+      "platformUsage": 70,
+      "customerSentiment": 58,
+      "npsSurvey": 43,
+      "onboardingHealth": 57,
+      "supportLoad": 72,
+      "engagementCadence": 82,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/45778087555",
+      "metabaseEmployerId": "cm1kwooyg000009k3956aex4v",
+      "renewalDate": null,
+      "npsTicketUrls": [
+        {
+          "label": "Angie Wheeler - Crestwood - February 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41797011310"
+        },
+        {
+          "label": "Kathleen Wilke - Columbine Commons - February 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41761858935"
+        },
+        {
+          "label": "Erika Upchurch - Columbine West - February 2026",
+          "score": 3,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41940439312"
+        },
+        {
+          "label": "Staci Day - Alpine Meadow - February 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41759845381"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Automated conflict handling isn't working (Ridgewood at Heritage)",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40471205163"
+        },
+        {
+          "label": "Manually added PTO immediately disappears from schedule",
+          "priority": "MEDIUM",
+          "status": "open",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/36689149470"
+        }
+      ],
+      "actions": [
+        "Spanish Fork at-risk follow-up \u2014 Blake reverted to paper for a month due to bugs; schedule a hands-on session and lead with ROI data to rebuild confidence",
+        "Execute regional training plan for low-engagement buildings (Lomond Peak, Millcreek, Maple Ridge) as discussed in QBR; split by region not all 22 at once",
+        "Improve staff app adoption \u2014 shift invite fill rate is only ~2-3%; work with building admins on mobile onboarding and set up shared on-call Veras profiles where phones can't install the app"
+      ],
+      "notes": "Large, actively expanding account \u2014 12 buildings live, 8 in onboarding pipeline (TX and Nevada expansion). QBR on Apr 24 was a turning point; $14K Q1 savings and $61K/yr North Shore trajectory landed well with Ben Reeves. Workday API integration scoped for Jan 1 2027 go-live (Impact Advisors). Main risks: Spanish Fork paper reversion, low NPS, low invite fill rate.",
+      "metricDetails": {
+        "platformUsage": {
+          "summary": "All 18 facilities in Metabase are publishing schedules \u2014 a strong foundation. Message volume peaked at ~7K/mo in Feb and is holding around 6-6.3K through April. Call-offs actively tracked and rising (277 in April). Shift invite fill rate is very low at ~2-3%, pointing to staff app adoption as the main gap.",
+          "highlights": [
+            "18/18 buildings publishing shifts",
+            "~6.3K messages sent in April",
+            "277 call-offs recorded in April",
+            "2.5% invite acceptance rate (April) \u2014 staff app adoption gap"
+          ]
+        },
+        "npsSurvey": {
+          "period": "February 2026",
+          "avgScore": 2.5,
+          "responseCount": 4,
+          "trend": "Up slightly vs. January 2026 (avg 2.25), but still in low range",
+          "responses": [
+            {
+              "building": "Crestwood",
+              "respondent": "Angie Wheeler",
+              "score": 2,
+              "note": null
+            },
+            {
+              "building": "Columbine Commons",
+              "respondent": "Kathleen Wilke",
+              "score": 3,
+              "note": null
+            },
+            {
+              "building": "Columbine West H&R",
+              "respondent": "Erika Upchurch",
+              "score": 3,
+              "note": "Slow, doesn't allow sending a message for all shared shifts, can't view 2 schedule views simultaneously"
+            },
+            {
+              "building": "Alpine Meadow",
+              "respondent": "Staci Day",
+              "score": 2,
+              "note": null
+            }
+          ]
+        },
+        "supportLoad": {
+          "openHigh": 0,
+          "openMedium": 2,
+          "openLow": 0,
+          "backlogItems": 3,
+          "summary": "No high-priority open bugs. Two medium bugs open 3-5 months: PTO disappears on save (all Cottonwood communities) and automated conflict handling not working. Three feature requests in backlog: schedule calendar view improvements, budget overage indicator, shift pickup indicator."
+        },
+        "onboardingHealth": {
+          "total": 20,
+          "live": 12,
+          "midStage": 7,
+          "earlyStage": 1,
+          "summary": "12 of 20 buildings in Customer Success (live) stage. 7 in Pre-Live Check-In \u2014 includes TX and Nevada expansion buildings, several of which are already publishing in Metabase. Park Forest Care Center just added May 6 (Training Call stage). Actively expanding account."
+        },
+        "customerSentiment": {
+          "summary": "Mixed but trending positive. Recurring technical friction throughout Q1 (PTO bugs, cache issues, schedule display, automated conflict handling). Spanish Fork is the most at-risk community \u2014 Blake reverted to a paper system for a month. The Apr 24 QBR was a genuine turning point: Ben Reeves engaged and enthusiastic, ROI data resonated, Workday integration scoped. Columbine Commons check-in on Apr 21 was collaborative. No confirmed real #at-risk signals (Highland Manor Fallon entries from March 30 appear to be test entries).",
+          "signals": [
+            "QBR Apr 24: $14K Q1 savings and $61K/yr North Shore trajectory \u2014 Ben Reeves positive and forward-looking",
+            "Spanish Fork: Blake reverted to paper scheduling for a month due to time-off routing bugs and cache display issues",
+            "Recurring NPS complaints: glitchy, confusing interface, can't send messages for all shared shifts, can't view 2 schedule screens simultaneously",
+            "Workday API integration kicked off Apr 23 with Impact Advisors \u2014 Jan 2027 go-live target, strong alignment"
+          ]
+        },
+        "engagementCadence": {
+          "summary": "Very active cadence appropriate for a large multi-site account in active onboarding and expansion. 4+ substantive calls in April alone. Ben Reeves and Holden Grandstaff are exec contacts; Bryan and Jake don't yet have active dashboard logins (credentials resent at QBR). Region-based check-in cadence discussed as the scalable format going forward.",
+          "avgDaysBetween": 10,
+          "recentMeetings": [
+            {
+              "title": "Cottonwood Health | Veras QBR",
+              "date": "2026-04-24"
+            },
+            {
+              "title": "Cottonwood | Veras Integration Meeting (Workday API)",
+              "date": "2026-04-23"
+            },
+            {
+              "title": "Cottonwood | Veras Check-In (Columbine Commons)",
+              "date": "2026-04-21"
+            },
+            {
+              "title": "Cottonwood Spanish Fork Training Call",
+              "date": "2026-03-25"
+            }
+          ]
+        }
+      },
+      "communities": [
+        {
+          "name": "Alpine Meadow Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 33,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Centre Avenue H&R",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine Commons ALF",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine Commons H&R",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Columbine West H&R",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 52,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Crestwood Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": 33,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Highland Manor Elko",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Highland Manor Fallon",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Highland Manor Mesquite",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lemay Avenue H&R",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Lomond Peak Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Maple Ridge Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Millcreek Rehab",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "North Shore H&R",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Silver Oak H&R (TX)",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Spanish Fork Nursing",
+          "csRep": "Cayden Fox",
+          "status": "live",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "St George Bella Terra (TX)",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Willow Haven H&R",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Cottonwood Nevada",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        },
+        {
+          "name": "Park Forest Care Center",
+          "csRep": "Cayden Fox",
+          "status": "onboarding",
+          "npsSurvey": null,
+          "platformUsage": null,
+          "onboardingHealth": null,
+          "supportLoad": null,
+          "customerSentiment": null,
+          "engagementCadence": null
+        }
+      ]
     }
   ]
 }
