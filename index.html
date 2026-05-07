@@ -1901,7 +1901,8 @@ function buildMetricDetailBody(dimKey, detail, entry) {
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>${hoursHtml}${otHtml}`;
   }
   if(dimKey==='integrationHealth') {
-    const it=detail.integrationType||entry.integrationType||'unknown';
+    const _ihRegAcct=REGISTRY_DATA&&REGISTRY_DATA.accounts&&REGISTRY_DATA.accounts[entry.company];
+    const it=detail.integrationType||entry.integrationType||(_ihRegAcct&&_ihRegAcct.integrationType)||'unknown';
     const badgeStyle={'API':'background:#dbeafe;color:#1d4ed8','SFTP':'background:#d1fae5;color:#065f46','unknown':'background:var(--gray-100);color:var(--gray-400)'}[it]||'background:var(--gray-100);color:var(--gray-400)';
     const stages=detail.onboardingStages||{};
     const t=stages.total||0,l=stages.live||0,m=stages.midStage||0,e=stages.earlyStage||0;
@@ -1934,18 +1935,30 @@ function buildMetricDetailBody(dimKey, detail, entry) {
     const ihCommTable=ihComms.length
       ?`<div class="detail-section"><div class="detail-label">Communities (${ihComms.length})</div><table class="comm-modal-table"><thead><tr><th>Community</th><th>Status</th></tr></thead><tbody>${ihCommRows}</tbody></table></div>`
       :'';
+    const _ihLastQbr=(entry.qbrDates&&entry.qbrDates.length&&entry.qbrDates[entry.qbrDates.length-1])||(entry.lastQbrDate)||(_ihRegAcct&&_ihRegAcct.lastQbrDate)||null;
+    const _ihNextQbr=(_ihRegAcct&&_ihRegAcct.nextQbrDate)||null;
+    const _ihQbrHtml=(_ihLastQbr||_ihNextQbr)?`<div class="detail-section"><div class="detail-label">QBR Dates</div><div class="detail-summary">${_ihLastQbr?`Last: <strong>${esc(_ihLastQbr)}</strong>`:''} ${_ihNextQbr&&_ihLastQbr?' · ':''} ${_ihNextQbr?`Next: <strong>${esc(_ihNextQbr)}</strong>`:''}</div></div>`:'';
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||''  )}</div></div>
       <div class="detail-section"><div class="detail-label">Integration Type</div>
         <span style="display:inline-block;padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;${esc(badgeStyle)}">${esc(it==='unknown'||it===''?'— not set —':it)}</span>
-      </div>${stagesHtml}${ihCommTable}`;
+      </div>${_ihQbrHtml}${stagesHtml}${ihCommTable}`;
   }
   if(dimKey==='relationshipStrength') {
     const typeIcons={'QBR':'📊','training':'📚','in-person':'🤝','call':'📞','meeting':'📅'};
     const sentColors={'positive':'var(--green-dark)','negative':'var(--red-dark)','neutral':'var(--gray-500)'};
+    const _rsRegAcct=REGISTRY_DATA&&REGISTRY_DATA.accounts&&REGISTRY_DATA.accounts[entry.company];
+    const _rsLastQbr=(entry.qbrDates&&entry.qbrDates.length?entry.qbrDates[entry.qbrDates.length-1]:null)||(entry.lastQbrDate)||(_rsRegAcct&&_rsRegAcct.lastQbrDate)||null;
+    const _rsNextQbr=(_rsRegAcct&&_rsRegAcct.nextQbrDate)||null;
+    const _rsLastTouch=entry.lastTouchPoint||null;
+    const _rsQbrRow=_rsLastQbr?`<div class="signal-item"><span style="flex-shrink:0;font-size:14px">📊</span><div style="flex:1;min-width:0"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font-weight:500;font-size:12px;color:var(--gray-800)">Last QBR</span><span style="font-size:11px;color:var(--gray-400)">${esc(_rsLastQbr)}</span></div><div style="font-size:11px;color:var(--gray-400)">from account settings</div></div></div>`:'';
+    const _rsNextQbrRow=_rsNextQbr?`<div class="signal-item"><span style="flex-shrink:0;font-size:14px">📅</span><div style="flex:1;min-width:0"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font-weight:500;font-size:12px;color:var(--gray-800)">Next QBR</span><span style="font-size:11px;color:var(--yellow-dark)">${esc(_rsNextQbr)}</span></div><div style="font-size:11px;color:var(--gray-400)">from account settings</div></div></div>`:'';
+    const _rsQbrSection=(_rsQbrRow||_rsNextQbrRow)?`<div class="detail-section"><div class="detail-label">QBR Cadence</div><div class="signal-list">${_rsQbrRow}${_rsNextQbrRow}</div></div>`:'';
     const tpHtml=(detail.touchPoints||[]).slice(0,15).map(tp=>{
       const icon=typeIcons[tp.type]||'📅';
       const color=sentColors[tp.sentiment]||'var(--gray-500)';
       const d=tp.date?new Date(tp.date+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'';
+      const nameHtml=tp.name?`<div style="font-size:11px;color:var(--gray-700);margin-top:1px">${esc(tp.name)}</div>`:'';
+      const urlHtml=tp.url?`<a href="${esc(tp.url)}" target="_blank" style="font-size:10px;color:var(--brand)">Open ↗</a>`:'';
       return `<div class="signal-item" style="align-items:flex-start">
         <span style="flex-shrink:0;font-size:14px">${icon}</span>
         <div style="flex:1;min-width:0">
@@ -1953,12 +1966,17 @@ function buildMetricDetailBody(dimKey, detail, entry) {
             <span style="font-weight:500;font-size:12px;color:var(--gray-800)">${esc(tp.type||'meeting')}</span>
             ${d?`<span style="font-size:11px;color:var(--gray-400)">${d}</span>`:''}
             ${tp.sentiment?`<span style="font-size:11px;color:${color}">${esc(tp.sentiment)}</span>`:''}
+            ${urlHtml}
           </div>
+          ${nameHtml}
           ${tp.source?`<div style="font-size:11px;color:var(--gray-400)">${esc(tp.source)}</div>`:''}
         </div></div>`;
     }).join('');
+    const _rsLastTouchHtml=_rsLastTouch&&!tpHtml?`<div class="detail-section"><div class="detail-label">Last Touch Point</div><div class="detail-summary">${esc(_rsLastTouch)}</div></div>`:'';
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
+      ${_rsQbrSection}
       ${detail.avgDaysBetween?`<div class="detail-section"><div class="detail-label">Avg Days Between Touchpoints</div><div class="detail-summary" style="font-size:24px;font-weight:700;color:var(--brand)">${detail.avgDaysBetween} days</div></div>`:''}
+      ${_rsLastTouchHtml}
       ${tpHtml?`<div class="detail-section"><div class="detail-label">Recent Touchpoints</div><div class="signal-list">${tpHtml}</div></div>`:''}`;
   }
   if(dimKey==='sentimentFriction') {
@@ -1985,22 +2003,56 @@ function buildMetricDetailBody(dimKey, detail, entry) {
         </div>`
       :'';
     const nps=detail.nps||{};
+    // NPS header + individual responses with links
+    const _sfNpsTickets=entry.npsTicketUrls||[];
+    const _sfNpsResponses=nps.responses||[];
+    const _sfNpsRows=_sfNpsTickets.length
+      ?_sfNpsTickets.map(r=>{
+          const sc=r.score;
+          const dot=sc>=4?'var(--green)':sc>=3?'var(--yellow)':'var(--red)';
+          return `<div class="signal-item"><div class="signal-dot" style="background:${dot};flex-shrink:0"></div><div style="flex:1;min-width:0"><a class="ticket-link" href="${esc(r.url)}" target="_blank">${esc(r.label)}</a></div><span style="font-size:12px;font-weight:700;color:${dot};flex-shrink:0">${sc}/5</span></div>`;
+        }).join('')
+      :_sfNpsResponses.map(r=>{
+          const sc=r.score;
+          const dot=sc>=4?'var(--green)':sc>=3?'var(--yellow)':'var(--red)';
+          return `<div class="signal-item"><div class="signal-dot" style="background:${dot};flex-shrink:0"></div><div style="flex:1;min-width:0"><span style="font-size:12px">${esc(r.building||'')}${r.respondent?' — '+esc(r.respondent):''}</span>${r.note?`<div style="font-size:11px;color:var(--gray-500);margin-top:1px">${esc(r.note)}</div>`:''}</div><span style="font-size:12px;font-weight:700;color:${dot};flex-shrink:0">${sc}/5</span></div>`;
+        }).join('');
     const npsHtml=nps.avgScore!=null
-      ?`<div class="detail-section"><div class="detail-label">NPS</div><div class="detail-summary"><strong>${esc(nps.period||'')}</strong> · Avg: <strong>${nps.avgScore}/5</strong> · ${nps.responseCount||0} responses · Trend: ${esc(nps.trend||'\u2014')}</div></div>`
-      :'';
+      ?`<div class="detail-section"><div class="detail-label">NPS</div>
+          <div class="detail-summary" style="margin-bottom:${_sfNpsRows?'8px':'0'}"><strong>${esc(nps.period||'')}</strong> · Avg: <strong>${nps.avgScore}/5</strong> · ${nps.responseCount||0} responses · Trend: ${esc(nps.trend||'—')}</div>
+          ${_sfNpsRows?`<div class="signal-list" style="margin-top:4px">${_sfNpsRows}</div>`:''}
+        </div>`
+      :(_sfNpsTickets.length
+        ?`<div class="detail-section"><div class="detail-label">NPS Responses</div><div class="signal-list">${_sfNpsRows}</div></div>`
+        :'');
     const sl=detail.supportLoad||{};
-    const slHtml=(sl.openHigh!=null||sl.openMedium!=null||sl.openLow!=null)
-      ?`<div class="detail-section"><div class="detail-label">Open Bug Tickets</div><div class="support-counts">
-          <div class="support-count high"><div class="num">${sl.openHigh||0}</div><div class="lbl">HIGH</div></div>
-          <div class="support-count med"><div class="num">${sl.openMedium||0}</div><div class="lbl">MEDIUM</div></div>
-          <div class="support-count low"><div class="num">${sl.openLow||0}</div><div class="lbl">LOW</div></div>
-        </div></div>`
+    // Bug tickets with links
+    const _sfBugTickets=(entry.bugTicketUrls||[]);
+    const _sfOpenBugs=_sfBugTickets.filter(t=>t.status!=='closed');
+    const _sfBugRows=_sfOpenBugs.map(t=>`<div class="signal-item"><span class="ticket-tag ${(t.priority||'low').toLowerCase()}" style="flex-shrink:0">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('');
+    const slHtml=(sl.openHigh!=null||sl.openMedium!=null||sl.openLow!=null||_sfOpenBugs.length)
+      ?`<div class="detail-section"><div class="detail-label">Open Bug Tickets</div>
+          ${(sl.openHigh!=null||sl.openMedium!=null||sl.openLow!=null)?`<div class="support-counts" style="margin-bottom:${_sfBugRows?'10px':'0'}">
+            <div class="support-count high"><div class="num">${sl.openHigh||0}</div><div class="lbl">HIGH</div></div>
+            <div class="support-count med"><div class="num">${sl.openMedium||0}</div><div class="lbl">MEDIUM</div></div>
+            <div class="support-count low"><div class="num">${sl.openLow||0}</div><div class="lbl">LOW</div></div>
+          </div>`:''}
+          ${_sfBugRows?`<div class="signal-list">${_sfBugRows}</div>`:(!sl.openHigh&&!sl.openMedium&&!sl.openLow?`<div style="color:var(--green-dark);font-size:12px;padding:4px 0">✓ No open bugs</div>`:'')}
+        </div>`
+      :'';
+    // Feature requests
+    const _sfFrTickets=(entry.featureRequestUrls||entry.featureRequestTicketUrls||[]).filter(t=>t.status!=='closed');
+    const frHtml=_sfFrTickets.length
+      ?`<div class="detail-section">
+          <div class="detail-label" style="display:flex;align-items:center;gap:6px">Feature Requests <span style="font-size:10px;font-weight:400;color:var(--gray-400);background:var(--gray-100);padding:1px 6px;border-radius:10px">not scored</span></div>
+          <div class="signal-list">${_sfFrTickets.map(t=>`<div class="signal-item"><span class="ticket-tag" style="flex-shrink:0;background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe">${t.priority||'LOW'}</span><a class="ticket-link" href="${esc(t.url)}" target="_blank">${esc(t.label)}</a></div>`).join('')}</div>
+        </div>`
       :'';
     const atRiskHtml=detail.atRiskMentions>0
-      ?`<div class="detail-section"><div class="detail-label">At-Risk Signals</div><div class="detail-summary" style="color:var(--red-dark)">${detail.atRiskMentions} Slack #at-risk mention${detail.atRiskMentions>1?'s':''}</div></div>`
+      ?`<div class="detail-section"><div class="detail-label">At-Risk Signals</div><div class="detail-summary" style="color:var(--red-dark)">${detail.atRiskMentions} Slack #at-risk mention${detail.atRiskMentions>1?'s':''} — <a href="https://veras.slack.com/archives/at-risk" target="_blank" style="color:var(--red-dark);text-decoration:underline">view #at-risk ↗</a></div></div>`
       :'';
     return `<div class="detail-section"><div class="detail-label">Summary</div><div class="detail-summary">${esc(detail.summary||'')}</div></div>
-      ${sigsHtml}${npsHtml}${slHtml}${atRiskHtml}`;
+      ${sigsHtml}${npsHtml}${slHtml}${frHtml}${atRiskHtml}`;
   }
   return `<div class="detail-summary">${esc(JSON.stringify(detail,null,2))}</div>`;
 }
