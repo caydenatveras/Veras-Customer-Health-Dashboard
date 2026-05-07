@@ -2,8 +2,8 @@
   "_schema": {
     "description": "Registry of all Veras accounts and their communities. Drives automated health score runs.",
     "communityFields": {
-      "displayName": "Dashboard label \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 decoupled from HubSpot/Metabase naming",
-      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 no name matching.",
+      "displayName": "Dashboard label ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ decoupled from HubSpot/Metabase naming",
+      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no name matching.",
       "metabaseFacilityIds": "Array of Metabase Facility.id values. Array supports multi-entity buildings.",
       "npsKeyword": "Short unique substring matched against NPS ticket subjects to identify this community's responses.",
       "mappingConfidence": "'confirmed' = manually verified | 'inferred' = auto-matched, should verify | 'unresolved' = needs manual mapping",
@@ -169,7 +169,7 @@
           ],
           "npsKeyword": "Fallon",
           "mappingConfidence": "inferred",
-          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify which entities to include for usage data",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify which entities to include for usage data",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -181,7 +181,7 @@
           ],
           "npsKeyword": "Elko",
           "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify",
+          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -210,7 +210,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Nevada",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Nevada region facilities not yet in Metabase \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 6 communities signed Apr 2026, Metabase setup pending",
+          "mappingNote": "Nevada region facilities not yet in Metabase ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 6 communities signed Apr 2026, Metabase setup pending",
           "implRep": "Tegan Perry"
         }
       ],
@@ -401,7 +401,7 @@
           ],
           "npsKeyword": "Hanover",
           "mappingConfidence": "inferred",
-          "mappingNote": "0% publish rate in May 2026 \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 investigate",
+          "mappingNote": "0% publish rate in May 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ investigate",
           "implRep": "Tegan Perry"
         },
         {
@@ -566,7 +566,7 @@
           ],
           "npsKeyword": "West Jordan",
           "mappingConfidence": "inferred",
-          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 stage may be stale, verify with Bryan Ovalle",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ stage may be stale, verify with Bryan Ovalle",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -587,7 +587,7 @@
           ],
           "npsKeyword": "Cache Valley",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify whether this is a standalone community or part of another entity",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify whether this is a standalone community or part of another entity",
           "implRep": null
         }
       ],
@@ -701,7 +701,7 @@
       "metabaseEmployerId": "clud2zmdj000208k1bnx70lfx",
       "csRep": "Tegan Perry",
       "renewalDate": "",
-      "note": "Large enterprise account \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
+      "note": "Large enterprise account ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
       "communities": [
         {
           "displayName": "Aspen Hills",
@@ -733,7 +733,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Las Palmas",
           "mappingConfidence": "inferred",
-          "mappingNote": "Re-signup (new admin) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 previous onboarding record may exist",
+          "mappingNote": "Re-signup (new admin) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ previous onboarding record may exist",
           "implRep": "Cayden Fox"
         },
         {
@@ -758,7 +758,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Ridgeway",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ needs rep assignment",
           "implRep": null
         },
         {
@@ -767,7 +767,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Norwood",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ needs rep assignment",
           "implRep": null
         }
       ],
@@ -780,7 +780,7 @@
       "metabaseEmployerId": "cmfh8985x000008kzci3h7v81",
       "csRep": "Cayden Fox",
       "renewalDate": "",
-      "integrationType": "unknown",
+      "integrationType": "API",
       "communities": [
         {
           "displayName": "Cottonwood Post-Acute Rehab",
@@ -843,7 +843,7 @@
           "implRep": "Cayden Fox"
         },
         {
-          "displayName": "The Palazzo \u2014 Rehab Center at Palazzo",
+          "displayName": "The Palazzo — Rehab Center at Palazzo",
           "hubspotOnboardingTicketId": "42614191210",
           "metabaseFacilityIds": [
             "cmfhzcgkl6qy1hjqh2m12f9p6"
@@ -958,7 +958,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Bixby Towers",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Not found in Metabase \u2014 may not be configured yet",
+          "mappingNote": "Not found in Metabase — may not be configured yet",
           "implRep": "Cayden Fox"
         },
         {
@@ -977,7 +977,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Kei-Ai South Bay",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Just kicked off Apr 23 \u2014 not yet in Metabase",
+          "mappingNote": "Just kicked off Apr 23 — not yet in Metabase",
           "implRep": "Cayden Fox"
         },
         {
@@ -988,7 +988,7 @@
           ],
           "npsKeyword": "Alta Camarillo",
           "mappingConfidence": "inferred",
-          "mappingNote": "Metabase entry is 'Camarillo Senior Living - Alta Camarillo' \u2014 may be shared with Camarillo Senior Living ticket",
+          "mappingNote": "Metabase entry is 'Camarillo Senior Living - Alta Camarillo' — may be shared with Camarillo Senior Living ticket",
           "implRep": null
         },
         {
@@ -997,7 +997,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Camarillo Senior Living",
           "mappingConfidence": "unresolved",
-          "mappingNote": "May share Metabase entry with Alta Camarillo \u2014 verify",
+          "mappingNote": "May share Metabase entry with Alta Camarillo — verify",
           "implRep": null
         },
         {
@@ -1137,7 +1137,10 @@
           "mappingConfidence": "unresolved",
           "implRep": null
         }
-      ]
+      ],
+      "lastQbrDate": "",
+      "nextQbrDate": "2026-05-14",
+      "excludedCommunities": []
     }
   }
 }
