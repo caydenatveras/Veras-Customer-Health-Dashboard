@@ -353,6 +353,1553 @@
           "engagementCadence": null
         }
       ]
+    },
+    {
+      "schemaVersion": 1,
+      "company": "Aspen Health",
+      "date": "2026-05-07",
+      "csRep": "Cayden Fox",
+      "dataConfidence": "high",
+      "lifecycle": "active-onboarding",
+      "integrationHealth": null,
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/54589714729",
+      "renewalDate": "",
+      "integrationType": "unknown",
+      "qbrDates": [],
+      "lastTouchPoint": "2026-04-27",
+      "npsTicketUrls": [
+        {
+          "label": "Osvaldo Heredia \u2014 Kei-Ai LA \u2014 February 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41746453157"
+        },
+        {
+          "label": "Shoua Yang \u2014 Country Crest \u2014 February 2026",
+          "score": 1,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41770669949"
+        },
+        {
+          "label": "Shoua Yang \u2014 Country Crest \u2014 January 2026",
+          "score": 2,
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39956966024"
+        }
+      ],
+      "bugTicketUrls": [
+        {
+          "label": "Agency appears on schedule twice when they have a called off shift",
+          "priority": "MEDIUM",
+          "status": "Backlog",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050897763",
+          "daysOpen": 120
+        },
+        {
+          "label": "Schedule doesn't display properly when area is secondary grouping",
+          "priority": "MEDIUM",
+          "status": "Backlog",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/34224983605",
+          "daysOpen": 183
+        }
+      ],
+      "featureRequestUrls": [
+        {
+          "label": "Make schedule changes more forgiving",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44277459531"
+        },
+        {
+          "label": "Staff schedule preferences for overnight shifts",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44277459283"
+        },
+        {
+          "label": "Still require scheduler approval after staff accepts shift invite",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/44276778293"
+        },
+        {
+          "label": "Automatically stagger sending shift invites",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41173666489"
+        },
+        {
+          "label": "Change the display/print order of shift templates",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/40472136027"
+        },
+        {
+          "label": "Position groups/preset filters on schedule",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050401032"
+        },
+        {
+          "label": "Share open shifts that aren't published",
+          "priority": "LOW",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050215981"
+        },
+        {
+          "label": "Daily Print View Enhancements (Consolidated)",
+          "priority": "MEDIUM",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39050215680"
+        },
+        {
+          "label": "Submit pending time off requests from scheduler side",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/37727275845"
+        },
+        {
+          "label": "Send home (facility call off) flow",
+          "priority": "HIGH",
+          "url": "https://app.hubspot.com/contacts/20279079/record/0-5/33118971741"
+        }
+      ],
+      "actions": [
+        "NPS remediation: Kei-Ai LA scored 2/5 and Country Crest scored 1/5 in Jan\u2013Feb \u2014 get on a call with both building contacts before the May 14 QBR to understand root causes and close the loop.",
+        "The Avenues is near-dark: 2.6% published despite being fully live since Jan. Escalate to building admin immediately \u2014 Feb 10 notes flag schedule visibility issues. This is the highest-urgency operational risk.",
+        "Lodi at-risk: flagged for potential cancellation due to limited call time. Book a dedicated weekly slot with the Lodi team (Marissa, Johnny) through go-live to stabilize the relationship."
+      ],
+      "notes": "Large enterprise account \u2014 42 facilities in pipeline, 8 live. Strong exec engagement (President + CEO + CAO in contact, all touched within 90 days). Q1 QBR scheduled May 14. Key risks: low NPS on first two live buildings, Lodi and Sierra Vista at-risk flags, The Avenues near-dark, and rapidly escalating overtime spend ($1.5M/mo) that Veras hasn't yet demonstrably bent. UKG sync gap noted Feb 10.",
+      "rawMetrics": {
+        "publishRate": 0.456,
+        "darkFacilities": 0,
+        "nursingActive30dPct": 83.2,
+        "mobileAdoptionPct": 89.1,
+        "schedulerMomChangePct": 2.2,
+        "fillRatePct": 1.1,
+        "fillRateMomDeltaPct": -3.0,
+        "hoursSaved": 927.0,
+        "otMomChangePct": -7.0,
+        "clockVariancePctGt15": 13.9,
+        "clockVarianceMomChangePts": 3.3,
+        "mealBreakMissedPct": 94.6,
+        "mealBreakMomChangePts": 2.7,
+        "meetingCount90d": 16,
+        "daysSinceLastMeeting": 10,
+        "meetingCountLast30d": 5,
+        "meetingCountPrior60d": 12,
+        "multiThreadingCoveragePct": 50.0,
+        "execDaysSinceContact": 0,
+        "execContactsExist": true,
+        "hasQbrLast90d": false,
+        "hasInPersonLast90d": false,
+        "hasTrainingLast90d": true,
+        "tonePositiveCount": 8,
+        "toneNegativeCount": 8,
+        "hasEscalationLanguage": true,
+        "npsAvg": 1.5,
+        "npsResponseCount": 2,
+        "openHighTickets": 0,
+        "openHighAges": [],
+        "openHighWithEngStage": [],
+        "openMediumGt30dCount": 2,
+        "intercomOpenConversations": 0,
+        "atRiskMentions": 3
+      },
+      "metricDetails": {
+        "productAdoption": {
+          "summary": "19 facilities active in Metabase; 8 live, 11 in onboarding. Overall shift-weighted publish rate 45.6%. Riverwood (93%) and Country Crest (85%) lead. The Avenues (2.6%) is critically underperforming for a live building. Nursing engagement strong: 83% 30-day login, 89% mobile adoption. Scheduler headcount grew slightly (+2.2% MoM). Fill rate via ShiftInvite very low at 1.1% \u2014 staff largely not accepting open shift invitations through app yet.",
+          "highlights": [
+            "Riverwood: 93.4% published \u2014 model building",
+            "Country Crest: 84.6% published",
+            "The Avenues: 2.6% published \u2014 LIVE building, urgent",
+            "Nursing 30d login: 83.2% | Mobile adoption: 89.1%",
+            "ShiftInvite fill rate 1.1% (Apr) \u2014 staff not using open shift accept flow"
+          ],
+          "publishRate": 0.456,
+          "darkFacilities": 0,
+          "fillRate": 0.011,
+          "fillRateTrend": -0.03,
+          "loginUsage": {
+            "nursingWorkers": 387,
+            "active30d": 322,
+            "active7d": 285,
+            "active30dPct": 83.2
+          },
+          "mobileAdoption": {
+            "mobileAppUsers": 345,
+            "mobilePct": 89.1
+          },
+          "schedulerLoginDecay": {
+            "priorMonthUsers": 91,
+            "currentMonthUsers": 93,
+            "momChangePct": 2.2
+          }
+        },
+        "outcomesRoi": {
+          "summary": "927 hours saved in trailing 12 months (1,688 call-offs, 20 schedule-months, 610 daily census entries). OT spend is extremely high \u2014 spiked to $1.6M in March before easing slightly to $1.5M in April (-7% MoM). Clock variance worsening: 13.9% of nursing shifts >15min variance in April (up from 8.3% in Feb). Meal break missed rate 94.6% \u2014 very high, though only 463 shifts captured (T&A enabled subset).",
+          "timeSavings": {
+            "hoursSaved": 927.0,
+            "callOffs": 1688,
+            "scheduleMonths": 20,
+            "dailyCardDays": 610
+          },
+          "overtimeTrend": {
+            "byMonth": [
+              {
+                "month": "2025-11-01",
+                "otHours": 9462.5,
+                "otSpend": 490168.8
+              },
+              {
+                "month": "2025-12-01",
+                "otHours": 12358.6,
+                "otSpend": 642465.22
+              },
+              {
+                "month": "2026-01-01",
+                "otHours": 12893.4,
+                "otSpend": 672566.6
+              },
+              {
+                "month": "2026-02-01",
+                "otHours": 26337.1,
+                "otSpend": 1326551.34
+              },
+              {
+                "month": "2026-03-01",
+                "otHours": 32601.7,
+                "otSpend": 1622469.26
+              },
+              {
+                "month": "2026-04-01",
+                "otHours": 30310.9,
+                "otSpend": 1500582.21
+              }
+            ],
+            "trend": "Growing"
+          },
+          "clockVariance": {
+            "mostRecentMonth": "2026-04-01",
+            "avgClockinVarianceMins": 30.7,
+            "pctVarianceGt15": 13.9,
+            "momChangePctPoints": 3.3,
+            "byMonth": [
+              {
+                "month": "2026-02-01",
+                "timesheetEntries": 37460,
+                "avgClockinVarianceMins": 30.3,
+                "pctVarianceGt15": 8.3
+              },
+              {
+                "month": "2026-03-01",
+                "timesheetEntries": 45230,
+                "avgClockinVarianceMins": 29.5,
+                "pctVarianceGt15": 10.6
+              },
+              {
+                "month": "2026-04-01",
+                "timesheetEntries": 44232,
+                "avgClockinVarianceMins": 30.7,
+                "pctVarianceGt15": 13.9
+              }
+            ]
+          },
+          "mealBreakRate": {
+            "mostRecentMonth": "2026-04-01",
+            "missedBreakPct": 94.6,
+            "momChangePctPoints": 2.7,
+            "byMonth": [
+              {
+                "month": "2026-02-01",
+                "totalShifts": 103,
+                "missedBreaks": 90,
+                "missedBreakPct": 87.4
+              },
+              {
+                "month": "2026-03-01",
+                "totalShifts": 258,
+                "missedBreaks": 237,
+                "missedBreakPct": 91.9
+              },
+              {
+                "month": "2026-04-01",
+                "totalShifts": 463,
+                "missedBreaks": 438,
+                "missedBreakPct": 94.6
+              }
+            ],
+            "dataAvailable": true
+          }
+        },
+        "integrationHealth": {
+          "summary": "Integration health tracking is not yet active. This dimension will score HRIS data pull recency, error rates, and uptime once a data source is connected. Note: an API integration discussion occurred Mar 20 \u2014 Aspen wants to pull scheduling/labor data into their UKG/GL analytics stack. API does not exist yet; Russell Dupaix will loop them in when building.",
+          "integrationType": "unknown",
+          "status": "inactive"
+        },
+        "relationshipStrength": {
+          "summary": "Very active onboarding cadence: 16 meetings in 90 days, 5 in the last 30. Multiple team members engaged across facilities. Exec multi-threading is strong \u2014 President (Jay Brady, contacted today), CEO (Jeff Bradshaw), CAO (Marcus Paxman, contacted May 6), CTO, CFO, and two Executive Directors all in HubSpot. Q1 QBR scheduled May 14. Only 50% domain coverage (aspenhealth.com vs. gmail.com contacts). No in-person visits or past QBRs in window, but QBR imminent.",
+          "avgDaysBetween": 5,
+          "touchPoints": [
+            {
+              "type": "call",
+              "date": "2026-04-27",
+              "name": "Team sync (HubSpot log)",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            },
+            {
+              "type": "training",
+              "date": "2026-04-23",
+              "name": "Aspen Kei-Ai South Bay & Veras | Intro & Welcome Call",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-04-21",
+              "name": "Veras Check-In | Aspen Tracy Nursing and Rehabilitation Center",
+              "sentiment": "positive",
+              "source": "hubspot"
+            },
+            {
+              "type": "training",
+              "date": "2026-04-17",
+              "name": "Marina Pointe | Veras Training",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "training",
+              "date": "2026-04-10",
+              "name": "Marina Pointe & Veras | Welcome + Kick-off",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "training",
+              "date": "2026-04-02",
+              "name": "Aspen Lake Park | Veras Welcome & Setup Call",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "training",
+              "date": "2026-04-02",
+              "name": "Veras Training | Aspen Tracy Nursing and Rehabilitation Center",
+              "sentiment": "positive",
+              "source": "hubspot"
+            },
+            {
+              "type": "training",
+              "date": "2026-03-24",
+              "name": "Veras Welcome & Setup Call | Aspen Tracy (kickoff)",
+              "sentiment": "positive",
+              "source": "hubspot"
+            },
+            {
+              "type": "training",
+              "date": "2026-03-23",
+              "name": "Veras Welcome & Setup Call | ASPEN SKILLED HEALTHCARE (Lodi)",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-03-20",
+              "name": "Aspen Health | Veras API Discussion",
+              "sentiment": "neutral",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-03-17",
+              "name": "Quarterly Check-In (The Avenues)",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            },
+            {
+              "type": "training",
+              "date": "2026-03-13",
+              "name": "Woodland Post Acute // Veras Welcome & Setup Call",
+              "sentiment": "positive",
+              "source": "circleback"
+            },
+            {
+              "type": "call",
+              "date": "2026-02-24",
+              "name": "Aspen Health | Veras Sync",
+              "sentiment": "positive",
+              "source": "hubspot"
+            },
+            {
+              "type": "call",
+              "date": "2026-02-13",
+              "name": "Marcus | Veras",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            },
+            {
+              "type": "call",
+              "date": "2026-02-12",
+              "name": "Messaging review (HubSpot log)",
+              "sentiment": "positive",
+              "source": "hubspot"
+            },
+            {
+              "type": "call",
+              "date": "2026-02-10",
+              "name": "Live building review \u2014 Ed, Leah",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            },
+            {
+              "type": "call",
+              "date": "2026-02-10",
+              "name": "Live building review \u2014 Ashley, Crystal, Maria",
+              "sentiment": "neutral",
+              "source": "hubspot"
+            }
+          ],
+          "qbrDates": [],
+          "multiThreading": {
+            "totalContacts": 18,
+            "recentlyTouched": 6,
+            "uniqueDomainsTotal": 2,
+            "uniqueDomainsRecentlyTouched": 1,
+            "coveragePct": 50.0
+          },
+          "execEngagement": {
+            "execContactsFound": 10,
+            "execRecentlyTouched": 10,
+            "mostRecentExecContact": "2026-05-07",
+            "execContacts": [
+              {
+                "name": "Jay Brady",
+                "jobtitle": "President",
+                "email": "jbrady@aspenhealth.com",
+                "lastContacted": "2026-05-07"
+              },
+              {
+                "name": "Marcus Paxman",
+                "jobtitle": "Chief Administrative Officer",
+                "email": "mpaxman@aspenhealth.com",
+                "lastContacted": "2026-05-06"
+              },
+              {
+                "name": "Bryan Fisher",
+                "jobtitle": "Executive Director",
+                "email": "bfisher@aspenhealth.com",
+                "lastContacted": "2026-04-21"
+              },
+              {
+                "name": "Bryan Millikan",
+                "jobtitle": "Assistant Administrator @ Kei-Ai LA",
+                "email": "bmillikan@aspenhealth.com",
+                "lastContacted": "2026-02-25"
+              },
+              {
+                "name": "Christian Siedentopf",
+                "jobtitle": "Administrator @ Country Crest",
+                "email": "christians@aspenhealth.com",
+                "lastContacted": "2026-02-19"
+              },
+              {
+                "name": "Kevin Krone",
+                "jobtitle": "Director of Nursing @ Country Crest",
+                "email": "kkrone@aspenhealth.com",
+                "lastContacted": "2026-02-17"
+              },
+              {
+                "name": "Stan Anderson",
+                "jobtitle": "Chief Technology Officer",
+                "email": "sanderson@aspenhealth.com",
+                "lastContacted": "2026-02-17"
+              },
+              {
+                "name": "Jeff Bradshaw",
+                "jobtitle": "CEO",
+                "email": null,
+                "lastContacted": "2026-02-17"
+              },
+              {
+                "name": "Bryan Fisher",
+                "jobtitle": "Executive Director of Operations",
+                "email": "bryanf@aspenhealth.com",
+                "lastContacted": "2026-02-17"
+              },
+              {
+                "name": "Frank Jurado",
+                "jobtitle": "Chief Financial Officer",
+                "email": "frankj@aspenhealth.com",
+                "lastContacted": "2026-02-17"
+              }
+            ],
+            "note": "jobtitle coverage ~15% \u2014 some execs may be undetected. Strong C-suite presence: President, CEO, CAO, CTO, CFO all in system."
+          },
+          "giftsSent": []
+        },
+        "sentimentFriction": {
+          "summary": "NPS is alarming: avg 1.5/5 from Jan\u2013Feb 2026 (Country Crest 1/5, Kei-Ai LA 2/5) \u2014 the two earliest live buildings. Circleback notes are largely positive (onboarding progress, engaged staff) but also surface a UKG sync gap, confusion around master vs. working schedule, and the API data gap. Three at-risk mentions in Slack (Lodi cancellation risk, Sierra Vista \u00d7 2). Two MEDIUM bugs in backlog \u2014 both very old (120 and 183 days). No HIGH open bugs. Intercom shows 0 open conversations (all 14 closed).",
+          "nps": {
+            "period": "February 2026",
+            "avgScore": 1.5,
+            "responseCount": 2,
+            "trend": "Insufficient data",
+            "responses": [
+              {
+                "building": "Kei-Ai Los Angeles Healthcare Center",
+                "respondent": "Osvaldo Heredia",
+                "score": 2,
+                "note": null
+              },
+              {
+                "building": "Country Crest Post Acute",
+                "respondent": "Shoua Yang",
+                "score": 1,
+                "note": null
+              }
+            ]
+          },
+          "supportLoad": {
+            "openHigh": 0,
+            "openMedium": 2,
+            "openLow": 0,
+            "backlogItems": 2,
+            "oldestHighDays": 0,
+            "agedHighCount": 0,
+            "agedMediumCount": 2,
+            "summary": "0 HIGH bugs. 2 MEDIUM bugs \u2014 both very old (183 days and 120 days in backlog). Also 10 open feature requests."
+          },
+          "atRiskMentions": 3,
+          "signals": {
+            "positive": [
+              {
+                "text": "Kei-Ai South Bay go-live on track for mid-May \u2014 platform fully configured, Myra confirmed login works",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Marina Pointe team engaged \u2014 training progressing well with full team attendance",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Lake Park excited about go-live target May 4 \u2014 all setups done",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              },
+              {
+                "text": "CAO Marcus Paxman actively engaged \u2014 requesting data integration for cross-facility analytics",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "President Jay Brady in HubSpot \u2014 contacted today (May 7)",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Switched from OnShift \u2014 team preferred Veras for split shifts and PRN scheduling",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Aspen published a month of schedules and some staff are using the app on live buildings",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Q1 QBR scheduled May 14 \u2014 executive meeting confirms engagement at leadership level",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              }
+            ],
+            "negative": [
+              {
+                "text": "NPS 1/5 from Country Crest (Shoua Yang, Feb 2026) and 2/5 from Kei-Ai LA (Osvaldo Heredia, Feb 2026)",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "UKG sync gap: new CNA Cassidy Barnes did not sync from UKG into Veras (Ed, Feb 10)",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Duplicate name publishing bug noted at The Avenues \u2014 manual workaround in place (Mar 17)",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Marina Pointe team struggled with master vs. working schedule concept (Apr 17)",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              },
+              {
+                "text": "API integration Aspen requested does not exist yet \u2014 gap for their analytics reporting",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Lodi flagged at-risk: may cancel over limited weekly call time with rep (Slack, Mar 24)",
+                "sourceType": "slack",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Sierra Vista Healthcare flagged at-risk \u00d7 2 (Slack, Mar 25)",
+                "sourceType": "slack",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Clock-in variance worsening: 13.9% of shifts >15min in April (up from 8.3% in Feb)",
+                "sourceType": "metabase",
+                "sourceUrl": ""
+              }
+            ],
+            "neutral": [
+              {
+                "text": "Aspen turned off time-off requests and shift swaps on early live buildings",
+                "sourceType": "hubspot",
+                "sourceUrl": ""
+              },
+              {
+                "text": "Staffing budgets skipped on Lodi kickoff call \u2014 to be covered in follow-up",
+                "sourceType": "circleback",
+                "sourceUrl": ""
+              }
+            ]
+          }
+        }
+      },
+      "communities": [
+        {
+          "name": "Cottonwood Post-Acute Rehab",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Cottonwood",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/39540932698",
+          "npsSurvey": null,
+          "productAdoption": 55,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2666,
+            "publishedShifts": 1458,
+            "publishRate": 54.7,
+            "period": "May 2026",
+            "note": ""
+          }
+        },
+        {
+          "name": "Country Crest Post Acute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Country Crest",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32647507780",
+          "npsSurvey": 1,
+          "productAdoption": 90,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1024,
+            "publishedShifts": 866,
+            "publishRate": 84.6,
+            "period": "May 2026",
+            "note": "NPS 1/5 (Feb 2026) \u2014 schedule remediation call"
+          }
+        },
+        {
+          "name": "Kei-Ai Los Angeles Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Kei-Ai Los Angeles",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32543029623",
+          "npsSurvey": 2,
+          "productAdoption": 75,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 8229,
+            "publishedShifts": 5106,
+            "publishRate": 62.1,
+            "period": "May 2026",
+            "note": "NPS 2/5 (Feb 2026) \u2014 largest facility by volume"
+          }
+        },
+        {
+          "name": "North Park Post-Acute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "NorthPark",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40350934396",
+          "npsSurvey": null,
+          "productAdoption": 75,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2518,
+            "publishedShifts": 1527,
+            "publishRate": 60.6,
+            "period": "May 2026",
+            "note": ""
+          }
+        },
+        {
+          "name": "Riverwood Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Riverwood",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43433189491",
+          "npsSurvey": null,
+          "productAdoption": 90,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1352,
+            "publishedShifts": 1263,
+            "publishRate": 93.4,
+            "period": "May 2026",
+            "note": "Top publisher \u2014 model facility"
+          }
+        },
+        {
+          "name": "The Avenues Transitional Care Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Avenues",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40290206265",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1946,
+            "publishedShifts": 51,
+            "publishRate": 2.6,
+            "period": "May 2026",
+            "note": "\u26a0\ufe0f LIVE but near-dark \u2014 2.6% published. Urgent outreach needed. Note from Feb 10 sync: staff schedule visibility issues logged."
+          }
+        },
+        {
+          "name": "The Palazzo \u2014 Rehab Center at Palazzo",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Palazzo",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42614191210",
+          "npsSurvey": null,
+          "productAdoption": 55,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2154,
+            "publishedShifts": 958,
+            "publishRate": 44.5,
+            "period": "May 2026",
+            "note": "Also has a separate stage-1 ticket (43794049563) \u2014 possible DBA variant"
+          }
+        },
+        {
+          "name": "Woodland Post Acute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Woodland",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43433189491",
+          "npsSurvey": null,
+          "productAdoption": 75,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1747,
+            "publishedShifts": 1273,
+            "publishRate": 72.9,
+            "period": "May 2026",
+            "note": "Onboarded Mar 13; Jared wanted Apr 1 go-live \u2014 tracking well"
+          }
+        },
+        {
+          "name": "South Marin Health & Wellness Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "pending-go-live",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "South Marin",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42144265293",
+          "npsSurvey": null,
+          "productAdoption": 55,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2315,
+            "publishedShifts": 1073,
+            "publishRate": 46.3,
+            "period": "May 2026",
+            "note": "46% publish pre-go-live \u2014 on track"
+          }
+        },
+        {
+          "name": "University Post-Acute Rehab",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "University Post-Acute",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43841506601",
+          "npsSurvey": null,
+          "productAdoption": 75,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1610,
+            "publishedShifts": 1002,
+            "publishRate": 62.2,
+            "period": "May 2026",
+            "note": "Strong early publishing for mid-stage"
+          }
+        },
+        {
+          "name": "Oakland Heights Nursing & Rehabilitation",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "mid-stage",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Oakland Heights",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43792810667",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 900,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "0% published at mid-stage \u2014 expected if still setting up schedules"
+          }
+        },
+        {
+          "name": "Sierra Vista Healthcare",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "mid-stage",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Sierra Vista",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43430372122",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1410,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "\u26a0\ufe0f At-risk: flagged in #at-risk channel (Bryan Ovalle, Mar 25). 0% published."
+          }
+        },
+        {
+          "name": "Lake Park Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Lake Park",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43858071160",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 588,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "Kickoff Apr 2, go-live target May 4. 0% published \u2014 normal at early stage."
+          }
+        },
+        {
+          "name": "Lodi Nursing & Rehabilitation",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Lodi",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43794050207",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1485,
+            "publishedShifts": 25,
+            "publishRate": 1.7,
+            "period": "May 2026",
+            "note": "\u26a0\ufe0f At-risk: may cancel over limited call time (flagged Mar 24). 1.7% published."
+          }
+        },
+        {
+          "name": "Tracy Nursing and Rehabilitation Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Tracy",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43798744341",
+          "npsSurvey": null,
+          "productAdoption": 35,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1748,
+            "publishedShifts": 607,
+            "publishRate": 34.7,
+            "period": "May 2026",
+            "note": "Bryan Ovalle rep. Training + check-in done in April."
+          }
+        },
+        {
+          "name": "Berkley East Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Berkley East",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804387964",
+          "npsSurvey": null,
+          "productAdoption": 55,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 2325,
+            "publishedShifts": 1261,
+            "publishRate": 54.2,
+            "period": "May 2026",
+            "note": "Good early publishing despite being in training stage"
+          }
+        },
+        {
+          "name": "Ocean Pointe Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Bryan Ovalle",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Ocean Pointe",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43797505426",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 768,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "Early stage, no publishing yet \u2014 normal."
+          }
+        },
+        {
+          "name": "Bixby Towers Post-Acute Rehab",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "No Metabase facility match found \u2014 may not be set up yet",
+          "npsKeyword": "Bixby Towers",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40347062075",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "No Metabase facility match \u2014 may not be configured in platform yet. Also has a stage-1 ticket (43798435432)."
+          }
+        },
+        {
+          "name": "Marina Pointe Healthcare & Subacute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "npsKeyword": "Marina Pointe",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43796576151",
+          "npsSurvey": null,
+          "productAdoption": 15,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1350,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "Kickoff Apr 10, training Apr 17. Go-live target May 1. 0% published \u2014 early stage."
+          }
+        },
+        {
+          "name": "Kei-Ai South Bay Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": "Cayden Fox",
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "No Metabase facility match found yet \u2014 just kicked off Apr 23",
+          "npsKeyword": "Kei-Ai South Bay",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804851979",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Intro/welcome call Apr 23. Go-live mid-May. Not yet in Metabase."
+          }
+        },
+        {
+          "name": "Alta Camarillo Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "inferred",
+          "mappingNote": "May share Metabase entry with 'Camarillo Senior Living - Alta Camarillo'",
+          "npsKeyword": "Alta Camarillo",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43792810669",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": 1,
+            "publishedShifts": 0,
+            "publishRate": 0.0,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start. 1 test shift in Metabase under 'Camarillo Senior Living - Alta Camarillo'."
+          }
+        },
+        {
+          "name": "The Rehabilitation Center at the Palazzo",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "May duplicate live 'CS - The Palazzo' ticket. Verify if separate building.",
+          "npsKeyword": "Rehabilitation Center Palazzo",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43794049563",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1. May be same as live Palazzo ticket \u2014 confirm with team."
+          }
+        },
+        {
+          "name": "Santa Rosa",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Santa Rosa",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43785083733",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Villa Valencia Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Villa Valencia",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43787769437",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Capistrano Senior Living",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Capistrano",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804696595",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Berkley Post-Acute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Berkley Post-Acute",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43786841720",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Camarillo Senior Living",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Camarillo Senior Living",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43782916906",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Berkley West Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Berkley West",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43784308642",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "The Springs Healthcare Center at the Carlotta",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Springs Carlotta",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43790093598",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Greenridge Post-Acute",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Greenridge Post-Acute",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43795958324",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Stonebrook Health and Rehabilitation",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Stonebrook",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804696594",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Mission Palms Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Mission Palms",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43796887303",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "San Juan Hills Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "San Juan Hills",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43782916905",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "La Casa Via Transitional Care Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "La Casa Via",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43781522093",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Greenridge Senior Living",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Greenridge Senior",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43794976533",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "The Gardens Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Gardens Healthcare",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43793583714",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Pacific Heights Transitional Care Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Pacific Heights",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43792033808",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Petaluma Post-Acute Rehab",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Petaluma",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43795958323",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        },
+        {
+          "name": "Hillcrest Heights Healthcare Center",
+          "excluded": false,
+          "csRep": "Cayden Fox",
+          "implRep": null,
+          "status": "early",
+          "registryNote": "Not in registry \u2014 add at registry.html",
+          "mappingConfidence": "unresolved",
+          "npsKeyword": "Hillcrest Heights",
+          "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43800292475",
+          "npsSurvey": null,
+          "productAdoption": null,
+          "integrationHealth": null,
+          "sentimentFriction": null,
+          "relationshipStrength": null,
+          "outcomesRoi": null,
+          "usageDetail": {
+            "totalShifts": null,
+            "publishedShifts": null,
+            "publishRate": null,
+            "period": "May 2026",
+            "note": "Stage 1 pre-start."
+          }
+        }
+      ]
     }
   ]
 }

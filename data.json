@@ -736,5 +736,19 @@
         }
       ]
     }
+  ],
+  "companies": [
+    {
+      "name": "Aspen Health",
+      "file": "data/aspen-health.json",
+      "slug": "aspen-health",
+      "latestScore": null,
+      "latestDate": "2026-05-07",
+      "csRep": "Cayden Fox",
+      "status": "active-onboarding",
+      "hubspotUrl": "https://app.hubspot.com/contacts/20279079/record/0-2/54589714729",
+      "renewalDate": "",
+      "integrationType": "unknown"
+    }
   ]
 }
