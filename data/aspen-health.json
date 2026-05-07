@@ -118,20 +118,20 @@
         }
       ],
       "actions": [
-        "Address Lodi urgently \u2014 schedule a call this week, clarify unresolved issues, consider increasing check-in frequency",
-        "Get Sierra Vista to a go-live plan \u2014 identify the blocker (3,529 drafts, 0 published) and set a firm target date",
-        "Investigate low shift invite fill rate (2-4%) \u2014 check app adoption at top facilities and consider re-engagement push",
-        "Drive NPS submissions \u2014 only 3 responses across 35+ facilities; expand outreach to get 5-6 live facility responses",
-        "Build TX-batch onboarding roadmap \u2014 ~25 facilities not started; sequence with Marcus over Q2"
+        "Address Lodi urgently — schedule a call this week, clarify unresolved issues, consider increasing check-in frequency",
+        "Get Sierra Vista to a go-live plan — identify the blocker (3,529 drafts, 0 published) and set a firm target date",
+        "Investigate low shift invite fill rate (2-4%) — check app adoption at top facilities and consider re-engagement push",
+        "Drive NPS submissions — only 3 responses across 35+ facilities; expand outreach to get 5-6 live facility responses",
+        "Build TX-batch onboarding roadmap — ~25 facilities not started; sequence with Marcus over Q2"
       ],
-      "notes": "Large portfolio in active expansion. Marcus relationship is healthy and forward-looking (API/analytics discussions). NPS dragging score down significantly \u2014 avg 1.67/5 from 3 responses. Lodi and Sierra Vista both flagged at-risk in Slack. Fill rate at 2-4% is a concern. ~25 TX-suffix facilities not yet started.",
+      "notes": "Large portfolio in active expansion. Marcus relationship is healthy and forward-looking (API/analytics discussions). NPS dragging score down significantly — avg 1.67/5 from 3 responses. Lodi and Sierra Vista both flagged at-risk in Slack. Fill rate at 2-4% is a concern. ~25 TX-suffix facilities not yet started.",
       "metricDetails": {
         "platformUsage": {
-          "summary": "10 of 14 facilities publishing shifts. Messaging volume 160x growth Oct-Mar. Fill rate 2-4% \u2014 weak engagement with shift invites. 4 facilities at zero published shifts.",
+          "summary": "10 of 14 facilities publishing shifts. Messaging volume 160x growth Oct-Mar. Fill rate 2-4% — weak engagement with shift invites. 4 facilities at zero published shifts.",
           "highlights": [
             "14 facilities active in platform",
-            "Messaging: 10/mo (Oct) \u2192 1,608/mo (Mar) \u2014 strong growth",
-            "Fill rate: 3.9% (Jan) / 2.3% (Feb) / 4.1% (Mar) \u2014 consistently low",
+            "Messaging: 10/mo (Oct) → 1,608/mo (Mar) — strong growth",
+            "Fill rate: 3.9% (Jan) / 2.3% (Feb) / 4.1% (Mar) — consistently low",
             "Lodi, Tracy, University Post-Acute, Oakland Heights: 0 published shifts"
           ]
         },
@@ -139,7 +139,7 @@
           "period": "Jan-Feb 2026",
           "avgScore": 1.67,
           "responseCount": 3,
-          "trend": "Only 3 responses total \u2014 insufficient for trend",
+          "trend": "Only 3 responses total — insufficient for trend",
           "responses": [
             {
               "building": "Kei-Ai Los Angeles HC",
@@ -176,24 +176,24 @@
           "summary": "5 live, 4 in soft-launch/training, 4 in early setup, ~27 not started (TX-suffix batch). Large pipeline ahead."
         },
         "customerSentiment": {
-          "summary": "Marcus engaged and expanding \u2014 API/analytics integration discussions underway. No escalations in transcripts. Lodi is the one substantive risk signal. Facilities going live reporting positive experiences.",
+          "summary": "Marcus engaged and expanding — API/analytics integration discussions underway. No escalations in transcripts. Lodi is the one substantive risk signal. Facilities going live reporting positive experiences.",
           "signals": [
-            "Marcus pursuing UKG API + billing + analytics integration \u2014 strong commitment signal",
+            "Marcus pursuing UKG API + billing + analytics integration — strong commitment signal",
             "Multiple facilities successfully onboarded in Q1 2026 with positive staff adoption",
-            "Lodi flagged at-risk \u2014 contact frustrated with rep time allocation",
-            "Sierra Vista flagged at-risk \u2014 no clear go-live path"
+            "Lodi flagged at-risk — contact frustrated with rep time allocation",
+            "Sierra Vista flagged at-risk — no clear go-live path"
           ]
         },
         "engagementCadence": {
           "summary": "Strong weekly/biweekly cadence across all active facilities. Corporate sync with Marcus Feb 24 + API meeting Mar 20. No facilities have gone dark.",
           "avgDaysBetween": 10,
           "recentMeetings": [
-            "Aspen Health API Discussion \u2014 Mar 20, 2026",
-            "Aspen Skilled Healthcare go-live \u2014 Apr 1, 2026",
-            "Woodland Post Acute Check-In \u2014 Mar 24, 2026",
-            "South Marin Pre-Live Check-In \u2014 Mar 19, 2026",
-            "The Avenues Check-In \u2014 Mar 17, 2026",
-            "Riverwood Pre-Live Check-In \u2014 Mar 13, 2026"
+            "Aspen Health API Discussion — Mar 20, 2026",
+            "Aspen Skilled Healthcare go-live — Apr 1, 2026",
+            "Woodland Post Acute Check-In — Mar 24, 2026",
+            "South Marin Pre-Live Check-In — Mar 19, 2026",
+            "The Avenues Check-In — Mar 17, 2026",
+            "Riverwood Pre-Live Check-In — Mar 13, 2026"
           ]
         }
       },
@@ -369,17 +369,17 @@
       "lastTouchPoint": "2026-04-27",
       "npsTicketUrls": [
         {
-          "label": "Osvaldo Heredia \u2014 Kei-Ai LA \u2014 February 2026",
+          "label": "Osvaldo Heredia — Kei-Ai LA — February 2026",
           "score": 2,
           "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41746453157"
         },
         {
-          "label": "Shoua Yang \u2014 Country Crest \u2014 February 2026",
+          "label": "Shoua Yang — Country Crest — February 2026",
           "score": 1,
           "url": "https://app.hubspot.com/contacts/20279079/record/0-5/41770669949"
         },
         {
-          "label": "Shoua Yang \u2014 Country Crest \u2014 January 2026",
+          "label": "Shoua Yang — Country Crest — January 2026",
           "score": 2,
           "url": "https://app.hubspot.com/contacts/20279079/record/0-5/39956966024"
         }
@@ -451,11 +451,10 @@
         }
       ],
       "actions": [
-        "NPS remediation: Kei-Ai LA scored 2/5 and Country Crest scored 1/5 in Jan\u2013Feb \u2014 get on a call with both building contacts before the May 14 QBR to understand root causes and close the loop.",
-        "The Avenues is near-dark: 2.6% published despite being fully live since Jan. Escalate to building admin immediately \u2014 Feb 10 notes flag schedule visibility issues. This is the highest-urgency operational risk.",
-        "Lodi at-risk: flagged for potential cancellation due to limited call time. Book a dedicated weekly slot with the Lodi team (Marissa, Johnny) through go-live to stabilize the relationship."
+        "NPS remediation: Kei-Ai LA scored 2/5 and Country Crest scored 1/5 in Jan–Feb — get on a call with both building contacts before the May 14 QBR to understand root causes and close the loop.",
+        "The Avenues is near-dark: 2.6% published despite being fully live since Jan. Escalate to building admin immediately — Feb 10 notes flag schedule visibility issues. This is the highest-urgency operational risk."
       ],
-      "notes": "Large enterprise account \u2014 42 facilities in pipeline, 8 live. Strong exec engagement (President + CEO + CAO in contact, all touched within 90 days). Q1 QBR scheduled May 14. Key risks: low NPS on first two live buildings, Lodi and Sierra Vista at-risk flags, The Avenues near-dark, and rapidly escalating overtime spend ($1.5M/mo) that Veras hasn't yet demonstrably bent. UKG sync gap noted Feb 10.",
+      "notes": "Large enterprise account — 42 facilities in pipeline, 8 live. Strong exec engagement (President + CEO + CAO in contact, all touched within 90 days). Q1 QBR scheduled May 14. Key risks: low NPS on first two live buildings, The Avenues near-dark, and rapidly escalating overtime spend ($1.5M/mo) that Veras hasn't yet demonstrably bent. UKG sync gap noted Feb 10.",
       "rawMetrics": {
         "publishRate": 0.456,
         "darkFacilities": 0,
@@ -490,17 +489,17 @@
         "openHighWithEngStage": [],
         "openMediumGt30dCount": 2,
         "intercomOpenConversations": 0,
-        "atRiskMentions": 3
+        "atRiskMentions": 0
       },
       "metricDetails": {
         "productAdoption": {
-          "summary": "19 facilities active in Metabase; 8 live, 11 in onboarding. Overall shift-weighted publish rate 45.6%. Riverwood (93%) and Country Crest (85%) lead. The Avenues (2.6%) is critically underperforming for a live building. Nursing engagement strong: 83% 30-day login, 89% mobile adoption. Scheduler headcount grew slightly (+2.2% MoM). Fill rate via ShiftInvite very low at 1.1% \u2014 staff largely not accepting open shift invitations through app yet.",
+          "summary": "19 facilities active in Metabase; 8 live, 11 in onboarding. Overall shift-weighted publish rate 45.6%. Riverwood (93%) and Country Crest (85%) lead. The Avenues (2.6%) is critically underperforming for a live building. Nursing engagement strong: 83% 30-day login, 89% mobile adoption. Scheduler headcount grew slightly (+2.2% MoM). Fill rate via ShiftInvite very low at 1.1% — staff largely not accepting open shift invitations through app yet.",
           "highlights": [
-            "Riverwood: 93.4% published \u2014 model building",
+            "Riverwood: 93.4% published — model building",
             "Country Crest: 84.6% published",
-            "The Avenues: 2.6% published \u2014 LIVE building, urgent",
+            "The Avenues: 2.6% published — LIVE building, urgent",
             "Nursing 30d login: 83.2% | Mobile adoption: 89.1%",
-            "ShiftInvite fill rate 1.1% (Apr) \u2014 staff not using open shift accept flow"
+            "ShiftInvite fill rate 1.1% (Apr) — staff not using open shift accept flow"
           ],
           "publishRate": 0.456,
           "darkFacilities": 0,
@@ -523,7 +522,7 @@
           }
         },
         "outcomesRoi": {
-          "summary": "927 hours saved in trailing 12 months (1,688 call-offs, 20 schedule-months, 610 daily census entries). OT spend is extremely high \u2014 spiked to $1.6M in March before easing slightly to $1.5M in April (-7% MoM). Clock variance worsening: 13.9% of nursing shifts >15min variance in April (up from 8.3% in Feb). Meal break missed rate 94.6% \u2014 very high, though only 463 shifts captured (T&A enabled subset).",
+          "summary": "927 hours saved in trailing 12 months (1,688 call-offs, 20 schedule-months, 610 daily census entries). OT spend is extremely high — spiked to $1.6M in March before easing slightly to $1.5M in April (-7% MoM). Clock variance worsening: 13.9% of nursing shifts >15min variance in April (up from 8.3% in Feb). Meal break missed rate 94.6% — very high, though only 463 shifts captured (T&A enabled subset).",
           "timeSavings": {
             "hoursSaved": 927.0,
             "callOffs": 1688,
@@ -619,12 +618,12 @@
           }
         },
         "integrationHealth": {
-          "summary": "Integration health tracking is not yet active. This dimension will score HRIS data pull recency, error rates, and uptime once a data source is connected. Note: an API integration discussion occurred Mar 20 \u2014 Aspen wants to pull scheduling/labor data into their UKG/GL analytics stack. API does not exist yet; Russell Dupaix will loop them in when building.",
+          "summary": "Integration health tracking is not yet active. This dimension will score HRIS data pull recency, error rates, and uptime once a data source is connected. Note: an API integration discussion occurred Mar 20 — Aspen wants to pull scheduling/labor data into their UKG/GL analytics stack. API does not exist yet; Russell Dupaix will loop them in when building.",
           "integrationType": "unknown",
           "status": "inactive"
         },
         "relationshipStrength": {
-          "summary": "Very active onboarding cadence: 16 meetings in 90 days, 5 in the last 30. Multiple team members engaged across facilities. Exec multi-threading is strong \u2014 President (Jay Brady, contacted today), CEO (Jeff Bradshaw), CAO (Marcus Paxman, contacted May 6), CTO, CFO, and two Executive Directors all in HubSpot. Q1 QBR scheduled May 14. Only 50% domain coverage (aspenhealth.com vs. gmail.com contacts). No in-person visits or past QBRs in window, but QBR imminent.",
+          "summary": "Very active onboarding cadence: 16 meetings in 90 days, 5 in the last 30. Multiple team members engaged across facilities. Exec multi-threading is strong — President (Jay Brady, contacted today), CEO (Jeff Bradshaw), CAO (Marcus Paxman, contacted May 6), CTO, CFO, and two Executive Directors all in HubSpot. Q1 QBR scheduled May 14. Only 50% domain coverage (aspenhealth.com vs. gmail.com contacts). No in-person visits or past QBRs in window, but QBR imminent.",
           "avgDaysBetween": 5,
           "touchPoints": [
             {
@@ -735,14 +734,14 @@
             {
               "type": "call",
               "date": "2026-02-10",
-              "name": "Live building review \u2014 Ed, Leah",
+              "name": "Live building review — Ed, Leah",
               "sentiment": "neutral",
               "source": "hubspot"
             },
             {
               "type": "call",
               "date": "2026-02-10",
-              "name": "Live building review \u2014 Ashley, Crystal, Maria",
+              "name": "Live building review — Ashley, Crystal, Maria",
               "sentiment": "neutral",
               "source": "hubspot"
             }
@@ -821,12 +820,12 @@
                 "lastContacted": "2026-02-17"
               }
             ],
-            "note": "jobtitle coverage ~15% \u2014 some execs may be undetected. Strong C-suite presence: President, CEO, CAO, CTO, CFO all in system."
+            "note": "jobtitle coverage ~15% — some execs may be undetected. Strong C-suite presence: President, CEO, CAO, CTO, CFO all in system."
           },
           "giftsSent": []
         },
         "sentimentFriction": {
-          "summary": "NPS is alarming: avg 1.5/5 from Jan\u2013Feb 2026 (Country Crest 1/5, Kei-Ai LA 2/5) \u2014 the two earliest live buildings. Circleback notes are largely positive (onboarding progress, engaged staff) but also surface a UKG sync gap, confusion around master vs. working schedule, and the API data gap. Three at-risk mentions in Slack (Lodi cancellation risk, Sierra Vista \u00d7 2). Two MEDIUM bugs in backlog \u2014 both very old (120 and 183 days). No HIGH open bugs. Intercom shows 0 open conversations (all 14 closed).",
+          "summary": "NPS is alarming: avg 1.5/5 from Jan–Feb 2026 (Country Crest 1/5, Kei-Ai LA 2/5) — the two earliest live buildings. Circleback notes are largely positive (onboarding progress, engaged staff) but also surface a UKG sync gap, confusion around master vs. working schedule, and the API data gap. Two MEDIUM bugs in backlog — both very old (120 and 183 days). No HIGH open bugs. Intercom shows 0 open conversations (all 14 closed).",
           "nps": {
             "period": "February 2026",
             "avgScore": 1.5,
@@ -855,38 +854,38 @@
             "oldestHighDays": 0,
             "agedHighCount": 0,
             "agedMediumCount": 2,
-            "summary": "0 HIGH bugs. 2 MEDIUM bugs \u2014 both very old (183 days and 120 days in backlog). Also 10 open feature requests."
+            "summary": "0 HIGH bugs. 2 MEDIUM bugs — both very old (183 days and 120 days in backlog). Also 10 open feature requests."
           },
-          "atRiskMentions": 3,
+          "atRiskMentions": 0,
           "signals": {
             "positive": [
               {
-                "text": "Kei-Ai South Bay go-live on track for mid-May \u2014 platform fully configured, Myra confirmed login works",
+                "text": "Kei-Ai South Bay go-live on track for mid-May — platform fully configured, Myra confirmed login works",
                 "sourceType": "circleback",
                 "sourceUrl": ""
               },
               {
-                "text": "Marina Pointe team engaged \u2014 training progressing well with full team attendance",
+                "text": "Marina Pointe team engaged — training progressing well with full team attendance",
                 "sourceType": "circleback",
                 "sourceUrl": ""
               },
               {
-                "text": "Lake Park excited about go-live target May 4 \u2014 all setups done",
+                "text": "Lake Park excited about go-live target May 4 — all setups done",
                 "sourceType": "circleback",
                 "sourceUrl": ""
               },
               {
-                "text": "CAO Marcus Paxman actively engaged \u2014 requesting data integration for cross-facility analytics",
+                "text": "CAO Marcus Paxman actively engaged — requesting data integration for cross-facility analytics",
                 "sourceType": "hubspot",
                 "sourceUrl": ""
               },
               {
-                "text": "President Jay Brady in HubSpot \u2014 contacted today (May 7)",
+                "text": "President Jay Brady in HubSpot — contacted today (May 7)",
                 "sourceType": "hubspot",
                 "sourceUrl": ""
               },
               {
-                "text": "Switched from OnShift \u2014 team preferred Veras for split shifts and PRN scheduling",
+                "text": "Switched from OnShift — team preferred Veras for split shifts and PRN scheduling",
                 "sourceType": "hubspot",
                 "sourceUrl": ""
               },
@@ -896,7 +895,7 @@
                 "sourceUrl": ""
               },
               {
-                "text": "Q1 QBR scheduled May 14 \u2014 executive meeting confirms engagement at leadership level",
+                "text": "Q1 QBR scheduled May 14 — executive meeting confirms engagement at leadership level",
                 "sourceType": "hubspot",
                 "sourceUrl": ""
               }
@@ -913,7 +912,7 @@
                 "sourceUrl": ""
               },
               {
-                "text": "Duplicate name publishing bug noted at The Avenues \u2014 manual workaround in place (Mar 17)",
+                "text": "Duplicate name publishing bug noted at The Avenues — manual workaround in place (Mar 17)",
                 "sourceType": "hubspot",
                 "sourceUrl": ""
               },
@@ -923,18 +922,8 @@
                 "sourceUrl": ""
               },
               {
-                "text": "API integration Aspen requested does not exist yet \u2014 gap for their analytics reporting",
+                "text": "API integration Aspen requested does not exist yet — gap for their analytics reporting",
                 "sourceType": "circleback",
-                "sourceUrl": ""
-              },
-              {
-                "text": "Lodi flagged at-risk: may cancel over limited weekly call time with rep (Slack, Mar 24)",
-                "sourceType": "slack",
-                "sourceUrl": ""
-              },
-              {
-                "text": "Sierra Vista Healthcare flagged at-risk \u00d7 2 (Slack, Mar 25)",
-                "sourceType": "slack",
                 "sourceUrl": ""
               },
               {
@@ -950,7 +939,7 @@
                 "sourceUrl": ""
               },
               {
-                "text": "Staffing budgets skipped on Lodi kickoff call \u2014 to be covered in follow-up",
+                "text": "Staffing budgets skipped on Lodi kickoff call — to be covered in follow-up",
                 "sourceType": "circleback",
                 "sourceUrl": ""
               }
@@ -965,7 +954,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Cottonwood",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/39540932698",
@@ -989,7 +978,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Country Crest",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32647507780",
@@ -1004,7 +993,7 @@
             "publishedShifts": 866,
             "publishRate": 84.6,
             "period": "May 2026",
-            "note": "NPS 1/5 (Feb 2026) \u2014 schedule remediation call"
+            "note": "NPS 1/5 (Feb 2026) — schedule remediation call"
           }
         },
         {
@@ -1013,7 +1002,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Kei-Ai Los Angeles",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/32543029623",
@@ -1028,7 +1017,7 @@
             "publishedShifts": 5106,
             "publishRate": 62.1,
             "period": "May 2026",
-            "note": "NPS 2/5 (Feb 2026) \u2014 largest facility by volume"
+            "note": "NPS 2/5 (Feb 2026) — largest facility by volume"
           }
         },
         {
@@ -1037,7 +1026,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "NorthPark",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40350934396",
@@ -1061,7 +1050,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Riverwood",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43433189491",
@@ -1076,7 +1065,7 @@
             "publishedShifts": 1263,
             "publishRate": 93.4,
             "period": "May 2026",
-            "note": "Top publisher \u2014 model facility"
+            "note": "Top publisher — model facility"
           }
         },
         {
@@ -1085,7 +1074,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Avenues",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40290206265",
@@ -1100,16 +1089,16 @@
             "publishedShifts": 51,
             "publishRate": 2.6,
             "period": "May 2026",
-            "note": "\u26a0\ufe0f LIVE but near-dark \u2014 2.6% published. Urgent outreach needed. Note from Feb 10 sync: staff schedule visibility issues logged."
+            "note": "⚠️ LIVE but near-dark — 2.6% published. Urgent outreach needed. Note from Feb 10 sync: staff schedule visibility issues logged."
           }
         },
         {
-          "name": "The Palazzo \u2014 Rehab Center at Palazzo",
+          "name": "The Palazzo — Rehab Center at Palazzo",
           "excluded": false,
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Palazzo",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42614191210",
@@ -1124,7 +1113,7 @@
             "publishedShifts": 958,
             "publishRate": 44.5,
             "period": "May 2026",
-            "note": "Also has a separate stage-1 ticket (43794049563) \u2014 possible DBA variant"
+            "note": "Also has a separate stage-1 ticket (43794049563) — possible DBA variant"
           }
         },
         {
@@ -1133,7 +1122,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Woodland",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43433189491",
@@ -1148,7 +1137,7 @@
             "publishedShifts": 1273,
             "publishRate": 72.9,
             "period": "May 2026",
-            "note": "Onboarded Mar 13; Jared wanted Apr 1 go-live \u2014 tracking well"
+            "note": "Onboarded Mar 13; Jared wanted Apr 1 go-live — tracking well"
           }
         },
         {
@@ -1157,7 +1146,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "pending-go-live",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "South Marin",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/42144265293",
@@ -1172,7 +1161,7 @@
             "publishedShifts": 1073,
             "publishRate": 46.3,
             "period": "May 2026",
-            "note": "46% publish pre-go-live \u2014 on track"
+            "note": "46% publish pre-go-live — on track"
           }
         },
         {
@@ -1181,7 +1170,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Bryan Ovalle",
           "status": "mid-stage",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "University Post-Acute",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43841506601",
@@ -1205,7 +1194,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "mid-stage",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Oakland Heights",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43792810667",
@@ -1220,7 +1209,7 @@
             "publishedShifts": 0,
             "publishRate": 0.0,
             "period": "May 2026",
-            "note": "0% published at mid-stage \u2014 expected if still setting up schedules"
+            "note": "0% published at mid-stage — expected if still setting up schedules"
           }
         },
         {
@@ -1229,7 +1218,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Bryan Ovalle",
           "status": "mid-stage",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Sierra Vista",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43430372122",
@@ -1244,7 +1233,7 @@
             "publishedShifts": 0,
             "publishRate": 0.0,
             "period": "May 2026",
-            "note": "\u26a0\ufe0f At-risk: flagged in #at-risk channel (Bryan Ovalle, Mar 25). 0% published."
+            "note": "0% published — at mid-stage. Bryan Ovalle rep."
           }
         },
         {
@@ -1253,7 +1242,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Lake Park",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43858071160",
@@ -1268,7 +1257,7 @@
             "publishedShifts": 0,
             "publishRate": 0.0,
             "period": "May 2026",
-            "note": "Kickoff Apr 2, go-live target May 4. 0% published \u2014 normal at early stage."
+            "note": "Kickoff Apr 2, go-live target May 4. 0% published — normal at early stage."
           }
         },
         {
@@ -1277,7 +1266,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Lodi",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43794050207",
@@ -1292,7 +1281,7 @@
             "publishedShifts": 25,
             "publishRate": 1.7,
             "period": "May 2026",
-            "note": "\u26a0\ufe0f At-risk: may cancel over limited call time (flagged Mar 24). 1.7% published."
+            "note": "1.7% published — early stage. Limited publishing activity."
           }
         },
         {
@@ -1301,7 +1290,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Bryan Ovalle",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Tracy",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43798744341",
@@ -1325,7 +1314,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Berkley East",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804387964",
@@ -1349,7 +1338,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Bryan Ovalle",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Ocean Pointe",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43797505426",
@@ -1364,7 +1353,7 @@
             "publishedShifts": 0,
             "publishRate": 0.0,
             "period": "May 2026",
-            "note": "Early stage, no publishing yet \u2014 normal."
+            "note": "Early stage, no publishing yet — normal."
           }
         },
         {
@@ -1373,9 +1362,9 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
-          "mappingNote": "No Metabase facility match found \u2014 may not be set up yet",
+          "mappingNote": "No Metabase facility match found — may not be set up yet",
           "npsKeyword": "Bixby Towers",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/40347062075",
           "npsSurvey": null,
@@ -1389,7 +1378,7 @@
             "publishedShifts": null,
             "publishRate": null,
             "period": "May 2026",
-            "note": "No Metabase facility match \u2014 may not be configured in platform yet. Also has a stage-1 ticket (43798435432)."
+            "note": "No Metabase facility match — may not be configured in platform yet. Also has a stage-1 ticket (43798435432)."
           }
         },
         {
@@ -1398,7 +1387,7 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "npsKeyword": "Marina Pointe",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43796576151",
@@ -1413,7 +1402,7 @@
             "publishedShifts": 0,
             "publishRate": 0.0,
             "period": "May 2026",
-            "note": "Kickoff Apr 10, training Apr 17. Go-live target May 1. 0% published \u2014 early stage."
+            "note": "Kickoff Apr 10, training Apr 17. Go-live target May 1. 0% published — early stage."
           }
         },
         {
@@ -1422,9 +1411,9 @@
           "csRep": "Cayden Fox",
           "implRep": "Cayden Fox",
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
-          "mappingNote": "No Metabase facility match found yet \u2014 just kicked off Apr 23",
+          "mappingNote": "No Metabase facility match found yet — just kicked off Apr 23",
           "npsKeyword": "Kei-Ai South Bay",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804851979",
           "npsSurvey": null,
@@ -1447,7 +1436,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "inferred",
           "mappingNote": "May share Metabase entry with 'Camarillo Senior Living - Alta Camarillo'",
           "npsKeyword": "Alta Camarillo",
@@ -1472,7 +1461,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "mappingNote": "May duplicate live 'CS - The Palazzo' ticket. Verify if separate building.",
           "npsKeyword": "Rehabilitation Center Palazzo",
@@ -1488,7 +1477,7 @@
             "publishedShifts": null,
             "publishRate": null,
             "period": "May 2026",
-            "note": "Stage 1. May be same as live Palazzo ticket \u2014 confirm with team."
+            "note": "Stage 1. May be same as live Palazzo ticket — confirm with team."
           }
         },
         {
@@ -1497,7 +1486,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Santa Rosa",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43785083733",
@@ -1521,7 +1510,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Villa Valencia",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43787769437",
@@ -1545,7 +1534,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Capistrano",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804696595",
@@ -1569,7 +1558,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Berkley Post-Acute",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43786841720",
@@ -1593,7 +1582,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Camarillo Senior Living",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43782916906",
@@ -1617,7 +1606,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Berkley West",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43784308642",
@@ -1641,7 +1630,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Springs Carlotta",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43790093598",
@@ -1665,7 +1654,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Greenridge Post-Acute",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43795958324",
@@ -1689,7 +1678,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Stonebrook",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43804696594",
@@ -1713,7 +1702,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Mission Palms",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43796887303",
@@ -1737,7 +1726,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "San Juan Hills",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43782916905",
@@ -1761,7 +1750,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "La Casa Via",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43781522093",
@@ -1785,7 +1774,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Greenridge Senior",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43794976533",
@@ -1809,7 +1798,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Gardens Healthcare",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43793583714",
@@ -1833,7 +1822,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Pacific Heights",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43792033808",
@@ -1857,7 +1846,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Petaluma",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43795958323",
@@ -1881,7 +1870,7 @@
           "csRep": "Cayden Fox",
           "implRep": null,
           "status": "early",
-          "registryNote": "Not in registry \u2014 add at registry.html",
+          "registryNote": "Not in registry — add at registry.html",
           "mappingConfidence": "unresolved",
           "npsKeyword": "Hillcrest Heights",
           "hubspotTicketUrl": "https://app.hubspot.com/contacts/20279079/record/0-5/43800292475",
