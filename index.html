@@ -1355,7 +1355,7 @@ function renderCard(c) {
       <div class="card-footer">
         <span class="notes-text">${esc(c.latest.notes||'')}</span>
         <div class="card-footer-meta">
-          <span class="last-updated">Last scored: ${fmtDate(c.latest.date)}</span>
+          <span class="last-updated">Last scored: ${fmtDate(c.latest.date)}${c.latest.lastRefreshed && c.latest.lastRefreshed !== c.latest.date ? `<span style="color:var(--gray-400);margin-left:4px">· refreshed ${c.latest.lastRefreshed}</span>` : ''}</span>
           <button class="rescore-btn" onclick="copyRescorePrompt('${esc(c.name)}',event)" title="Copy prompt to re-run this health score">⎘ Re-score</button>
           <button class="rescore-btn" style="background:var(--brand-light);color:var(--brand-dark);border-color:var(--brand-light)" onclick="event.stopPropagation();openQBRModal('${esc(c.name)}')" title="Generate QBR prep summary">📋 Prep QBR</button>
           ${commCount?`<button class="communities-btn" onclick="event.stopPropagation();openCompany('${esc(c.name)}')">${commCount} Communities →</button>`:''}
@@ -3267,4 +3267,5 @@ async function saveAccountSettings() {
 
 </body>
 </html>
+
 
