@@ -1,8 +1,8 @@
 name: Refresh Health Metrics
 
-"on":
+  on:
     schedule:
-      - cron: '0 8 * * *'
+      - cron: 0 8 * * *
     workflow_dispatch:
 
   jobs:
@@ -10,7 +10,6 @@ name: Refresh Health Metrics
       runs-on: ubuntu-latest
       permissions:
         contents: write
-
       steps:
         - uses: actions/checkout@v4
         - uses: actions/setup-python@v5
