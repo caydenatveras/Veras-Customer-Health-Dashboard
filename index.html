@@ -825,6 +825,270 @@ let HEALTH_DATA = [];
 // HEALTH_DATA_END
 
 // ═══════════════════════════════════════════════════════════════
+// CLIENT-SIDE SCORING ENGINE
+// Computes dimension scores and overallScore from rawMetrics.
+// Entries without rawMetrics are left unchanged (backward compat).
+// ═══════════════════════════════════════════════════════════════
+
+const SCORING_WEIGHTS = {
+  'active-onboarding': {
+    productAdoption: 0.25, outcomesRoi: 0.05,
+    integrationHealth: 0, relationshipStrength: 0.15, sentimentFriction: 0.30
+  },
+  'post-live': {
+    productAdoption: 0.25, outcomesRoi: 0.25,
+    integrationHealth: 0, relationshipStrength: 0.20, sentimentFriction: 0.15
+  }
+};
+
+// Linear interpolation within score bands.
+// bands: [[lo, hi, scoreMin, scoreMax], ...] sorted descending by lo.
+// hi=Infinity on the top band → returns scoreMax for any value >= lo.
+// value below all bands → returns lowest band's scoreMin.
+function bandScore(value, bands) {
+  if (value == null) return null;
+  for (let i = 0; i < bands.length; i++) {
+    const [lo, hi, sMin, sMax] = bands[i];
+    if (value >= lo) {
+      if (!isFinite(hi) || value >= hi) return sMax;
+      return Math.round(sMin + (value - lo) / (hi - lo) * (sMax - sMin));
+    }
+  }
+  return bands[bands.length - 1][2]; // below all bands
+}
+
+// Weighted average of [score, weight] pairs.
+// Pairs with null score or 0 weight are excluded; remaining weights renormalized.
+function weightedAvg(pairs) {
+  const valid = pairs.filter(([s, w]) => s != null && w > 0);
+  if (!valid.length) return 50;
+  const totalW = valid.reduce((s, [, w]) => s + w, 0);
+  return valid.reduce((s, [score, w]) => s + score * (w / totalW), 0);
+}
+
+// ── Product Adoption ──────────────────────────────────────────
+function scorePublishRate(rm) {
+  if (rm.publishRate == null) return 50;
+  const pct = rm.publishRate * 100;
+  const bands = [[80, Infinity, 85, 100], [60, 80, 65, 85], [40, 60, 45, 65], [20, 40, 25, 45], [0, 20, 0, 25]];
+  const s = bandScore(pct, bands);
+  const penalty = Math.min(30, (rm.darkFacilities || 0) * 10);
+  return Math.max(0, Math.min(100, s - penalty));
+}
+function scoreNursingLogin(rm) {
+  if (rm.nursingActive30dPct == null) return 50;
+  return bandScore(rm.nursingActive30dPct, [[70, Infinity, 85, 100], [50, 70, 65, 85], [30, 50, 45, 65], [15, 30, 25, 45], [0, 15, 0, 25]]);
+}
+function scoreSchedulerDecay(rm) {
+  if (rm.schedulerMomChangePct == null) return 60;
+  return bandScore(rm.schedulerMomChangePct, [[5, Infinity, 85, 100], [-5, 5, 65, 85], [-20, -5, 45, 65], [-40, -20, 25, 45], [-999, -40, 0, 25]]);
+}
+function scoreMobileAdoption(rm) {
+  if (rm.mobileAdoptionPct == null) return 50;
+  return bandScore(rm.mobileAdoptionPct, [[80, Infinity, 85, 100], [60, 80, 65, 85], [40, 60, 45, 65], [20, 40, 25, 45], [0, 20, 0, 25]]);
+}
+function scoreFillRate(rm) {
+  if (rm.fillRatePct == null) return 50;
+  const bands = [[80, Infinity, 85, 100], [60, 80, 65, 85], [40, 60, 45, 65], [20, 40, 25, 45], [0, 20, 0, 25]];
+  let s = bandScore(rm.fillRatePct, bands);
+  if (rm.fillRateMomDeltaPct != null) {
+    if (rm.fillRateMomDeltaPct >= 5) s += 10;
+    else if (rm.fillRateMomDeltaPct >= 2) s += 5;
+    else if (rm.fillRateMomDeltaPct <= -5) s -= 10;
+    else if (rm.fillRateMomDeltaPct <= -2) s -= 5;
+  }
+  return Math.max(0, Math.min(100, s));
+}
+
+// ── Outcomes / ROI ────────────────────────────────────────────
+function scoreHoursSaved(rm) {
+  if (rm.hoursSaved == null) return 50;
+  return bandScore(rm.hoursSaved, [[500, Infinity, 90, 100], [300, 500, 70, 90], [150, 300, 50, 70], [75, 150, 30, 50], [0, 75, 0, 30]]);
+}
+function scoreOtTrend(rm) {
+  if (rm.otMomChangePct == null) return 55;
+  // Negative change = declining OT = good. Negate so positive = improvement.
+  const declining = -rm.otMomChangePct;
+  return bandScore(declining, [[10, Infinity, 75, 100], [-10, 10, 50, 75], [-999, -10, 20, 50]]);
+}
+function scoreClockVariance(rm) {
+  if (rm.clockVariancePctGt15 == null) return 55;
+  // Lower variance is better — highest pct gets lowest score
+  let s = bandScore(rm.clockVariancePctGt15, [
+    [35, Infinity, 0, 25], [20, 35, 25, 45], [10, 20, 45, 65], [5, 10, 65, 85], [0, 5, 85, 100]
+  ]);
+  if (rm.clockVarianceMomChangePts != null) {
+    if (rm.clockVarianceMomChangePts <= -3) s += 5;  // improving (fewer >15min)
+    if (rm.clockVarianceMomChangePts >= 3)  s -= 5;  // worsening
+  }
+  return Math.max(0, Math.min(100, s));
+}
+function scoreMealBreak(rm) {
+  if (rm.mealBreakMissedPct == null) return null; // null → weight redistributed
+  let s = bandScore(rm.mealBreakMissedPct, [
+    [35, Infinity, 0, 25], [20, 35, 25, 45], [10, 20, 45, 65], [5, 10, 65, 85], [0, 5, 85, 100]
+  ]);
+  if (rm.mealBreakMomChangePts != null) {
+    if (rm.mealBreakMomChangePts <= -3) s += 5;
+    if (rm.mealBreakMomChangePts >= 3)  s -= 5;
+  }
+  return Math.max(0, Math.min(100, s));
+}
+
+// ── Relationship Strength ─────────────────────────────────────
+function scoreMeetingCadence(entry) {
+  const rm = entry.rawMetrics;
+  if (!rm) return 50;
+  const isOnboarding = (entry.lifecycle === 'active-onboarding');
+  const count = rm.meetingCount90d || 0;
+  let s;
+  if (isOnboarding) {
+    s = bandScore(count, [[6, Infinity, 80, 100], [4, 6, 65, 80], [2, 4, 45, 65], [1, 2, 20, 45], [0, 1, 0, 20]]);
+  } else if (count >= 1) {
+    s = bandScore(count, [[4, Infinity, 80, 100], [3, 4, 65, 80], [2, 3, 50, 65], [1, 2, 30, 50]]);
+  } else {
+    // 0 meetings — score by days since last meeting
+    const days = rm.daysSinceLastMeeting;
+    if (days == null || days > 365) { s = 2; }
+    else if (days <= 120) { s = 15 + (120 - days) / 30 * 15; }  // 120d→15, 90d→30
+    else if (days <= 180) { s = 5  + (180 - days) / 60 * 10; }  // 180d→5, 120d→15
+    else { s = Math.max(0, 5 - (days - 180) / 36); }            // 0–5 beyond 6 months
+  }
+  // Trend: last 30 days vs prior 30-day rate
+  const last30 = rm.meetingCountLast30d || 0;
+  const prior30avg = ((rm.meetingCountPrior60d || 0) / 2);
+  if (last30 > prior30avg + 0.4) s += 5;
+  else if (last30 < prior30avg - 0.4 && prior30avg > 0) s -= 5;
+  return Math.max(0, Math.min(100, Math.round(s)));
+}
+function scoreMultiThreading(rm) {
+  if (rm.multiThreadingCoveragePct == null) return 55;
+  return bandScore(rm.multiThreadingCoveragePct, [[80, Infinity, 85, 100], [60, 80, 65, 85], [40, 60, 45, 65], [20, 40, 25, 45], [0, 20, 0, 25]]);
+}
+function scoreTouchPointQuality(entry) {
+  const rm = entry.rawMetrics;
+  if (!rm) return 65;
+  let s = 65;
+  if (rm.hasQbrLast90d) s += 20;
+  if (rm.hasInPersonLast90d) s += 15;
+  if (rm.hasTrainingLast90d && entry.lifecycle === 'active-onboarding') s += 5;
+  return Math.max(0, Math.min(100, s));
+}
+function scoreExecEngagement(rm) {
+  if (rm.execContactsExist === false) return 30;
+  if (rm.execDaysSinceContact == null) return 50;
+  const d = rm.execDaysSinceContact;
+  if (d <= 90)  return Math.round(80 + (90 - d) / 90 * 20);   // 0d→100, 90d→80
+  if (d <= 180) return Math.round(50 + (180 - d) / 90 * 30);  // 91d→80, 180d→50
+  return Math.max(20, Math.round(50 - (d - 180) / 18));       // declines toward 20
+}
+
+// ── Sentiment / Friction ──────────────────────────────────────
+function scoreTone(rm) {
+  const pos = rm.tonePositiveCount || 0;
+  const neg = rm.toneNegativeCount || 0;
+  if (pos === 0 && neg === 0) return 50; // no notes → neutral
+  const net = pos - neg;
+  let s;
+  if (net >= 4 && neg === 0) s = Math.min(100, 85 + (net - 4) * 3);
+  else if (net >= 2 && neg <= 1) s = 70 + (net - 2) / 2 * 15;
+  else if (net >= 0) s = 50 + net * 10;
+  else if (net >= -3) s = 30 + (net + 3) / 3 * 20;
+  else s = Math.max(0, 30 + (net + 4) * 5);
+  if (rm.hasEscalationLanguage) s = Math.min(s, 30);
+  return Math.round(Math.max(0, Math.min(100, s)));
+}
+function scoreNps(rm) {
+  if (rm.npsAvg == null) return 60;
+  return bandScore(rm.npsAvg, [[4.5, Infinity, 85, 100], [3.5, 4.5, 65, 85], [2.5, 3.5, 40, 65], [0, 2.5, 0, 40]]);
+}
+function scoreSupportLoad(rm) {
+  const highCount = rm.openHighTickets || 0;
+  const highAges  = rm.openHighAges || [];
+  const withEng   = rm.openHighWithEngStage || [];
+  const base = ([90, 75, 55])[highCount] ?? 35;
+  let agingPenalty = 0;
+  for (let i = 0; i < highAges.length; i++) {
+    const days = highAges[i];
+    const eng  = withEng[i] || false;
+    let p = days > 60 ? 15 : days > 30 ? 10 : days > 7 ? 5 : 0;
+    if (eng) p = Math.round(p / 2);
+    agingPenalty += p;
+  }
+  const mediumPenalty = Math.min(10, (rm.openMediumGt30dCount || 0) * 3);
+  let intercomAdj = 0;
+  if (rm.intercomOpenConversations != null) {
+    if      (rm.intercomOpenConversations > 10) intercomAdj = -15;
+    else if (rm.intercomOpenConversations > 5)  intercomAdj = -10;
+    else if (rm.intercomOpenConversations > 2)  intercomAdj = -5;
+    else if (rm.intercomOpenConversations === 0) intercomAdj = 5;
+  }
+  return Math.max(0, Math.min(100, base - agingPenalty - mediumPenalty + intercomAdj));
+}
+
+// ── Main compute function ─────────────────────────────────────
+function computeScores(entry) {
+  if (!entry.rawMetrics) return; // backward compat — leave stored scores untouched
+  const rm = entry.rawMetrics;
+  const lifecycle = entry.lifecycle || 'post-live';
+  const weights = SCORING_WEIGHTS[lifecycle] || SCORING_WEIGHTS['post-live'];
+
+  // Product Adoption
+  const pa = weightedAvg([
+    [scorePublishRate(rm),    0.35],
+    [scoreNursingLogin(rm),   0.25],
+    [scoreSchedulerDecay(rm), 0.15],
+    [scoreMobileAdoption(rm), 0.15],
+    [scoreFillRate(rm),       0.10],
+  ]);
+
+  // Outcomes/ROI — meal break redistributes if null (weightedAvg handles null)
+  const roi = weightedAvg([
+    [scoreHoursSaved(rm),    0.30],
+    [scoreOtTrend(rm),       0.25],
+    [scoreClockVariance(rm), 0.25],
+    [scoreMealBreak(rm),     0.15],
+  ]);
+
+  // Relationship Strength — if contacts null, zero out multi-thread + exec weights
+  const hasContacts = rm.multiThreadingCoveragePct != null;
+  const rs = weightedAvg([
+    [scoreMeetingCadence(entry),    0.45],
+    [scoreMultiThreading(rm),       hasContacts ? 0.25 : 0],
+    [scoreTouchPointQuality(entry), 0.20],
+    [scoreExecEngagement(rm),       hasContacts ? 0.10 : 0],
+  ]);
+
+  // Sentiment / Friction
+  const slackPenalty = Math.min(30, (rm.atRiskMentions || 0) * 10);
+  const sf = Math.max(0,
+    scoreTone(rm)        * 0.40 +
+    scoreNps(rm)         * 0.35 +
+    scoreSupportLoad(rm) * 0.25 -
+    slackPenalty
+  );
+
+  entry.productAdoption      = Math.round(pa);
+  entry.outcomesRoi          = Math.round(roi);
+  entry.integrationHealth    = null;
+  entry.relationshipStrength = Math.round(rs);
+  entry.sentimentFriction    = Math.round(sf);
+
+  // Overall — normalize weights across active dimensions only
+  const active = [
+    [pa,  weights.productAdoption],
+    [roi, weights.outcomesRoi],
+    [rs,  weights.relationshipStrength],
+    [sf,  weights.sentimentFriction],
+  ].filter(([, w]) => w > 0);
+  const totalW = active.reduce((sum, [, w]) => sum + w, 0);
+  entry.overallScore = Math.round(
+    active.reduce((sum, [score, w]) => sum + score * (w / totalW), 0)
+  );
+}
+
+
+// ═══════════════════════════════════════════════════════════════
 // METRIC CHART COLORS
 // ═══════════════════════════════════════════════════════════════
 const METRIC_META = [
@@ -875,6 +1139,7 @@ async function loadAndRender() {
   try {
     const { entries } = await fetchAllEntries(false);
     HEALTH_DATA = entries;
+    HEALTH_DATA.forEach(e => computeScores(e));
   } catch(e) {
     console.warn('Could not load data.json:', e);
     if (grid) grid.innerHTML = '<div style="text-align:center;padding:60px;color:var(--red-dark)"><div style="font-size:28px;margin-bottom:10px">⚠️</div><strong>Could not load health data.</strong><br><span style="font-size:12px;color:var(--gray-500)">Make sure data.json is deployed alongside index.html and refresh the page.</span></div>';
@@ -888,6 +1153,7 @@ async function reloadAndRender() {
   try {
     const { entries, index } = await fetchAllEntries(true);
     HEALTH_DATA = entries;
+    HEALTH_DATA.forEach(e => computeScores(e));
     renderAll();
     const n = (index.companies || []).length || entries.length;
     showToast('Refreshed — ' + n + ' account' + (n !== 1 ? 's' : '') + ' loaded');
@@ -990,11 +1256,11 @@ function renderDashboard() {
 
 const DIMS = [
   // [label, weight, key, fallbackKey]  — fallbackKey handles pre-redesign entries
-  ['Product Adoption',   '25%', 'productAdoption',    'platformUsage'],
-  ['Outcomes / ROI',     '25%', 'outcomesRoi',         null],
-  ['Integration Health', '15%', 'integrationHealth',  'onboardingHealth'],
-  ['Relationship',       '15%', 'relationshipStrength','engagementCadence'],
-  ['Sentiment / Friction','20%','sentimentFriction',   'customerSentiment'],
+  ['Product Adoption',    '25%', 'productAdoption',     'platformUsage'],
+  ['Outcomes / ROI',      '25%', 'outcomesRoi',          null],
+  ['Integration Health',  '—',   'integrationHealth',   'onboardingHealth'],
+  ['Relationship',        '20%', 'relationshipStrength', 'engagementCadence'],
+  ['Sentiment / Friction','15%', 'sentimentFriction',    'customerSentiment'],
 ];
 
 function renderCard(c) {
