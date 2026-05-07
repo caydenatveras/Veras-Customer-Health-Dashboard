@@ -2,8 +2,8 @@
   "_schema": {
     "description": "Registry of all Veras accounts and their communities. Drives automated health score runs.",
     "communityFields": {
-      "displayName": "Dashboard label ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ decoupled from HubSpot/Metabase naming",
-      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no name matching.",
+      "displayName": "Dashboard label \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 decoupled from HubSpot/Metabase naming",
+      "hubspotOnboardingTicketId": "HubSpot ticket ID for this community's onboarding stage record (pipeline 0). Looked up by ID \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 no name matching.",
       "metabaseFacilityIds": "Array of Metabase Facility.id values. Array supports multi-entity buildings.",
       "npsKeyword": "Short unique substring matched against NPS ticket subjects to identify this community's responses.",
       "mappingConfidence": "'confirmed' = manually verified | 'inferred' = auto-matched, should verify | 'unresolved' = needs manual mapping",
@@ -169,7 +169,7 @@
           ],
           "npsKeyword": "Fallon",
           "mappingConfidence": "inferred",
-          "mappingNote": "Three Metabase records (Rehab, AL, IL) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify which entities to include for usage data",
+          "mappingNote": "Three Metabase records (Rehab, AL, IL) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify which entities to include for usage data",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -181,7 +181,7 @@
           ],
           "npsKeyword": "Elko",
           "mappingConfidence": "inferred",
-          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify",
+          "mappingNote": "Two Metabase records (Rehab, AL) included; xxx-prefixed IL record excluded as test data \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -210,7 +210,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Nevada",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Nevada region facilities not yet in Metabase ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 6 communities signed Apr 2026, Metabase setup pending",
+          "mappingNote": "Nevada region facilities not yet in Metabase \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 6 communities signed Apr 2026, Metabase setup pending",
           "implRep": "Tegan Perry"
         }
       ],
@@ -401,7 +401,7 @@
           ],
           "npsKeyword": "Hanover",
           "mappingConfidence": "inferred",
-          "mappingNote": "0% publish rate in May 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ investigate",
+          "mappingNote": "0% publish rate in May 2026 \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 investigate",
           "implRep": "Tegan Perry"
         },
         {
@@ -566,7 +566,7 @@
           ],
           "npsKeyword": "West Jordan",
           "mappingConfidence": "inferred",
-          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ stage may be stale, verify with Bryan Ovalle",
+          "mappingNote": "HubSpot stage is mid-stage (1176560693) but community shows live-level usage (2,000+ shifts/month) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 stage may be stale, verify with Bryan Ovalle",
           "implRep": "Bryan Ovalle"
         },
         {
@@ -587,7 +587,7 @@
           ],
           "npsKeyword": "Cache Valley",
           "mappingConfidence": "unresolved",
-          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ verify whether this is a standalone community or part of another entity",
+          "mappingNote": "Appears in Metabase usage data and NPS tickets but has no onboarding ticket in HubSpot \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 verify whether this is a standalone community or part of another entity",
           "implRep": null
         }
       ],
@@ -701,7 +701,7 @@
       "metabaseEmployerId": "clud2zmdj000208k1bnx70lfx",
       "csRep": "Tegan Perry",
       "renewalDate": "",
-      "note": "Large enterprise account ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
+      "note": "Large enterprise account \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 hundreds of live facilities. Onboarding tickets below represent communities currently being added. Metabase employer ID may only map to one facility cluster; confirm full coverage.",
       "communities": [
         {
           "displayName": "Aspen Hills",
@@ -733,7 +733,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Las Palmas",
           "mappingConfidence": "inferred",
-          "mappingNote": "Re-signup (new admin) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ previous onboarding record may exist",
+          "mappingNote": "Re-signup (new admin) \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 previous onboarding record may exist",
           "implRep": "Cayden Fox"
         },
         {
@@ -758,7 +758,7 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Ridgeway",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 needs rep assignment",
           "implRep": null
         },
         {
@@ -767,13 +767,377 @@
           "metabaseFacilityIds": [],
           "npsKeyword": "Norwood",
           "mappingConfidence": "inferred",
-          "mappingNote": "No owner assigned on HubSpot ticket ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ needs rep assignment",
+          "mappingNote": "No owner assigned on HubSpot ticket \u00c3\u0083\u00c2\u0083\u00c3\u0082\u00c2\u00a2\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0080\u00c3\u0083\u00c2\u0082\u00c3\u0082\u00c2\u0094 needs rep assignment",
           "implRep": null
         }
       ],
       "integrationType": "",
       "lastQbrDate": "",
       "nextQbrDate": ""
+    },
+    "Aspen Health": {
+      "hubspotCompanyId": "54589714729",
+      "metabaseEmployerId": "cmfh8985x000008kzci3h7v81",
+      "csRep": "Cayden Fox",
+      "renewalDate": "",
+      "integrationType": "unknown",
+      "communities": [
+        {
+          "displayName": "Cottonwood Post-Acute Rehab",
+          "hubspotOnboardingTicketId": "39540932698",
+          "metabaseFacilityIds": [
+            "cmfhzcgkn6qydhjqhg0fqbwkf"
+          ],
+          "npsKeyword": "Cottonwood",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Country Crest Post Acute",
+          "hubspotOnboardingTicketId": "32647507780",
+          "metabaseFacilityIds": [
+            "cmfhzcgkl6qxzhjqh6bbwgxfe"
+          ],
+          "npsKeyword": "Country Crest",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Kei-Ai Los Angeles Healthcare Center",
+          "hubspotOnboardingTicketId": "32543029623",
+          "metabaseFacilityIds": [
+            "cmfhzcgkj6qxrhjqhhgj8e1o4"
+          ],
+          "npsKeyword": "Kei-Ai Los Angeles",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "North Park Post-Acute",
+          "hubspotOnboardingTicketId": "40350934396",
+          "metabaseFacilityIds": [
+            "cmfhzcgkl6qy5hjqh35m32unv"
+          ],
+          "npsKeyword": "NorthPark",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Riverwood Healthcare Center",
+          "hubspotOnboardingTicketId": "43433189491",
+          "metabaseFacilityIds": [
+            "cmfhzcgki6qxnhjqh9w82bc02"
+          ],
+          "npsKeyword": "Riverwood",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "The Avenues Transitional Care Center",
+          "hubspotOnboardingTicketId": "40290206265",
+          "metabaseFacilityIds": [
+            "cmfhzcgko6qylhjqh162th0s5"
+          ],
+          "npsKeyword": "Avenues",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "The Palazzo \u2014 Rehab Center at Palazzo",
+          "hubspotOnboardingTicketId": "42614191210",
+          "metabaseFacilityIds": [
+            "cmfhzcgkl6qy1hjqh2m12f9p6"
+          ],
+          "npsKeyword": "Palazzo",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Woodland Post Acute",
+          "hubspotOnboardingTicketId": "43433189491",
+          "metabaseFacilityIds": [
+            "cmfhzcgkn6qyfhjqh1uqyac6e"
+          ],
+          "npsKeyword": "Woodland",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "South Marin Health & Wellness Center",
+          "hubspotOnboardingTicketId": "42144265293",
+          "metabaseFacilityIds": [
+            "cmfhzcgkp6qyohjqhfrs2348a"
+          ],
+          "npsKeyword": "South Marin",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "University Post-Acute Rehab",
+          "hubspotOnboardingTicketId": "43841506601",
+          "metabaseFacilityIds": [
+            "cmfhzcgkn6qyehjqhfm2s9yty"
+          ],
+          "npsKeyword": "University Post-Acute",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Oakland Heights Nursing & Rehabilitation",
+          "hubspotOnboardingTicketId": "43792810667",
+          "metabaseFacilityIds": [
+            "cmfhzcgkj6qxohjqhcvts0tyq"
+          ],
+          "npsKeyword": "Oakland Heights",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Sierra Vista Healthcare",
+          "hubspotOnboardingTicketId": "43430372122",
+          "metabaseFacilityIds": [
+            "cmfhzcgkh6qxlhjqhexk9608w"
+          ],
+          "npsKeyword": "Sierra Vista",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Lake Park Healthcare Center",
+          "hubspotOnboardingTicketId": "43858071160",
+          "metabaseFacilityIds": [
+            "cmfhzcgkl6qy4hjqh2wbj5n6a"
+          ],
+          "npsKeyword": "Lake Park",
+          "mappingConfidence": "inferred",
+          "implRep": null
+        },
+        {
+          "displayName": "Lodi Nursing & Rehabilitation",
+          "hubspotOnboardingTicketId": "43794050207",
+          "metabaseFacilityIds": [
+            "cmfhzcgkj6qxqhjqhe6dschiw"
+          ],
+          "npsKeyword": "Lodi",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Tracy Nursing and Rehabilitation Center",
+          "hubspotOnboardingTicketId": "43798744341",
+          "metabaseFacilityIds": [
+            "cmfhzcgkh6qxmhjqhhq3rf6j4"
+          ],
+          "npsKeyword": "Tracy",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Berkley East Healthcare Center",
+          "hubspotOnboardingTicketId": "43804387964",
+          "metabaseFacilityIds": [
+            "cmfhzcgko6qyjhjqhf0fx7xjq"
+          ],
+          "npsKeyword": "Berkley East",
+          "mappingConfidence": "inferred",
+          "implRep": null
+        },
+        {
+          "displayName": "Ocean Pointe Healthcare Center",
+          "hubspotOnboardingTicketId": "43797505426",
+          "metabaseFacilityIds": [
+            "cmfhzcgko6qyihjqh25mh4r77"
+          ],
+          "npsKeyword": "Ocean Pointe",
+          "mappingConfidence": "inferred",
+          "implRep": "Bryan Ovalle"
+        },
+        {
+          "displayName": "Bixby Towers Post-Acute Rehab",
+          "hubspotOnboardingTicketId": "40347062075",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Bixby Towers",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Not found in Metabase \u2014 may not be configured yet",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Marina Pointe Healthcare & Subacute",
+          "hubspotOnboardingTicketId": "43796576151",
+          "metabaseFacilityIds": [
+            "cmfhzcgkj6qxphjqhg05l4bzr"
+          ],
+          "npsKeyword": "Marina Pointe",
+          "mappingConfidence": "inferred",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Kei-Ai South Bay Healthcare Center",
+          "hubspotOnboardingTicketId": "43804851979",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Kei-Ai South Bay",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "Just kicked off Apr 23 \u2014 not yet in Metabase",
+          "implRep": "Cayden Fox"
+        },
+        {
+          "displayName": "Alta Camarillo Healthcare Center",
+          "hubspotOnboardingTicketId": "43792810669",
+          "metabaseFacilityIds": [
+            "cmfhzcgkm6qy9hjqhbtlg7y2u"
+          ],
+          "npsKeyword": "Alta Camarillo",
+          "mappingConfidence": "inferred",
+          "mappingNote": "Metabase entry is 'Camarillo Senior Living - Alta Camarillo' \u2014 may be shared with Camarillo Senior Living ticket",
+          "implRep": null
+        },
+        {
+          "displayName": "Camarillo Senior Living",
+          "hubspotOnboardingTicketId": "43782916906",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Camarillo Senior Living",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "May share Metabase entry with Alta Camarillo \u2014 verify",
+          "implRep": null
+        },
+        {
+          "displayName": "The Rehabilitation Center at the Palazzo",
+          "hubspotOnboardingTicketId": "43794049563",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Rehabilitation Palazzo",
+          "mappingConfidence": "unresolved",
+          "mappingNote": "May be same as live CS - The Palazzo ticket (42614191210). Verify.",
+          "implRep": null
+        },
+        {
+          "displayName": "Santa Rosa",
+          "hubspotOnboardingTicketId": "43785083733",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Santa Rosa",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Villa Valencia Healthcare Center",
+          "hubspotOnboardingTicketId": "43787769437",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Villa Valencia",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Capistrano Senior Living",
+          "hubspotOnboardingTicketId": "43804696595",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Capistrano",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Berkley Post-Acute",
+          "hubspotOnboardingTicketId": "43786841720",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Berkley Post-Acute",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Berkley West Healthcare Center",
+          "hubspotOnboardingTicketId": "43784308642",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Berkley West",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "The Springs Healthcare Center at the Carlotta",
+          "hubspotOnboardingTicketId": "43790093598",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Springs Carlotta",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Greenridge Post-Acute",
+          "hubspotOnboardingTicketId": "43795958324",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Greenridge Post-Acute",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Stonebrook Health and Rehabilitation",
+          "hubspotOnboardingTicketId": "43804696594",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Stonebrook",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Mission Palms Healthcare Center",
+          "hubspotOnboardingTicketId": "43796887303",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Mission Palms",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "San Juan Hills Healthcare Center",
+          "hubspotOnboardingTicketId": "43782916905",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "San Juan Hills",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "La Casa Via Transitional Care Center",
+          "hubspotOnboardingTicketId": "43781522093",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "La Casa Via",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Greenridge Senior Living",
+          "hubspotOnboardingTicketId": "43794976533",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Greenridge Senior",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "The Gardens Healthcare Center",
+          "hubspotOnboardingTicketId": "43793583714",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Gardens Healthcare",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Pacific Heights Transitional Care Center",
+          "hubspotOnboardingTicketId": "43792033808",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Pacific Heights",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Petaluma Post-Acute Rehab",
+          "hubspotOnboardingTicketId": "43795958323",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Petaluma",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        },
+        {
+          "displayName": "Hillcrest Heights Healthcare Center",
+          "hubspotOnboardingTicketId": "43800292475",
+          "metabaseFacilityIds": [],
+          "npsKeyword": "Hillcrest Heights",
+          "mappingConfidence": "unresolved",
+          "implRep": null
+        }
+      ]
     }
   }
 }
