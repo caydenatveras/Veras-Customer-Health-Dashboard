@@ -635,16 +635,21 @@ def patch_metabase(rm: dict, employer_id: str, account: dict) -> None:
 
 def patch_slack(rm: dict, company_name: str) -> None:
     try:
+        # Only count messages posted by "Veras At Risk Bot" to avoid false positives
+        # from general channel discussion mentioning a company name.
+        # Use len(matches) rather than total — total includes edits/thread replies.
+        query = f'{company_name} in:#at-risk from:"Veras At Risk Bot"'
         r = requests.get(
             'https://slack.com/api/search.messages',
             headers={'Authorization': f'Bearer {SLACK_TOKEN}'},
-            params={'query': f'{company_name} in:#at-risk', 'count': 20},
+            params={'query': query, 'count': 100},
             timeout=15,
         )
         r.raise_for_status()
         data = r.json()
         if data.get('ok'):
-            rm['atRiskMentions'] = data.get('messages', {}).get('total', 0)
+            matches = data.get('messages', {}).get('matches', [])
+            rm['atRiskMentions'] = len(matches)
         else:
             print(f'    [WARN] Slack: {data.get("error")}')
     except Exception as e:
@@ -797,3 +802,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
